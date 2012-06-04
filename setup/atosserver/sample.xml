@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
+	<binding fileName="modules/atosserver/persistentdocument/import/atosserver_binding.xml" />
+
+	<rootfolder module="payment">
+		<atosserverconnector byLabel="paiement ATOS Serveur" publicationstatus="DEACTIVATED" code="CB"  minValue="0.1" />
+	</rootfolder>
+</script>	

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
+
+	<rootfolder module="users">
+		<frontendgroup id="customersGroup" byTag="default_modules_customer_customer-website-user-group" label="Utilisateurs disposant d'un compte client" />
+	</rootfolder>
+	
+	<systemfolder module="form" relatedmodule="customer">
+		<form byFormid="modules_customer/contact" id="contactForm" />
+	</systemfolder>
+	
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Compte client">
+			<page label="Mon compte" isIndexPage="true" byTag="contextual_website_website_modules_customer_my-account">
+				<changecontent for="content-block">
+					<changeblock type="modules_customer_index" />
+				</changecontent>
+			</page>
+			<page label="Mes informations" byTag="contextual_website_website_modules_customer_my-account-info">
+				<changecontent for="content-block">
+					<changeblock type="modules_customer_editaccount" />
+				</changecontent>
+			</page>
+			<page label="Mon mot de passe" byTag="contextual_website_website_modules_customer_my-account-password">
+				<changecontent for="content-block">
+					<changeblock type="modules_users_changepassword" />
+				</changecontent>
+			</page>
+			<page label="Mes adresses" byTag="contextual_website_website_modules_customer_manageaddress">
+				<changecontent for="content-block">
+					<changeblock type="modules_customer_manageaddress" />
+				</changecontent>
+			</page>
+			<page label="Contact" byTag="contextual_website_website_modules_customer_contact-form">
+				<changecontent for="content-block">
+					<changeblock type="modules_form_form" __cmpref-refid="contactForm" />
+				</changecontent>
+			</page>						
+			<permissions>
+				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="customersGroup" />
+			</permissions>
+		</topic>
+		
+		<topic byLabel="Outils">
+			<page label="Mot de passe perdu" byTag="contextual_website_website_modules_customer_password-lost">
+				<changecontent for="content-block">
+					<changeblock type="modules_users_resetpassword" />
+				</changecontent>
+			</page>
+		</topic>
+			
+		<topic byLabel="Commande">
+			<page label="Créer un compte client" byTag="contextual_website_website_modules_customer_new-account">
+				<changecontent for="content-block">
+					<changeblock type="modules_customer_createaccount" />
+				</changecontent>
+			</page>
+		</topic>
+	</website>
+</script>

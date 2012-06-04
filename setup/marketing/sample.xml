@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<!-- 
+		WARNING: before importing this file, import :
+			- catalog/sample.xml
+	-->
+
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/customer/persistentdocument/import/customer_binding.xml" />
+	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<binding fileName="modules/payment/persistentdocument/import/payment_binding.xml" />
+	<binding fileName="modules/shipping/persistentdocument/import/shipping_binding.xml" />
+	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
+	<binding fileName="modules/marketing/persistentdocument/import/marketing_binding.xml" />
+	
+	<!-- Include page structure. -->
+	<binding fileName="modules/marketing/setup/default.xml" />
+	
+	<!-- Look for required documents. -->
+	<documentRef byLabel="Boutique" id="shop" type="modules_catalog/shop" />
+	<documentRef id="shipping" byLabel="Colissimo" type="modules_shipping/mode" />
+	<documentRef id="payment" byLabel="Paiement par chèque" type="modules_payment/chequeconnector" />
+	<documentRef id="shippingfilter" byLabel="Collisimo 10€" type="modules_catalog/shippingfilter" />
+	
+	<product id="product1" byCodeReference="L1" />
+	<product id="product2" byCodeReference="L2" />
+	<product id="product3" byCodeReference="L3" />
+	<product id="product4" byCodeReference="D150" />
+	<product id="product5" byCodeReference="000000-3" />
+	<customer id="customer1" byLogin="johndoe1" />
+	<customer id="customer2" byLogin="johndoe2" />
+	<address id="address" byLabel="L'adresse de livraison de JohnDoe1" />
+		
+	<!-- Coupons and discount samples. -->
+	<rootfolder module="marketing">
+		<folder byLabel="Exemples" label="Exemples">
+			<coupon id="coupon1" byLabel="Test 1" code="test1" shop-refid="shop" publicationstatus="ACTIVE"/>
+			<coupon id="coupon2" byLabel="Test 2" code="test2" shop-refid="shop" publicationstatus="ACTIVE"/>
+			
+			<discount byLabel="Réduction coupon test1" applicationstrategy="GlobalPercentDiscount" 
+				shop-refid="shop" publicationstatus="ACTIVE" 
+				query='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["coupon","in","{ref-id:coupon1}"]}}]}'
+				strategy='{"value":0.05,"strategylabel":"Réduction test1"}' />
+			<discount byLabel="Réduction coupon test2" applicationstrategy="GlobalValueDiscount" 
+				shop-refid="shop" publicationstatus="ACTIVE"
+				query='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["coupon","in","{ref-id:coupon2}"]}}]}'
+				strategy='{"value":15,"strategylabel":"Réduction test2"}' />		</folder>
+	</rootfolder>
+	
+	<!-- Orders using coupons. -->
+	<cart id="cart1" shop-refid="shop" customer-refid="customer2" 
+		address-refid="address" shippingFilter-refid="shippingfilter"
+		coupon-refid="coupon2"
+		billingMode-refid="payment"
+		creationdate="2010-04-01 08:16:12">
+		<cartline product-refid="product1" quantity="1" />
+		<cartline product-refid="product2" quantity="2" />
+	</cart>
+	<order cart-refid="cart1">
+		<bill transactionId="CHQ-523312564" creationdate="2010-04-01 08:16:12"
+			transactionDate="2010-04-03 10:45:12" transactionText="Chèque receptionné le 2010-04-03"
+			status="success"/>
+	</order>
+	
+	<cart id="cart2" shop-refid="shop" customer-refid="customer1" 
+		address-refid="address" shippingFilter-refid="shippingfilter" 
+		coupon-refid="coupon1"
+		billingMode-refid="payment"
+		creationdate="2010-04-01 09:12:12">
+		<cartline product-refid="product4" quantity="1" />
+		<cartline product-refid="product5" quantity="2" />
+		<cartline product-refid="product3" quantity="1" />
+	</cart>
+	<order cart-refid="cart2">
+		<bill transactionId="CHQ-566621231" creationdate="2010-04-01 09:12:12"
+			transactionDate="2010-04-04 09:45:12" transactionText="Chèque receptionné le 2010-04-04"
+			status="success"/>
+	</order>
+</script>

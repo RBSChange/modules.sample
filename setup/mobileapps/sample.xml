@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<binding fileName="modules/mobileapps/persistentdocument/import/mobileapps_binding.xml" />
+	
+	<shop byLabel="Boutique" id="shop" />
+
+	<rootfolder module="media">
+		<folder byLabel="Médias liés à l'exemple Mobile app">
+			<media path="modules/sample/setup/mobileapps/media/changeapp.jpg" byLabel="Change Mobile App" id="V_CMA" />
+		</folder>
+	</rootfolder>
+		
+	<rootfolder module="mobileapps">
+		<iosecom byLabel="RBS Boutique (IOS)" 
+			shop-refid="shop" visual-refid="V_CMA"
+			consumerKey="ConsumerKey" consumerSecret="ConsumerSecret" useOAuth="true" 
+			description="Bienvenue dans l'exemple IOS de boutique"
+			jsonConfig="{&quot;showTopShelf&quot;:true,&quot;showAddToCart&quot;:true,&quot;facets&quot;:&quot;brandId|discountLevel:[50,*];[25,*];[10,*];]0,*]|price:[0,10[;[10,20[;[20,50[;[50,100[;[100,*]&quot;}"		
+			/>
+			
+		<androidecom byLabel="RBS Boutique (Android)" 
+			shop-refid="shop" visual-refid="V_CMA"
+			consumerKey="ConsumerKey" consumerSecret="ConsumerSecret" useOAuth="true" 
+			description="Bienvenue dans l'exemple (Android) de boutique"
+			jsonConfig="{&quot;showTopShelf&quot;:true,&quot;showAddToCart&quot;:true,&quot;facets&quot;:&quot;brandId|discountLevel:[50,*];[25,*];[10,*];]0,*]|price:[0,10[;[10,20[;[20,50[;[50,100[;[100,*]&quot;}"		
+			/>
+	</rootfolder>
+</script>

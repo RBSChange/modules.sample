@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/ads/persistentdocument/import/ads_binding.xml" />
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	
+	<rootfolder module="media">
+		<folder byLabel="Exemples de bannières">
+			<media path="modules/sample/setup/ads/media/RBSChange01.png" byLabel="RBS Change (gris)" id="m1" />
+			<media path="modules/sample/setup/ads/media/RBSChange02.png" byLabel="RBS Change (bleu)" id="m2" />
+			<media path="modules/sample/setup/ads/media/RBSChange03.png" byLabel="RBS Change (jaune)" id="m3" />
+		</folder>
+	</rootfolder>
+	
+	<banner byLabel="Bannière 1" media-refid="m1" id="ban1" page-refid="m1" />
+	<banner byLabel="Bannière 2" media-refid="m2" id="ban2" page-refid="m2" />
+	<banner byLabel="Bannière 3" media-refid="m3" id="ban3" page-refid="m3" />
+	
+	<rootfolder module="ads">
+		<folder byLabel="Exemples">
+			<bannergroup byLabel="Groupe simple" banner-refids="ban1,ban2" />
+			<rotatingbannergroup byLabel="Groupe tournant" height="75" width="365" banner-refids="ban1,ban2,ban3" />
+		</folder>
+	</rootfolder>
+</script>

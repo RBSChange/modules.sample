@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/survey/persistentdocument/import/survey_binding.xml" />
+	
+	<rootfolder module="list">
+		<folder byLabel="Listes de l'exemple d'enquêtes">
+			<editablelist id="liste1" listid="modules_survey/sampleliste1" label="Liste raisons choix RBS">
+				<item byLabel="Qualité de service" /> 
+				<item byLabel="Qualité des produits" /> 
+				<item byLabel="Rapport qualité/prix" /> 
+				<item byLabel="Professionnalisme" /> 
+				<item byLabel="Confiance dans l'équipe" /> 
+				<item byLabel="Étendue de la gamme" /> 
+				<item byLabel="Renommée" /> 
+				<item byLabel="Proximité" /> 
+			</editablelist>			
+			<valuededitablelist id="liste2" listid="modules_survey/sampleliste2" label="Echelle de Likert standard">
+				<valueditem label="1 (Très mauvais)" byValue="1" /> 
+				<valueditem label="2" byValue="2" /> 
+				<valueditem label="3" byValue="3" /> 
+				<valueditem label="4" byValue="4" /> 
+				<valueditem label="5" byValue="5" /> 
+				<valueditem label="6" byValue="6" /> 
+				<valueditem label="7 (Très bon)" byValue="7" /> 
+			</valuededitablelist>
+			<editablelist id="liste3" listid="modules_survey/sampleliste3" label="Secteurs d'activités">
+				<item byLabel="Agroalimentaire" /> 
+				<item byLabel="Autres services" /> 
+				<item byLabel="BTP" /> 
+				<item byLabel="Informatique" /> 
+				<item byLabel="Mécanique" /> 
+				<item byLabel="Transport/Logistique" />
+			</editablelist>
+		</folder>
+	</rootfolder>	
+	
+	<rootfolder module="survey">
+		<survey id="testsurvey" byLabel="Enquête de satisfaction clients" description="Dans l'objectif d'améliorer la qualité de nos services et de mieux satisfaire vos attentes, merci de bien vouloir consacrer un peu de temps pour répondre à ce questionnaire..." endMessage="Nous vous remercions d'avoir pris le temps de remplir ce questionnaire..." public="true" publicationstatus="ACTIVE">
+			<step byLabel="L'entreprise">
+				<section byLabel="RBS en général">
+					<listquestion valuesList-refid="liste1" byLabel="Parmi les propositions suivantes, choisissez les TROIS principales raisons qui vous ont incité à choisir RBS." minSelection="3" maxSelection="3" />
+					<linkedset valuesList-refid="liste2" byLabel="Evaluez les prestations « avant-vente » :" description="Evaluez les prestations « avant-vente » :">
+						<embededquestion byLabel="Conseils techniques" />
+						<embededquestion byLabel="Clareté de l'offre" />
+						<embededquestion byLabel="Documentation technique" />
+						<embededquestion byLabel="Adéquation avec vos attentes" />
+						<embededquestion byLabel="Réactivité" />
+					</linkedset>
+					<linkedset valuesList-refid="liste2" byLabel="Evaluez les prestations par rapport aux commandes :" description="Evaluez les prestations par rapport aux commandes :">
+						<embededquestion byLabel="Disponibilité de l'équipe commerciale" />
+						<embededquestion byLabel="Gestion contractuelle de la commande" />
+						<embededquestion byLabel="Délai de livraison" />
+					</linkedset>
+				</section>
+				<section byLabel="Équipe commerciale">
+					<linkedset valuesList-refid="liste2" byLabel="Evaluez les prestations par rapport aux commandes :" description="Evaluez les prestations par rapport aux commandes :">
+						<embededquestion byLabel="Écoute et compréhension de vos besoin par le commercial" />
+						<embededquestion byLabel="Assistance technique du commercial" />
+						<embededquestion byLabel="Réactivité du commercial à vos questions spécifiques" />
+						<embededquestion byLabel="Apport de solutions innovantes" />
+						<embededquestion byLabel="Suivi du dossier après signature" />
+					</linkedset>
+				</section>
+			</step>
+			<step byLabel="Les produits">
+				<section byLabel="Solution « RBS Agiléo »" description="« RBS Agiléo » est une suite logicielle collaborative pour l'entreprise, les institutions et les collectivités. Elle est dotée d'un noyau standard et de nombreux modules paramétrables (RH, Qualité, CRM, GED, etc.).">
+					<booleanquestion id="condAgileo" byLabel="Utilisez-vous « RBS Agiléo » ?" required="true" alignField="true" />
+					<group byLabel="Questions « RBS Agiléo »" activationQuestion-refid="condAgileo" activationValue="true">
+						<linkedset valuesList-refid="liste2" byLabel="Evaluez les performances de la solution « RBS Agiléo » :" description="Evaluez les performances de la solution « RBS Agiléo » :">
+							<embededquestion byLabel="Simplicité d'utilisation" />
+							<embededquestion byLabel="Réponse aux attentes initiales" />
+							<embededquestion byLabel="Richesse des fonctionnalités" />
+							<embededquestion byLabel="Performances de l'affichage" />
+							<embededquestion byLabel="Ergonomie" />
+							<embededquestion byLabel="Rapport qualité/prix" />
+							<embededquestion byLabel="Moteur de recherche" />
+						</linkedset>
+						<textquestion byLabel="Commentaires :" multiline="true" alignField="true" />
+					</group>
+				</section>
+				<section byLabel="Solution « RBS Change »" description="« RBS Change » est une plate-forme de création et de gestion de contenu multi-sites et multi-langues pour le Web.">
+					<booleanquestion id="condChange" byLabel="Utilisez-vous « RBS Change » ?" required="true" alignField="true" />
+					<group byLabel="Questions « RBS Change »" activationQuestion-refid="condChange" activationValue="true">
+						<linkedset valuesList-refid="liste2" byLabel="Evaluez les performances de la solution « RBS Change » :" description="Evaluez les performances de la solution « RBS Change » :">
+							<embededquestion byLabel="Simplicité d'utilisation" />
+							<embededquestion byLabel="Réponse aux attentes initiales" />
+							<embededquestion byLabel="Richesse des fonctionnalités" />
+							<embededquestion byLabel="Performances de l'affichage" />
+							<embededquestion byLabel="Ergonomie" />
+							<embededquestion byLabel="Rapport qualité/prix" />
+							<embededquestion byLabel="Moteur de recherche" />
+						</linkedset>
+						<textquestion byLabel="Commentaires :" multiline="true" alignField="true" />
+					</group>
+				</section>
+			</step>
+			<step byLabel="Fiche d'identité du client">
+				<section byLabel="Fiche d'identité">
+					<textquestion byLabel="Raison sociale" required="true" alignField="true" />
+					<listquestion valuesList-refid="liste3" byLabel="Secteur d'activité" minSelection="1" maxSelection="1" alignField="true" />
+					<textquestion byLabel="Prénom du contact" required="true" alignField="true" />
+					<textquestion byLabel="Nom du contact" required="true" alignField="true" />
+					<textquestion byLabel="Fonction" required="true" alignField="true" />
+					<textquestion byLabel="Âge" alignField="true" />
+					<textquestion byLabel="Site web" alignField="true" />
+					<emailquestion byLabel="E-mail" required="true" alignField="true" />
+				</section>
+			</step>
+		</survey>
+	</rootfolder>
+	
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Enquête">			
+			<page byLabel="Enquête de satisfaction clients" isIndexPage="true" indexingstatus="false">
+				<changecontent for="content-block">
+					<changeblock type="modules_survey_survey" __cmpref-refid="testsurvey" />
+				</changecontent>
+			</page>	
+		</topic>
+	</website>
+</script>

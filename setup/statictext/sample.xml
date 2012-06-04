@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="/modules/statictext/persistentdocument/import/statictext_binding.xml" />
+	<rootfolder module="statictext">
+		<folder byLabel="Exemples">
+			<i18n lang="fr">
+				<text byLabel="Copyright" text="Copyright(R) RBS 2012 &lt;br /&gt; 11 rue Icare, 67960 Entzheim, FRANCE - Tél. +33 (0)3 88 764 764" 
+					id="t1"></text>
+			</i18n>
+			<i18n lang="en">
+				<text byRefid="t1" label="Copyright" text="Copyright(R) RBS 2012 &lt;br /&gt; 11 rue Icare, 67960 Entzheim, FRANCE - Tél. +33 (0)3 88 764 764"></text>
+			</i18n>
+		</folder>
+	</rootfolder>	
+	
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<website byTag="default_modules_website_default-website">	
+		<i18n lang="fr">
+			<topic byLabel="Exemple Texte statique" id="to1">
+				<page byLabel="Exemple Texte statique" isIndexPage="true" navigationVisibility="hidden" indexingstatus="false" id="p1">
+					<changecontent for="content-block">
+						<changeblock type="modules_statictext_Text" __cmpref-refid="t1"/>
+					</changecontent>
+				</page>
+			</topic>
+		</i18n>
+		
+		<i18n lang="en">
+			<topic byRefid="to1" label="Static text sample">
+				<page byRefid="p1" label="Static text sample" navigationVisibility="hidden">
+					<changecontent for="content-block">
+						<changeblock type="modules_statictext_Text" __showLabel="true" __cmpref-refid="t1"/>
+					</changecontent>				
+				</page>
+			</topic>
+		</i18n>
+	</website>
+</script>

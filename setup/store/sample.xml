@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
+	<binding fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
+	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
+	<binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<rootfolder module="media">
+		<folder label="Médias liés aux exemples de magasin">
+			<media path="modules/sample/setup/store/media/change_logo.png" byLabel="RBS Change Store" id="media1" />
+			<media path="modules/sample/setup/store/media/lilas_logo.png" byLabel="Lila's Kitchen" id="media2" />
+			<media path="modules/sample/setup/store/media/instoremode_visual.png" label="Retrait en magasin" id="instore_visual" />
+			<media path="modules/sample/setup/store/media/SAV.png" label="SAV" id="sav_visual" />
+			<media path="modules/sample/setup/store/media/clock.png" label="24/24" id="clock_visual" />
+		
+		</folder>
+	</rootfolder>
+	
+	<rootfolder module="contactcard">
+		<folder byLabel="Exemples de magasins">
+			<contact id="contact1" name="RBS Change Store" city="Entzeim" country="France" phone="0388999999" mails="store@rbschange.fr" />
+			<contact id="contact2" name="Lila's Kitchen" city="Strasbourg" country="France" phone="0388000000" mails="lila@lilas-kitchen.com" function="Gérante" firstname="Lila" lastname="Doe"/>
+			<contact id="contact3" name="Lila's Kitchen" city="Strasbourg" country="France" phone="0388000001" mails="john@lilas-kitchen.com" function="Service après vente" firstname="John" lastname="Doe"/>
+		</folder>	
+	</rootfolder>
+	
+	<website byTag="default_modules_website_default-website" id="default-website">
+		<execute method="setDocumentIdAttribute" />
+		<binding fileName="modules/store/setup/globalDefaultStructure.xml" />
+		<execute method="setDocumentIdAttribute" attribute-name="website-id" />
+		<execute method="setDocumentTypeAttribute" attribute-name="website-type" />
+		<topic byLabel="Compte client">
+			<execute method="setDocumentIdAttribute" />
+			<execute method="setDocumentTypeAttribute" />
+			<binding fileName="modules/store/setup/customerDefaultStructure.xml" />
+		</topic>
+		<topic byLabel="Nos magasins" id="storetopic" />
+		<menus>
+			<menu byTag="contextual_website_website_menu-main">
+				<menuitempage pageid="storetopic" />
+			</menu>
+		</menus>
+	</website>
+	
+	<attribute name="description" default="true">
+		<![CDATA[<p>Sed sapien risus, rhoncus ac, vehicula ac, vulputate ut, nibh. Praesent nisi nulla, bibendum dapibus, tincidunt sed, dapibus ac, orci. Duis vulputate. Morbi nunc. Donec libero nulla, suscipit eget, hendrerit sit amet, sollicitudin et, libero. Integer metus arcu, malesuada et, vestibulum vel, accumsan in, mi. Curabitur molestie. Vestibulum ut purus. Duis vestibulum orci condimentum diam. Cras congue pharetra mauris! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mollis tortor. Donec velit mauris, facilisis vel, venenatis id, congue eget; nisi. Nullam dictum laoreet ligula. Pellentesque magna. In lobortis, eros a elementum dictum, est neque sodales quam, in tempor mi leo rhoncus nisi.</p>]]>
+	</attribute>
+	<attribute name="opening-1" default="true"><![CDATA[<p>24 heures sur 24, 7 jours sur 7.</p>]]></attribute>
+	<attribute name="opening-2" default="true"><![CDATA[<ul><li>lundi 	14:00:00 - 18:30:00</li>
+<li>mardi 	10:30:00 - 19:00:00</li>
+<li>mercredi 	10:30:00 - 19:00:00</li>
+<li>jeudi 	10:30:00 - 19:00:00</li>
+<li>vendredi 	10:30:00 - 19:00:00</li>
+<li>samedi 	10:30:00 - 19:00:00</li></ul>]]></attribute>
+	<country byCode="FR" id="fr" />
+	
+	<rootfolder module="store">
+		<folder byLabel="m.store.document.storeservicefolder.document-name">
+			<storeservice publicationstatus="PUBLICATED" byCodeReference="SAV" id="SAV" label="S.A.V" pictogram-refid="sav_visual" description-attr="" />
+			<storeservice publicationstatus="PUBLICATED"  byCodeReference="24/24" id="2424" label="Ouverture 24h/24h &amp; 7j/7j" pictogram-refid="clock_visual" description-attr="" />	
+		</folder>
+		<folder byLabel="m.generic.bo.general.samples">
+			<store id="store1" byCodeReference="Change" label="RBS Change Store" visual-refid="media1" description-attr=""
+				services-refids="SAV,2424"
+				openingHours-attr="opening-1" contact-refids="contact1" latitude="48.5463108" longitude="7.65184339"
+				addressLine1="AEROPARC 1" addressLine2="11 rue Icare" zipCode="67836" city="ENTZHEIM" countryId-refid="fr" website-refids="default-website"/>
+				
+			<store id="store2" byCodeReference="Lilas" label="Lila's Kitchen" visual-refid="media2" description-attr=""
+				services-refids="SAV" isShippingRelay="false"
+				openingHours-attr="opening-2" contact-refids="contact2,contact3" latitude="48.56598091501242" longitude="7.772782135104308"
+				addressLine1="22 rue de la cuisine" zipCode="67000" city="STRASBOURG" countryId-refid="fr" website-refids="default-website" />
+		</folder>	
+
+	</rootfolder>
+	
+	
+
+	<rootfolder module="shipping">
+		<folder byLabel="m.generic.bo.general.samples">
+			<instore byLabel="Retrait en magasin" description="Retrait en magasin" code="InStore" codeReference="InStore" visual-refid="instore_visual" />
+		</folder>
+	</rootfolder>
+</script>
