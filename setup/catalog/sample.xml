@@ -3,6 +3,7 @@
 	<!-- 
 		WARNING: before importing this file, import :
 			- catalog/default.xml
+			- media/sample.xml
 			- payment/sample.xml 
 			- shipping/sample.xml
 	-->
@@ -15,198 +16,463 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
+
+	<!-- Remind all needs to catalog's samples --> 
 
 	<rootfolder module="media">
-		<folder label="Média liés aux exemples de catalogues">
-			<media path="modules/sample/setup/catalog/media/Anniversaire3.jpg" label="Anniversaire 3" id="photo1" />
-			<media path="modules/sample/setup/catalog/media/Anniversaire4.jpg" label="Anniversaire 4" id="photo2" />
-			<media path="modules/sample/setup/catalog/media/papillon_change.jpg" label="Papillon change" id="photo3" />
-			<media path="modules/sample/setup/catalog/media/RBS_batiment_open_space.jpg" label="RBS batiment open space" id="photo4" />
-			<media path="modules/sample/setup/catalog/media/RBS_batiment.jpg" label="RBS batiment" id="photo5" />
-			<media path="modules/sample/setup/catalog/media/nike_logo.jpg" label="Logo Nike" id="photo6" />
-			<media path="modules/sample/setup/catalog/media/adidas_logo.jpg" label="Logo Adidas" id="photo7" />
+		<folder byLabel="m.generic.bo.general.samples">
+			<folder byLabel="media">
+				<folder byLabel="Retrogaming">
+					<!-- external media (comming from media module sample) -->
+					<media path="modules/sample/setup/media/media/NES-1985-1.jpg" byLabel="NES (set)" id="NES-1985-1" />
+					<media path="modules/sample/setup/media/media/NES-1985-2.jpg" byLabel="NES (controller)" id="NES-1985-2" />
+					<media path="modules/sample/setup/media/media/NES-ZAPPER.jpg" byLabel="NES Zapper" id="NES-ZAPPER-1" />
+					<media path="modules/sample/setup/media/media/NES-ZAPPER-2.jpg" byLabel="NES Zapper Orange" id="NES-ZAPPER-2" />						
+					<media path="modules/sample/setup/media/media/FAMICOM-1983-1.png" byLabel="FAMICOM (set)" id="FAMICOM-1983-1" />
+					<media path="modules/sample/setup/media/media/FAMICOM-1983-2.jpg" byLabel="FAMICOM (controller)" id="FAMICOM-1983-2" />
+					<media path="modules/sample/setup/media/media/NEOGEO-1990-1.jpg" byLabel="NEO-GEO Main" id="NEOGEO-1990-1" />
+					<media path="modules/sample/setup/media/media/NEOGEO-1990-2.png" byLabel="NEO-GEO Alternate View" id="NEOGEO-1990-2" />
+					<media path="modules/sample/setup/media/media/MASTERSYSTEM-1985-1.png" byLabel="SMS I" id="MASTERSYSTEM-1985" />
+					<media path="modules/sample/setup/media/media/MASTERSYSTEM-1990-1.jpg" byLabel="SMS II" id="MASTERSYSTEM-1990" />
+					<media path="modules/sample/setup/media/media/COLECO-1982.jpg" byLabel="Colecovision" id="COLECO-1982-1" />
+					<media path="modules/sample/setup/media/media/ATARI2600-1978-1.jpg" byLabel="Atari 2600" id="ATARI2600-1978-1" />
+					<media path="modules/sample/setup/media/media/ATARI7800-1986-1.jpg" byLabel="Atari 7800" id="ATARI7800-1986-1" />
+					<media path="modules/sample/setup/media/media/SNES-1992-1.png" byLabel="Super NES" id="SNES-1992-1" />
+					<media path="modules/sample/setup/media/media/SNESPAL-1992-1.png" byLabel="Super NES PAL" id="SNESPAL-1992-1" />
+					<media path="modules/sample/setup/media/media/SNESPAL-1992-2.jpg" byLabel="Super NES PAL (alternate)" id="SNESPAL-1992-2" />
+					<media path="modules/sample/setup/media/media/SFAMICOM-1992-1.png" byLabel="Super FAMICOM" id="SFAMICOM-1992-1" />
+					<media path="modules/sample/setup/media/media/MEGADRIVE-1988-1.jpg" byLabel="Megadrive" id="MEGADRIVE-1988-1" />
+					<media path="modules/sample/setup/media/media/RETROGAMING.png" byLabel="Pong Arcade" id="RETROGAMING" />
+					<media path="modules/sample/setup/media/media/GAMEBOY-ALL.png" byLabel="Gameboy Panorama" id="GAMEBOY-ALL" />
+					<!-- Internal media (included in catalog sample media folder) -->
+					<media path="modules/sample/setup/catalog/media/DUCK-HUNT-BOX.jpg" byLabel="Duck Hunt box" id="DUCK-HUNT-BOX" />
+					<media path="modules/sample/setup/catalog/media/DUCK-HUNT-PIC1.png" byLabel="Duck Hunt game 1" id="DUCK-HUNT-PIC1" />
+					<media path="modules/sample/setup/catalog/media/DUCK-HUNT-PIC2.jpg" byLabel="Duck Hunt game 2" id="DUCK-HUNT-PIC2" />
+					<media path="modules/sample/setup/catalog/media/DUCK-HUNT-PIC3.png" byLabel="Duck Hunt game 3" id="DUCK-HUNT-PIC3" />
+					<media path="modules/sample/setup/catalog/media/NES-CONTROLLER.jpg" byLabel="Manette Nes 1" id="NES-CONTROLLER-PIC1" />
+					<media path="modules/sample/setup/catalog/media/FAMICOM-CONTROLLER.jpg" byLabel="Manette Famicom 1" id="FAMICOM-CONTROLLER-PIC1" />
+					<media path="modules/sample/setup/catalog/media/NES-ADVANTAGE.jpg" byLabel="Joystick Nes 1" id="NES-ADVANTAGE-PIC1" />
+					<media path="modules/sample/setup/catalog/media/GAMEBOY-CLASSIC-PIC1.jpg" byLabel="Gameboy classic 1" id="GAMEBOY-CLASSIC-PIC1" />
+					<media path="modules/sample/setup/catalog/media/GAMEBOY-CLASSIC-PIC2.png" byLabel="Gameboy classic 2" id="GAMEBOY-CLASSIC-PIC2" />
+					<media path="modules/sample/setup/catalog/media/GAMEBOY-CLEAR-PIC1.jpg" byLabel="Gameboy clear 1" id="GAMEBOY-CLEAR-PIC1" />
+					<media path="modules/sample/setup/catalog/media/GAMEBOY-LIGHT-PIC1.jpg" byLabel="Gameboy light 1" id="GAMEBOY-LIGHT-PIC1" />
+					<media path="modules/sample/setup/catalog/media/GAMEBOY-POCKET-PIC1.jpg" byLabel="Gameboy pocket 1" id="GAMEBOY-POCKET-PIC1" />
+					<media path="modules/sample/setup/catalog/media/GAMEBOY-GAME-POKEMON-RED-PIC1.jpg" byLabel="Pokemon version rouge 1" id="GAMEBOY-GAME-POKEMON-RED" />
+					<media path="modules/sample/setup/catalog/media/GAMEBOY-GAME-POKEMON-RED-PIC1.jpg" byLabel="Pokemon version bleu 1" id="GAMEBOY-GAME-POKEMON-BLUE" />
+				</folder>
+			</folder>
 		</folder>
 	</rootfolder>
-
-	<attribute name="brandDescription" default="true">
-		<![CDATA[<p>Sed sapien risus, rhoncus ac, vehicula ac, vulputate ut, nibh. Praesent nisi nulla, bibendum dapibus, tincidunt sed, dapibus ac, orci. Duis vulputate. Morbi nunc. Donec libero nulla, suscipit eget, hendrerit sit amet, sollicitudin et, libero. Integer metus arcu, malesuada et, vestibulum vel, accumsan in, mi. Curabitur molestie. Vestibulum ut purus. Duis vestibulum orci condimentum diam. Cras congue pharetra mauris! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mollis tortor. Donec velit mauris, facilisis vel, venenatis id, congue eget; nisi. Nullam dictum laoreet ligula. Pellentesque magna. In lobortis, eros a elementum dictum, est neque sodales quam, in tempor mi leo rhoncus nisi.</p>]]>
-	</attribute>
 	<rootfolder module="brand">
-		<folder byLabel="Marques liées aux exemples de catalogues">
-			<brand label="Nike" visual-refid="photo6" description-attr="brandDescription" id="brand1" />
-			<brand label="Adidas" visual-refid="photo7" description-attr="brandDescription" websiteUrl="http://www.adidas.com" id="brand2" />
+		<folder byLabel="m.generic.bo.general.samples">
+			<brand byLabel="Nintendo" id="NINTENDO" />
+			<brand byLabel="SNK" id="SNK" />
+			<brand byLabel="Sega" id="SEGA" />
+			<brand byLabel="Coleco" id="COLECO" />
+			<brand byLabel="Atari" id="ATARI" />
 		</folder>
 	</rootfolder>
-
-	<rootfolder module="catalog">
-		<topshelf label="rayon 1" visual-refid="photo5" id="r1">
-			<shelf label="sous-rayon 1" visual-refid="photo4" id="r1-1" />
-			<shelf label="sous-rayon 2" visual-refid="photo2" id="r1-2" />
-		</topshelf>
-		<topshelf label="rayon 2" visual-refid="photo3" id="r2">
-			<shelf label="sous-rayon 1" visual-refid="photo4" id="r2-1" />
-		</topshelf>
-		<topshelf label="rayon 3" visual-refid="photo2" id="r3" />
-		<topshelf label="rayon 4" visual-refid="photo2" id="r4" />
-		<topshelf label="rayon 5" visual-refid="photo3" id="r5">
-			<shelf label="sous-rayon 1" visual-refid="photo4" id="r5-1" />
-		</topshelf>
-		<topshelf label="rayon 6" visual-refid="photo5" id="r6">
-			<shelf label="sous-rayon 1" visual-refid="photo4" id="r6-1" />
-			<shelf label="sous-rayon 2" visual-refid="photo2" id="r6-2" />
-		</topshelf>
+	<rootfolder module="list">
+		<folder byLabel="m.generic.bo.general.samples">
+			<editablelist listid="modules_catalog/videostd" id="VIDEOSTD-LIST"
+						label="Standard vidéo" description="Liste des différents standards vidéos couleur">
+						<item byLabel="NTSC" id="NTSC" />
+						<item byLabel="PAL" id="PAL" />
+			</editablelist>
+			<editablelist listid="modules_catalog/gamezones" id="GAMEZONES-LIST"
+						label="Zonage" description="Liste des différentes zones souvent affectés aux cartouches de jeux vidéos et a leur console">
+						<item byLabel="Japon" id="JAP" />
+						<item byLabel="USA" id="USA" />
+						<item byLabel="North America" id="N-USA" />
+						<item byLabel="Europe" id="EUR" />
+			</editablelist>
+			<editablelist listid="modules_catalog/samplecolors" id="COLORS-LIST"
+				label="Couleur de déclinaison" description="Exemple de liste éditable par utile pour avoir une palette de couleurs">
+				<item byLabel="Rouge" id="LIST-ITEM-RED" />
+				<item byLabel="Bleu" id="LIST-ITEM-BLUE" />
+				<item byLabel="Jaune" id="LIST-ITEM-YELLOW" />
+				<item byLabel="Vert" id="LIST-ITEM-GREEN" />
+				<item byLabel="Orange" id="LIST-ITEM-ORANGE"/>
+				<item byLabel="Violet" id="LIST-ITEM-PURPLE" />
+				<item byLabel="Gris" id="LIST-ITEM-GREY"/>
+				<item byLabel="Noir" id="LIST-ITEM-BLACK" />
+				<item byLabel="Blanc" id="LIST-ITEM-WHITE" />
+				<i18n lang="en">
+					<item byRefid="LIST-ITEM-RED" label="Red" />
+					<item byRefid="LIST-ITEM-BLUE" label="Blue" />
+					<item byRefid="LIST-ITEM-YELLOW" label="Yellow" />
+					<item byRefid="LIST-ITEM-GREEN" label="Green" />
+					<item byRefid="LIST-ITEM-ORANGE" label="Orange" />
+					<item byRefid="LIST-ITEM-PURPLE" label="Purple" />
+					<item byRefid="LIST-ITEM-GREY" label="Grey" />
+					<item byRefid="LIST-ITEM-BLACK" label="Black" />
+					<item byRefid="LIST-ITEM-WHITE" label="White" />
+				</i18n>
+			</editablelist>
+		</folder>
 	</rootfolder>
+	<rootfolder module="catalog">
+		<topshelf byLabel="Consoles" visual-refid="NES-1985-1" id="CAT-CONSOLES">
+			<shelf byLabel="Portables" visual-refid="GAMEBOY-ALL" id="SUBCAT-PORTABLE" />
+		</topshelf>
+		<topshelf byLabel="Accessoires" visual-refid="NES-ZAPPER-1" id="CAT-ACCESSORIES" />
+		<topshelf byLabel="Jeux" visual-refid="DUCK-HUNT-BOX" id="CAT-GAMES" />
+		<attributefolder label="m.catalog.document.attributefolder.document-name">
+			<attributeDefinition label="Couleur" code="COLOR" type="text" list-refid="COLORS-LIST" />
+			<attributeDefinition label="Standard vidéo" code="VIDEOSTD" type="text" list-refid="VIDEOSTD-LIST" />
+			<attributeDefinition label="Zonage" code="GAMEZONE" type="text" list-refid="GAMEZONES-LIST" />
+		</attributefolder>
+	</rootfolder>
+	<shop byCodeReference="DEMO" id="shop" topShelf-refids="CAT-CONSOLES,CAT-ACCESSORIES,CAT-GAMES" />
 	
-	<shop byCodeReference="DEMO" id="shop" topShelf-refids="r1,r2,r5,r6" />
-
-	<mode id="shipping" byLabel="Colissimo" />
-	<chequeconnector id="payment" byLabel="Paiement par chèque" />
-	<freeconnector id="freepayment" byLabel="Pas de paiement" />
-
-	<page byLabel="Contenu du rayon">
-		<execute method="setPageRefAsIndex" />
-	</page>
-
-	<shippingfilter byLabel="Collisimo 10€" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="8.04" />
+	<!-- MOP/MOS -->
+	<mode id="shipping" byCode="ColiPoste" />
+	<chequeconnector id="payment" byCode="CHQ" />
+	<freeconnector id="freepayment" byCode="FREE" />
+	<shippingfilter byLabel="Colissimo" shop-refid="shop" mode-refid="shipping" taxCategory="10" valueWithoutTax="8.361204013377927" />
 	<paymentfilter byLabel="Chèque" shop-refid="shop" connector-refid="payment" />
-	<paymentfilter byLabel="Offert" shop-refid="shop" connector-refid="freepayment" />
+	<paymentfilter byLabel="Avoir/Commande offerte" shop-refid="shop" connector-refid="freepayment" />
 
-	<attribute name="productDescription" default="true">
-		<![CDATA[<p>Sed sapien risus, rhoncus ac, vehicula ac, vulputate ut, nibh. Praesent nisi nulla, bibendum dapibus, tincidunt sed, dapibus ac, orci. Duis vulputate. Morbi nunc. Donec libero nulla, suscipit eget, hendrerit sit amet, sollicitudin et, libero. Integer metus arcu, malesuada et, vestibulum vel, accumsan in, mi. Curabitur molestie. Vestibulum ut purus. Duis vestibulum orci condimentum diam. Cras congue pharetra mauris! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mollis tortor. Donec velit mauris, facilisis vel, venenatis id, congue eget; nisi. Nullam dictum laoreet ligula. Pellentesque magna. In lobortis, eros a elementum dictum, est neque sodales quam, in tempor mi leo rhoncus nisi.</p>
-		<p>Curabitur et libero ut ante porta gravida? Phasellus rhoncus, dolor at consectetuer porta; tortor odio suscipit ante, non congue risus libero eu sapien. Donec ut pede. Suspendisse sapien? Integer arcu metus; bibendum nec, blandit vitae, faucibus quis, odio. Sed euismod sapien a libero. Curabitur placerat scelerisque dui. Praesent convallis dolor quis nisi. Praesent lorem lacus, luctus sed, rutrum non, lacinia non, nisi? Cras et lectus ac nisi eleifend posuere. Suspendisse eu risus luctus ipsum congue fermentum? Praesent eu erat sed nunc ullamcorper vehicula.</p>
-		<p>Morbi id est et erat fringilla vestibulum. Maecenas risus. Ut blandit nibh auctor arcu. Integer iaculis, neque at aliquet consectetuer, nunc purus placerat elit, et ultrices mi neque vel dolor. Fusce porttitor tellus quis nulla. Suspendisse potenti. Aenean et erat. Integer nisl leo, vulputate vel, elementum at, congue ultricies, tellus. Proin id sapien sed mauris vehicula semper. Suspendisse eget eros vitae erat vehicula dignissim. Proin tempus. Pellentesque at velit ac felis tristique faucibus. Donec euismod dui at nisl.</p>]]>
-	</attribute>
-	<simpleproduct label="produit 1" id="product1" shelf-refids="r1-1,r2" visual-refid="photo1" brand-refid="brand1"
-		stockQuantity="5" codeReference="P1" description-attr="productDescription">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="90" valueWithoutDiscount="100" discountDetail="10%" ecoTax="5" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="89" valueWithoutDiscount="95" ecoTax="5" thresholdMin="5" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="79" valueWithoutDiscount="85" ecoTax="5" thresholdMin="10" />
-		<comment authorName="Toto67" email="toto67@rbs.fr" authorwebsiteurl="http://rbs.fr" contentsAsBBCode="Super !" rating="5" />
-		<comment authorName="FanDeChange" email="fandechange@rbs.fr" authorwebsiteurl="http://change.rbs.fr" contentsAsBBCode="Moi j'ai eu plein de problèmes avec..."
-			rating="1" />
-		<comment authorName="MacUser" email="macuser@rbs.fr" contentsAsBBCode="Le design est top mais ça ne marche pas toujours bien." rating="3" />
-		<comment websiteId="123" authorName="UtilisateurAutreSite" email="autresite@rbs.fr" contentsAsBBCode="Test." rating="3" />
+	<!-- DUCK HUNT -->
+	<attribute name="description-duckhunt"><![CDATA[Duck Hunt est un jeu vidéo de tir au pistolet développé et édité par Nintendo, sorti en 1985 sur NES. Il est le premier jeu à exploiter le pistolet de la console, le NES Zapper, via une simulation de chasse aux canards et de tir aux pigeons d'argile.
+Le jeu fut livré avec les lots « Action Set » et « Deluxe Set » de la console, mais fut également mis en vente séparément.
+Ce jeu vidéo est l'adaptation du jeu Duck Hunt (de Nintendo toujours) sorti en 1977, qui est une sorte de tir aux pigeons électronique. Il est composé d'un petit projecteur qui envoie les canards sur le mur et d'un fusil pour les abattre. C'est devenu un objet collector.
+Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="http://fr.wikipedia.org/wiki/Duck_Hunt">Voir l'article Wikipedia</a>).
+	]]></attribute>
+	<simpleproduct	byCodeReference="DUCK-HUNT" 
+						id="DUCK-HUNT"	
+						label="Duck Hunt" 
+						shelf-refids="CAT-GAMES" 
+						complementary-refids=""
+						visual-refid="DUCK-HUNT-BOX"
+						additionnalVisual-refids="DUCK-HUNT-PIC1,DUCK-HUNT-PIC2,DUCK-HUNT-PIC3" 
+						brand-refid="NINTENDO"
+						stockQuantity="8" 
+						shippedIn="1"
+						description-attr="description-duckhunt"
+						similar-refids="">
+			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="20" />
 	</simpleproduct>
-	<simpleproduct label="produit 2" id="product2" shelf-refids="r1-1,r2-1" visual-refid="photo2" brand-refid="brand2"
-		stockQuantity="10" codeReference="P2" description-attr="productDescription">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="130" valueWithoutDiscount="150" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="125" valueWithoutDiscount="140" thresholdMin="5" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="105" valueWithoutDiscount="130" thresholdMin="10" />
-	</simpleproduct>
-	<declinedproduct label="produit 3" id="product3" shelf-refids="r2-1" visual-refid="photo3"
-		synchronizePrices="false" complementary-refids="product1,product2" additionnalVisual-refids="photo1,photo2,photo3,photo4,photo5"
-		codeReference="P3" description-attr="productDescription">
-		<productdeclination label="produit 3, déclinaison 1" codeReference="P3-1" id="d31">
-			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="490" valueWithoutDiscount="500" />
+
+	<!-- NES ZAPPER -->
+	<attribute name="description-zapper"><![CDATA[Le NES Zapper (ou Famicom Light Gun au Japon) est un pistolet électronique, vendu comme accessoire de la Nintendo Entertainment System (NES) en 1985 et de la Nintendo Family Computer (Famicom) en 1984. La version japonaise est une représentation réaliste d'un revolver, alors que la version occidentale ressemble plus à un jouet, gardant le schéma de couleur de la NES. Le NES Zapper original est gris, mais une autre version sortit plus tard en couleur orange, la première ressemblant trop à une arme réelle pour le marché occidental. Il permet aux joueurs de tirer sur la télévision, sur des cibles telles que des canards, des pigeons d'argile ou encore des bandits.(<a href="http://fr.wikipedia.org/wiki/NES_Zapper">Voir l'article Wikipedia</a>).
+	]]></attribute>
+	<declinedproduct	byCodeReference="NES-ZAPPER"
+						label="NES Zapper" 
+						shelf-refids="CAT-ACCESSORIES" 
+						complementary-refids="DUCK-HUNT"
+						synchronizePrices="false" 
+						brand-refid="NINTENDO" 
+						description-attr="description-zapper"
+						similar-refids=""
+						axe1="attribute::COLOR" 
+						showAxeInList="0">
+		<productdeclination shippedIn="1"  visual-refid="NES-ZAPPER-1"  byCodeReference="NES-ZAPPER-GREY" id="NES-ZAPPER-GREY" label="NES Zapper (gris)" stockQuantity="5" attributes='COLOR:{ref-id:LIST-ITEM-GREY},GAMEZONE:{ref-id:JAP}'>
+			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="20" />
 		</productdeclination>
-		<productdeclination label="produit 3, déclinaison 2" codeReference="P3-2" id="d32">
-			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="529" valueWithoutDiscount="559" />
+		<productdeclination shippedIn="1"  visual-refid="NES-ZAPPER-2" byCodeReference="NES-ZAPPER-ORANGE" id="NES-ZAPPER-ORANGE" label="NES Zapper (orange)" stockQuantity="10" attributes='COLOR:{ref-id:LIST-ITEM-ORANGE}'>
+			<price shop-refid="shop"  storeWithTax="true" taxCategory="10" value="20" />
 		</productdeclination>
 	</declinedproduct>
-	<simpleproduct label="produit 4" id="product4" shelf-refids="r3,r4" visual-refid="photo4" codeReference="P4"
-		description-attr="productDescription">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="90" valueWithoutDiscount="100" />
+
+	<!-- NES CONTROLLER -->
+	<attribute name="description-nescontroller"><![CDATA[La manette de jeu utilisée par la NES et la Famicom]]></attribute>
+	<simpleproduct	byCodeReference="NES-CONTROLLER" 
+						id="NES-CONTROLLER"	
+						label="Manette de NES" 
+						shelf-refids="CAT-ACCESSORIES" 
+						complementary-refids="NES-ZAPPER-GREY"
+						visual-refid="NES-CONTROLLER-PIC1"
+						additionnalVisual-refids="" 
+						brand-refid="NINTENDO"
+						stockQuantity="8" 
+						shippedIn="1"
+						description-attr="description-nescontroller"
+						similar-refids="">
+			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="20" />
 	</simpleproduct>
-	<simpleproduct label="produit 5" id="product5" shelf-refid="r3" visual-refid="photo5" codeReference="P5" description-attr="productDescription">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="130" valueWithoutDiscount="150" />
+	<simpleproduct	byCodeReference="FAMICOM-CONTROLLER" 
+						id="FAMICOM-CONTROLLER"	
+						label="Manette de Famicom" 
+						shelf-refids="CAT-ACCESSORIES" 
+						complementary-refids="NES-ZAPPER-ORANGE"
+						visual-refid="FAMICOM-CONTROLLER-PIC1"
+						additionnalVisual-refids="" 
+						brand-refid="NINTENDO"
+						stockQuantity="8" 
+						shippedIn="1"
+						description-attr="description-nescontroller"
+						similar-refids="">
+			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="20" />
 	</simpleproduct>
-	<declinedproduct label="produit 6" id="product6" shelf-refids="r4" complementary-refids="product4,product5"
-		codeReference="P6" synchronizePrices="true" description-attr="productDescription">
-		<productdeclination label="produit 6, déclinaison 1" codeReference="P6-1" />
-		<productdeclination label="produit 6, déclinaison 2" codeReference="P6-2" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="490" valueWithoutDiscount="500" />
-	</declinedproduct>
-	<simpleproduct label="produit 7" id="product7" shelf-refids="r4,r5" visual-refid="photo1" codeReference="P7">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="90" valueWithoutDiscount="100" />
+
+	<!-- NES ADVANTAGE -->
+	<attribute name="description-nesadvantage"><![CDATA[Le NES Advantage est un grand joystick de type arcade développé pour la console Nintendo Entertainment System et vendu à partir de 1987. Ce joystick est censé reposer sur une surface plane afin d'offrir un meilleur confort de jeu (sur une table ou sur le sol). Ainsi positionné celui-ci peut être utilisé comme le joystick d'un jeu d'arcade, avec une main utilisant le stick et l'autre appuyant sur les boutons.(<a href="http://fr.wikipedia.org/wiki/NES_Advantage">Voir l'article Wikipedia</a>)]]></attribute>
+	<simpleproduct	byCodeReference="NES-ADVANTAGE" 
+						id="NES-ADVANTAGE"	
+						label="Joystick pour la NES" 
+						shelf-refids="CAT-ACCESSORIES" 
+						complementary-refids="NES-ZAPPER-GREY,NES-CONTROLLER"
+						visual-refid="NES-ADVANTAGE-PIC1"
+						additionnalVisual-refids="" 
+						brand-refid="NINTENDO"
+						stockQuantity="8" 
+						shippedIn="1"
+						description-attr="description-nesadvantage"
+						similar-refids="">
+			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="40" />
 	</simpleproduct>
-	<simpleproduct label="produit 8" id="product8" shelf-refids="r4,r5,r6" visual-refid="photo2" codeReference="P8">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="130" valueWithoutDiscount="150" />
+
+	<!-- NES -->
+	<attribute name="description-nes"><![CDATA[
+		<p class="normal">Le Nintendo Entertainment System (en français : le système de divertissement de Nintendo), ou NES, est une console de jeux vidéo 8 bits du constructeur japonais Nintendo sortie en 1985 en Amérique du Nord et en 1986-1987 en Europe et en Australie. Son équivalent japonais est la Family Computer (ファミリーコンピュータ, Famirī Konpyūta), ou Famicom (ファミコン, Famikon), sortie quelques années avant, en 1983. Le succès de la console fut énorme au Japon et en Amérique du Nord, ce qui aida à redynamiser l'industrie du jeu vidéo après le krach du jeu vidéo de 1983, et ce qui fixa les normes pour les consoles suivantes, du game design (le premier jeu moderne de plateforme, Super Mario Bros., était le premier jeu vidéo qui justifiait l'achat de la console à lui tout seul, c'est un killer game) aux procédures de gestion. La NES est également la première console pour laquelle Nintendo alla au-devant des développeurs tiers. (<a href="http://fr.wikipedia.org/wiki/Nintendo_Entertainment_System" class="link">Voir l'article Wikipedia</a>)</p>
+	]]></attribute>
+	<simpleproduct 	byCodeReference="NES-1985" 
+					label="Nintendo Entertainment System (NES)" 
+					shelf-refids="CAT-CONSOLES" 
+					id="NES-1985" 
+					visual-refid="NES-1985-1" 
+					additionnalVisual-refids="NES-1985-2" 
+					brand-refid="NINTENDO" 
+					stockQuantity="8" 
+					shippedIn="1"
+					description-attr="description-nes">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="179.00" />
 	</simpleproduct>
-	<declinedproduct label="produit 9" id="product9" shelf-refids="r1-1,r4,r5,r6" additionnalVisual-refids="photo1,photo2,photo3,photo4,photo5"
-		complementary-refids="product2,product4,d31,d32" synchronizePrices="false">
-		<productdeclination label="produit 9, déclinaison 1" codeReference="P9-1">
-			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="490" valueWithoutDiscount="500" />
-			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="470" valueWithoutDiscount="490" thresholdMin="5" />
-			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="450" valueWithoutDiscount="480" thresholdMin="10" />
+	<!-- FAMICOM -->
+	<attribute name="description-famicom"><![CDATA[
+		<p class="normal">La Famicom (ファミコン, Famikon), ou Family Computer (ファミリーコンピュータ, Famirī Konpyūta), est une console de jeux vidéo créée par Nintendo en 1983. Elle est sortie dans une version légèrement différente en Europe et aux États-Unis, sous le nom Nintendo Entertainment System (NES).Son nom est la réduction de Family Computer. À sa sortie au Japon, la Famicom se vend à 500 000 exemplaires en deux semaines. Son succès vient du fait qu'aucun concurrent n'est présent alors. L'industrie des jeux vidéo sort d'une vaste crise, et personne ne s'imagine le succès de la Famicom. Cependant, imitant Nintendo, Sega sort la Sega Mark III (Master System en Europe et aux États-Unis).Nintendo élargit sa clientèle en exportant en 1985 aux États-Unis, la console rebaptisée Nintendo Entertainment System. Encore une fois ongné des contrats avec les éditeurs tiers afin de s'assurer un bon catalogue de jeux. Nintendo, et son patron Hiroshi Yamauchi, sont persuadés que les jeux sont l'argument de vente numéro un.</p><p class="normal">Cette console connut un succès phénoménal, Nintendo estimant en avoir vendu 61 millions. À la fin des années 1980, au Japon et aux États-Unis, un foyer sur trois était équipé de Famicom. À l'époque, Nintendo fut l'entreprise japonaise la plus rentable, devant Toyota. Plus de 1 200 jeux furent développés pour cette console.</p><p class="normal">Il existe plusieurs versions de la console : la Famicom au Japon, la NES en Europe, aux États-Unis et en Australie, la AV Famicom qui est une version relookée et la Twin Famicom qui regroupe la console et le Disk System en une seule machine. (<a href="http://fr.wikipedia.org/wiki/Famicom" class="link">Voir l'article Wikipedia</a>)</p>
+	]]></attribute>
+	<simpleproduct 	byCodeReference="FAMICOM-1983" 
+					label="Famicom" 
+					shelf-refids="CAT-CONSOLES" 
+					id="FAMICOM-1983" 
+					visual-refid="FAMICOM-1983-1" 
+					additionnalVisual-refids="FAMICOM-1983-2" 
+					brand-refid="NINTENDO" 
+					stockQuantity="4" 
+					shippedIn="3"
+					description-attr="description-famicom">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="249.00" />
+	</simpleproduct>
+	
+	<!-- COLECOVISION -->
+	<attribute name="description-coleco"><![CDATA[
+		<p class="normal">La Colecovision est une console de jeu vidéo de seconde génération commercialisée par Coleco (Connecticut Leather Company), sortie en août 1982. Elle propose des graphismes et des manettes similaires aux jeux d'arcade de l'époque.</p><p class="normal">Le Colecovision est commercialisé à l'été 1982 pour un prix de 199 $. Le catalogue de lancement comprend douze titres, avec dix titres à venir en plus. Finalement, environ 170 titres sont sortis sur cartouche pendant toute sa vie. La majorité des titres de son catalogue sont des conversions de jeux d'arcade.</p><p class="normal">Coleco a commercialisé un module qui rend la console compatible avec l'Atari 2600, lui apportant la plus vaste bibliothèque de jeux de toutes les consoles du moment. Le module a provoqué une action judiciaire d'Atari, mais cette dernière n'a pas pu en empêcher les ventes du module. Pour l'anecdote, grâce à ce module les possesseurs de cartouches VCS2600 français découvraient enfin leurs jeux en 128 couleurs au lieu de la simple colorisation suspecte 8 couleurs de la version noir et blanc de ceux-ci, sur VCS2600 SECAM.</p>
+	]]></attribute>
+	<simpleproduct 	byCodeReference="COLECO-1982" 
+					label="Colecovision" 
+					shelf-refids="CAT-CONSOLES" 
+					id="COLECO-1982" 
+					visual-refid="COLECO-1982-1" 
+					additionnalVisual-refids="" 
+					brand-refid="COLECO" 
+					stockQuantity="1" 
+					description-attr="description-coleco">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="149.00" />
+	</simpleproduct>
+	
+	<!-- SMS I et II -->
+	<attribute name="description-sms"><![CDATA[
+	<p class="normal">La console qui a précédé la Master System au Japon est la SG-1000 Mark III, qui succède à la SG-1000 et la SG-1000 II. Elle sort en 1985 au Japon, avec pour mascotte Alex Kidd.</p><p class="normal">La console est redessinée avant d'être vendue aux États-Unis sous le nom Sega Master System en juin 1986, soit un an après la sortie de la NES. Son prix de vente est alors de 200 dollars</p><p class="normal">La console sort alors un peu partout dans le monde, y compris au Japon, en 1987 sous son nouveau nom. Mais la version japonaise n'était pas qu'un simple recarrossage de la SG-1000 Mark III puisqu'elle incorporait pour le son un module FM qu'exploitaient certains jeux.</p><p class="normal">Bien que la Master System soit sur certains points plus avancée que la NES, elle n'atteint pas le même niveau de popularité aux États-Unis. Ce manque de succès a de multiples causes. On peut citer la quantité de jeux qui a joué en l'avantage de la NES, ainsi que l'année qui sépare la sortie des deux consoles. L'accord qui existait entre Nintendo et ses éditeurs a certainement eu un impact. En effet, le contrat des éditeurs stipulait que ceux-ci ne devaient produire que pour la console de Nintendo. Durant les quatre premiers mois suivant sa sortie, la Master System s'est vendue à 125 000 exemplaires contre 2 000 000 pour la NES dans la même période.</p>
+	]]></attribute>
+	<declinedproduct	byCodeReference="SMS-MULTI" 	
+						label="Master System" 
+						shelf-refids="CAT-CONSOLES" 
+						complementary-refids=""
+						synchronizePrices="false" 
+						brand-refid="SEGA" 
+						description-attr="description-sms"
+						similar-refids="COLECO-1982,FAMICOM-1983,NES-1985">
+		<productdeclination shippedIn="1" visual-refid="MASTERSYSTEM-1985"  byCodeReference="SMS-1" id="SMS-1" label="Master System I (1985)" stockQuantity="5">
+			<price  shop-refid="shop" storeWithTax="true" taxCategory="10" value="249" valueWithoutDiscount="299" />
 		</productdeclination>
-		<productdeclination label="produit 9, déclinaison 2" codeReference="P9-2">
-			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="529" valueWithoutDiscount="559" />
-			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="499" valueWithoutDiscount="549" thresholdMin="5" />
-			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="489" valueWithoutDiscount="539" thresholdMin="10" />
+		<productdeclination shippedIn="3" visual-refid="MASTERSYSTEM-1990" byCodeReference="SMS-2" label="Master System II (1990)" stockQuantity="10">
+			<price shop-refid="shop"  storeWithTax="true" taxCategory="10" value="199" />
 		</productdeclination>
-		<comment authorName="Toto67" email="toto67@rbs.fr" authorwebsiteurl="http://rbs.fr" contentsAsBBCode="Pas mal du tout !" rating="4" />
-		<comment authorName="FanDeChange" email="fandechange@rbs.fr" authorwebsiteurl="http://change.rbs.fr" contentsAsBBCode="C'est nul !"
-			rating="1" />
-		<comment authorName="MacUser" email="macuser@rbs.fr" contentsAsBBCode="Bof..." rating="2" />
-		<comment websiteId="123" authorName="UtilisateurAutreSite" email="autresite@rbs.fr" contentsAsBBCode="Test." rating="3" />
 	</declinedproduct>
-	<simpleproduct label="produit 13" id="product13" shelf-refids="r4,r5-1,r6-1,r6-2" visual-refid="photo3"
-		codeReference="P13">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="89" />
+	<!-- ATARI 2600 -->
+	<attribute name="description-atari2600"><![CDATA[
+	<p class="normal">L’Atari 2600 est lancée en octobre 1977 au prix de 199 USD (de l’époque), livrée avec une paire de joysticks et le jeu Combat. C’est la troisième console à cartouches, après la Channel F de Fairchild et la RCA Studio II, commercialisée un an plus tôt (les précédentes consoles du marché intègrent un ou plusieurs jeux sans la possibilité d’en adjoindre d’autres). À l’origine, le nom de la console est Atari VCS, pour Video Computer System. Le nom Atari 2600 est utilisé pour la première fois en 1982 lors de la sortie de l’Atari 5200. Avec entre 25 et 40 millions d’unités vendues, l’Atari 2600 est la console la plus populaire de sa génération. Le succès est historique, marquant l’avènement d’un marché de masse pour le jeu vidéo. La console rapporte beaucoup d’argent à la société Atari jusqu’en 1983 et la crise du marché du jeu vidéo aux États-Unis. Vendue principalement aux États-Unis et en Europe, elle est produite jusqu’en 1991, ce qui constitue un record de longévité sur les marchés occidentaux.</p>
+	]]></attribute>
+	<simpleproduct 	byCodeReference="ATARI2600-1978" 
+					label="Atari 2660 (Atari VCS)" 
+					shelf-refids="CAT-CONSOLES" 
+					id="ATARI2600-1978" 
+					visual-refid="ATARI2600-1978-1" 
+					additionnalVisual-refids="" 
+					brand-refid="ATARI" 
+					stockQuantity="5" 
+					shippedIn="2"
+					description-attr="description-atari2600">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="199.00" />
 	</simpleproduct>
-	<simpleproduct label="produit 14" id="product14" shelf-refids="r1-1,r4,r5,r6" visual-refid="photo4" codeReference="P14"
-		complementary-refids="product2,product4">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="130" valueWithoutDiscount="150" />
+
+	<!-- ATARI 7800 -->
+	<attribute name="description-atari7800"><![CDATA[
+	<p class="normal">L'Atari 7800 ProSystem, ou simplement Atari 7800, est une console 
+sortie par la Société Atari en janvier 1986. La sortie originale était 
+prévue deux ans plus tôt sous Atari Inc. Les 7800 avaient à l'origine 
+été conçus pour remplacer l'Atari 5200 en 1984, mais ont été 
+temporairement retardées en raison de la vente de la société après 
+l'échec du marché du jeu vidéo. En janvier 1986, les 7800 ont été 
+sorties et rivaliseraient cette année avec la NES de Nintendo et la 
+Master System de Sega. L'Atari 7800 a des manettes simples, 
+retrocompatibles avec l'Atari 2600. En 2009, IGN a élu l'Atari 7800 en 
+tant que 17ème meilleure console de jeu vidéo de tous les temps.</p>
+<p class="normal">L'Atari 7800 ProSystem était le premier système de jeu d'Atari conçu 
+par une société extérieure, General Computer Corporation (GCC). Le 
+système a été conçu en 1983-1984 avec un lancement grand public prévu en
+ juin 1984, mais qui a été annulé suite à la vente de la société à 
+Tramiel Technology Ltd le 2 juillet 1984. Le projet était à l'origine 
+appelé l'Atari 3600, rebaptisé ensuite l'Atari 7800.</p>
+<p class="normal">Plusieurs facteurs ont influencé la conception de la 7800. D'abord, 
+Atari a fait face à la pression montante du ColecoVision, qui affichait 
+alors des graphismes plus aptes à refléter les jeux d'arcade de l'époque
+ par rapport à l'Atari 2600. Deuxièmement, l'Atari 5200 (le successeur 
+de l'Atari 2600 ) avait été largement critiquée pour l'incapacité à 
+jouer aux jeux d'Atari 2600 sans adaptateur. Finalement, laissant tomber
+ les prix d'ordinateurs familiaux qui ont fait de la Commodore 64 un 
+échec car l'achat d'un ordinateur familial était un meilleur 
+investissement, un PC offre à l'époque la possibilité de jouer à des 
+jeux au gameplay plus performant et pouvait être utilisé dans d'autres 
+buts, comme le traitement de texte.</p>
+	
+	]]></attribute>
+	<simpleproduct 	byCodeReference="ATARI7800-1986" 
+					label="Atari 7800" 
+					shelf-refids="CAT-CONSOLES" 
+					id="ATARI7800-1986" 
+					visual-refid="ATARI7800-1986-1" 
+					additionnalVisual-refids="" 
+					brand-refid="ATARI" 
+					stockQuantity="10" 
+					shippedIn="1"
+					description-attr="description-atari7800">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="149.00" valueWithoutDiscount="179.00"/>
 	</simpleproduct>
-	<simpleproduct label="produit 15" id="product15" shelf-refids="r1-1,r4,r5,r6" visual-refid="photo3" codeReference="P15"
-		complementary-refids="product2,product4">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="90" valueWithoutDiscount="100" />
+	
+	<!-- NEOGEO -->
+	<attribute name="description-neogeo"><![CDATA[
+	    <p class="normal">La Neo-Geo, appelée aussi NeoGeo Advanced Entertainment System, est une console de jeu vidéo sortie en 1990 à la location et en 1991 à la vente.</p><p class="normal">Conçue par la société japonaise SNK, elle a la particularité d'être,d'un point de vue technique,strictement identique au système d'arcade Neo-Geo MVS, avec lequel elle partage une ludothèque commune. La console est connue pour sa ludothèque de jeu d'arcade 2D de qualité, dont une grande partie sont des jeux de combat, ainsi que pour son prix très élevé et par sa très grande longévité. Au vu de son prix et de ses caractéristiques par rapport aux consoles concurrentes de la même époque, elle est considérée par beaucoup comme la « Rolls Royce » des consoles. (<a href="http://fr.wikipedia.org/wiki/Neo-Geo_AES" class="link">Voir l'article Wikipedia</a>)</p>
+	]]></attribute>
+	<simpleproduct 	byCodeReference="NEOGEO-1990" 
+					label="Neo-Geo AES" 
+					shelf-refids="CAT-CONSOLES" 
+					id="NEOGEO-1990" 
+					visual-refid="NEOGEO-1990-1" 
+					additionnalVisual-refids="NEOGEO-1990-2" 
+					brand-refid="SNK" 
+					stockQuantity="0" 
+					description-attr="description-neogeo">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="599.00" />
 	</simpleproduct>
-	<simpleproduct label="produit 16" id="product16" shelf-refids="r1-1,r4,r5,r6" visual-refid="photo4" codeReference="P16"
-		complementary-refids="product4,product5">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="129" valueWithoutDiscount="150" />
+	
+	<!-- SNESPAL -->
+	<attribute name="description-snespal"><![CDATA[
+	<p class="normal">La Super Nintendo est une console de jeux vidéo de salon 16 bits du constructeur japonais Nintendo sortie en 1992 en Europe. Son équivalent japonais est la Super Famicom (スーパーファミコン) sortie en 1990 et arborant quasiment le même design. À noter qu'en Corée du Sud, la Super Famicom est distribuée par Hyundai Electronics sous le nom de Super Comboy (슈퍼 컴보이). L'équivalent nord-américain, le Super Nintendo Entertainment System (Super NES) présente, en revanche, un look résolument différent. Les consoles sont zonées (Asie, Europe, Amérique) mais les différences concrètes sont inexistantes ou aisément contournables. La Super Nintendo, sort pour contrer la Megadrive de Sega (16 bits) et dans une moindre mesure la PC-Engine de NEC (16 bits processeur graphique/8 bits processeur principal) et la Neo-Geo AES de SNK (16 bits). La Super Nintendo sera la mieux vendue des consoles de son époque et malgré ses faibles capacités sur le papier, elle tiendra encore tête à des consoles de génération suivantes : 3DO, Saturn de Sega.</p>
+	]]></attribute>
+	<simpleproduct 	byCodeReference="SNESPAL-1992" 
+					label="Super Nintendo (PAL)" 
+					shelf-refids="CAT-CONSOLES" 
+					id="SNESPAL-1992" 
+					visual-refid="SNESPAL-1992-1" 
+					additionnalVisual-refids="SNESPAL-1992-2" 
+					brand-refid="NINTENDO" 
+					stockQuantity="15" 
+					description-attr="description-snespal">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="199.00" />
 	</simpleproduct>
-	<simpleproduct label="produit 17" id="product17" shelf-refids="r1-1,r4,r5,r6" visual-refid="photo1" codeReference="P17"
-		complementary-refids="product2,product4,d31,d32">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="79" valueWithoutDiscount="100" />
+	
+	<!-- SNES -->
+	
+	<simpleproduct 	byCodeReference="SNES-1992" 
+					label="Super Nintendo (North America)" 
+					shelf-refids="CAT-CONSOLES" 
+					id="SNES-1992" 
+					visual-refid="SNES-1992-1" 
+					additionnalVisual-refids="" 
+					brand-refid="NINTENDO" 
+					stockQuantity="1" 
+					description-attr="description-snes">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="189.00" />
 	</simpleproduct>
-	<simpleproduct label="produit 18" id="product18" shelf-refids="r1-1,r4,r5,r6" visual-refid="photo2" codeReference="P18"
-		similar-refids="product1,product5,product7,product8,d31,d32">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="125" />
+	
+	<attribute name="description-megdrive"><![CDATA[
+	]]></attribute>
+	<simpleproduct 	byCodeReference="MEGADRIVE-1988" 
+					label="Megadrive" 
+					shelf-refids="CAT-CONSOLES" 
+					id="MEGADRIVE-1988" 
+					visual-refid="MEGADRIVE-1988-1" 
+					additionnalVisual-refids="" 
+					brand-refid="SEGA" 
+					stockQuantity="100" 
+					description-attr="description-megdrive">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="149.00" />
 	</simpleproduct>
-	<simpleproduct label="produit 20" id="product20" shelf-refids="r1-1,r4,r5,r6" visual-refid="photo1" codeReference="P20"
-		complementary-refids="product4,product5">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="119" />
-	</simpleproduct>
-	<simpleproduct label="produit 21" id="product21" shelf-refids="r1-1,r4,r5,r6" visual-refid="photo2" codeReference="P21"
-		complementary-refids="product4,product5">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="140" />
-	</simpleproduct>
-	<simpleproduct label="produit 23" id="product23" shelf-refids="r1-1,r4,r5,r6" visual-refid="photo4" codeReference="P23">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="129" />
-	</simpleproduct>
-	<simpleproduct label="produit 24" id="product24" shelf-refids="r1-1,r4,r5,r6" visual-refid="photo5" codeReference="P24">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="130" valueWithoutDiscount="150" />
-	</simpleproduct>
-	<declinedproduct label="produit 25 (décliné)" id="product25" shelf-refids="r1-1,r4,r5,r6" synchronizePrices="true"
-		additionnalVisual-refids="photo1,photo2,photo3,photo4,photo5" complementary-refids="product2,product4" similar-refids="product1,product5,product7,product8"
-		upsell-refids="product14,product15" codeReference="P25">
-		<productdeclination id="product251" label="produit 25, déclinaison 1" codeReference="P25-1" />
-		<productdeclination label="produit 25, déclinaison 2" codeReference="P25-2" />
+	<!--  GB -->
+	<attribute name="description-gameboy"><![CDATA[
+	<p class="normal">Le (ou la) Game Boy (ゲームボーイ, Gēmu Bōi) est une console de jeux vidéo portable créée par Nintendo en 1989.(<a href="http://fr.wikipedia.org/wiki/Gameboy" class="link">Voir l'article Wikipedia</a>)</p>
+	]]></attribute>
+	<declinedproduct	byCodeReference="GAMEBOY" 	
+						label="Game boy" 
+						shelf-refids="SUBCAT-PORTABLE" 
+						complementary-refids=""
+						synchronizePrices="false" 
+						brand-refid="NINTENDO" 
+						description-attr="description-gameboy"
+						similar-refids="">
+		<productdeclination shippedIn="1" visual-refid="GAMEBOY-CLASSIC-PIC1" additionnalVisual-refids="GAMEBOY-CLASSIC-PIC2"  byCodeReference="GAMEBOY-CLASSIC" id="GAMEBOY-CLASSIC" label="Game boy classic (1989)" stockQuantity="3">
+			<price  shop-refid="shop" storeWithTax="true" taxCategory="10" value="85" valueWithoutDiscount="90" />
+		</productdeclination>
+		<productdeclination shippedIn="2" visual-refid="GAMEBOY-POCKET-PIC1" byCodeReference="GAMEBOY-POCKET" label="Game boy pocket (1996)" stockQuantity="10">
+			<price shop-refid="shop"  storeWithTax="true" taxCategory="10" value="75" />
+		</productdeclination>
+		<productdeclination shippedIn="3" visual-refid="GAMEBOY-CLEAR-PIC1" byCodeReference="GAMEBOY-CLEAR" label="Game boy transparente (1998)" stockQuantity="10">
+			<price shop-refid="shop"  storeWithTax="true" taxCategory="10" value="180" />
+		</productdeclination>
+	</declinedproduct>
+
+	<!-- GB Games -->
+	<attribute name="description-pokemon"><![CDATA[<p class="normal">Pokémon version rouge et Pokémon version bleue sont les deux éditions du premier jeu vidéo de rôle japonais de la licence Pokémon développé par Game Freak sous la direction de Satoshi Tajiri. Elles sont éditées par Nintendo sur la console portable Game Boy au Japon en 1996 (originellement dans des versions version rouge et version verte), en Amérique du Nord en 1998, puis en Europe et en Australie en 1999.(<a href="http://fr.wikipedia.org/wiki/Pok%C3%A9mon_Rouge_et_Bleu" class="link">Voir l'article Wikipedia</a>)</p>
+	]]></attribute>
+	<declinedproduct    byCodeReference="POKEMON-GAME" 
+						label="Pokemon" 
+						shelf-refids="CAT-GAMES" 
+						id="POKEMON" 
+						synchronizePrices="true" 
+						additionnalVisual-refids="" 
+						brand-refid="NINTENDO" 
+						description-attr="description-pokemon">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="15.00" />
+		<productdeclination shippedIn="1" visual-refid="GAMEBOY-GAME-POKEMON-RED" byCodeReference="POKEMON-GAME-RED" label="Pokemon version rouge" stockQuantity="100" />
+		<productdeclination shippedIn="1" visual-refid="GAMEBOY-GAME-POKEMON-BLUE" byCodeReference="POKEMON-GAME-BLUE" label="Pokemon version bleu" stockQuantity="100" />
+	</declinedproduct>
+
+	<!-- Bundle -->
+	<bundleproduct id="NES-BUNDLE" byCodeReference="NES-BUNDLE" label="Groupe Starter Nes"  shelf-refids="CAT-CONSOLES,CAT-ACCESSORIES,CAT-GAMES"
+		complementary-refids="" 
+		similar-refids=""
+		upsell-refids="">
+		<bundleditem product-refid="NES-1985" quantity="1" />
+		<bundleditem product-refid="DUCK-HUNT" quantity="1" />
+		<bundleditem product-refid="NES-ZAPPER-ORANGE" quantity="1" />
+		<bundleditem product-refid="NES-CONTROLLER" quantity="2"/>
 		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="490" valueWithoutDiscount="500" />
 		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="470" valueWithoutDiscount="490" thresholdMin="5" />
 		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="450" valueWithoutDiscount="480" thresholdMin="10" />
-		<comment authorName="Toto67" email="toto67@rbs.fr" authorwebsiteurl="http://rbs.fr" contentsAsBBCode="Pas mal du tout !" rating="4" />
-		<comment authorName="FanDeChange" email="fandechange@rbs.fr" authorwebsiteurl="http://change.rbs.fr" contentsAsBBCode="C'est nul !"
-			rating="1" />
-		<comment authorName="MacUser" email="macuser@rbs.fr" contentsAsBBCode="Bof..." rating="2" />
-		<comment websiteId="123" authorName="UtilisateurAutreSite" email="autresite@rbs.fr" contentsAsBBCode="Test." rating="3" />
-	</declinedproduct>
-	<bundleproduct id="produit26" codeReference="P26" label="produit 26 (bundle)"  shelf-refids="r1-1,r4,r5,r6"
-		complementary-refids="product2,product4" 
-		similar-refids="product1,product5,product7,product8,d31,d32"
-		upsell-refids="product14,product15">
-		<bundleditem product-refid="product251" quantity="4" />
-		<bundleditem product-refid="product21" quantity="2" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="490" valueWithoutDiscount="500" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="470" valueWithoutDiscount="490" thresholdMin="5" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="450" valueWithoutDiscount="480" thresholdMin="10" />
-		<comment authorName="Toto67" email="toto67@rbs.fr" authorwebsiteurl="http://rbs.fr" contentsAsBBCode="Pas mal du tout !" rating="4" />
-		<comment authorName="FanDeChange" email="fandechange@rbs.fr" authorwebsiteurl="http://change.rbs.fr" contentsAsBBCode="C'est nul !"
-			rating="1" />
-		<comment authorName="MacUser" email="macuser@rbs.fr" contentsAsBBCode="Bof..." rating="2" />
-		<comment websiteId="123" authorName="UtilisateurAutreSite" email="autresite@rbs.fr" contentsAsBBCode="Test." rating="3" />
 	</bundleproduct>
+	
+	<!-- Cross-selling -->
+	<simpleproduct byCodeReference="NES-1985" similar-refids="FAMICOM-1983,SMS-1" complementary-refids="NES-ZAPPER-GREY,NES-ADVANTAGE,NES-CONTROLLER" upsell-refids="SNES-1992,SNESPAL-1992,NEOGEO-1990" />
+	<simpleproduct byCodeReference="DUCK-HUNT" similar-refids="" complementary-refids="NES-ZAPPER-GREY,NES-1985" upsell-refids="" />
+	<simpleproduct byCodeReference="SNES-1992" similar-refids="SNESPAL-1992" complementary-refids="" upsell-refids="" />
+	<simpleproduct byCodeReference="MEGADRIVE-1988" similar-refids="SNESPAL-1992,SNES-1992" complementary-refids="" upsell-refids="" />
+
+
+	<!--
 	<kit id="produit27" codeReference="P27" label="produit 27 (kit)"  shelf-refids="r1-1,r4,r5,r6"
 		complementary-refids="product2,product4" 
 		similar-refids="product1,product5,product7,product8"
@@ -218,5 +484,5 @@
 			rating="1" />
 		<comment authorName="MacUser" email="macuser@rbs.fr" contentsAsBBCode="Bof..." rating="2" />
 		<comment websiteId="123" authorName="UtilisateurAutreSite" email="autresite@rbs.fr" contentsAsBBCode="Test." rating="3" />
-	</kit>
+	</kit-->
 </script>

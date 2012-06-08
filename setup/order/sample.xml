@@ -18,27 +18,27 @@
 
 	<!--  Begin -->
 	<shop byLabel="Boutique" id="shop" />
-	<customer id="customer1" byLogin="johndoe1" />
-	<customer id="customer2" byLogin="johndoe2" />
-	<customer id="customer3" byLogin="johndoe3" />
-	<customer id="customer4" byLogin="joedoe" />
+	<customer id="customer1" byLogin="mario" />
+	<customer id="customer2" byLogin="luigi" />
+	<customer id="customer3" byLogin="donkey" />
+	<customer id="customer4" byLogin="peach" />
 	
 	<mode id="shipping" byLabel="Colissimo"  />
 	
-	<shippingfilter id="shippingfilter" byLabel="Collisimo 10€" shop-refid="shop" mode-refid="shipping" 
+	<shippingfilter id="shippingfilter" byLabel="Colisimo" shop-refid="shop" mode-refid="shipping" 
 		taxCategory="1" valueWithoutTax="8.04"/>
 	
 	<chequeconnector id="payment" byLabel="Paiement par chèque" />
 
-	<product id="product1" byCodeReference="L1" />
-	<product id="product2" byCodeReference="L2" />
-	<product id="product3" byCodeReference="L3" />
-	<product id="product4" byCodeReference="D150" />
-	<product id="product5" byCodeReference="000000-3" />
-	<product id="product6" byCodeReference="P3-1" />
-	<product id="product7" byCodeReference="P3-2" />
+	<simpleproduct id="product1" byCodeReference="NES-1985" />
+	<simpleproduct id="product2" byCodeReference="COLECO-1982" />
+	<simpleproduct id="product3" byCodeReference="SNESPAL-1992" />
+	<simpleproduct id="product4" byCodeReference="MEGADRIVE-1988" />
+	<simpleproduct id="product5" byCodeReference="NEOGEO-1990" />
+	<simpleproduct id="product6" byCodeReference="ATARI2600-1978" />
+	<productdeclination id="product7" byCodeReference="NES-ZAPPER-GREY" />
 		
-	<address id="address" byLabel="L'adresse de livraison de JohnDoe1" />
+	<address id="address" byLabel="L'adresse de livraison de Mario" />
 	
 	<website id="website" byTag="default_modules_website_default-website" />
 

@@ -88,4 +88,5 @@ Entzheim 67836 Tanneries Cedex" minValue="0.1" />
 			bankServerUrl="https://secure.ogone.com/ncol/test/orderstandard.asp" 
 			operation="RES" shaInKey="votreCleSHA1-In" shaOutKey="votreCleSHA1-Out" minValue="0.1" />
 	</rootfolder>
+	
 </script>

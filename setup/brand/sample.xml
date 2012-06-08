@@ -5,20 +5,44 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
 	<rootfolder module="media">
-		<folder label="Médias liés aux exemples de marques">
-			<media path="modules/sample/setup/brand/media/nike_logo.jpg" label="Logo Nike" id="media1" />
-			<media path="modules/sample/setup/brand/media/adidas_logo.jpg" label="Logo Adidas" id="media2" />
+		<folder byLabel="m.generic.bo.general.samples">
+			<folder byLabel="brand">
+				<media path="modules/sample/setup/brand/media/NINTENDO-BRAND-LOGO.png" label="Logo Nintendo" id="NINTENDO-LOGO" />
+				<media path="modules/sample/setup/brand/media/SNK-BRAND-LOGO.gif" label="Logo SNK" id="SNK-LOGO" />
+				<media path="modules/sample/setup/brand/media/SEGA-BRAND-LOGO.png" label="Logo SEGA" id="SEGA-LOGO" />
+				<media path="modules/sample/setup/brand/media/COLECO-BRAND-LOGO.png" label="Logo Coleco" id="COLECO-LOGO" />
+				<media path="modules/sample/setup/brand/media/ATARI-BRAND-LOGO.png" label="Logo Atari" id="ATARI-LOGO" />
+			</folder>
 		</folder>
 	</rootfolder>
 	
 	<attribute name="brandDescription" default="true">
 		<![CDATA[<p>Sed sapien risus, rhoncus ac, vehicula ac, vulputate ut, nibh. Praesent nisi nulla, bibendum dapibus, tincidunt sed, dapibus ac, orci. Duis vulputate. Morbi nunc. Donec libero nulla, suscipit eget, hendrerit sit amet, sollicitudin et, libero. Integer metus arcu, malesuada et, vestibulum vel, accumsan in, mi. Curabitur molestie. Vestibulum ut purus. Duis vestibulum orci condimentum diam. Cras congue pharetra mauris! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mollis tortor. Donec velit mauris, facilisis vel, venenatis id, congue eget; nisi. Nullam dictum laoreet ligula. Pellentesque magna. In lobortis, eros a elementum dictum, est neque sodales quam, in tempor mi leo rhoncus nisi.</p>]]>
 	</attribute>
+	<attribute name="nintendoDescription" default="true">
+		<![CDATA[<p class="normal">Nintendo Company, Limited (任天堂株式会社, Nintendō Kabushiki Gaisha) est une entreprise multinationale japonaise fondée en 1889 par Fusajiro Yamauchi près de Kyōto au Japon.<br />À ses débuts, la société produisait des cartes à jouer japonaises : les hanafuda. C’est à partir des années 1970 que la société a diversifié ses activités en produisant des jeux vidéo. Elle a été l'un des principaux précurseurs du jeu vidéo, et est actuellement le leader du marché des consoles de jeux vidéo.<br />À partir des années 1980, Nintendo s’est lancé dans le marché des consoles et des jeux vidéo. Actuellement, elle est l’un des leaders de ce marché : en 2008, Nintendo est classé premier éditeur de jeux vidéo au Japon et deuxième aux États-Unis (NPD Group). Au 1er décembre 2006, Nintendo a vendu 387 millions de consoles et 2,2 milliards de jeux vidéo dans le monde.(<a href="http://fr.wikipedia.org/wiki/Nintendo" class="link">Voir l'article Wikipedia</a>)</p>]]>
+	</attribute>
+	<attribute name="atariDescription" default="true">
+		<![CDATA[<p class="normal">Atari est à l'origine une entreprise américaine pionnière dans l'industrie du jeu vidéo fondée en 1972 par Nolan Bushnell et Ted Dabney. Elle est spécialisée dans le développement des jeux vidéo et fabrique des bornes d'arcade, des consoles de jeux et des ordinateurs personnels. Depuis 2001, la marque Atari appartient à Infogrames Entertainment qui décide le 7 mai 2003 d'adopter le nom Atari pour l'ensemble de ses opérations commerciales et rebaptise ainsi l'ensemble de ses filiales mondiales en "Atari suivie du nom du pays" (ex : Atari UK). Infogrames finalise l'acquisition d'Atari en 2008 en fusionnant avec cette dernière qui devient donc une entreprise française(<a href="http://fr.wikipedia.org/wiki/Atari" class="link">Voir l'article Wikipedia</a>)</p>]]>
+	</attribute>
+	<attribute name="segaDescription" default="true">
+		<![CDATA[<p class="normal">Sega Corporation (株式会社セガ, Kabushiki kaisha Sega, abréviation de SErvice GAmes, couramment stylisé SEGA), est une société américano-japonaise fondée en 1954 par David Rosen de développement et d'édition de jeux vidéo, ainsi que fabricant de bornes et de systèmes d'arcade.<br />Sega fut également un fabricant de consoles de jeux vidéo, mais suite à l'échec commercial de la console de salon Saturn ainsi qu'à l'indifférence du public envers la Dreamcast, la société se retira de ce marché à partir du 31 janvier 2001 pour se consacrer exclusivement au développement de jeux et à l'arcade.<br />Le 1er novembre 2000, Sega Enterprises, Ltd change son nom en Sega Corporation. La devise de Sega est « Sega, c'est plus fort que toi ! ».(<a href="http://fr.wikipedia.org/wiki/Sega" class="link">Voir l'article Wikipedia</a>)</p>]]>
+	</attribute>
+	<attribute name="colecoDescription" default="true">
+		<![CDATA[<p class="normal">Coleco était une entreprise fondée en 1932 par Maurice Greenberg sous le nom de « Connecticut Leather Company ». Elle devint l'une des plus célèbres entreprises de jouets dans les années 1980. Elle est connue pour avoir produit les premières consoles, à savoir Coleco Telstar et Colecovision. Elle a été rachetée par Hasbro en 1989.<br />Coleco a aussi produit des jeux électroniques, avec deux modèles populaires, le modèle « head to head » avec des jeux de sport à deux joueur, et le modèle « mini-arcade » avec des franchises de jeux de borne d'arcade comme Pac-Man, Galaxian, Frogger, Donkey Kong, ou Zaxxon.(<a href="http://fr.wikipedia.org/wiki/Coleco" class="link">Voir l'article Wikipedia</a>)</p>]]>
+	</attribute>
+	<attribute name="snkDescription" default="true">
+		<![CDATA[<p class="normal">SNK Corporation est une entreprise japonaise fondée en 1973 et basée à Ōsaka, dont l'activité est la planification, le développement et l'édition de jeux vidéo et de systèmes de jeu vidéo, ainsi que la création et la gestion de centres de divertissement. Parmi les produits plus célèbres de la marque, figurent le Neo-Geo MVS, un système d'arcade également commercialisé en version console de jeux vidéo de luxe : la Neo-Geo AES, les séries des jeux Fatal Fury, The King of Fighters ou Metal Slug. Après des tentatives infructueuses pour s'imposer sur le marché des consoles de salon et des consoles portables, SNK connaît de grosses difficultés financières. Aruze rachète l'entreprise en 2000, mais de mauvaises orientations et stratégies font sombrer SNK. Juste avant la faillite de SNK en 2001, le fondateur de la société créé une entreprise nommée BrezzaSoft, puis créé la société Playmore qui sera renommée SNK Playmore et détenant tous les droits des propriétés intellectuelles de SNK(<a href="http://fr.wikipedia.org/wiki/Snk" class="link">Voir l'article Wikipedia</a>)</p>]]>
+	</attribute>
+	
 	<rootfolder module="brand">
-		<folder byLabel="Exemples de marques">
-			<brand label="Nike" visual-refid="media1" description-attr="brandDescription" id="brand1" />
-			<brand label="Adidas" visual-refid="media2" description-attr="brandDescription" websiteUrl="http://www.adidas.com" id="brand2" />
-		</folder>	
+		<folder byLabel="m.generic.bo.general.samples">
+			<brand byLabel="Nintendo" id="NINTENDO" visual-refid="NINTENDO-LOGO" description-attr="nintendoDescription" websiteUrl="http://www.nintendo.com"/>
+			<brand byLabel="SNK" id="SNK" visual-refid="SNK-LOGO" description-attr="snkDescription" />
+			<brand byLabel="Sega" id="SEGA" visual-refid="SEGA-LOGO" description-attr="segaDescription" websiteUrl="http://www.sega.fr" />
+			<brand byLabel="Coleco" id="COLECO" visual-refid="COLECO-LOGO" description-attr="colecoDescription" websiteUrl="http://www.coleco.com/" />
+			<brand byLabel="Atari" id="ATARI" visual-refid="ATARI-LOGO" description-attr="colecoDescription" websiteUrl="http://www.coleco.com/" />
+		</folder>
 	</rootfolder>
 	
 	<website byTag="default_modules_website_default-website">

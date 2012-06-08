@@ -2,7 +2,7 @@
 <script>
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<rootfolder module="list">
-		<folder byLabel="Exemples">
+		<folder byLabel="m.generic.bo.general.samples">
 			<dynamiclist listid="modules_list/sampledynamic"
 				description="Exemple de liste dynamique" label="Exemple de liste dynamique" />
 
@@ -33,6 +33,7 @@
 				<valueditem label="02 - Aisne" byValue="02" />
 				<valueditem label="03 - Allier" byValue="03" />
 			</valuededitablelist>
+			
 		</folder>
 	</rootfolder>
 </script>

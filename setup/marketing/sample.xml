@@ -20,16 +20,16 @@
 	<documentRef byLabel="Boutique" id="shop" type="modules_catalog/shop" />
 	<documentRef id="shipping" byLabel="Colissimo" type="modules_shipping/mode" />
 	<documentRef id="payment" byLabel="Paiement par chèque" type="modules_payment/chequeconnector" />
-	<documentRef id="shippingfilter" byLabel="Collisimo 10€" type="modules_catalog/shippingfilter" />
+	<shippingfilter id="shippingfilter" byLabel="Colissimo" />
 	
-	<product id="product1" byCodeReference="L1" />
-	<product id="product2" byCodeReference="L2" />
-	<product id="product3" byCodeReference="L3" />
-	<product id="product4" byCodeReference="D150" />
-	<product id="product5" byCodeReference="000000-3" />
-	<customer id="customer1" byLogin="johndoe1" />
-	<customer id="customer2" byLogin="johndoe2" />
-	<address id="address" byLabel="L'adresse de livraison de JohnDoe1" />
+	<product id="product1" byCodeReference="NES-1985" />
+	<product id="product2" byCodeReference="COLECO-1982" />
+	<product id="product3" byCodeReference="ATARI2600-1978" />
+	<product id="product4" byCodeReference="NEOGEO-1990" />
+	<product id="product5" byCodeReference="SNESPAL-1992" />
+	<customer id="customer1" byLogin="mario" />
+	<customer id="customer2" byLogin="luigi" />
+	<address id="address" byLabel="L'adresse de livraison de Mario" />
 		
 	<!-- Coupons and discount samples. -->
 	<rootfolder module="marketing">

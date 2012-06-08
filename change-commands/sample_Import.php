@@ -79,6 +79,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 			if ($result != 'OK')
 			{
 				Framework::error(__METHOD__ . ' ' . $batchPath . ' unexpected result: "' . $result . '"');
+				echo "Error: " . $result;
 			}
 			$index = $index + count($chunk);
 			echo "Importing samples: " . $samples[$index - 1] . "\n";
@@ -93,7 +94,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	}
 	
 	/**
-	 * @return array<string ModuleName, string XMLName>
+	 * @return string[]
 	 */
 	private function getSamples()
 	{
@@ -133,7 +134,6 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'default.xml';
 		$samples[] = 'loyalty' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'default.xml';
-		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'book-catalog-sample.xml';
 		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'marketing' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'sample.xml';
@@ -145,7 +145,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'privatemessaging' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'mobileapps' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'store' . DIRECTORY_SEPARATOR . 'sample.xml';
-		$samples[] = 'sorte' . DIRECTORY_SEPARATOR . 'sampleextranet.xml';
+		$samples[] = 'store' . DIRECTORY_SEPARATOR . 'sampleextranet.xml';
 		$samples[] = 'synchronizer' . DIRECTORY_SEPARATOR . 'sample.xml';
 		
 		return $samples;

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<!-- 
+		WARNING: before importing this file, import customer/default.xml 
+	-->
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
+
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Commande">
+			<page label="Mon panier" indexingstatus="false" robotsmeta="noindex,nofollow" template-attr="templateNosidebar"
+				byTag="contextual_website_website_modules_order_cart">
+				<changecontent for="content-block">
+					<changeblock type="modules_order_Cart" />
+				</changecontent>
+			</page>
+			<page label="Votre panier est vide" navigationVisibility="hidden" indexingstatus="false"
+				robotsmeta="noindex,nofollow" byTag="contextual_website_website_modules_order_cart-empty">
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[<p>Votre panier est vide.</p>]]>
+					</changeblock>
+				</changecontent>
+			</page>
+			<page label="Conditions générales de vente" byTag="contextual_website_website_modules_order_cgv">
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[<p>Conditions générales de vente...</p>]]>
+					</changeblock>
+				</changecontent>
+			</page>
+		</topic>
+		
+		<topic byLabel="Compte client">		
+			<page label="Mes commandes" isIndexPage="true"
+				byTag="contextual_website_website_modules_order_order-list">
+				<changecontent for="content-block">
+					<changeblock type="modules_order_orderlist" />
+					<changeblock type="modules_order_Creditnotes" />
+					<changeblock type="modules_order_Repayments" />
+				</changecontent>
+			</page>
+			<page label="Détail d'une commande" navigationVisibility="hidden" 
+				indexingstatus="false" robotsmeta="noindex,nofollow">
+				<changecontent for="content-block">
+					<changeblock type="modules_order_order" />
+				</changecontent>
+			</page>
+			<page label="Détail d'une expédition" navigationVisibility="hidden" indexingstatus="false"
+				robotsmeta="noindex,nofollow" byTag="contextual_website_website_modules_order_expedition">
+				<changecontent for="content-block">
+					<changeblock type="modules_order_ExpeditionDetail" />
+				</changecontent>
+			</page>
+			<page label="Détail d'une expédition virtuelle" navigationVisibility="hidden" indexingstatus="false"
+				robotsmeta="noindex,nofollow" byTag="contextual_website_website_modules_order_expeditionvirtual">
+				<changecontent for="content-block">
+					<changeblock type="modules_order_ExpeditionDetailVirtual" />
+				</changecontent>
+			</page>
+			<page label="Messagerie relative à une commande" navigationVisibility="hidden"
+				byTag="contextual_website_website_modules_order_order-messages">
+				<changecontent for="content-block">
+					<changeblock type="modules_order_messages" />
+				</changecontent>
+			</page>
+		</topic>
+	</website>
+	
+	<binding fileName="modules/order/setup/standardProccess.xml" />
+</script>
