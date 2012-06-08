@@ -26,6 +26,7 @@
 					<media path="modules/sample/setup/media/media/MEGADRIVE-1988-1.jpg" byLabel="Megadrive" id="MEGADRIVE-1988-1" />
 					<media path="modules/sample/setup/media/media/RETROGAMING.png" byLabel="Pong Arcade" id="RETROGAMING" />
 					<media path="modules/sample/setup/media/media/GAMEBOY-ALL.png" byLabel="Gameboy Panorama" id="GAMEBOY-ALL" />
+					<media path="modules/sample/setup/media/media/RETROGAMING.png" byLabel="Arcade" id="ARCADE-PONG-PIC1" />
 				</folder>
 			</folder>
 		</folder>
