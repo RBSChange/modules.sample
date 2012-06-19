@@ -2,6 +2,12 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/loyalty/persistentdocument/import/loyalty_binding.xml" />
+	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<binding fileName="modules/notification/persistentdocument/import/notification_binding.xml" />
+	<binding fileName="modules/marketing/persistentdocument/import/marketing_binding.xml" />
+	<binding fileName="modules/customer/persistentdocument/import/customer_binding.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+	<binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
 
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Commande">
@@ -37,4 +43,44 @@
 			</page>
 		</topic>
 	</website>
+	
+	<event byCode="GODCHILD_REGISTERED" id="godchild" />
+	<event byCode="ORDER_COMPLETED" id="order-completed" />
+	<notification byCodename="modules_loyalty/godchildregistered" id="godchild-notification"/>
+	
+	<shop byCodeReference="DEMO" id="shop">
+		<eventfilter byLabel="Inscription par votre parrain" shop-refid="shop" event-refid="godchild" notification-refid="godchild-notification" applicationstrategy="loyalty_DefaultPointStrategy" strategyParams-serialized='a:1:{s:10:"pointCount";s:4:"1000";}' publicationstatus="ACTIVE" />
+		<eventfilter byLabel="Inscription d'un filleul" targetCode="godfather" shop-refid="shop" event-refid="godchild" notification-refid="godchild-notification" applicationstrategy="loyalty_DefaultPointStrategy" strategyParams-serialized='a:1:{s:10:"pointCount";s:4:"6000";}' publicationstatus="ACTIVE" />
+		<eventfilter byLabel="Commande du filleul" targetCode="godfather" shop-refid="shop" event-refid="order-completed" applicationstrategy="loyalty_OrderAmountPointStrategy" strategyParams-serialized='a:1:{s:16:"amountPercentage";s:3:"100";}' publicationstatus="ACTIVE" />
+		<eventfilter byLabel="Commande supérieur à 300€" shop-refid="shop" event-refid="order-completed" applicationstrategy="loyalty_OrderAmountPointStrategy" filter='{"operator":"and","elements":[{"class":"customer_LastOrderCustomerFilter","parameters":{"field":["modules_order/order.totalAmountWithTax","ge","300"]}}]}' strategyParams-serialized='a:1:{s:16:"amountPercentage";s:4:"1000";}' publicationstatus="ACTIVE" />
+		<reward byLabel="Réduction de 10€" shop-refid="shop" pointCost="5500" id="reward10" description="Une réduction de 10€ pour vous remercier de votre fidélité" code="REDUC-15E" couponFilter='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["totalAmountWithTax","gt","15"]}}]}' />
+		<reward byLabel="Réduction de 3%" shop-refid="shop" pointCost="7500" id="reward3pc" description="Une réduction de 3% pour vous remercier de votre fidélité" code="REDUC-3P" />
+	</shop>
+
+	<rootfolder module="marketing">
+		<folder byLabel="m.generic.bo.general.samples">
+			<discount byLabel="Coupon de réduction de 10€" description="Réduction de 10€ à valoir sur le total de votre panier si celui ci est d'un montant total TTC supérieur à 10€" applicationstrategy="GlobalValueDiscount" 
+				shop-refid="shop" publicationstatus="ACTIVE"
+				query='{"operator":"and","elements":[{"class":"loyalty_RewardCouponCartFilter","parameters":{"reward":[null,null,"{ref-id:reward10}"]}}]}'
+				strategy='{"value":10,"strategylabel":"Réduction de 10€"}' />
+			<discount byLabel="Coupon de réduction de 3%" description="Réduction de 3% à valoir sur le total de votre panier" applicationstrategy="GlobalPercentDiscount" 
+				shop-refid="shop" publicationstatus="ACTIVE"
+				query='{"operator":"and","elements":[{"class":"loyalty_RewardCouponCartFilter","parameters":{"reward":[null,null,"{ref-id:reward3pc}"]}}]}'
+				strategy='{"value":3,"strategylabel":"Réduction de 3%"}' />
+		</folder>
+	</rootfolder>
+	
+	<customer id="luigi" byLogin="luigi" />
+	<loyaltyinfos customer-refid="luigi" points="6000" />
+	
+	<customer id="mario" byLogin="mario" />
+	<websitefrontendgroup for-default-website="true">
+		<websitefrontenduser id="yoshi" byLogin="yoshi@rbs.fr" firstname="Yoshi" lastname="Egg" email="yoshi@rbs.fr" password="abcd123" />
+	</websitefrontendgroup>
+	<country byLabel="France" id="fr" />
+	<address id="yoshiAddress" label="L'adresse de facturation de Yoshi" firstname="Yoshi" lastname="Egg"
+		email="yoshi@rbs.fr" addressLine1="150 île aux arbres" zipCode="67000" city="Strasbourg" country-refid="fr" />
+	<customer id="yoshiCustomer" user-refid="yoshi" address-refids="yoshiAddress" creationdate="2011-09-01 15:49:00"/>
+	<proposing godfatherId-refid="mario" godchildEmail="yoshi@rbs.fr" godchildId-refid="yoshiCustomer" code="SuPr-123" />
+	
 </script>

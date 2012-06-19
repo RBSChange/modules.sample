@@ -132,9 +132,9 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'default.xml';
 		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'default.xml';
-		$samples[] = 'loyalty' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'default.xml';
 		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'loyalty' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'marketing' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'privatesales' . DIRECTORY_SEPARATOR . 'sample.xml';

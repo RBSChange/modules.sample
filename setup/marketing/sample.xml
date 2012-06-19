@@ -33,18 +33,19 @@
 		
 	<!-- Coupons and discount samples. -->
 	<rootfolder module="marketing">
-		<folder byLabel="Exemples" label="Exemples">
-			<coupon id="coupon1" byLabel="Test 1" code="test1" shop-refid="shop" publicationstatus="ACTIVE"/>
-			<coupon id="coupon2" byLabel="Test 2" code="test2" shop-refid="shop" publicationstatus="ACTIVE"/>
+		<folder byLabel="m.generic.bo.general.samples">
+			<coupon id="coupon1" byLabel="Réduction de 5%" code="test1" shop-refid="shop" publicationstatus="ACTIVE"/>
+			<coupon id="coupon2" byLabel="Réduction de 15€" code="test2" shop-refid="shop" publicationstatus="ACTIVE"/>
 			
-			<discount byLabel="Réduction coupon test1" applicationstrategy="GlobalPercentDiscount" 
+			<discount byLabel="Coupon de réduction de 5%" applicationstrategy="GlobalPercentDiscount" 
 				shop-refid="shop" publicationstatus="ACTIVE" 
 				query='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["coupon","in","{ref-id:coupon1}"]}}]}'
-				strategy='{"value":0.05,"strategylabel":"Réduction test1"}' />
-			<discount byLabel="Réduction coupon test2" applicationstrategy="GlobalValueDiscount" 
+				strategy='{"value":0.05,"strategylabel":"Réduction de 5%"}' />
+			<discount byLabel="Coupon de réduction de 15€" description="Réduction de 15€ à valoir sur le total de votre panier celui ci est d'un montant total TTC supérieur à 15€" applicationstrategy="GlobalValueDiscount" 
 				shop-refid="shop" publicationstatus="ACTIVE"
-				query='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["coupon","in","{ref-id:coupon2}"]}}]}'
-				strategy='{"value":15,"strategylabel":"Réduction test2"}' />		</folder>
+				query='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["coupon","in","{ref-id:coupon2}"]}},{"class":"order_CartFilter","parameters":{"cart":["totalAmountWithTax","gt","15"]}}]}'
+				strategy='{"value":15,"strategylabel":"Réduction de 15€"}' />
+		</folder>
 	</rootfolder>
 	
 	<!-- Orders using coupons. -->

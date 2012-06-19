@@ -69,6 +69,9 @@
 					<media path="modules/sample/setup/catalog/media/COMMODORE64-PIC1.jpg" byLabel="Commodore 64 1" id="MICRO-COMMODORE64-PIC1" />
 					<media path="modules/sample/setup/catalog/media/ATARI-1040ST.jpg" byLabel="Atari ST 1" id="ATARI-ST-PIC1" />
 					<media path="modules/sample/setup/catalog/media/COMMODORE-LOGO.png" byLabel="Logo de Commodore" id="COMMODORE-LOGO" />
+					<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC1.jpg" byLabel="Amiga 500 1" id="MICRO-AMIGA-500-PIC1" />
+					<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC2.jpg" byLabel="Amiga 500 2" id="MICRO-AMIGA-500-PIC2" />
+					<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC3.jpg" byLabel="Amiga 500 3" id="MICRO-AMIGA-500-PIC3" />
 				</folder>
 			</folder>
 		</folder>
@@ -128,6 +131,7 @@
 	<rootfolder module="catalog">
 		<topshelf byLabel="Consoles" visual-refid="NES-1985-1" id="CAT-CONSOLES">
 			<shelf byLabel="Portables" visual-refid="GAMEBOY-ALL" id="SUBCAT-PORTABLE" />
+			<shelf byLabel="Salon" visual-refid="NES-1985-1" id="SUBCAT-SALON" />
 		</topshelf>
 		<topshelf byLabel="Accessoires" visual-refid="NES-ZAPPER-1" id="CAT-ACCESSORIES" />
 		<topshelf byLabel="Jeux" visual-refid="DUCK-HUNT-BOX" id="CAT-GAMES" />
@@ -245,7 +249,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<simpleproduct 	byCodeReference="NES-1985" 
 					label="Nintendo Entertainment System (NES)" 
-					shelf-refids="CAT-CONSOLES" 
+					shelf-refids="SUBCAT-SALON" 
 					id="NES-1985" 
 					visual-refid="NES-1985-1" 
 					additionnalVisual-refids="NES-1985-2" 
@@ -261,7 +265,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<simpleproduct 	byCodeReference="FAMICOM-1983" 
 					label="Famicom" 
-					shelf-refids="CAT-CONSOLES" 
+					shelf-refids="SUBCAT-SALON" 
 					id="FAMICOM-1983" 
 					visual-refid="FAMICOM-1983-1" 
 					additionnalVisual-refids="FAMICOM-1983-2" 
@@ -278,7 +282,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<simpleproduct 	byCodeReference="COLECO-1982" 
 					label="Colecovision" 
-					shelf-refids="CAT-CONSOLES" 
+					shelf-refids="SUBCAT-SALON" 
 					id="COLECO-1982" 
 					visual-refid="COLECO-1982-1" 
 					additionnalVisual-refids="" 
@@ -294,7 +298,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<declinedproduct	byCodeReference="SMS-MULTI" 	
 						label="Master System" 
-						shelf-refids="CAT-CONSOLES" 
+						shelf-refids="SUBCAT-SALON" 
 						complementary-refids=""
 						synchronizePrices="false" 
 						brand-refid="SEGA" 
@@ -313,7 +317,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<simpleproduct 	byCodeReference="ATARI2600-1978" 
 					label="Atari 2660 (Atari VCS)" 
-					shelf-refids="CAT-CONSOLES" 
+					shelf-refids="SUBCAT-SALON" 
 					id="ATARI2600-1978" 
 					visual-refid="ATARI2600-1978-1" 
 					additionnalVisual-refids="" 
@@ -357,7 +361,7 @@ buts, comme le traitement de texte.</p>
 	]]></attribute>
 	<simpleproduct 	byCodeReference="ATARI7800-1986" 
 					label="Atari 7800" 
-					shelf-refids="CAT-CONSOLES" 
+					shelf-refids="SUBCAT-SALON" 
 					id="ATARI7800-1986" 
 					visual-refid="ATARI7800-1986-1" 
 					additionnalVisual-refids="" 
@@ -374,7 +378,7 @@ buts, comme le traitement de texte.</p>
 	]]></attribute>
 	<simpleproduct 	byCodeReference="NEOGEO-1990" 
 					label="Neo-Geo AES" 
-					shelf-refids="CAT-CONSOLES" 
+					shelf-refids="SUBCAT-SALON" 
 					id="NEOGEO-1990" 
 					visual-refid="NEOGEO-1990-1" 
 					additionnalVisual-refids="NEOGEO-1990-2" 
@@ -390,7 +394,7 @@ buts, comme le traitement de texte.</p>
 	]]></attribute>
 	<simpleproduct 	byCodeReference="SNESPAL-1992" 
 					label="Super Nintendo (PAL)" 
-					shelf-refids="CAT-CONSOLES" 
+					shelf-refids="SUBCAT-SALON" 
 					id="SNESPAL-1992" 
 					visual-refid="SNESPAL-1992-1" 
 					additionnalVisual-refids="SNESPAL-1992-2" 
@@ -404,7 +408,7 @@ buts, comme le traitement de texte.</p>
 	
 	<simpleproduct 	byCodeReference="SNES-1992" 
 					label="Super Nintendo (North America)" 
-					shelf-refids="CAT-CONSOLES" 
+					shelf-refids="SUBCAT-SALON" 
 					id="SNES-1992" 
 					visual-refid="SNES-1992-1" 
 					additionnalVisual-refids="" 
@@ -452,7 +456,7 @@ buts, comme le traitement de texte.</p>
 	]]></attribute>
 	<simpleproduct 	byCodeReference="MEGADRIVE-1988" 
 					label="Megadrive" 
-					shelf-refids="CAT-CONSOLES" 
+					shelf-refids="SUBCAT-SALON" 
 					id="MEGADRIVE-1988" 
 					visual-refid="MEGADRIVE-1988-1" 
 					additionnalVisual-refids="" 
@@ -557,6 +561,18 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="409.90" />
 	</simpleproduct>
 
+	<attribute name="description-amiga"><![CDATA[<p class="normal">L’Amiga est une famille d’ordinateurs personnels commercialisée par Commodore International entre 1985 et 1994. Dans les années 1990 il était très populaire sur la scène démo, parmi les amateurs de jeux vidéo et dans l'industrie du cinéma et de la télévision. L'Amiga offrait alors un affichage plus coloré et plus fluide et un multitâches supérieur à celles des produits concurrents, une interface graphique similaire à celle du Macintosh et des logiciels de traitement de texte, de musique assistée par ordinateur et de dessin.(<a href="http://fr.wikipedia.org/wiki/Amiga" class="link">Voir l'article Wikipedia</a>)</p>]]></attribute>
+	<simpleproduct 	byCodeReference="MICRO-AMIGA" 
+					label="Amiga" 
+					shelf-refids="CAT-MICRO" 
+					id="MICRO-AMIGA" 
+					visual-refid="MICRO-AMIGA-500-PIC1" 
+					additionnalVisual-refids="MICRO-AMIGA-500-PIC2,MICRO-AMIGA-500-PIC3" 
+					brand-refid="COMMODORE" 
+					stockQuantity="10" 
+					description-attr="description-amiga">
+		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="609.90" />
+	</simpleproduct>
 
 
 	<!-- Bundle -->
@@ -601,4 +617,5 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 	<simpleproduct byCodeReference="COLECO-1982" similar-refids="NES-1985,FAMICOM-1983,SMS-1,ATARI2600-1978" complementary-refids="" upsell-refids="SNES-1992,SNESPAL-1992,NEOGEO-1990" />
 	<virtualproduct byCodeReference="SNES-DOWNLOAD-ZELDA-TIPS" complementary-refids="SNES-GAME-ZELDA" />
 	<simpleproduct byCodeReference="SNES-GAME-ZELDA" complementary-refids="SNES-DOWNLOAD-ZELDA-TIPS" />
+	
 </script>
