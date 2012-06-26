@@ -77,4 +77,42 @@
 			transactionDate="2010-04-04 09:45:12" transactionText="Chèque receptionné le 2010-04-04"
 			status="success"/>
 	</order>
+	
+	<!-- Animations -->
+	<rootfolder module="marketing">
+		<folder byLabel="m.generic.bo.general.samples">
+			<editableanim product-refids="product1,product2,product5" byLabel="Produit d'occasion" description="Notre sélection de produit facilement trouvable d'occasion !" shop-refid="shop" id="editanim" />
+			<dynamicanim query='[{"class":"order_MostFrequentlyOrderedFilter","parameters":{"maxcount":[null,null,"5"]}}]' byLabel="Top Ventes" shop-refid="shop" id="topventes" />
+			<dynamicanim query='[{"class":"marketing_LastProductFilter","parameters":{"count":[null,null,"10"],"datetype":[null,null,"creation"]}}]' byLabel="Nouveautés" shop-refid="shop" id="newproducts" />
+			<dynamicanim query='[{"class":"marketing_ProductPriceFilter","parameters":{}}]' byLabel="Promotions" shop-refid="shop" id="promotions" />
+		</folder>
+	</rootfolder>
+	
+	<website byTag="default_modules_website_default-website">
+		<page id="homepage" byLabel="Accueil">
+			<changecontent for="content-block" append="true">
+				<changelayout>
+					<changecolumn width="25">
+						<changerow>
+							<changeblock type="modules_marketing_animationList" __usetypetitle="false" __cmpref-refid="topventes" __displayMode="List" __nbresultsperpage="3" __displayaddtocart="false" __displayavailability="false" />
+						</changerow>
+					</changecolumn>
+					<changecolumn width="75">
+						<changerow>
+							<changeblock type="modules_marketing_animationList" __usetypetitle="false" __cmpref-refid="newproducts" __displayMode="Slide" __nbresultsperpage="12" __displayaddtocart="false" __displayavailability="false" />
+						</changerow>
+					</changecolumn>
+				</changelayout>
+			</changecontent>
+		</page>
+		<topic byLabel="Boutique">
+			<page byTag="functional_catalog_product-list">
+				<changecontent for="sidebar-block" append="true">
+					<changeblock type="modules_marketing_animationList" __sortRandom="true" __usetypetitle="false" __cmpref-refid="promotions" __nbresultsperpage="1" __displayaddtocart="false" __displayMode="Short" />
+					<changeblock type="modules_marketing_animationList" __sortRandom="true" __usetypetitle="false" __cmpref-refid="editanim" __nbresultsperpage="1" __displayaddtocart="false" __displayMode="Short" />					
+				</changecontent>
+			</page>
+		</topic>
+	</website>
+	
 </script>

@@ -16,15 +16,17 @@
 	</website>
 	
 	<rootfolder module="media">
-		<folder byLabel="Exemple documents à télécharger">
-			<media path="modules/sample/setup/download/media/plan_icone.gif"
-				byLabel="Icone plan d'accès" title="Icone plan d'accès" id="m1" />
-			<media path="modules/sample/setup/download/media/Plan_d_acces_RBS_Paris.pdf"
-				byLabel="Plan d'accès RBS Paris" title="Plan d'accès RBS Paris" id="m2" />
-			<media path="modules/sample/setup/download/media/Plan_d_acces_RBS_Siege.pdf"
-				byLabel="Plan d'accès RBS Siège" title="Plan d'accès RBS Siège" id="m3" />
-			<media path="modules/sample/setup/download/media/RBS_Change.docx"
-				byLabel="Descriptif RBS Change" title="Descriptif RBS Change" id="m4" />
+		<folder byLabel="m.generic.bo.general.samples">
+			<folder byLabel="download">
+				<media path="modules/sample/setup/download/media/plan_icone.gif"
+					byLabel="Icone plan d'accès" title="Icone plan d'accès" id="m1" />
+				<media path="modules/sample/setup/download/media/Plan_d_acces_RBS_Paris.pdf"
+					byLabel="Plan d'accès RBS Paris" title="Plan d'accès RBS Paris" id="m2" />
+				<media path="modules/sample/setup/download/media/Plan_d_acces_RBS_Siege.pdf"
+					byLabel="Plan d'accès RBS Siège" title="Plan d'accès RBS Siège" id="m3" />
+				<media path="modules/sample/setup/download/media/RBS_Change.docx"
+					byLabel="Descriptif RBS Change" title="Descriptif RBS Change" id="m4" />
+			</folder>
 		</folder>
 	</rootfolder>
 	

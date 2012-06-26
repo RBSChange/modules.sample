@@ -7,6 +7,7 @@
 	
 	<billingarea byCodeReference="GB" id="areagb" />
 	<shop id="shop" byCodeReference="DEMO" billingAreas-refid="areagb" />
+	<!-- 
 	<websitefrontendgroup for-default-website="true">
 		<websitefrontenduser id="cammy" byLogin="cammy" firstname="Cammy" lastname="White" email="cammy.white@rbs.fr" password="abcd123" />
 	</websitefrontendgroup>
@@ -14,11 +15,12 @@
 	<address id="cammyBillingAddress" label="Billing address of Cammy White" firstname="Cammy" lastname="White"
 		email="cammy.white@rbs.fr" addressLine1="42 Backer Street" zipCode="B29 1WQ" city="London" country-refid="gb" />
 	<customer id="customerCammy" user-refid="cammy" address-refids="cammyBillingAddress" creationdate="2010-09-01 15:49:00" />
-	
+	 -->
 	<simpleproduct byCodeReference="NES-1985" >
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="143.90" billingAreaId-refid="areagb" />
+		<price shopId-refid="shop" storeWithTax="true" taxCategory="1" value="155.99" billingAreaId-refid="areagb" />
+		<price shopId-refid="shop" storeWithTax="true" taxCategory="1" value="143.90" billingAreaId-refid="areagb" 
+			valueWithoutDiscount="155.99" startpublicationdate="2012-06-01 00:00:00" endpublicationdate="2012-07-01 00:00:00"/>
+		
 	</simpleproduct>
-	
-	<zone code="GBZONE" byLabel="United Kingdom" subzone-refids="gb" />
 	
 </script>

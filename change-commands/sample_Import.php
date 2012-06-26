@@ -90,6 +90,11 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$parent->executeCommand('catalog.compile-catalog');
 		$parent->executeCommand('enable-site');
 		
+		$this->message("Replace default page templates by eCom page templates");
+		$tps = theme_PagetemplateService::getInstance();
+		$tps->replacePagetemplate($tps->getByCodeName('default/nosidebarpage'), $tps->getByCodeName('default/nosidebarpage-ecom'));
+		$tps->replacePagetemplate($tps->getByCodeName('default/sidebarpage'), $tps->getByCodeName('default/sidebarpage-ecom'));
+		
 		$this->quitOk("Command successfully executed");
 	}
 	

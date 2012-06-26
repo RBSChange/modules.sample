@@ -6,12 +6,11 @@
 	<rootfolder module="rss">
 		<feed id="rbs" codeReference="rbs" byLabel="Actualités Ready Business System" publicationstatus="ACTIVE" 
 			feedurl="http://www.rbs.fr/fr/actualites/rss/flux-fr,453,5872.xml" expirestime="60" />
-		<feed id="monde" codeReference="monde" byLabel="Le Monde.fr : à la Une" publicationstatus="ACTIVE"
-			feedurl="http://www.lemonde.fr/rss/une.xml" expirestime="60" />
-		<feed id="afp" codeReference="afp" byLabel="Agence France-Presse : Quoi de neuf !" publicationstatus="ACTIVE"
-			feedurl="http://www.afp.fr/afpcom/fr/content/newsrss" expirestime="10" />	
 				
-		<feedgroup id="feedgroup" byLabel="Groupe de flux rss" publicationstatus="ACTIVE" feed-refids="rbs,monde,afp">
+		<feed id="monde" codeReference="monde" byLabel="Le Monde.fr : à la Une" publicationstatus="ACTIVE" feedurl="http://www.lemonde.fr/rss/une.xml" expirestime="60" />
+		<feed id="afp" codeReference="afp" byLabel="Agence France-Presse : Quoi de neuf !" publicationstatus="ACTIVE" feedurl="http://www.afp.fr/afpcom/fr/content/newsrss" expirestime="10" />	
+				
+		<feedgroup id="feedgroup" byLabel="Groupe de flux rss" publicationstatus="ACTIVE" feed-refids="rbs">
 		</feedgroup>
 		
 		<feed id="oscms" codeReference="oscms" byLabel="Produit RBS Change" publicationstatus="ACTIVE"
@@ -19,11 +18,18 @@
 	</rootfolder>
 	
 	<website byTag="default_modules_website_default-website">
+		<page id="homepage" byLabel="Accueil">
+			<changecontent for="content-block" append="true">
+				<changeblock type="richtext">
+					<![CDATA[<p>Restez au courant des nouveautés de <strong>RBS Change</strong> grâce au flux RSS !</p>]]>
+				</changeblock>
+				<changeblock type="modules_rss_feed" __cmpref-refid="oscms" __displayMode="Success" __cleanLevel="high" __showSource="true" __titleOnly="true" />
+			</changecontent>
+		</page>
 		<topic byLabel="Flux rss">			
 			<page byLabel="Flux rss" isIndexPage="true" indexingstatus="false" navigationVisibility="hidden">
 				<changecontent for="content-block">
 					<changeblock type="modules_rss_feed" __cmpref-refid="feedgroup" />
-					
 					<changeblock type="modules_rss_feed" __cmpref-refid="oscms" />
 				</changecontent>
 			</page>

@@ -60,7 +60,7 @@
 					<media path="modules/sample/setup/catalog/media/GAMEBOY-LIGHT-PIC1.jpg" byLabel="Gameboy light 1" id="GAMEBOY-LIGHT-PIC1" />
 					<media path="modules/sample/setup/catalog/media/GAMEBOY-POCKET-PIC1.jpg" byLabel="Gameboy pocket 1" id="GAMEBOY-POCKET-PIC1" />
 					<media path="modules/sample/setup/catalog/media/GAMEBOY-GAME-POKEMON-RED-PIC1.jpg" byLabel="Pokemon version rouge 1" id="GAMEBOY-GAME-POKEMON-RED" />
-					<media path="modules/sample/setup/catalog/media/GAMEBOY-GAME-POKEMON-RED-PIC1.jpg" byLabel="Pokemon version bleu 1" id="GAMEBOY-GAME-POKEMON-BLUE" />
+					<media path="modules/sample/setup/catalog/media/GAMEBOY-GAME-POKEMON-BLUE-PIC1.jpg" byLabel="Pokemon version bleu 1" id="GAMEBOY-GAME-POKEMON-BLUE" />
 					<media path="modules/sample/setup/catalog/media/PACK-NES.jpg" byLabel="Pack pour bundle NES 1" id="PACK-NES-PIC1" />
 					<media path="modules/sample/setup/catalog/media/GAMEBOY-LINKCABLE.jpg" byLabel="Câble link pour gameboy 1" id="GAMEBOY-LINKCABLE-PIC1" />
 					<media path="modules/sample/setup/catalog/media/SNES-GAME-ZELDA.png" byLabel="The Legend of Zelda: A Link to the Past 1" id="SNES-GAME-ZELDA-PIC1" />
@@ -72,6 +72,8 @@
 					<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC1.jpg" byLabel="Amiga 500 1" id="MICRO-AMIGA-500-PIC1" />
 					<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC2.jpg" byLabel="Amiga 500 2" id="MICRO-AMIGA-500-PIC2" />
 					<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC3.jpg" byLabel="Amiga 500 3" id="MICRO-AMIGA-500-PIC3" />
+					<media path="modules/sample/setup/catalog/media/PACK-GAMEBOY-POKEMON.jpg" byLabel="Kit gameboy pokemon" id="PACK-GAMEBOY-POKEMON" />
+					
 				</folder>
 			</folder>
 		</folder>
@@ -172,6 +174,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 						description-attr="description-duckhunt"
 						similar-refids="">
 			<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="20" />
+			<comment authorName="Gamer51" email="gamer51@rbs.fr" contentsAsBBCode="Super" rating="5" />
 	</simpleproduct>
 
 	<!-- NES ZAPPER -->
@@ -258,6 +261,9 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 					shippedIn="1"
 					description-attr="description-nes">
 		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="179.00" />
+		<comment authorName="NostaGamer" email="ngamer@rbs.fr" contentsAsBBCode="J'avais 10 ans quand elle est sortie ! Ma console préféré !" rating="5" />
+		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Nul ! Vive la master system !!!" rating="1" />
+		<comment authorName="OldGame" email="olg@rbs.fr" contentsAsBBCode="Le tout premier Zelda était extraordinaire, seul défaut, les cartouches s'encrasse de poussières et il faut souffler dans la cartouche avant de la mettre dans la NES" rating="4" />
 	</simpleproduct>
 	<!-- FAMICOM -->
 	<attribute name="description-famicom"><![CDATA[
@@ -386,6 +392,9 @@ buts, comme le traitement de texte.</p>
 					stockQuantity="0" 
 					description-attr="description-neogeo">
 		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="599.00" />
+		<comment authorName="NostaGamer" email="ngamer@rbs.fr" contentsAsBBCode="Dommage quelle soit si chère !" rating="5" />
+		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Elle est juste géniale !" rating="4" />
+		<comment authorName="OldGame" email="olg@rbs.fr" contentsAsBBCode="KOF POWA !" rating="4" />
 	</simpleproduct>
 	
 	<!-- SNESPAL -->
@@ -402,6 +411,12 @@ buts, comme le traitement de texte.</p>
 					stockQuantity="15" 
 					description-attr="description-snespal">
 		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="199.00" />
+		<comment authorName="NostaGamer" email="ngamer@rbs.fr"
+						contentsAsBBCode="J'avais 10 ans quand elle est sortie ! Ma console préféré !"
+						rating="5" />
+		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Bof ! Vive la megadrive !!!" rating="2" />
+		<comment authorName="OldGame" email="olg@rbs.fr" contentsAsBBCode="La meilleur des 16 bits" rating="4" />
+		<comment authorName="Mario" email="mario@rbs.fr" contentsAsBBCode="J'aime bien conduire des kartings" rating="5" />
 	</simpleproduct>
 	
 	<!-- SNES -->
@@ -601,6 +616,7 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 	</bundleproduct>
 	
 	<kit id="KIT-GAMEBOY-POKEMON" byCodeReference="KIT-GAMEBOY-POKEMON" label="Kit Pokemon"  shelf-refids="CAT-GAMES,SUBCAT-PORTABLE"
+		visual-refid="PACK-GAMEBOY-POKEMON"
 		complementary-refids="" 
 		similar-refids=""
 		upsell-refids="">

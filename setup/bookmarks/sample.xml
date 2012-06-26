@@ -16,9 +16,11 @@
 	</website>
 	
 	<rootfolder module="media">
-		<folder byLabel="Exemple de media de L'annuaire de liens">
-			<media path="modules/sample/setup/bookmarks/media/RBS.jpg" byLabel="RBS" id="photo1" />
-			<media path="modules/sample/setup/bookmarks/media/RBSChange.jpg" byLabel="RBS Change" id="photo2" />
+		<folder byLabel="m.generic.bo.general.samples">
+			<folder byLabel="bookmarks">
+				<media path="modules/sample/setup/bookmarks/media/RBS.jpg" byLabel="RBS" id="photo1" />
+				<media path="modules/sample/setup/bookmarks/media/RBSChange.jpg" byLabel="RBS Change" id="photo2" />
+			</folder>
 		</folder>
 	</rootfolder>
 	

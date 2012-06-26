@@ -8,13 +8,14 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
 	<rootfolder module="media">
-		<folder label="Médias liés aux exemples de magasin">
-			<media path="modules/sample/setup/store/media/change_logo.png" byLabel="RBS Change Store" id="media1" />
-			<media path="modules/sample/setup/store/media/lilas_logo.png" byLabel="Lila's Kitchen" id="media2" />
-			<media path="modules/sample/setup/store/media/instoremode_visual.png" label="Retrait en magasin" id="instore_visual" />
-			<media path="modules/sample/setup/store/media/SAV.png" label="SAV" id="sav_visual" />
-			<media path="modules/sample/setup/store/media/clock.png" label="24/24" id="clock_visual" />
-		
+		<folder byLabel="m.generic.bo.general.samples">
+			<folder label="store">
+				<media path="modules/sample/setup/store/media/change_logo.png" byLabel="RBS Change Store" id="media1" />
+				<media path="modules/sample/setup/store/media/lilas_logo.png" byLabel="Lila's Kitchen" id="media2" />
+				<media path="modules/sample/setup/store/media/instoremode_visual.png" label="Retrait en magasin" id="instore_visual" />
+				<media path="modules/sample/setup/store/media/SAV.png" label="SAV" id="sav_visual" />
+				<media path="modules/sample/setup/store/media/clock.png" label="24/24" id="clock_visual" />
+			</folder>
 		</folder>
 	</rootfolder>
 	

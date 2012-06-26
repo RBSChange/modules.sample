@@ -25,7 +25,7 @@
 	
 	<mode id="shipping" byLabel="Colissimo"  />
 	
-	<shippingfilter id="shippingfilter" byLabel="Colisimo" shop-refid="shop" mode-refid="shipping" 
+	<shippingfilter id="shippingfilter" byLabel="Colissimo" shop-refid="shop" mode-refid="shipping" 
 		taxCategory="1" valueWithoutTax="8.04"/>
 	
 	<chequeconnector id="payment" byLabel="Paiement par chèque" />

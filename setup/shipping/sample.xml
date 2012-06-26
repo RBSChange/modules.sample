@@ -8,16 +8,11 @@
 	
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
-			<media
-				path="modules/sample/setup/shipping/media/banner.gif"
-				label="Coliposte" id="coliposte_visual" />
-			<media
-				path="modules/sample/setup/shipping/media/ups.gif"
-				label="UPS" id="ups_visual" />	
-			<media
-				path="modules/sample/setup/shipping/media/download_icon.gif"
-				label="Download" id="download_visual" />
-			
+			<folder byLabel="shipping">
+				<media	path="modules/sample/setup/shipping/media/banner.gif" label="Coliposte" id="coliposte_visual" />
+				<media	path="modules/sample/setup/shipping/media/ups.gif" label="UPS" id="ups_visual" />	
+				<media	path="modules/sample/setup/shipping/media/download_icon.gif" label="Download" id="download_visual" />
+			</folder>
 		</folder>
 	</rootfolder>
 	

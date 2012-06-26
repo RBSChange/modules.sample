@@ -56,12 +56,5 @@
 				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="websitefrontendgroup"/>
 			</permissions>
 		</topic>
-		
-		<menus>
-			<menu byTag="contextual_website_website_menu-main">
-				<menuitempage pageid="register" />
-				<menuitempage pageid="editprofile" />
-			</menu>
-		</menus>
 	</website>
 </script>

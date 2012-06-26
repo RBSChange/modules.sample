@@ -7,8 +7,10 @@
 	<shop byLabel="Boutique" id="shop" />
 
 	<rootfolder module="media">
-		<folder byLabel="Médias liés à l'exemple Mobile app">
-			<media path="modules/sample/setup/mobileapps/media/changeapp.jpg" byLabel="Change Mobile App" id="V_CMA" />
+		<folder byLabel="m.generic.bo.general.samples">
+			<folder byLabel="mobileapps">
+				<media path="modules/sample/setup/mobileapps/media/changeapp.jpg" byLabel="Change Mobile App" id="V_CMA" />
+			</folder>
 		</folder>
 	</rootfolder>
 		
