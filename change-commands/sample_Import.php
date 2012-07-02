@@ -10,7 +10,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	public function getUsage()
 	{
-		return "";
+		return "<os-core|os-ecom|ecom-extended|all>";
 	}
 
 	/**
@@ -18,7 +18,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	public function getDescription()
 	{
-		return "import all samples data";
+		return "import samples data";
 	}
 	
 	/**
@@ -28,23 +28,22 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 * @param array<String, String> $options where the option array key is the option name, the potential option value or true
 	 * @return String[] or null
 	 */
-//	public function getParameters($completeParamCount, $params, $options, $current)
-//	{
-//		$components = array();
-//		
-//		// Generate options in $components.		
-//		
-//		return $components;
-//	}
+	public function getParameters($completeParamCount, $params, $options, $current)
+	{
+		$components = array('os-core', 'os-ecom', 'ecom-extended', 'all');	
+		
+		return $components;
+	}
 	
 	/**
 	 * @param String[] $params
 	 * @param array<String, String> $options where the option array key is the option name, the potential option value or true
 	 * @return boolean
 	 */
-//	protected function validateArgs($params, $options)
-//	{
-//	}
+	protected function validateArgs($params, $options)
+	{
+		return (count($params) == 1);
+	}
 
 	/**
 	 * @return String[]
@@ -60,6 +59,13 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	public function _execute($params, $options)
 	{
+		if (count(array_diff($params, array('os-core', 'os-ecom', 'ecom-extended', 'all'))) > 0)
+		{
+			$this->quitError('Bad parameter');
+			$this->message('Usage: change.php ' . $this->getFullName() . ' ' . $this->getUsage());
+			return;
+		}
+		
 		$this->message("== Initdata ==");
 
 		$this->loadFramework();
@@ -69,31 +75,70 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$parent->executeCommand('theme.install');
 		$batchPath = 'modules/sample/lib/bin/batchImport.php';
 		
-		$samples = $this->getSamples();
+		$ecomMode = true;
+		
+		switch ($params[0])
+		{
+			case 'os-core':
+				$this->message('= Import samples of your OS Core modules =');
+				$samples = $this->getOSCoreSamples();
+				$ecomMode = false;
+				break;
+			case 'os-ecom':
+				$this->message('= Import samples of your OS Ecom & Core modules =');
+				$samples = $this->getOSEcomSamples();
+				break;
+			case 'ecom-extended':
+				$this->message('= Import samples of your OS Core, Ecom & Ecom Extended modules =');
+				$samples = $this->getEcomExtSamples();
+				break;
+			case 'all':
+				$this->message('= Import samples of all your modules =');
+				$samples = $this->getSamples();
+				break;
+			default:
+				$samples = array();
+		}
+		
+		$ms = ModuleService::getInstance();
 		
 		$index = 0;
 		foreach (array_chunk($samples, 1, true) as $chunk)
 		{
-			$result = f_util_System::execHTTPScript($batchPath, $chunk);
-			// Log fatal errors...
-			if ($result != 'OK')
+			$sampleName = $samples[$index];
+			$moduleName = preg_replace('/\/.*/', '', $sampleName);
+			if ($ms->isInstalled($moduleName))
 			{
-				Framework::error(__METHOD__ . ' ' . $batchPath . ' unexpected result: "' . $result . '"');
-				echo "Error: " . $result;
+				$result = f_util_System::execHTTPScript($batchPath, $chunk);
+				// Log fatal errors...
+				if ($result != 'OK')
+				{
+					Framework::error(__METHOD__ . ' ' . $batchPath . ' unexpected result: "' . $result . '"');
+					$this->errorMessage("Error: " . $result);
+				}
+				$this->message("Importing samples: " . $sampleName);
 			}
-			$index = $index + count($chunk);
-			echo "Importing samples: " . $samples[$index - 1] . "\n";
+			else
+			{
+				$this->warnMessage('Sample: ' . $sampleName . ' wasn\'t imported because module ' . $moduleName . ' is not installed');
+			}
+			$index++;
 		}
-		
-		$parent->executeCommand('mysqlstock.reset-products-stock');
 		$parent->executeCommand('i18n-synchro');
-		$parent->executeCommand('catalog.compile-catalog');
+		if ($ecomMode && $ms->isInstalled('catalog'))
+		{
+			if ($ms->isInstalled('mysqlstock'))
+			{
+				$parent->executeCommand('mysqlstock.reset-products-stock');
+			}
+			$parent->executeCommand('catalog.compile-catalog');
+			
+			$this->message("Replace default page templates by eCom page templates");
+			$tps = theme_PagetemplateService::getInstance();
+			$tps->replacePagetemplate($tps->getByCodeName('default/nosidebarpage'), $tps->getByCodeName('default/nosidebarpage-ecom'));
+			$tps->replacePagetemplate($tps->getByCodeName('default/sidebarpage'), $tps->getByCodeName('default/sidebarpage-ecom'));
+		}
 		$parent->executeCommand('enable-site');
-		
-		$this->message("Replace default page templates by eCom page templates");
-		$tps = theme_PagetemplateService::getInstance();
-		$tps->replacePagetemplate($tps->getByCodeName('default/nosidebarpage'), $tps->getByCodeName('default/nosidebarpage-ecom'));
-		$tps->replacePagetemplate($tps->getByCodeName('default/sidebarpage'), $tps->getByCodeName('default/sidebarpage-ecom'));
 		
 		$this->quitOk("Command successfully executed");
 	}
@@ -110,8 +155,10 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'photoalbum' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'users' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'workflow' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'emailing' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'emailing' . DIRECTORY_SEPARATOR . 'samplepage.xml';
+		
 		$samples[] = 'forums' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'blog' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'form' . DIRECTORY_SEPARATOR . 'sample.xml';
@@ -121,33 +168,45 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'list' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'faq' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'lexicon' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'survey' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'inquiry' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'joboffer' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'sharethis' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'ads' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'videos' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'polls' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'statictext' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'brand' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'shipping' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'payment' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'atosserver' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'paybox' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'default.xml';
 		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'default.xml';
 		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'default.xml';
 		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'loyalty' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'marketing' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'privatesales' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'productreturns' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'event' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'rss' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'bookmarks' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'privatemessaging' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
 		$samples[] = 'mobileapps' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'store' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'store' . DIRECTORY_SEPARATOR . 'sampleextranet.xml';
@@ -155,4 +214,66 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		
 		return $samples;
 	}
+	
+	/**
+	 * @return string[]
+	 */
+	private function getOSCoreSamples()
+	{
+		$samples = array();
+		
+		$samples[] = 'website' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'media' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'users' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'workflow' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'form' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'notification' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'contactcard' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'list' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'statictext' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'rss' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
+		return $samples;
+	}
+	
+	/**
+	 * @return string[]
+	 */
+	private function getOSEcomSamples()
+	{
+		$samples = $this->getOSCoreSamples();
+		
+		$samples[] = 'brand' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'shipping' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'payment' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
+		$samples[] = 'paybox' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'default.xml';
+		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'default.xml';
+		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'default.xml';
+		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
+		return $samples;
+	}
+	
+	/**
+	 * @return string[]
+	 */
+	private function getEcomExtSamples()
+	{
+		$samples = $this->getOSEcomSamples();
+		
+		return $samples;
+	}
+	
+	private function getAllSamples()
+	{
+		$samples = $this->getEcomExtSamples();
+		$samples[] = 'photoalbum' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
+		return $samples;
+	}	
+	
 }

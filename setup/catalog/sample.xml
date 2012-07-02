@@ -310,10 +310,10 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 						brand-refid="SEGA" 
 						description-attr="description-sms"
 						similar-refids="COLECO-1982,FAMICOM-1983,NES-1985">
-		<productdeclination shippedIn="1" visual-refid="MASTERSYSTEM-1985"  byCodeReference="SMS-1" id="SMS-1" label="Master System I (1985)" stockQuantity="5">
+		<productdeclination shippedIn="1" visual-refid="MASTERSYSTEM-1985"  byCodeReference="SMS-1" id="SMS-1" label="I (1985)" stockQuantity="5">
 			<price  shop-refid="shop" storeWithTax="true" taxCategory="10" value="249" valueWithoutDiscount="299" />
 		</productdeclination>
-		<productdeclination shippedIn="3" visual-refid="MASTERSYSTEM-1990" byCodeReference="SMS-2" label="Master System II (1990)" stockQuantity="10">
+		<productdeclination shippedIn="3" visual-refid="MASTERSYSTEM-1990" byCodeReference="SMS-2" label="II (1990)" stockQuantity="10">
 			<price shop-refid="shop"  storeWithTax="true" taxCategory="10" value="199" />
 		</productdeclination>
 	</declinedproduct>
@@ -411,9 +411,7 @@ buts, comme le traitement de texte.</p>
 					stockQuantity="15" 
 					description-attr="description-snespal">
 		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="199.00" />
-		<comment authorName="NostaGamer" email="ngamer@rbs.fr"
-						contentsAsBBCode="J'avais 10 ans quand elle est sortie ! Ma console préféré !"
-						rating="5" />
+		<comment authorName="NostaGamer" email="ngamer@rbs.fr" contentsAsBBCode="J'avais 10 ans quand elle est sortie ! Ma console préféré !" rating="5" />
 		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Bof ! Vive la megadrive !!!" rating="2" />
 		<comment authorName="OldGame" email="olg@rbs.fr" contentsAsBBCode="La meilleur des 16 bits" rating="4" />
 		<comment authorName="Mario" email="mario@rbs.fr" contentsAsBBCode="J'aime bien conduire des kartings" rating="5" />
@@ -516,8 +514,8 @@ buts, comme le traitement de texte.</p>
 						brand-refid="NINTENDO" 
 						description-attr="description-pokemon">
 		<price shop-refid="shop" storeWithTax="true" taxCategory="10" value="15.00" />
-		<productdeclination shippedIn="1" visual-refid="GAMEBOY-GAME-POKEMON-RED" byCodeReference="POKEMON-GAME-RED" label="Pokemon version rouge" stockQuantity="100" id="POKEMON-GAME-RED" />
-		<productdeclination shippedIn="1" visual-refid="GAMEBOY-GAME-POKEMON-BLUE" byCodeReference="POKEMON-GAME-BLUE" label="Pokemon version bleu" stockQuantity="100" />
+		<productdeclination shippedIn="1" visual-refid="GAMEBOY-GAME-POKEMON-RED" byCodeReference="POKEMON-GAME-RED" label="version rouge" stockQuantity="100" id="POKEMON-GAME-RED" />
+		<productdeclination shippedIn="1" visual-refid="GAMEBOY-GAME-POKEMON-BLUE" byCodeReference="POKEMON-GAME-BLUE" label="version bleu" stockQuantity="100" />
 	</declinedproduct>
 
 	<!-- GB Accessories -->
@@ -626,12 +624,34 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 	</kit>
 	
 	<!-- Cross-selling -->
-	<simpleproduct byCodeReference="NES-1985" similar-refids="FAMICOM-1983,SMS-1" complementary-refids="NES-ZAPPER-GREY,NES-ADVANTAGE,NES-CONTROLLER" upsell-refids="SNES-1992,SNESPAL-1992,NEOGEO-1990" />
+	<simpleproduct byCodeReference="NES-1985" similar-refids="FAMICOM-1983,SMS-1,ATARI7800-1986" complementary-refids="NES-ZAPPER-GREY,NES-ADVANTAGE,NES-CONTROLLER" upsell-refids="SNES-1992,SNESPAL-1992,NEOGEO-1990" />
 	<simpleproduct byCodeReference="DUCK-HUNT" similar-refids="" complementary-refids="NES-ZAPPER-GREY,NES-1985" upsell-refids="" />
-	<simpleproduct byCodeReference="SNES-1992" similar-refids="SNESPAL-1992" complementary-refids="" upsell-refids="" />
-	<simpleproduct byCodeReference="MEGADRIVE-1988" similar-refids="SNESPAL-1992,SNES-1992" complementary-refids="" upsell-refids="" />
-	<simpleproduct byCodeReference="COLECO-1982" similar-refids="NES-1985,FAMICOM-1983,SMS-1,ATARI2600-1978" complementary-refids="" upsell-refids="SNES-1992,SNESPAL-1992,NEOGEO-1990" />
+	<declinedproduct byCodeReference="NES-ZAPPER" similar-refids="" complementary-refids="DUCK-HUNT,NES-1985" upsell-refids="" />
+	<simpleproduct byCodeReference="NES-CONTROLLER" similar-refids="FAMICOM-CONTROLLER,NES-ADVANTAGE" complementary-refids="NES-1985" upsell-refids="" />
+	<simpleproduct byCodeReference="FAMICOM-CONTROLLER" similar-refids="NES-CONTROLLER" complementary-refids="FAMICOM-1983" upsell-refids="" />
+	<simpleproduct byCodeReference="NES-ADVANTAGE" similar-refids="NES-CONTROLLER" complementary-refids="NES-1985" upsell-refids="" />
+	<simpleproduct byCodeReference="FAMICOM-1983" similar-refids="NES-1985,SMS-1" complementary-refids="NES-ZAPPER-GREY,NES-ADVANTAGE,FAMICOM-CONTROLLER" upsell-refids="SNESPAL-1992,NEOGEO-1990" />
+	
+	<simpleproduct byCodeReference="COLECO-1982" similar-refids="NES-1985,FAMICOM-1983,SMS-1,ATARI2600-1978" complementary-refids="" upsell-refids="" />
+	<simpleproduct byCodeReference="ATARI2600-1978" similar-refids="COLECO-1982" complementary-refids="" upsell-refids="ATARI7800-1986" />
+	<simpleproduct byCodeReference="ATARI7800-1986" similar-refids="NES-1985,FAMICOM-1983,SMS-1,COLECO-1982" complementary-refids="" upsell-refids="" />
+	<declinedproduct byCodeReference="SMS-MULTI" similar-refids="NES-1985,FAMICOM-1983,SMS-1,COLECO-1982,ATARI7800-1986" complementary-refids="" upsell-refids="MEGADRIVE-1988" />
+	
+	<simpleproduct byCodeReference="NEOGEO-1990" similar-refids="SNESPAL-1992,SNES-1992,MEGADRIVE-1988" complementary-refids="" upsell-refids="" />
+	<simpleproduct byCodeReference="SNES-1992" similar-refids="SNESPAL-1992" complementary-refids="SNES-GAME-ZELDA" upsell-refids="" />
+	<simpleproduct byCodeReference="SNESPAL-1992" similar-refids="SNES-1992" complementary-refids="SNES-GAME-ZELDA" upsell-refids="" />
+	<simpleproduct byCodeReference="MEGADRIVE-1988" similar-refids="SNESPAL-1992,SNES-1992,NEOGEO-1990" complementary-refids="" upsell-refids="" />
 	<virtualproduct byCodeReference="SNES-DOWNLOAD-ZELDA-TIPS" complementary-refids="SNES-GAME-ZELDA" />
-	<simpleproduct byCodeReference="SNES-GAME-ZELDA" complementary-refids="SNES-DOWNLOAD-ZELDA-TIPS" />
+	<simpleproduct byCodeReference="SNES-GAME-ZELDA" complementary-refids="SNESPAL-1992,SNES-DOWNLOAD-ZELDA-TIPS" />
+	
+	<simpleproduct byCodeReference="GAMEBOY-LINKCABLE" similar-refids="" complementary-refids="GAMEBOY-CLASSIC" upsell-refids="" />
+	<declinedproduct byCodeReference="GAMEBOY-GAME-POKEMON" similar-refids="" complementary-refids="GAMEBOY-LINKCABLE,GAMEBOY-CLASSIC" upsell-refids="" />
+	<declinedproduct byCodeReference="GAMEBOY" similar-refids="" complementary-refids="GAMEBOY-LINKCABLE,GAMEBOY-GAME-POKEMON" upsell-refids="" />
+	
+	<simpleproduct byCodeReference="MICRO-ATARI-ST" similar-refids="MICRO-AMIGA" complementary-refids="" upsell-refids="" />
+	<simpleproduct byCodeReference="MICRO-AMIGA" similar-refids="MICRO-ATARI-ST" complementary-refids="" upsell-refids="" />
+	
+	
+	
 	
 </script>
