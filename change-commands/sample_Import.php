@@ -10,7 +10,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	public function getUsage()
 	{
-		return "<os-core|os-ecom|ecom-extended|all>";
+		return "<cmscore|ecommercecore|cmsecomos|ecom-performance|'moduleName/sample.xml'>";
 	}
 
 	/**
@@ -30,7 +30,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	public function getParameters($completeParamCount, $params, $options, $current)
 	{
-		$components = array('os-core', 'os-ecom', 'ecom-extended', 'all');	
+		$components = array_merge(array('cmscore', 'ecommercecore', 'cmsecomos', 'ecom-performance', 'all'), $this->getSamples());
 		
 		return $components;
 	}
@@ -42,7 +42,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	protected function validateArgs($params, $options)
 	{
-		return (count($params) == 1);
+		return (count($params) == 1 && in_array($params[0], array_merge(array('cmscore', 'ecommercecore', 'cmsecomos', 'ecom-performance', 'all'), $this->getSamples())));
 	}
 
 	/**
@@ -59,13 +59,6 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	public function _execute($params, $options)
 	{
-		if (count(array_diff($params, array('os-core', 'os-ecom', 'ecom-extended', 'all'))) > 0)
-		{
-			$this->quitError('Bad parameter');
-			$this->message('Usage: change.php ' . $this->getFullName() . ' ' . $this->getUsage());
-			return;
-		}
-		
 		$this->message("== Initdata ==");
 
 		$this->loadFramework();
@@ -79,31 +72,38 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		
 		switch ($params[0])
 		{
-			case 'os-core':
+			case 'cmscore':
 				$this->message('= Import samples of your OS Core modules =');
-				$samples = $this->getOSCoreSamples();
+				$wantedSamples = $this->getOSCoreSamples();
 				$ecomMode = false;
 				break;
-			case 'os-ecom':
+			case 'ecommercecore':
 				$this->message('= Import samples of your OS Ecom & Core modules =');
-				$samples = $this->getOSEcomSamples();
+				$wantedSamples = $this->getOSEcomSamples();
 				break;
-			case 'ecom-extended':
-				$this->message('= Import samples of your OS Core, Ecom & Ecom Extended modules =');
-				$samples = $this->getEcomExtSamples();
+			case 'cmsecomos':
+					$this->message('= Import samples of all OS modules =');
+					$wantedSamples = $this->getCMSEcomOSSamples();
+					break;
+			case 'ecom-performance':
+				$this->message('= Import samples of your OS Core, Ecom & Ecom performance modules =');
+				$wantedSamples = $this->getEcomPerformanceSamples();
 				break;
 			case 'all':
 				$this->message('= Import samples of all your modules =');
-				$samples = $this->getSamples();
+				$wantedSamples = $this->getSamples();
 				break;
 			default:
-				$samples = array();
+				$this->message('= Import only ' . $params[0] . ' =');
+				$wantedSamples = array($params[0]);
 		}
+		
+		$samples = array_values(array_intersect($this->getSamples(), $wantedSamples));
 		
 		$ms = ModuleService::getInstance();
 		
 		$index = 0;
-		foreach (array_chunk($samples, 1, true) as $chunk)
+		foreach (array_chunk($samples, 1, false) as $chunk)
 		{
 			$sampleName = $samples[$index];
 			$moduleName = preg_replace('/\/.*/', '', $sampleName);
@@ -144,10 +144,15 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	}
 	
 	/**
+	 * All samples of all modules ordered
 	 * @return string[]
 	 */
 	private function getSamples()
 	{
+		//This method preserves the good order of samples. 
+		//It return the ordered array to compare with other 
+		//method that return an unordered array of samples you want
+		
 		$samples = array();
 		
 		$samples[] = 'website' . DIRECTORY_SEPARATOR . 'sample.xml';
@@ -216,6 +221,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	}
 	
 	/**
+	 * Samples of OS CMS Core pack unordered
 	 * @return string[]
 	 */
 	private function getOSCoreSamples()
@@ -237,6 +243,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	}
 	
 	/**
+	 * Samples of OS E-commerce core pack unordered
 	 * @return string[]
 	 */
 	private function getOSEcomSamples()
@@ -259,21 +266,49 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	}
 	
 	/**
+	 * All OS samples unordered
 	 * @return string[]
 	 */
-	private function getEcomExtSamples()
+	private function getCMSEcomOSSamples()
 	{
 		$samples = $this->getOSEcomSamples();
+		
+		$samples[] = 'forums' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'blog' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'download' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'faq' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'lexicon' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'inquiry' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'joboffer' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'sharethis' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'videos' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'polls' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'event' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'bookmarks' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'privatemessaging' . DIRECTORY_SEPARATOR . 'sample.xml';
 		
 		return $samples;
 	}
 	
-	private function getAllSamples()
+	/**
+	 * Samples of OS E-commerce performance pack unordered
+	 * @return string[]
+	 */
+	private function getEcomPerformanceSamples()
 	{
-		$samples = $this->getEcomExtSamples();
-		$samples[] = 'photoalbum' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples = $this->getOSEcomSamples();
+		
+		$samples[] = 'emailing' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'emailing' . DIRECTORY_SEPARATOR . 'samplepage.xml';
+		
+		$samples[] = 'ads' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
+		$samples[] = 'loyalty' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'marketing' . DIRECTORY_SEPARATOR . 'sample.xml';
+		
+		$samples[] = 'productreturns' . DIRECTORY_SEPARATOR . 'sample.xml';
 		
 		return $samples;
-	}	
+	}
 	
 }

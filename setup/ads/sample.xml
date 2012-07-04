@@ -24,12 +24,4 @@
 			<rotatingbannergroup id="rotatingbanner" byLabel="Groupe tournant" height="75" width="365" banner-refids="ban1,ban2,ban3" />
 		</folder>
 	</rootfolder>
-	
-	<website byTag="default_modules_website_default-website">
-		<page id="homepage" byLabel="Accueil">
-			<changecontent for="content-block" append="true">
-				<changeblock type="modules_ads_rotatingbannergroup" __cmpref-refid="rotatingbanner" />
-			</changecontent>
-		</page>
-	</website>
 </script>
