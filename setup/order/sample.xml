@@ -32,7 +32,7 @@
 
 	<simpleproduct id="product1" byCodeReference="NES-1985" />
 	<simpleproduct id="product2" byCodeReference="COLECO-1982" />
-	<simpleproduct id="product3" byCodeReference="SNESPAL-1992" />
+	<productdeclination id="product3" byCodeReference="SUPER-NINTENDO-EUR" />
 	<simpleproduct id="product4" byCodeReference="MEGADRIVE-1988" />
 	<simpleproduct id="product5" byCodeReference="NEOGEO-1990" />
 	<simpleproduct id="product6" byCodeReference="ATARI2600-1978" />

@@ -26,7 +26,7 @@
 	<product id="product2" byCodeReference="COLECO-1982" />
 	<product id="product3" byCodeReference="ATARI2600-1978" />
 	<product id="product4" byCodeReference="NEOGEO-1990" />
-	<product id="product5" byCodeReference="SNESPAL-1992" />
+	<productdeclination id="product5" byCodeReference="SUPER-NINTENDO-EUR" />
 	<customer id="customer1" byLogin="mario" />
 	<customer id="customer2" byLogin="luigi" />
 	<address id="address" byLabel="L'adresse de livraison de Mario" />
