@@ -50,6 +50,6 @@
 				publicationstatus="ACTIVE" location="Strasbourg" background="am id nulla purus, vulputate euismod felis."
 				profile="Curabitur tristique mattis rhoncus." candidacyForm-refid="sform" />
 		</linkedtopic>
-		<spontaneous byLabel="Candidatures spontanées" candidacyForm-refid="sform"></spontaneous> 
+		<spontaneous byLabel="m.joboffer.document.spontaneous.document-name" candidacyForm-refid="sform" offertype-refid="cdi"></spontaneous> 
 	</rootfolder>
 </script>
