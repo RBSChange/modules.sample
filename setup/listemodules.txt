@@ -1,0 +1,62 @@
+Module CORE : sample/samplecore.xml
+
+CORE	 website/sample.xml
+CORE	 media/sample.xml
+CORE	 users/sample.xml
+CORE	 workflow/sample.xml
+CORE	 form/sample.xml
+CORE	 notification/sample.xml
+CORE	 contactcard/sample.xml
+CORE	 list/sample.xml
+CORE	 statictext/sample.xml
+CORE	 rss/sample.xml		
+		
+Module CMS : sample/samplecms.xml
+
+CMS 	 photoalbum/sample.xml			/ fait améliorer les exemples
+CMS		 forums/sample.xml
+CMS 	 blog/sample.xml				/ fait
+CMS		 download/sample.xml
+CMS 	 faq/sample.xml
+CMS 	 lexicon/sample.xml
+CMS 	 joboffer/sample.xml 			/ fait améliorer les exemples
+CMS 	 sharethis/sample.xml
+CMS 	 videos/sample.xml				/ revoir le sample entièrement
+CMS 	 polls/sample.xml
+CMS 	 event/sample.xml				/ fait améliorer les exemples / voir a mettre un menu dans le sampleevent.xml
+CMS 	 bookmarks/sample.xml
+CMS 	 privatemessaging/sample.xml	/ fait, mais pas de réel données d'exemples
+		
+Module ECOM : sample/sampleecom.xml
+
+ECOM	 brand/sample.xml
+ECOM 	 shipping/sample.xml
+ECOM 	 payment/sample.xml
+ECOM 	 paybox/sample.xml
+ECOM 	 catalog/default.xml
+ECOM 	 catalog/sample.xml
+ECOM 	 customer/default.xml
+ECOM 	 order/default.xml
+ECOM 	 customer/sample.xml
+ECOM 	 order/sample.xml
+
+Module ECO+ : sample/sampleecoplus.xml
+
+ECO+	 emailing/sample.xml
+ECO+	 emailing/samplepage.xml
+ECO+	 ads/sample.xml
+ECO+	 loyalty/sample.xml
+ECO+	 marketing/sample.xml
+ECO+	 productreturns/sample.xml
+ECO+	 store/sample.xml
+ECO+	 store/sampleextranet.xml
+
+Module non affecté
+
++		 survey/sample.xml
+		 inquiry/sample.xml
+ECO+	 atosserver/sample.xml
+ECO+	 privatesales/sample.xml
+		 mobileapps/sample.xml
+		 
+		 synchronizer/sample.xml

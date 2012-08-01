@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/sample/setup/statictext/sample.xml" />
+
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Exemple Texte statique" id="statictexttopic">
+			<page byLabel="Exemple Texte statique" isIndexPage="true"
+				navigationVisibility="hidden" indexingstatus="false" id="statictextpage1">
+				<changecontent for="content-block">
+					<changeblock type="modules_statictext_Text"
+						__cmpref-refid="t1" />
+				</changecontent>
+			</page>
+			<page byLabel="Exemple Texte statique HTML" isIndexPage="true"
+				navigationVisibility="hidden" indexingstatus="false" id="statictextpage2">
+				<changecontent for="content-block">
+					<changeblock type="modules_statictext_Htmlcode"
+						__cmpref-refid="htmltext" />
+				</changecontent>
+			</page>
+		</topic>
+
+		<i18n lang="en">
+			<topic byRefid="statictexttopic" label="Static text sample">
+				<page byRefid="statictextpage1" label="Static text sample"
+					navigationVisibility="hidden">
+					<changecontent for="content-block">
+						<changeblock type="modules_statictext_Text"
+							__showLabel="true" __cmpref-refid="simpletext" />
+					</changecontent>
+				</page>
+			</topic>
+		</i18n>
+	</website>
+</script>

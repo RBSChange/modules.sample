@@ -17,7 +17,7 @@
 	</rootfolder>
 	
 	<rootfolder module="form">
-		<form label="Formulaire de contact" description="Exemple de formulaire"
+		<form label="Formulaire de contact" description="Exemple de formulaire" id="contactform"
 			submitButton="Envoyer" confirmMessage="Votre message nous a bien été transmis. Il sera traité sous 48 heures. Merci"
 			markup="default" useBackLink="true" useCaptcha="false">	
 			

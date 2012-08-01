@@ -4,6 +4,7 @@
 		"template" and "templateHome" attributes are automatically set with the configuration values:
 		 - modules/website/sample/defaultPageTemplate
 		 - modules/website/sample/defaultHomeTemplate
+		 - modules/website/sample/defaultPopinTemplate
 		
 		WARNING: before importing this file, you need to install the theme.
 	-->
@@ -20,8 +21,9 @@
 
 	<pagetemplate byCodename-attr="templateHome" id="tplOne" />
 	<pagetemplate byCodename-attr="template" id="tplTwo" />
+	<pagetemplate byCodename-attr="templatePopin" id="tplPopin" />
 	
-	<website id="website" byDocumentId-attr="" label-attr="" protocol-attr="" localizebypath-attr="" allowedpagetemplate-refids="tplOne,tplTwo">
+	<website id="website" byDocumentId-attr="" label-attr="" protocol-attr="" localizebypath-attr="" allowedpagetemplate-refids="tplOne,tplTwo,tplPopin">
 		<page id="homepage" label="Accueil" isHomePage="true" template-attr="templateHome" >
 			<changecontent for="content-block">
 				<changeblock type="richtext">
@@ -118,7 +120,6 @@
 			</menu>
 
 			<menu id="mnumain" label="Menu principal" byTag="contextual_website_website_menu-main">
-				<menuitempage pageid="sitemap" />
 			</menu>
 
 			<menu id="mnufooter" label="Menu en bas de page" byTag="contextual_website_website_menu-footer">

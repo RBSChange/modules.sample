@@ -1,96 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/forums/persistentdocument/import/forums_binding.xml" />
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
 
-	<country byCode="FR" id="fr"/>
-	<country byCode="CH" id="ch"/>
-			
+	<country byCode="FR" id="fr" />
+	<country byCode="CH" id="ch" />
+
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="forum">
-				<media path="modules/forums/setup/media/sample/new.png" byLabel="Nouveau" id="visual-new" />
-				<media path="modules/forums/setup/media/sample/award_star_bronze_2.png" byLabel="Médaille de bronze" id="visual-bronze" />
-				<media path="modules/forums/setup/media/sample/award_star_silver_2.png" byLabel="Médaille d'argent" id="visual-silver" />
-				<media path="modules/forums/setup/media/sample/award_star_gold_2.png" byLabel="Médaille d'or" id="visual-gold" />
-				<media path="modules/forums/setup/media/sample/medal_silver_1.png" byLabel="Modérateur" id="visual-mod" />
-				<media path="modules/forums/setup/media/sample/medal_gold_1.png" byLabel="Super-modérateur" id="visual-smod" />
+				<media path="modules/forums/setup/media/sample/new.png"
+					byLabel="Nouveau" id="visual-new" />
+				<media path="modules/forums/setup/media/sample/award_star_bronze_2.png"
+					byLabel="Médaille de bronze" id="visual-bronze" />
+				<media path="modules/forums/setup/media/sample/award_star_silver_2.png"
+					byLabel="Médaille d'argent" id="visual-silver" />
+				<media path="modules/forums/setup/media/sample/award_star_gold_2.png"
+					byLabel="Médaille d'or" id="visual-gold" />
+				<media path="modules/forums/setup/media/sample/medal_silver_1.png"
+					byLabel="Modérateur" id="visual-mod" />
+				<media path="modules/forums/setup/media/sample/medal_gold_1.png"
+					byLabel="Super-modérateur" id="visual-smod" />
 			</folder>
 		</folder>
 	</rootfolder>
 
 	<systemfolder module="list" relatedmodule="forums">
-		<valuededitablelist listid="modules_forums/flagsample" label="m.forums.lists.flagsample.label" description="m.forums.lists.flagsample.description" id="flags">
+		<valuededitablelist listid="modules_forums/flagsample"
+			label="m.forums.lists.flagsample.label" description="m.forums.lists.flagsample.description"
+			id="flags">
 			<valueditem label="Assistance" byValue="help" />
 			<valueditem label="Urgent" byValue="urgent" />
 			<valueditem label="Communauté" byValue="fellowship" />
 			<valueditem label="Règles" byValue="rules" />
 		</valuededitablelist>
 	</systemfolder>
-	
+
 	<websitefrontendgroup for-default-website="true">
-		<websitefrontenduser id="usera" byLogin="doug42" firstname="Douglas" lastname="Adams" email="douglas.adams@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="userb" byLogin="jp" firstname="Jean" lastname="Paoli" email="jean.paoli@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="user1" byLogin="gern" firstname="François" lastname="Gernelle" email="francois.gernelle@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="user2" byLogin="abi" firstname="Abigail" lastname="Sciuto" email="abigail.sciuto@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="user3" byLogin="pene" firstname="Penelope" lastname="Garcia" email="penelope.garcia@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="user4" byLogin="cloclo" firstname="Chloe" lastname="O'Brian" email="chloe.obrian@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="user5" byLogin="aColmer" firstname="Alain" lastname="Colmerauer" email="alain.colmerauer@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="user6" byLogin="gboole" firstname="George" lastname="Boole" email="george.boole@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="user7" byLogin="jpdela" firstname="Jean-Paul" lastname="Delahaye" email="jean-paul.delahaye@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="user8" byLogin="dave" firstname="Dave" lastname="Null" email="dave.null@rbs.fr" password="abcd123" />
-		<websitefrontenduser id="user9" byLogin="hg" firstname="Henri" lastname="Gouraud" email="henri.gouraud@rbs.fr" password="abcd123" />
+		<websitefrontenduser id="usera" byLogin="doug42"
+			firstname="Douglas" lastname="Adams" email="douglas.adams@rbs.fr"
+			password="abcd123" />
+		<websitefrontenduser id="userb" byLogin="jp"
+			firstname="Jean" lastname="Paoli" email="jean.paoli@rbs.fr" password="abcd123" />
+		<websitefrontenduser id="user1" byLogin="gern"
+			firstname="François" lastname="Gernelle" email="francois.gernelle@rbs.fr"
+			password="abcd123" />
+		<websitefrontenduser id="user2" byLogin="abi"
+			firstname="Abigail" lastname="Sciuto" email="abigail.sciuto@rbs.fr"
+			password="abcd123" />
+		<websitefrontenduser id="user3" byLogin="pene"
+			firstname="Penelope" lastname="Garcia" email="penelope.garcia@rbs.fr"
+			password="abcd123" />
+		<websitefrontenduser id="user4" byLogin="cloclo"
+			firstname="Chloe" lastname="O'Brian" email="chloe.obrian@rbs.fr"
+			password="abcd123" />
+		<websitefrontenduser id="user5" byLogin="aColmer"
+			firstname="Alain" lastname="Colmerauer" email="alain.colmerauer@rbs.fr"
+			password="abcd123" />
+		<websitefrontenduser id="user6" byLogin="gboole"
+			firstname="George" lastname="Boole" email="george.boole@rbs.fr"
+			password="abcd123" />
+		<websitefrontenduser id="user7" byLogin="jpdela"
+			firstname="Jean-Paul" lastname="Delahaye" email="jean-paul.delahaye@rbs.fr"
+			password="abcd123" />
+		<websitefrontenduser id="user8" byLogin="dave"
+			firstname="Dave" lastname="Null" email="dave.null@rbs.fr" password="abcd123" />
+		<websitefrontenduser id="user9" byLogin="hg"
+			firstname="Henri" lastname="Gouraud" email="henri.gouraud@rbs.fr"
+			password="abcd123" />
 	</websitefrontendgroup>
-		
+
 	<website byTag="default_modules_website_default-website" id="website" />
-	
-	<rank byLabel="Débutant" thresholdMin="0" visual-refid="visual-new" website-refid="website" />
-	<rank byLabel="Confirmé" thresholdMin="5" visual-refid="visual-bronze" website-refid="website" />
-	<rank byLabel="Avancé" thresholdMin="10" visual-refid="visual-silver" website-refid="website" />
-	<rank byLabel="Expert" thresholdMin="20" visual-refid="visual-gold" website-refid="website" />
-	<title byLabel="Modérateur" visual-refid="visual-mod" website-refid="website" id="title-mod" />
-	<title byLabel="Super-modérateur" visual-refid="visual-smod" website-refid="website" id="title-smod" />
-	<title byLabel="Super-modérateur" visual-refid="visual-smod" website-refid="website" id="title-smod" />
-	
+
+	<rank byLabel="Débutant" thresholdMin="0" visual-refid="visual-new"
+		website-refid="website" />
+	<rank byLabel="Confirmé" thresholdMin="5" visual-refid="visual-bronze"
+		website-refid="website" />
+	<rank byLabel="Avancé" thresholdMin="10" visual-refid="visual-silver"
+		website-refid="website" />
+	<rank byLabel="Expert" thresholdMin="20" visual-refid="visual-gold"
+		website-refid="website" />
+	<title byLabel="Modérateur" visual-refid="visual-mod"
+		website-refid="website" id="title-mod" />
+	<title byLabel="Super-modérateur" visual-refid="visual-smod"
+		website-refid="website" id="title-smod" />
+	<title byLabel="Super-modérateur" visual-refid="visual-smod"
+		website-refid="website" id="title-smod" />
+
 	<website byTag="default_modules_website_default-website" id="website">
-		<member id="mod1" user-refid="usera" publicationstatus="ACTIVE" title-refids="title-mod" country-refid="fr" />
+		<member id="mod1" user-refid="usera" publicationstatus="ACTIVE"
+			title-refids="title-mod" country-refid="fr" />
 		<bbcodeattribute name="memberSignature">
 			<![CDATA[[url="http://rbschange.fr"][img]http://www.rbschange.fr/publicmedia/formatted/593/21/fr/cmschange.png;maxh=40,maxw=40.png[/img][img]http://www.rbschange.fr/publicmedia/formatted/593/16/fr/ecommercechange.png.png;maxh=40,maxw=40.png[/img][img]http://www.rbschange.fr/publicmedia/formatted/593/24/fr/toolschange.png;maxh=40,maxw=40.png[/img][/url]]]>
 		</bbcodeattribute>
-		<member id="mod2" user-refid="userb" publicationstatus="ACTIVE" displayname="true" title-refids="title-smod" signature-attr="memberSignature"  country-refid="fr"/>
+		<member id="mod2" user-refid="userb" publicationstatus="ACTIVE"
+			displayname="true" title-refids="title-smod" signature-attr="memberSignature"
+			country-refid="fr" />
 		<bbcodeattribute name="memberSignature">
 			<![CDATA[[url="http://www.rbschange.fr"][img]http://www.rbschange.fr/media/themes/opensource/logo.png[/img][/url]]]>
-		</bbcodeattribute>		
-		<member id="member1" user-refid="user1" publicationstatus="ACTIVE" displayname="true" signature-attr="memberSignature" />
-		<member id="member2" user-refid="user2" publicationstatus="ACTIVE" displayname="true" signatureAsBBCode="\o/"  country-refid="ch" />
-		<member id="member3" user-refid="user3" publicationstatus="ACTIVE" displayname="true" signatureAsBBCode="[b]Bla[/b], [i]bla[/i] et [big]bla[/big]." />
-		<member id="member4" user-refid="user4" publicationstatus="ACTIVE" signatureAsBBCode="Ma signature." />
-		<member id="member5" user-refid="user5" publicationstatus="ACTIVE" displayname="true" />
-		<member id="member6" user-refid="user6" publicationstatus="ACTIVE" displayname="true" />
-		<member id="member7" user-refid="user7" publicationstatus="ACTIVE" displayname="true" />
-		<member id="member8" user-refid="user8" publicationstatus="ACTIVE" displayname="true" />
-		<member id="member9" user-refid="user9" publicationstatus="ACTIVE" displayname="true" />
+		</bbcodeattribute>
+		<member id="member1" user-refid="user1" publicationstatus="ACTIVE"
+			displayname="true" signature-attr="memberSignature" />
+		<member id="member2" user-refid="user2" publicationstatus="ACTIVE"
+			displayname="true" signatureAsBBCode="\o/" country-refid="ch" />
+		<member id="member3" user-refid="user3" publicationstatus="ACTIVE"
+			displayname="true" signatureAsBBCode="[b]Bla[/b], [i]bla[/i] et [big]bla[/big]." />
+		<member id="member4" user-refid="user4" publicationstatus="ACTIVE"
+			signatureAsBBCode="Ma signature." />
+		<member id="member5" user-refid="user5" publicationstatus="ACTIVE"
+			displayname="true" />
+		<member id="member6" user-refid="user6" publicationstatus="ACTIVE"
+			displayname="true" />
+		<member id="member7" user-refid="user7" publicationstatus="ACTIVE"
+			displayname="true" />
+		<member id="member8" user-refid="user8" publicationstatus="ACTIVE"
+			displayname="true" />
+		<member id="member9" user-refid="user9" publicationstatus="ACTIVE"
+			displayname="true" />
 	</website>
 	<rootfolder module="forums">
 		<websitefolder byWebsite-refid="website">
 			<permissions>
-				<frontendpermission module="forums" role="SuperModerator" user-refid="userb" />
+				<frontendpermission module="forums" role="SuperModerator"
+					user-refid="userb" />
 			</permissions>
 			<execute method="setDocumentIdAttributeWithWebsite" />
 			<binding fileName="modules/forums/setup/membersDefaultStructure.xml" />
-			<forumgroup label="Forums" mountParent-refid="website" publicationstatus="ACTIVE" flagList-refid="flags">
+			<forumgroup label="Forums" mountParent-refid="topiccommunity"
+				publicationstatus="ACTIVE" flagList-refid="flags">
 				<documenturl lang="fr" url="/forums" />
 				<permissions>
-					<frontendpermission module="forums" role="SuperModerator" user-refid="userb" />
-					<frontendpermission module="forums" role="Moderator" user-refid="usera" />
+					<frontendpermission module="forums" role="SuperModerator"
+						user-refid="userb" />
+					<frontendpermission module="forums" role="Moderator"
+						user-refid="usera" />
 				</permissions>
 				<execute method="setDocumentIdAttributeWithTopic" />
 				<binding fileName="modules/forums/setup/forumgroupDefaultStructure.xml" />
-				<forum label="Les jeux du grenier" nbPostPerPage="10" publicationstatus="ACTIVE" description="Pour parler d'anciens jeux qui ont marqué la culture du jeu vidéo.">
+				<forum label="Les jeux du grenier" nbPostPerPage="10"
+					publicationstatus="ACTIVE"
+					description="Pour parler d'anciens jeux qui ont marqué la culture du jeu vidéo.">
 					<documenturl lang="fr" url="/forums/grenier" />
 					<thread label="Game &amp; Watch" threadauthor-refid="member1">
 						<bbcodeattribute name="postText">
@@ -104,7 +157,8 @@ Une Game & Watch collector du nom de "Mario Bros Pokka" a été distribué par u
 						</bbcodeattribute>
 						<post postauthor-refid="member1" text-attr="postText" />
 					</thread>
-					<thread label="Nintendo Entertainment System" threadauthor-refid="member1">
+					<thread label="Nintendo Entertainment System"
+						threadauthor-refid="member1">
 						<bbcodeattribute name="postText">
 							<![CDATA[Le Nintendo Entertainment System (en français : le système de divertissement de Nintendo), ou NES, est une console de jeux vidéo 8 bits du constructeur japonais Nintendo sortie en 1985. Son équivalent japonais est la Family Computer (ファミリーコンピュータ, Famirī Konpyūta?), ou Famicom (ファミコン, Famikon?), sortie quelques années avant, en 1983.
 
@@ -116,7 +170,7 @@ La NES est également la première console pour laquelle Nintendo alla au-devant
 						</bbcodeattribute>
 						<post postauthor-refid="member1" text-attr="postText" />
 						<post postauthor-refid="mod1" textAsBBCode="Oh oui, la NES que de souvenirs :)." />
-					</thread>	
+					</thread>
 					<thread label="Donkey Kong Racing" threadauthor-refid="member1">
 						<bbcodeattribute name="postText">
 							<![CDATA[[img]http://upload.wikimedia.org/wikipedia/en/thumb/6/65/Donkey_Kong_logo.png/250px-Donkey_Kong_logo.png[/img]
@@ -152,14 +206,20 @@ Dr. Mario a été bien accueilli par la critique et est, aujourd'hui encore, cit
 						<post postauthor-refid="member1" text-attr="postText" />
 					</thread>
 				</forum>
-				<forum label="BlaBla général" nbPostPerPage="10" publicationstatus="ACTIVE" description="Discutons de tout et de rien">
+				<forum label="BlaBla général" nbPostPerPage="10"
+					publicationstatus="ACTIVE" description="Discutons de tout et de rien">
 					<documenturl lang="fr" url="/forums/blabla" />
-					<thread label="Présentation des nouveaux Retrogamers" threadauthor-refid="mod1" level="40" flag="fellowship">
-						<post postauthor-refid="mod1" textAsBBCode="Salut à toi petit nouveau et bienvenue sur les forums. Une petite présentation ça fait toujours bien plaisir à la communauté, c'est pourquoi tu es invité à te présenter." />
-						<post postauthor-refid="mod1" textAsBBCode="Salut les geeks, j'ai 34 ans, Parisien et heureux possesseur, d'une bonne trentaine de consoles 8/16/32/64/128 Bits et d'un petit millier de jeux. Je pratique le custom, la modification, l'upgrade, le Switch, et tout ce qui touche au modifs consoles en générale. Petite parenthèse : je pratique aussi l'escalade ^^'." />
-						<post postauthor-refid="member1" textAsBBCode="François, 33 ans dans 2 mois, marseillais depuis 9 ans, marié et père de deux petits geeks en puissance de 6 et 8 ans. Présent sur le site depuis peu mais déjà bien accro a F5 pour ne rien rater. Je suis plus gamer que rétro mais pas pour autant aficionado des derniers thx, hd, et autres nouveautes 3d
+					<thread label="Présentation des nouveaux Retrogamers"
+						threadauthor-refid="mod1" level="40" flag="fellowship">
+						<post postauthor-refid="mod1"
+							textAsBBCode="Salut à toi petit nouveau et bienvenue sur les forums. Une petite présentation ça fait toujours bien plaisir à la communauté, c'est pourquoi tu es invité à te présenter." />
+						<post postauthor-refid="mod1"
+							textAsBBCode="Salut les geeks, j'ai 34 ans, Parisien et heureux possesseur, d'une bonne trentaine de consoles 8/16/32/64/128 Bits et d'un petit millier de jeux. Je pratique le custom, la modification, l'upgrade, le Switch, et tout ce qui touche au modifs consoles en générale. Petite parenthèse : je pratique aussi l'escalade ^^'." />
+						<post postauthor-refid="member1"
+							textAsBBCode="François, 33 ans dans 2 mois, marseillais depuis 9 ans, marié et père de deux petits geeks en puissance de 6 et 8 ans. Présent sur le site depuis peu mais déjà bien accro a F5 pour ne rien rater. Je suis plus gamer que rétro mais pas pour autant aficionado des derniers thx, hd, et autres nouveautes 3d
 j'avoue préférer un kickle kubicle les plutôt que le dernier jeu." />
-							<post postauthor-refid="member2" textAsBBCode="Salut. J'ai 16 ans et j'aime la lecture (sf, fantasy), l'informatique (j aimerai en faire mon métier) et les jeux vidéo." />
+						<post postauthor-refid="member2"
+							textAsBBCode="Salut. J'ai 16 ans et j'aime la lecture (sf, fantasy), l'informatique (j aimerai en faire mon métier) et les jeux vidéo." />
 						<bbcodeattribute name="postText">
 							<![CDATA[[quote]Salut. J'ai 16 ans et j'aime la lecture (sf, fantasy), l'informatique (j aimerai en faire mon métier) et les jeux vidéo.[/quote] 
 Le bricolage est ma passion et j'ai fait de ma deuxième passion (l'informatique) mon métier.
@@ -168,7 +228,8 @@ Je te souhaite la bienvenue jeune padawan, puisse la lumière te guider.]]>
 						</bbcodeattribute>
 						<post postauthor-refid="mod1" text-attr="postText" />
 					</thread>
-					<thread label="Règles à respecter" threadauthor-refid="mod2" level="40" locked="true">
+					<thread label="Règles à respecter" threadauthor-refid="mod2"
+						level="40" locked="true">
 						<bbcodeattribute name="postText">
 							<![CDATA[N'utilisez pas de majuscules dans les titres de vos sujets.
 Utilisez un titre clair, explicite et compréhensible par tous.
@@ -178,17 +239,20 @@ Utilisez un titre clair, explicite et compréhensible par tous.
 Ecrivez uniquement des messages ayant un rapport direct avec le sujet concerné. Le déviage ou les posts poubelle constituent un manque total de respect envers le créateur du sujet, et nuisent à la clarté du forum.]]>
 						</bbcodeattribute>
 						<post postauthor-refid="mod2" text-attr="postText" />
-						<!-- 
-						<post postauthor-refid="mod2" textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						-->
+						<!-- <post postauthor-refid="mod2" textAsBBCode="Pellentesque nisl 
+							urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, 
+							ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." 
+							/> -->
 					</thread>
-					<thread label="Bienvenue dans le forum Blabla général" threadauthor-refid="mod2" level="30">
+					<thread label="Bienvenue dans le forum Blabla général"
+						threadauthor-refid="mod2" level="30">
 						<bbcodeattribute name="postText">
 							<![CDATA[Vous vous êtes fait des ami(e)s sur d'autres forums et souhaitez discuter avec eux de tout et n'importe quoi ? C'est ici ! Inutile d'y poser des questions d'ordre technique, vous n'aurez pas de réponse, et évitez de parler politique ou religion, ça finit toujours mal...]]>
 						</bbcodeattribute>
 						<post postauthor-refid="mod2" text-attr="postText" />
 					</thread>
-					<thread label="Best-of Vidéos" threadauthor-refid="mod1" level="20">
+					<thread label="Best-of Vidéos" threadauthor-refid="mod1"
+						level="20">
 						<bbcodeattribute name="postText">
 							<![CDATA[Postez ici vos meilleures vidéos sur le thème des Retro Games.]]>
 						</bbcodeattribute>
@@ -218,9 +282,11 @@ Par contre j'ai pas trouvé la partie 2/2 :(
 [list][item][url="http://www.youtube.com/watch?v=ZGjzo71z9d4"]Final Fantasy VI - Piano - The Decisive Battle[/url][/item][item][url="http://www.youtube.com/watch?v=ucIEef16d_M"]The Mystic Forest - Final Fantasy VI Piano Collections[/url][/item][item][url="http://www.youtube.com/watch?v=fUYGB-kczEg"]Final Fantasy VI - Terra - Piano[/url][/item][/list]]]>
 						</bbcodeattribute>
 						<post postauthor-refid="member2" text-attr="postText" />
-						<post postauthor-refid="member3" textAsBBCode="À oui, les Final Fantasy, depuis [b]20 ans[/b], un monument du jeu vidéo." />
+						<post postauthor-refid="member3"
+							textAsBBCode="À oui, les Final Fantasy, depuis [b]20 ans[/b], un monument du jeu vidéo." />
 					</thread>
-					<thread label="Test des BBCodes" threadauthor-refid="member1" level="20">
+					<thread label="Test des BBCodes" threadauthor-refid="member1"
+						level="20">
 						<bbcodeattribute name="postText">
 							<![CDATA[[b]Gras, italique, souligné, barré, lien : [/b]
 [quote][nobb]Texte en [b]gras[/b], [i]italique[/i], [u]souligné[/u], [s]barré[/s], [url="http://rbschange.fr"]lien[/url].[/nobb][/quote]
@@ -291,7 +357,8 @@ Tout ce beau monde pour 10€ le lot.]]>
 						</bbcodeattribute>
 						<post postauthor-refid="member1" text-attr="postText" />
 					</thread>
-					<thread label="SNES - Achat et Questions" threadauthor-refid="member1"><!-- 2 -->
+					<thread label="SNES - Achat et Questions"
+						threadauthor-refid="member1"><!-- 2 -->
 						<bbcodeattribute name="postText">
 							<![CDATA[Bonsoir,
 
@@ -310,7 +377,8 @@ En espérant être relativement clair !]]>
 						</bbcodeattribute>
 						<post postauthor-refid="member1" text-attr="postText" />
 					</thread>
-					<thread label="Collector The Legend of Zelda [Packs et Objets]" threadauthor-refid="member1"><!-- 3 -->
+					<thread label="Collector The Legend of Zelda [Packs et Objets]"
+						threadauthor-refid="member1"><!-- 3 -->
 						<bbcodeattribute name="postText">
 							<![CDATA[bonjour à tous et à toutes,
 
@@ -467,10 +535,14 @@ club nintendo :
 - Link on Epona (Zelda Twilight Princess)]]>
 						</bbcodeattribute>
 						<post postauthor-refid="member3" text-attr="postText" />
-						<post postauthor-refid="member2" textAsBBCode="Concernant les guides il me semble qu'il en existe un aussi pour les Zelda GB oracle Seasons et Ages." />
-						<post postauthor-refid="member1" textAsBBCode="Moi aussi je me lance dans une collection zelda mais je m'arrête juste au jeu j'aimerais les rechoper tous en version boite a peu près propre." />
-						<post postauthor-refid="member4" textAsBBCode="Possèdes-tu le Collector's Edition ? C'est un disque promotionnel qui était disponible sur Gamecube dans un pack spécial ou sur le Club Nintendo lors des beaux jours de la Gamecube (2002-2004)." />
-						<post postauthor-refid="member3" textAsBBCode="oui, effectivement je l'ai, j'ai oublié de le noter :)." />
+						<post postauthor-refid="member2"
+							textAsBBCode="Concernant les guides il me semble qu'il en existe un aussi pour les Zelda GB oracle Seasons et Ages." />
+						<post postauthor-refid="member1"
+							textAsBBCode="Moi aussi je me lance dans une collection zelda mais je m'arrête juste au jeu j'aimerais les rechoper tous en version boite a peu près propre." />
+						<post postauthor-refid="member4"
+							textAsBBCode="Possèdes-tu le Collector's Edition ? C'est un disque promotionnel qui était disponible sur Gamecube dans un pack spécial ou sur le Club Nintendo lors des beaux jours de la Gamecube (2002-2004)." />
+						<post postauthor-refid="member3"
+							textAsBBCode="oui, effectivement je l'ai, j'ai oublié de le noter :)." />
 						<bbcodeattribute name="postText">
 							<![CDATA[Super bonne idée ce sujet ! :)
 Par contre il y a du boulot parce que à chaque fois il y a des versions différentes, et des exclus pour certains pays etc...
@@ -482,7 +554,8 @@ Sur ce site tu trouveras déjà pas mal d'objets : [url="http://zeldacollectorsm
 						</bbcodeattribute>
 						<post postauthor-refid="member8" text-attr="postText" />
 					</thread>
-					<thread label="Origine des jeux Nintendo" threadauthor-refid="member2"><!-- 4 -->
+					<thread label="Origine des jeux Nintendo"
+						threadauthor-refid="member2"><!-- 4 -->
 						<bbcodeattribute name="postText">
 							<![CDATA[Bonjour à tous, je voulais juste partager, afin d'aider les débutants dans le rétrogaming, les significations pour les codes inscrits sur les jeux Nintendo, Super Nintendo, ...
 J'ai réalisé un petit listing ; le voici. En espérant que ça aide
@@ -554,7 +627,8 @@ Triangle vert : notice en anglais.]]>
 						</bbcodeattribute>
 						<post postauthor-refid="member2" text-attr="postText" />
 					</thread>
-					<thread label="Les bons jeux en 2D sur PlayStation" threadauthor-refid="member2"><!-- 5 -->
+					<thread label="Les bons jeux en 2D sur PlayStation"
+						threadauthor-refid="member2"><!-- 5 -->
 						<bbcodeattribute name="postText">
 							<![CDATA[Salut tout le monde
 
@@ -573,7 +647,8 @@ Merci :).]]>
 						</bbcodeattribute>
 						<post postauthor-refid="member2" text-attr="postText" />
 					</thread>
-					<thread label="Google Maps For The NES" threadauthor-refid="member1"><!-- 6 -->
+					<thread label="Google Maps For The NES" threadauthor-refid="member1"><!-- 
+							6 -->
 						<bbcodeattribute name="postText">
 							<![CDATA[À notre grande surprise Google a décidé de rendre disponible sa célèbre application Google Maps sur l'une des meilleures consoles de salon de tous les temps : la Nintendo Entertainment System (NES) ! 
 
@@ -581,9 +656,11 @@ Ainsi, plus de vingt ans après l'époque NES, Google sortirait une cartouche é
 
 En attendant la sortie de la fameuse cartouche (supposant qu'il ne s'agit pas d'une petite boutade), une démo est déjà disponible sur Google Maps directement ! Il suffit de cliquer sur Quest. En vidéo, ici : [url="http://www.youtube.com/watch?v=iJzHzSeO-O0"]Google Maps For The NES - April Fool's Day 2012[/url].]]>
 						</bbcodeattribute>
-						<post postauthor-refid="member8" text-attr="postText" editedby-refid="member8" creationdate="2012-04-01 08:16:12" />
+						<post postauthor-refid="member8" text-attr="postText"
+							editedby-refid="member8" creationdate="2012-04-01 08:16:12" />
 					</thread>
-					<thread label="J'ai 17 ans et je suis retrogameur" threadauthor-refid="member1"><!-- 7 -->
+					<thread label="J'ai 17 ans et je suis retrogameur"
+						threadauthor-refid="member1"><!-- 7 -->
 						<bbcodeattribute name="postText">
 							<![CDATA[Étrangement, bien qu'ayant seulement 17 ans, j'ai été élevé à coup de Zelda A Link To The Past, de Super Mario world et super Mario kart. Je suis content que la Super NES soit la première console à laquelle j'ai pu jouer ; elle reste une des meilleurs à mon goût. D'autre personne sont-elles dans le même cas que moi ? ]]>
 						</bbcodeattribute>
@@ -610,58 +687,63 @@ Merci d'avance.]]>
 						</bbcodeattribute>
 						<post postauthor-refid="member6" text-attr="postText" />
 					</thread>
-					<!-- sample-thread
-					<thread label="sample-thread" threadauthor-refid="member1">
-						<bbcodeattribute name="postText">
-							<![CDATA[ \o/ ]]>
-						</bbcodeattribute>
-						<post postauthor-refid="member1" text-attr="postText" />
-					</thread>
-					-->
+					<!-- sample-thread <thread label="sample-thread" threadauthor-refid="member1"> 
+						<bbcodeattribute name="postText"> <![CDATA[ \o/ ]]> </bbcodeattribute> <post 
+						postauthor-refid="member1" text-attr="postText" /> </thread> -->
 
 					<!-- end of lorem - should have 12 threads before -->
 				</forum>
-				<forum label="News du Forum" nbPostPerPage="10" publicationstatus="ACTIVE" description="Ici vous seront présenté, les nouveautés, les améliorations, les maintenances">
+				<forum label="News du Forum" nbPostPerPage="10"
+					publicationstatus="ACTIVE"
+					description="Ici vous seront présenté, les nouveautés, les améliorations, les maintenances">
 					<documenturl lang="fr" url="/forums/news" />
-					<thread label="Mise en place des présentations" threadauthor-refid="mod1">
-						<post postauthor-refid="mod1" textAsBBCode="Comme vous pouvez le voir, en annonce globale, j'ai ouvert un nouveau sujet pour que chacun puisse se présenter et que nous puissions faire connaissance." />
+					<thread label="Mise en place des présentations"
+						threadauthor-refid="mod1">
+						<post postauthor-refid="mod1"
+							textAsBBCode="Comme vous pouvez le voir, en annonce globale, j'ai ouvert un nouveau sujet pour que chacun puisse se présenter et que nous puissions faire connaissance." />
 						<post postauthor-refid="member2" textAsBBCode="Merci, monsieur." />
 					</thread>
 				</forum>
-				<forum label="Boîte à idées - Vos suggestions" nbPostPerPage="10" publicationstatus="ACTIVE" description="Déposez ici vos idées de forums, sujets, rubriques, catégories ... Afin de faire avancer le forum dans votre sens">
+				<forum label="Boîte à idées - Vos suggestions" nbPostPerPage="10"
+					publicationstatus="ACTIVE"
+					description="Déposez ici vos idées de forums, sujets, rubriques, catégories ... Afin de faire avancer le forum dans votre sens">
 					<thread label="Diam mauris, in" threadauthor-refid="member2">
-						<post postauthor-refid="member2" textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						<post postauthor-refid="mod2" textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						<post postauthor-refid="mod1" textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						<post postauthor-refid="member1" textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						<post postauthor-refid="mod2" textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="member2"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="mod2"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="mod1"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="member1"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="mod2"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
 					</thread>
 					<thread label="Dsagittis nec" threadauthor-refid="member3">
-						<post postauthor-refid="member3" textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						<post postauthor-refid="mod2" textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						<post postauthor-refid="member1" textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						<post postauthor-refid="mod1" textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						<post postauthor-refid="mod2" textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="member3"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="mod2"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="member1"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="mod1"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="mod2"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
 					</thread>
 					<thread label="Dacinia eget, in " threadauthor-refid="member4">
-						<post postauthor-refid="member4" textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
-						<post postauthor-refid="member1" textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="member4"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
+						<post postauthor-refid="member1"
+							textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
 					</thread>
-					<forum label="Suggestions rejetées" nbPostPerPage="10" publicationstatus="ACTIVE" />
-					<forum label="Suggestions réalisées" nbPostPerPage="10" publicationstatus="ACTIVE" />
+					<forum label="Suggestions rejetées" nbPostPerPage="10"
+						publicationstatus="ACTIVE" />
+					<forum label="Suggestions réalisées" nbPostPerPage="10"
+						publicationstatus="ACTIVE" />
 				</forum>
 			</forumgroup>
 		</websitefolder>
 	</rootfolder>
-	
-	<website byTag="default_modules_website_default-website">
-		<topic byLabel="Membres" id="members" />
-		<systemtopic byLabel="Forums" id="forums" />
-		<menus>
-			<menu byTag="contextual_website_website_menu-main">
-				<menuitempage pageid="forums" />
-				<menuitempage pageid="members" />
-			</menu>
-		</menus>
-	</website>
+
 </script>

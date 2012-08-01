@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding fileName="modules/photoalbum/persistentdocument/import/photoalbum_binding.xml" />
+
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
+	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
+	<binding fileName="modules/inquiry/persistentdocument/import/inquiry_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/joboffer/persistentdocument/import/joboffer_binding.xml" />
+	<binding fileName="modules/event/persistentdocument/import/event_binding.xml" />
+	<binding fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
+	<binding fileName="modules/privatemessaging/persistentdocument/import/privatemessaging_binding.xml" />
+	<binding fileName="modules/blog/persistentdocument/import/blog_binding.xml" />
+	<binding fileName="modules/brand/persistentdocument/import/brand_binding.xml" />
+	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
+	<binding fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
+	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
+	<binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
+	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
+	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+	<binding fileName="modules/emailing/persistentdocument/import/emailing_binding.xml" />
+
+	<binding fileName="modules/sample/setup/shipping/sample.xml" />
+	<binding fileName="modules/sample/setup/payment/sample.xml" />
+	<binding fileName="modules/sample/setup/paybox/sample.xml" />
+	<binding fileName="modules/sample/setup/media/sample.xml" />
+	<binding fileName="modules/sample/setup/catalog/default.xml" />
+	<binding fileName="modules/sample/setup/catalog/sample.xml" />
+	<binding fileName="modules/sample/setup/customer/default.xml" />
+	<binding fileName="modules/sample/setup/order/default.xml" />
+	<binding fileName="modules/sample/setup/customer/sample.xml" />
+	<binding fileName="modules/sample/setup/order/sample.xml" />
+	<binding fileName="modules/sample/setup/marketing/sample.xml" />
+	<binding fileName="modules/sample/setup/videos/sample.xml" />
+	<binding fileName="modules/sample/setup/emailing/sample.xml" />
+	<binding fileName="modules/sample/setup/sharethis/sample.xml" />
+	<binding fileName="modules/sample/setup/ecomextended/ecomextended-data.xml" />
+
+	<mailinglist id="mailingtest" byLabel="Mailing RBS" />
+
+	<website byTag="default_modules_website_default-website" id="default-website">
+
+		<page byLabel="Accueil">
+			<changecontent for="content-block" append="true">
+				<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
+					__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
+					__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="editanim" />
+			</changecontent>
+		</page>
+
+		<topic byLabel="Boutique">
+			<page byLabel="Contenu du rayon">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_ecomextended_Facets" />
+				</changecontent>
+				<changecontent for="content-block">
+					<changeblock type="modules_catalog_shelfContextualList" />
+					<changeblock type="modules_ecomextended_ManageFacetsFilter" />
+					<changeblock type="modules_ecomextended_ProductList" __complete="true" />
+				</changecontent>
+			</page>
+			<page byLabel="Comparaison de produits" navigationVisibility="Hidden-in-menu-only" />
+		</topic>
+
+		<topic byLabel="Communauté" id="topiccommunity">
+			<page id="pagecommunity" byLabel="Communauté" isIndexPage="true" navigationVisibility="Hidden">
+				<changecontent for="sidebar-block" append="true">
+					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
+						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
+						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="newproducts" />
+				</changecontent>
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[<p>Bienvenue dans la liste des modules CMS installés sur votre site.</p>]]>
+					</changeblock>
+				</changecontent>
+			</page>
+			<topic byLabel="Actualités et événements" id="events1">
+				<topic byLabel="Actualités abandonware" id="events2" />
+				<topic byLabel="Consoles Retro" id="events3" />
+				<execute method="setDocumentIdAttribute" />
+				<binding fileName="modules/event/setup/localDefaultStructure.xml" />
+				<binding fileName="modules/event/setup/globalDefaultStructure.xml" />
+			</topic>
+			<topic byLabel="Offres d'emploi" id="topic">
+				<execute method="setDocumentIdAttribute" />
+				<binding fileName="modules/joboffer/setup/topicDefaultStructure.xml" />
+			</topic>
+			<topic byLabel="Liste des blogs" id="blogs">
+				<execute method="setDocumentIdAttribute" />
+				<binding fileName="modules/blog/setup/topicDefaultStructure.xml" />
+			</topic>
+			<topic byLabel="Messagerie privée" id="messagerie">
+				<execute method="setDocumentIdAttribute" />
+				<binding fileName="modules/privatemessaging/setup/globalDefaultStructure.xml" />
+			</topic>
+		</topic>
+
+		<page byTag="contextual_website_website_modules_solrsearch_page-results">
+			<changecontent for="sidebar-block" append="true">
+				<changeblock type="modules_ecomextended_Facets" />
+			</changecontent>
+			<changecontent for="content-block">
+				<changeblock type="modules_ecomextended_ManageFacetsFilter" />
+				<changeblock type="modules_solrsearch_results" __facets-refids="documentModel,shelfIdCompiled,brand" __complete="true" />
+			</changecontent>
+		</page>
+
+		<topic byLabel="Annuaire" id="annuaire">
+			<page id="pageannuaire" byLabel="Annuaire" isIndexPage="true" navigationVisibility="Hidden">
+				<changecontent for="sidebar-block" append="true">
+					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
+						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
+						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="promotions" />
+				</changecontent>
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[<p>Bienvenue dans l'annuaire du site démo.</p>]]>
+					</changeblock>
+				</changecontent>
+			</page>
+
+			<execute method="setDocumentIdAttribute" />
+			<binding fileName="modules/brand/setup/globalDefaultStructure.xml" />
+
+			<page byLabel="Liste des contacts" indexingstatus="false">
+				<changecontent for="sidebar-block" append="true">
+					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
+						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
+						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="newproducts" />
+				</changecontent>
+				<changecontent for="content-block">
+					<changeblock type="modules_contactcard_contactlist" __showContactpageLink="false" />
+				</changecontent>
+			</page>
+			<execute method="setDocumentIdAttribute" />
+			<binding fileName="modules/store/setup/globalDefaultStructure.xml" />
+			<execute method="setDocumentIdAttribute" attribute-name="website-id" />
+			<execute method="setDocumentTypeAttribute" attribute-name="website-type" />
+			<topic byLabel="Compte client">
+				<execute method="setDocumentIdAttribute" />
+				<execute method="setDocumentTypeAttribute" />
+				<binding fileName="modules/store/setup/customerDefaultStructure.xml" />
+				<page label="Magasin préféré" indexingstatus="false" byTag="contextual_website_website_modules_store_favoritestore" isIndexPage="true" />
+			</topic>
+			<topic byLabel="Newsletter">
+				<execute method="setDocumentIdAttribute" />
+				<binding fileName="modules/sample/setup/emailing/samplepage.xml" />
+			</topic>
+		</topic>
+
+		<topic byLabel="Media" id="topicmedia">
+			<page id="pagemedia" byLabel="Médias" isIndexPage="true" navigationVisibility="Hidden">
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[<p>Bienvenue dans la liste des médias installés sur votre site.</p>]]>
+					</changeblock>
+				</changecontent>
+			</page>
+			<topic byLabel="Galerie de photos" id="gallery">
+				<execute method="setDocumentIdAttribute" />
+				<binding fileName="modules/photoalbum/setup/localDefaultStructure.xml" />
+			</topic>
+			<topic byLabel="Galerie de vidéos" id="video">
+				<page label="Exemple de vidéo youtube" isIndexPage="true">
+					<changecontent for="content-block">
+						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube1" />
+						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube2" />
+					</changecontent>
+				</page>
+				<page label="Exemple de vidéo flash">
+					<changecontent for="content-block">
+						<changeblock type="modules_videos_video" __cmpref-refid="v1" />
+					</changecontent>
+				</page>
+			</topic>
+		</topic>
+
+		<topic byLabel="Outils">
+			<page label="Contact" navigationVisibility="hidden" indexingstatus="false" byTag="contextual_website_website_modules_contactcard_contact">
+				<changecontent for="content-block">
+					<changeblock type="modules_contactcard_contact" />
+				</changecontent>
+			</page>
+			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false"
+				byTag="contextual_website_website_modules_contactcard_page-contact">
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[<h2 class="heading-two">Mettre ici le formulaire de contact</h2>]]>
+					</changeblock>
+				</changecontent>
+			</page>
+
+			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
+				<changecontent for="content-block">
+					<changeblock type="modules_form_form" __cmpref-refid="form1" />
+				</changecontent>
+			</page>
+		</topic>
+		<topic byLabel="Contact" id="topiccontact" />
+
+		<menus>
+			<menu byTag="contextual_website_website_menu-main">
+				<menuitempage pageid="consoles" />
+				<menuitempage pageid="accessoiries" />
+				<menuitempage pageid="games" />
+				<menuitempage pageid="arcades" />
+				<menuitempage pageid="micro" />
+				<menuitempage pageid="topiccommunity" />
+				<menuitempage pageid="annuaire" />
+				<menuitempage pageid="topicmedia" />
+				<menuitempage pageid="topiccontact" />
+			</menu>
+		</menus>
+	</website>
+
+	<binding fileName="modules/sample/setup/event/sample.xml" />
+	<binding fileName="modules/sample/setup/joboffer/sample.xml" />
+	<binding fileName="modules/sample/setup/photoalbum/sample.xml" />
+	<binding fileName="modules/sample/setup/blog/sample.xml" />
+	<binding fileName="modules/sample/setup/forums/sample.xml" />
+	<binding fileName="modules/sample/setup/brand/sample.xml" />
+	<binding fileName="modules/sample/setup/store/sample.xml" />
+	<binding fileName="modules/sample/setup/store/sampleextranet.xml" />
+
+</script>

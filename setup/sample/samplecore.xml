@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
+	<binding fileName="modules/sample/setup/statictext/sample.xml" />
+
+	<theme byCodename="default">
+		<pagetemplate byCodename="default/nosidebarpage">
+			<pagetemplatedeclination byCodename="default/nosidebarpagecmssample"
+				label="Sans sitebar CMS exemple">
+				<templateblock editname="footer-middle-1"
+					type="modules_website_ConfigurableMenu" __mode="tag"
+					__tag="contextual_website_website_menu-main" __displayMode="default"
+					__depth="1" />
+				<templateblock editname="footer-top-1"
+					type="modules_facebookconnect_Facebooklike" />
+			</pagetemplatedeclination>
+		</pagetemplate>
+		<pagetemplate byCodename="default/sidebarpage">
+			<pagetemplatedeclination byCodename="default/sidebarpagecmssample"
+				label="Avec sitebar CMS exemple">
+				<templateblock editname="footer-middle-1"
+					type="modules_website_ConfigurableMenu" __mode="tag"
+					__tag="contextual_website_website_menu-main" __displayMode="default"
+					__depth="1" />
+				<templateblock editname="footer-top-1"
+					type="modules_facebookconnect_Facebooklike" />
+			</pagetemplatedeclination>
+		</pagetemplate>
+		<pagetemplate byCodename="default/nosidebarpage">
+			<pagetemplatedeclination byCodename="default/nosidebarpageecomsample"
+				label="Sans sitebar ECOM exemple">
+				<templateblock editname="header-top-2"
+					type="modules_customer_Customerinfo" />
+				<templateblock editname="header-top-3" type="modules_order_ShortCart" />
+				<templateblock editname="footer-middle-1"
+					type="modules_website_ConfigurableMenu" __mode="tag"
+					__tag="contextual_website_website_menu-main" __displayMode="default"
+					__depth="1" />
+				<templateblock editname="footer-top-1"
+					type="modules_facebookconnect_Facebooklike" />
+				<templateblock editname="footer-middle-4" type="modules_statictext_Htmlcode"
+					__cmpref-refid="htmltext2" />
+			</pagetemplatedeclination>
+		</pagetemplate>
+		<pagetemplate byCodename="default/sidebarpage">
+			<pagetemplatedeclination byCodename="default/sidebarpageecomsample"
+				label="Avec sitebar ECOM exemple">
+				<templateblock editname="header-top-2"
+					type="modules_customer_Customerinfo" />
+				<templateblock editname="header-top-3" type="modules_order_ShortCart" />
+				<templateblock editname="footer-middle-1"
+					type="modules_website_ConfigurableMenu" __mode="tag"
+					__tag="contextual_website_website_menu-main" __displayMode="default"
+					__depth="1" />
+				<templateblock editname="footer-top-1"
+					type="modules_facebookconnect_Facebooklike" />
+				<templateblock editname="footer-middle-4" type="modules_statictext_Htmlcode"
+					__cmpref-refid="htmltext2" />
+			</pagetemplatedeclination>
+		</pagetemplate>
+	</theme>
+	
+	<binding fileName="modules/sample/setup/website/sample.xml" />
+	<binding fileName="modules/sample/setup/media/sample.xml" />
+	<binding fileName="modules/sample/setup/users/sample.xml" />
+	<binding fileName="modules/sample/setup/workflow/sample.xml" />
+	<binding fileName="modules/sample/setup/form/sample.xml" />
+	<binding fileName="modules/sample/setup/notification/sample.xml" />
+	<binding fileName="modules/sample/setup/contactcard/samplecontactcard.xml" />
+	<binding fileName="modules/sample/setup/list/sample.xml" />
+
+	<binding fileName="modules/sample/setup/rss/sample.xml" />
+
+	<website byTag="default_modules_website_default-website">
+		<page byLabel="Accueil">
+			<changecontent for="content-block">
+				<changeblock type="modules_statictext_Htmlcode"
+					__cmpref-refid="htmltext" />
+			</changecontent>
+		</page>
+		<topic byLabel="Contact">
+			<page byLabel="Contact" isIndexPage="true" navigationVisibility="Hidden" template-attr="templateHome">
+				<changecontent>
+					<changeblock type="modules_form_form" __cmpref-refid="contactform" />
+				</changecontent>
+			</page>
+		</topic>
+	</website>
+
+	<i18n lang="en">
+		<website byTag="default_modules_website_default-website">
+			<menus>
+				<menu byRefid="mnumain" label="Main menu">
+				</menu>
+			</menus>
+		</website>
+	</i18n>
+</script>
+
+
+
+
+

@@ -1,51 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	<binding fileName="modules/emailing/persistentdocument/import/emailing_binding.xml" />
-
-	<mailinglist id="test1" byLabel="Mailing RBS" />
-	
-	<website byTag="default_modules_website_default-website">
-		<topic byLabel="Newsletter" label="Newsletter">	
-			<page label="Inscription à la newsletter" isIndexPage="true" 
+		
+	<topic byDocumentId-attr="">
+			<page label="Inscription à la newsletter" isIndexPage="true"
 				indexingstatus="false" navigationVisibility="hidden">
 				<tag name="contextual_website_website_modules_emailing_subscribe" />
 				<changecontent for="content-block">
-					<changeblock type="modules_emailing_subscribe" __confirmsubscribe="true" __showextendfields="true" 
-							__mailinglist-refid="test1"/>
+					<changeblock type="modules_emailing_subscribe"
+						__confirmsubscribe="true" __showextendfields="true"
+						__mailinglist-refid="mailingtest" />
 				</changecontent>
 			</page>
 
 			<page label="Désinscription de la newsletter" indexingstatus="false">
 				<changecontent for="content-block">
-					<changeblock type="modules_emailing_unsubscribe" __confirmunsubscribe="true" 
-							__mailinglist-refid="test1"/>
+					<changeblock type="modules_emailing_unsubscribe"
+						__confirmunsubscribe="true" __mailinglist-refid="mailingtest" />
 				</changecontent>
-			</page>	
-						
-			<page label="Désinscription" indexingstatus="false" 
-				navigationVisibility="hidden" >
-				<tag name="contextual_website_website_modules_emailing_page-unsubscribeasked" />
+			</page>
+
+			<page label="Désinscription" indexingstatus="false"
+				navigationVisibility="hidden">
+				<tag
+					name="contextual_website_website_modules_emailing_page-unsubscribeasked" />
 				<changecontent for="content-block">
 					<changeblock type="richtext">
 						<![CDATA[<p>Un email vous à été envoyé pour confirmer votre désinscription</p>]]>
 					</changeblock>
 				</changecontent>
-			</page>		
-			
-			<page label="Désinscription confirmée" indexingstatus="false"  
+			</page>
+
+			<page label="Désinscription confirmée" indexingstatus="false"
 				navigationVisibility="hidden">
-				<tag name="contextual_website_website_modules_emailing_page-unsubscribeconfirm" />
+				<tag
+					name="contextual_website_website_modules_emailing_page-unsubscribeconfirm" />
 				<changecontent for="content-block">
 					<changeblock type="richtext">
 						<![CDATA[<p>Vous étes maintenant désinscrit.</p>]]>
 					</changeblock>
 				</changecontent>
 			</page>
-					
-			<page label="Confirmation de d'inscription" indexingstatus="false" 
+
+			<page label="Confirmation de d'inscription" indexingstatus="false"
 				navigationVisibility="hidden">
-				<tag name="contextual_website_website_modules_emailing_page-subscribeconfirm" />
+				<tag
+					name="contextual_website_website_modules_emailing_page-subscribeconfirm" />
 				<changecontent for="content-block">
 					<changeblock type="richtext">
 						<![CDATA[<p>Vous étes maintenant inscrit.</p>]]>
@@ -53,5 +52,5 @@
 				</changecontent>
 			</page>
 		</topic>
-	</website>
+	
 </script>

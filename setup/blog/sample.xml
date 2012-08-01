@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/blog/persistentdocument/import/blog_binding.xml" />
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
-	<binding fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
-
-	<website byTag="default_modules_website_default-website">
-		<execute method="setDocumentIdAttribute" />
-		<topic byLabel="Liste des blogs" id="blogs">
-			<execute method="setDocumentIdAttribute" />
-			<binding fileName="modules/blog/setup/topicDefaultStructure.xml" />
-		</topic>
-		<menus>
-			<menu byTag="contextual_website_website_menu-main">
-				<menuitempage pageid="blogs" />
-			</menu>
-		</menus>
-	</website>
 
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="blog">
-				<media path="modules/sample/setup/blog/media/voiture-1950.jpg" label="Voiture 1950" id="media1" />
-				<media path="modules/sample/setup/blog/media/voiture-cugnot.jpg" label="Fardier de Cugnot" id="media2" />
+				<media path="modules/sample/setup/blog/media/voiture-1950.jpg"
+					label="Voiture 1950" id="media1" />
+				<media path="modules/sample/setup/blog/media/voiture-cugnot.jpg"
+					label="Fardier de Cugnot" id="media2" />
 			</folder>
 		</folder>
 	</rootfolder>

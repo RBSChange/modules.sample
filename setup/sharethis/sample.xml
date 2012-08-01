@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 
 	<systemfolder module="form" relatedmodule="sharethis">
 		<documentRef type="modules_form/form" id="form1" byLabel="Partager un lien" />
 	</systemfolder>
 
-	<website byTag="default_modules_website_default-website">
-		<topic byLabel="Outils">
-			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
-				<changecontent for="content-block">
-					<changeblock type="modules_form_form" __cmpref-refid="form1" />
-				</changecontent>
-			</page>
-		</topic>
-	</website>
 </script>

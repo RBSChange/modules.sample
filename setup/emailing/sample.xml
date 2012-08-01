@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
-	<binding fileName="modules/emailing/persistentdocument/import/emailing_binding.xml" />
 
-	<website byTag="default_modules_website_default-website" id="website">
-		<binding fileName="modules/emailing/setup/samplepage.xml" />
-	</website>
-	
 	<rootfolder module="emailing">
 		<mailinglistfolder label="Listes d'abonnés" byLabel="Listes d'abonnés">
-			<mailinglist id="test1" label="Mailing RBS" description="Test Mailing RBS">
+			<mailinglist id="mailingtest" label="Mailing RBS" description="Mailing Test">
 				<subscriberfield label="Nom" mailingname="lastname" />
 				<subscriberfield label="Prénom" mailingname="firstname" />
 				<subscriberfield label="Fonction" mailingname="function" />
@@ -215,7 +208,8 @@
 					<fieldvalue name="firstname" value="Bruno" />
 					<fieldvalue name="function" value="Consultant ERP" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="delphine.agnel-berard@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="delphine.agnel-berard@rbs.fr">
 					<fieldvalue name="lastname" value="BERARD AGNEL" />
 					<fieldvalue name="firstname" value="Delphine" />
 					<fieldvalue name="function" value="Directeur de projet ERP" />
@@ -225,17 +219,20 @@
 					<fieldvalue name="firstname" value="Marc" />
 					<fieldvalue name="function" value="Chef de Projet" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="philippe.castronovo@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="philippe.castronovo@rbs.fr">
 					<fieldvalue name="lastname" value="CASTRONOVO" />
 					<fieldvalue name="firstname" value="Philippe" />
 					<fieldvalue name="function" value="Responsable d'agence" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="severine.charnay-pillet@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="severine.charnay-pillet@rbs.fr">
 					<fieldvalue name="lastname" value="CHARNAY-PILLET" />
 					<fieldvalue name="firstname" value="Séverine" />
 					<fieldvalue name="function" value="Analyste-Developpeur" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="christophe.courvoisier@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="christophe.courvoisier@rbs.fr">
 					<fieldvalue name="lastname" value="COURVOISIER" />
 					<fieldvalue name="firstname" value="Christophe" />
 					<fieldvalue name="function" value="CHEF DE PROJET" />
@@ -265,7 +262,8 @@
 					<fieldvalue name="firstname" value="Gérard" />
 					<fieldvalue name="function" value="Analyste développeur" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="guillaume.gervasoni@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="guillaume.gervasoni@rbs.fr">
 					<fieldvalue name="lastname" value="GERVASONI" />
 					<fieldvalue name="firstname" value="Guillaume" />
 					<fieldvalue name="function" value="Analyste Programmeur NAVISION" />
@@ -285,7 +283,8 @@
 					<fieldvalue name="firstname" value="Alain" />
 					<fieldvalue name="function" value="Chef de Projet NAVISION" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="guillaume.horlaville@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="guillaume.horlaville@rbs.fr">
 					<fieldvalue name="lastname" value="HORLAVILLE" />
 					<fieldvalue name="firstname" value="Guillaume" />
 					<fieldvalue name="function" value="Consultant" />
@@ -380,7 +379,8 @@
 					<fieldvalue name="firstname" value="Olivier" />
 					<fieldvalue name="function" value="Ingénieur Développement" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="marc-antoine.claustre@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="marc-antoine.claustre@rbs.fr">
 					<fieldvalue name="lastname" value="CLAUSTRE" />
 					<fieldvalue name="firstname" value="Marc-Antoine" />
 					<fieldvalue name="function" value="Chef de projets" />
@@ -410,7 +410,8 @@
 					<fieldvalue name="firstname" value="Olivier" />
 					<fieldvalue name="function" value="Chef de Projet" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="vincent.strohmenger@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="vincent.strohmenger@rbs.fr">
 					<fieldvalue name="lastname" value="STROHMENGER" />
 					<fieldvalue name="firstname" value="Vincent" />
 					<fieldvalue name="function" value="Chef de projet Intranet" />
@@ -455,7 +456,8 @@
 					<fieldvalue name="firstname" value="Yann" />
 					<fieldvalue name="function" value="Responsable Développement" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="jean-marc.burgstahler@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="jean-marc.burgstahler@rbs.fr">
 					<fieldvalue name="lastname" value="BURGSTAHLER" />
 					<fieldvalue name="firstname" value="Jean-Marc" />
 					<fieldvalue name="function" value="Directeur Technnique" />
@@ -495,7 +497,8 @@
 					<fieldvalue name="firstname" value="Zoubida" />
 					<fieldvalue name="function" value="Analyste programmeur" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="sebastien.courvoisier@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="sebastien.courvoisier@rbs.fr">
 					<fieldvalue name="lastname" value="COURVOISIER" />
 					<fieldvalue name="firstname" value="Sébastien" />
 					<fieldvalue name="function" value="Responsable des intégrateurs" />
@@ -510,12 +513,14 @@
 					<fieldvalue name="firstname" value="Eric" />
 					<fieldvalue name="function" value="Concepteur dev. web" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="denis.heiligenstein@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="denis.heiligenstein@rbs.fr">
 					<fieldvalue name="lastname" value="HEILIGENSTEIN" />
 					<fieldvalue name="firstname" value="Denis" />
 					<fieldvalue name="function" value="Ingénieur Système" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="jean-baptiste.huber@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="jean-baptiste.huber@rbs.fr">
 					<fieldvalue name="lastname" value="HUBER" />
 					<fieldvalue name="firstname" value="Jean-Baptiste" />
 					<fieldvalue name="function" value="Ingénieur développement" />
@@ -605,7 +610,8 @@
 					<fieldvalue name="firstname" value="Antoine" />
 					<fieldvalue name="function" value="Ingénieur Réseau et Sécurité" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="jonathan.dielenseger@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="jonathan.dielenseger@rbs.fr">
 					<fieldvalue name="lastname" value="DIELENSEGER" />
 					<fieldvalue name="firstname" value="Jonathan" />
 					<fieldvalue name="function" value="Technicien de maintenance" />
@@ -640,7 +646,8 @@
 					<fieldvalue name="firstname" value="Karl" />
 					<fieldvalue name="function" value="Technicien de maintenance" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="etienne.guillaumont@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="etienne.guillaumont@rbs.fr">
 					<fieldvalue name="lastname" value="GUILLAUMONT" />
 					<fieldvalue name="firstname" value="Etienne" />
 					<fieldvalue name="function" value="Ingénieur-Chef de Projet" />
@@ -670,7 +677,8 @@
 					<fieldvalue name="firstname" value="David" />
 					<fieldvalue name="function" value="Ingénieur en réseaux" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="jean-claude.matarazzo@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="jean-claude.matarazzo@rbs.fr">
 					<fieldvalue name="lastname" value="MATARAZZO" />
 					<fieldvalue name="firstname" value="Jean-Claude" />
 					<fieldvalue name="function" value="Ingénieur Système" />
@@ -680,7 +688,8 @@
 					<fieldvalue name="firstname" value="Julian" />
 					<fieldvalue name="function" value="Coordinateur Logistique" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="francois-xavier.patry@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="francois-xavier.patry@rbs.fr">
 					<fieldvalue name="lastname" value="PATRY" />
 					<fieldvalue name="firstname" value="François-Xavier" />
 					<fieldvalue name="function" value="Resp. Veille Technologique" />
@@ -710,7 +719,8 @@
 					<fieldvalue name="firstname" value="Christine" />
 					<fieldvalue name="function" value="Assistante Technique" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="jean-jacques.wattel@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="jean-jacques.wattel@rbs.fr">
 					<fieldvalue name="lastname" value="WATTEL" />
 					<fieldvalue name="firstname" value="Jean-Jacques" />
 					<fieldvalue name="function" value="Ingénieur" />
@@ -770,12 +780,14 @@
 					<fieldvalue name="firstname" value="Gaël" />
 					<fieldvalue name="function" value="Développeur WEB" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="jean-michel.ramseyer@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="jean-michel.ramseyer@rbs.fr">
 					<fieldvalue name="lastname" value="RAMSEYER" />
 					<fieldvalue name="firstname" value="Jean-Michel" />
 					<fieldvalue name="function" value="Coordinateur Production WEB" />
 				</subscriber>
-				<subscriber publicationstatus="ACTIVE" label="andry.randriamifidy@rbs.fr">
+				<subscriber publicationstatus="ACTIVE"
+					label="andry.randriamifidy@rbs.fr">
 					<fieldvalue name="lastname" value="RANDRIAMIFIDY" />
 					<fieldvalue name="firstname" value="Andry Alain" />
 					<fieldvalue name="function" value="Développeur WEB" />
@@ -824,14 +836,10 @@
 		</mailinglistfolder>
 
 		<folder label="Campagnes" byLabel="Campagnes">
-			<campaign label="Newletter interne RBS" 
-				fromemail="no-reply@rbs.fr" 
-				fromname="Webmaster RBS" 
-				mailinglists-refid="test1"
-				website-refid="website">
-				<mailing label="Contenu 1" 
-					fromemail="no-reply@rbs.fr" fromname="Webmaster RBS"
-					edittype="1"
+			<campaign label="Newletter interne RBS" fromemail="no-reply@rbs.fr"
+				fromname="Webmaster RBS" mailinglists-refid="mailingtest" website-refid="website">
+				<mailing label="Contenu 1" fromemail="no-reply@rbs.fr"
+					fromname="Webmaster RBS" edittype="1"
 					simplexhtmlcontent="
 &lt;h1&gt;Newletter interne RBS Test 1&lt;/h1&gt;
 &lt;p&gt;Bonjour {subscriber.firstname} {subscriber.lastname} Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
@@ -872,13 +880,16 @@ Curabitur nec leo. Pellentesque eleifend vehicula nisl. Fusce ut mauris. Donec v
 			</campaign>
 		</folder>
 	</rootfolder>
-	
+
 	<rootfolder module="users">
-		<documentRef type="modules_users/backendgroup" byLabel="Utilisateurs Change" id="bousergroup" />
+		<documentRef type="modules_users/backendgroup" byLabel="Utilisateurs Change"
+			id="bousergroup" />
 	</rootfolder>
-	
+
 	<systemfolder module="emailing" relatedmodule="users">
-		<dynamicmailinglist label="Utilisateurs backoffice" className="users_MailinglistGroupFeederService" parameter-groupId-refid="bousergroup">
+		<dynamicmailinglist label="Utilisateurs backoffice"
+			className="users_MailinglistGroupFeederService"
+			parameter-groupId-refid="bousergroup">
 			<subscriberrofield label="Nom" mailingname="lastname" />
 			<subscriberrofield label="Prénom" mailingname="firstname" />
 			<subscriberrofield label="Civilité" mailingname="title" />

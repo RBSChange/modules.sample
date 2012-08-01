@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
+	<binding
+		fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
+	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
+	<binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	
+
+	<website byTag="default_modules_website_default-website" id="default-website">
+		<execute method="setDocumentIdAttribute" />
+		<binding fileName="modules/store/setup/globalDefaultStructure.xml" />
+		<execute method="setDocumentIdAttribute" attribute-name="website-id" />
+		<execute method="setDocumentTypeAttribute" attribute-name="website-type" />
+		<topic byLabel="Compte client">
+			<execute method="setDocumentIdAttribute" />
+			<execute method="setDocumentTypeAttribute" />
+			<binding fileName="modules/store/setup/customerDefaultStructure.xml" />
+		</topic>
+		<topic byLabel="Nos magasins" id="storetopic" />
+		<menus>
+			<menu byTag="contextual_website_website_menu-main">
+				<menuitempage pageid="storetopic" />
+			</menu>
+		</menus>
+	</website>
+	
+	<binding fileName="modules/sample/setup/store/sample.xml" />
+
+</script>

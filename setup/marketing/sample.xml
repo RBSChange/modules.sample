@@ -27,6 +27,7 @@
 	<product id="product3" byCodeReference="ATARI2600-1978" />
 	<product id="product4" byCodeReference="NEOGEO-1990" />
 	<productdeclination id="product5" byCodeReference="SUPER-NINTENDO-EUR" />
+	<product id="product6" byCodeReference="MICRO-AMIGA" />
 	<customer id="customer1" byLogin="mario" />
 	<customer id="customer2" byLogin="luigi" />
 	<address id="address" byLabel="L'adresse de livraison de Mario" />
@@ -81,7 +82,7 @@
 	<!-- Animations -->
 	<rootfolder module="marketing">
 		<folder byLabel="m.generic.bo.general.samples">
-			<editableanim product-refids="product1,product2,product5" byLabel="Produit d'occasion" description="Notre sélection de produit facilement trouvable d'occasion !" shop-refid="shop" id="editanim" />
+			<editableanim product-refids="product1,product2,product3,product4,product5,product6" byLabel="Produit d'occasion" description="Notre sélection de produit facilement trouvable d'occasion !" shop-refid="shop" id="editanim" />
 			<dynamicanim query='[{"class":"order_MostFrequentlyOrderedFilter","parameters":{"maxcount":[null,null,"5"]}}]' byLabel="Top Ventes" shop-refid="shop" id="topventes" />
 			<dynamicanim query='[{"class":"marketing_LastProductFilter","parameters":{"count":[null,null,"10"],"datetype":[null,null,"creation"]}}]' byLabel="Nouveautés" shop-refid="shop" id="newproducts" />
 			<dynamicanim query='[{"class":"marketing_ProductPriceFilter","parameters":{}}]' byLabel="Promotions" shop-refid="shop" id="promotions" />

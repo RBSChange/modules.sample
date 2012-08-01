@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Membres" id="members" />
+		<systemtopic byLabel="Forums" id="forums" />
+	</topic>
+
+		<menus>
+			<menu byTag="contextual_website_website_menu-main">
+				<menuitempage pageid="forums" />
+				<menuitempage pageid="members" />
+			</menu>
+		</menus>
+	</website>
+
+	<binding fileName="modules/sample/setup/forums/sample.xml" />
+
+</script>

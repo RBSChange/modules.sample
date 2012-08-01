@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding fileName="modules/event/persistentdocument/import/event_binding.xml" />
+	<binding
+		fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
+
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Actualités et événements" id="events1">
+			<topic byLabel="Actualités abandonware" id="events2" />
+			<topic byLabel="Consoles Retro" id="events3" />
+			<execute method="setDocumentIdAttribute" />
+			<binding fileName="modules/event/setup/localDefaultStructure.xml" />
+			<binding fileName="modules/event/setup/globalDefaultStructure.xml" />
+		</topic>
+	</website>
+	
+	<binding fileName="modules/sample/setup/event/sample.xml" />
+
+</script>

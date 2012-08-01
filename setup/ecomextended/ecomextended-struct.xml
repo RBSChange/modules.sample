@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/sample/setup/ecomextended/ecomextended-data.xml" />
+
+	<website byTag="default_modules_website_default-website">
+		<page byTag="contextual_website_website_modules_solrsearch_page-results">
+		    <changecontent for="sidebar-block">
+				<changeblock type="modules_ecomextended_Facets" />
+			</changecontent>
+		    <changecontent for="content-block">
+		    	<changeblock type="modules_ecomextended_ManageFacetsFilter" />
+		    	<changeblock type="modules_solrsearch_results" __facets-refids="documentModel,shelfIdCompiled,brand" __complete="true" />
+			</changecontent>
+		</page>
+	</website>
+</script>

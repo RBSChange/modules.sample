@@ -435,7 +435,7 @@ buts, comme le traitement de texte.</p>
 		brand-refid="NINTENDO"
 		description-attr="description-snes-controller">
 		<productdeclination shippedIn="1"  visual-refid="SUPER-NINTENDO-CONTROLLER-1" byCodeReference="SUPER-NINTENDO-CONTROLLER-EUR" 
-			id="SUPER-NINTENDO-EUR" label="PAL" stockQuantity="15" attributes='GAMEZONE:{ref-id:EUR}'>
+			id="SUPER-NINTENDO-CONTROLLER-EUR" label="PAL" stockQuantity="15" attributes='GAMEZONE:{ref-id:EUR}'>
 			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="19.00" />
 		</productdeclination>
 		<productdeclination shippedIn="1"  visual-refid="SNES-CONTROLLER-1"  byCodeReference="SUPER-NINTENDO-CONTROLLER-N-USA" id="SUPER-NINTENDO-CONTROLLER-N-USA" 
@@ -658,7 +658,9 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 	<crossitem targetDocument-refid="FAMICOM-1983" linkedDocument-refid="NES-ZAPPER-GREY" linkType="complementary" symetrical="true" />
 	<crossitem targetDocument-refid="FAMICOM-1983" linkedDocument-refid="NES-ADVANTAGE" linkType="complementary" symetrical="true" />
 	<crossitem targetDocument-refid="SUPER-NINTENDO" linkedDocument-refid="SNES-GAME-ZELDA" linkType="complementary" symetrical="true" />
-	<crossitem targetDocument-refid="SUPER-NINTENDO" linkedDocument-refid="SUPER-NINTENDO-CONTROLLER" linkType="complementary" symetrical="true" />
+	<crossitem targetDocument-refid="SUPER-NINTENDO-EUR" linkedDocument-refid="SUPER-NINTENDO-CONTROLLER-EUR" linkType="complementary" symetrical="true" />
+	<crossitem targetDocument-refid="SUPER-NINTENDO-N-USA" linkedDocument-refid="SUPER-NINTENDO-CONTROLLER-N-USA" linkType="complementary" symetrical="true" />
+	<crossitem targetDocument-refid="SUPER-FAMICOM" linkedDocument-refid="SUPER-FAMICOM-CONTROLLER" linkType="complementary" symetrical="true" />
 	<crossitem targetDocument-refid="SNES-DOWNLOAD-ZELDA-TIPS" linkedDocument-refid="SNES-GAME-ZELDA" linkType="complementary" symetrical="true" />
 	<crossitem targetDocument-refid="GAMEBOY-LINKCABLE" linkedDocument-refid="GAMEBOY-CLASSIC" linkType="complementary" symetrical="true" />
 	<crossitem targetDocument-refid="GAMEBOY-LINKCABLE" linkedDocument-refid="GAMEBOY-GAME-POKEMON" linkType="complementary" symetrical="true" />

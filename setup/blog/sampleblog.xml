@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/blog/persistentdocument/import/blog_binding.xml" />
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding
+		fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
+
+	<website byTag="default_modules_website_default-website">
+			<topic byLabel="Liste des blogs" id="blogs">
+				<execute method="setDocumentIdAttribute" />
+				<binding fileName="modules/blog/setup/topicDefaultStructure.xml" />
+			</topic>
+		<menus>
+			<menu byTag="contextual_website_website_menu-main">
+				<menuitempage pageid="blogs" />
+			</menu>
+		</menus>
+	</website>
+
+	<binding fileName="modules/sample/setup/blog/sample.xml" />
+
+</script>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/ecomextended/persistentdocument/import/ecomextended_binding.xml" />
+	<rootfolder module="ecomextended">
+		<folder byLabel="m.ecomextended.bo.general.standard-facets">
+
+			<facet label="shelfMenu" id="shelfMenu"
+				i18nLabelKey="m.ecomextended.frontoffice.facet-shelfidcompiled-label"
+				byCodeName="shelfmenu" multipleValue="true" scalarType="Integer"
+				productSrc="shelfIdCompiled" phpEngineClass="ecomextended_ShelfMenuFacetEngine"
+				publicationstatus="ACTIVE" />
+
+			<facet label="shelfIdCompiled" id="shelfIdCompiled"
+				i18nLabelKey="m.ecomextended.frontoffice.facet-shelfidcompiled-label"
+				byCodeName="shelfIdCompiled" multipleValue="true" scalarType="Integer"
+				productSrc="shelfIdCompiled" phpEngineClass="ecomextended_ShelfFacetEngine"
+				publicationstatus="ACTIVE" />
+
+			<facet label="brand" i18nLabelKey="m.ecomextended.frontoffice.facet-brandid-label"
+				id="brand" byCodeName="brandId" multipleSelect="true" scalarType="Integer"
+				productSrc="property:brand" phpEngineClass="ecomextended_BaseFacetEngine"
+				publicationstatus="ACTIVE" />
+
+			<facet label="ratingAverage" id="ratingAverage"
+				i18nLabelKey="m.ecomextended.frontoffice.facet-ratingaverage-label"
+				byCodeName="ratingAverage" scalarType="Float"
+				renderInterval="[4,*];[3,*];[2,*];[1,*];[0,0]" i18nRangePackage="m.ecomextended.frontoffice.ratingaverage"
+				productSrc="compiledproperty:ratingAverage" phpEngineClass="ecomextended_BaseFacetEngine"
+				publicationstatus="ACTIVE" />
+
+			<facet label="discountLevel" id="discountLevel"
+				i18nLabelKey="m.ecomextended.frontoffice.facet-discountlevel-label"
+				byCodeName="discountLevel" scalarType="Integer" renderInterval="[50,*];[25,*];[10,*];]0,*]"
+				productSrc="compiledproperty:discountLevel" phpEngineClass="ecomextended_BaseFacetEngine"
+				numericFormatter="percent" publicationstatus="ACTIVE" />
+
+			<facet label="price" i18nLabelKey="m.ecomextended.frontoffice.facet-price-label"
+				id="price" byCodeName="price" scalarType="Float"
+				renderInterval="[0,10[;[10,20[;[20,50[;[50,100[;[100,*]" productSrc="price"
+				phpEngineClass="ecomextended_PriceFacetEngine" publicationstatus="ACTIVE" />
+
+			<facet label="documentModel" id="documentModel"
+				i18nLabelKey="m.ecomextended.frontoffice.facet-documentmodel-label"
+				byCodeName="documentModel" scalarType="String" productSrc="documentModel"
+				phpEngineClass="ecomextended_ModelFacetEngine" publicationstatus="ACTIVE" />
+
+			<facet label="isAvailable" id="isAvailable"
+				i18nLabelKey="m.ecomextended.frontoffice.facet-isavailable-label"
+				byCodeName="isAvailable" scalarType="Integer" renderInterval="[0,0];[1,*]"
+				renderListCode="modules_ecomextended/booleanrange" showAllListValue="true"
+				productSrc="compiledproperty:isAvailable" phpEngineClass="ecomextended_BaseFacetEngine"
+				publicationstatus="ACTIVE" />
+
+			<facet label="isDiscount" id="isDiscount"
+				i18nLabelKey="m.ecomextended.frontoffice.facet-isdiscount-label"
+				byCodeName="isDiscount" scalarType="Integer" renderInterval="[0,0];[1,*]"
+				renderListCode="modules_ecomextended/booleanrange" showAllListValue="true"
+				productSrc="compiledproperty:isDiscount" phpEngineClass="ecomextended_BaseFacetEngine"
+				publicationstatus="ACTIVE" />
+		</folder>
+	</rootfolder>
+	<documentRef type="modules_catalog/shop" id="shop" byCodeReference="DEMO" />
+	<shelffacets shop-refid="shop" facets-refids="shelfMenu,brand,ratingAverage,price" />
+</script>

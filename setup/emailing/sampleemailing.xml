@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+	<binding
+		fileName="modules/emailing/persistentdocument/import/emailing_binding.xml" />
+
+	<bindig fileName="modules/sample/setup/emailing/sample.xml" />
+
+	<website byTag="default_modules_website_default-website" id="website">
+		<topic byLabel="Newsletter">
+			<execute method="setDocumentIdAttribute" />
+			<binding fileName="modules/sample/setup/emailing/samplepage.xml" />
+		</topic>
+	</website>
+
+</script>
