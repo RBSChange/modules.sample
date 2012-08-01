@@ -1,178 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	<binding fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
-		
+
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder label="contactcard">
-				<media path="modules/sample/setup/contactcard/media/photo.png" byLabel="Photo non disponible" id="photo" />
-				<media path="modules/sample/setup/contactcard/media/amigacd32.jpg" byLabel="Amiga CD32" id="photo2" />
-				<media path="modules/sample/setup/contactcard/media/atari-2600.jpg" byLabel="Atari 2600" id="photo3" />
-				<media path="modules/sample/setup/contactcard/media/nes.png" byLabel="NES" id="photo4" />
-				<media path="modules/sample/setup/contactcard/media/master-system-set.png" byLabel="Master System" id="photo5" />
-				<media path="modules/sample/setup/contactcard/media/amiga-1200.jpg" byLabel="Amiga 1200" id="photo6" />
-				<media path="modules/sample/setup/contactcard/media/zx80.jpg" byLabel="ZX80" id="photo7" />
+				<media path="modules/sample/setup/contactcard/media/photo.png"
+					byLabel="Photo non disponible" id="photo" />
+				<media path="modules/sample/setup/contactcard/media/amigacd32.jpg"
+					byLabel="Amiga CD32" id="photo2" />
+				<media path="modules/sample/setup/contactcard/media/atari-2600.jpg"
+					byLabel="Atari 2600" id="photo3" />
+				<media path="modules/sample/setup/contactcard/media/nes.png"
+					byLabel="NES" id="photo4" />
+				<media
+					path="modules/sample/setup/contactcard/media/master-system-set.png"
+					byLabel="Master System" id="photo5" />
+				<media path="modules/sample/setup/contactcard/media/amiga-1200.jpg"
+					byLabel="Amiga 1200" id="photo6" />
+				<media path="modules/sample/setup/contactcard/media/zx80.jpg"
+					byLabel="ZX80" id="photo7" />
 			</folder>
 		</folder>
 	</rootfolder>
 
-	<website byTag="default_modules_website_default-website">
-		<topic byLabel="Outils">
-			<page label="Contact" navigationVisibility="hidden" indexingstatus="false"
-				byTag="contextual_website_website_modules_contactcard_contact">
-				<changecontent for="content-block">
-					<changeblock type="modules_contactcard_contact" />
-				</changecontent>
-			</page>
-
-			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false"
-				byTag="contextual_website_website_modules_contactcard_page-contact">
-				<changecontent for="content-block">
-					<changeblock type="richtext">
-						<![CDATA[<h2 class="heading-two">Mettre ici le formulaire de contact</h2>]]>
-					</changeblock>
-				</changecontent>
-			</page>
-		</topic>
-		<topic byLabel="Liste des contacts">
-			<page byLabel="Liste des contacts"  indexingstatus="false" isIndexPage="true">
-				<changecontent for="content-block">
-					<changeblock type="modules_contactcard_contactlist" __showContactpageLink="false"/>
-				</changecontent>
-			</page>
-		</topic>
-	</website>
-	
 	<rootfolder module="contactcard">
 		<folder byLabel="Consoles">
-			<contact byName="Commodore"
-				 titlestr="M."
-				 firstname="Amiga"
-				 lastname="CD32"
-				 function="Consoles de jeu"
-				 photo-refid="photo2"
-				 post=""
-				 mails="amigacd32@rbschange.fr"				 
-				 communicationlanguage="fr"
-				 phone="06 666 666 66"
-				 fax="08 888 888 88"
-				 address1="Cimmetière"
-				 address2="Industriel"
-				 zipcode="66 666"
-				 city="Quelque part"
-				 country="Sur Terre"				 
-				 indexingstatus="false"
-				 allowcontact="true"
-				 publicationstatus="ACTIVE" />
-				 
-				 <contact byName="Atari"
-				 titlestr="M."
-				 firstname="Atari"
-				 lastname="2600"
-				 function="Consoles de jeu"
-				 photo-refid="photo3"
-				 post=""
-				 mails="atari2600@rbschange.fr"				 
-				 communicationlanguage="fr"
-				 phone="06 666 666 66"
-				 fax="08 888 888 88"
-				 address1="Dans son salon"
-				 address2="ou Dans sa chambre"
-				 zipcode="66 666"
-				 city="Chez lui"
-				 country="FRANCE"				 
-				 indexingstatus="false"
-				 publicationstatus="ACTIVE" />
-				 
-				 <contact byName="Nintendo"
-				 titlestr="Mme"
-				 firstname="Nintendo"
-				 lastname="Entertainment System"
-				 function="Consoles de jeu"
-				 photo-refid="photo4"
-				 post=""
-				 mails="nes@rbschange.fr"				 
-				 communicationlanguage="fr"
-				 phone="06 666 666 66"
-				 fax="08 888 888 88"
-				 address1="Dans une salle d'arcade"
-				 address2="Ou dans une chambre"
-				 zipcode="66 666"
-				 city="Tokyo"
-				 country="JAPON"				 
-				 indexingstatus="false"
-				 publicationstatus="ACTIVE" />
-				 
-				 <contact byName="Sega"
-				 titlestr="Mme"
-				 firstname="Master"
-				 lastname="System"
-				 function="Consoles de jeu"
-				 photo-refid="photo5"
-				 post=""
-				 mails="master-system@rbschange.fr"				 
-				 communicationlanguage="fr"
-				 phone="06 666 666 66"
-				 fax="08 888 888 88"
-				 address1="Dans une autre salle d'arcade"
-				 address2="Ou dans une autre chambre"
-				 zipcode="66 666"
-				 city="Tokyo"
-				 country="JAPON"				 
-				 indexingstatus="false"
-				 publicationstatus="ACTIVE" />
+			<contact byName="Commodore" titlestr="M." firstname="Jack"
+				lastname="Tramiel" function="Fondateur" photo-refid="photo2"
+				post="" mails="amigacd32@rbschange.fr" communicationlanguage="en"
+				phone="01 23 44 55 66" fax="01 23 44 55 66" address1="West Chester"
+				zipcode="12 324" city="Pennsylvania," country="United States"
+				indexingstatus="false" allowcontact="true" publicationstatus="ACTIVE" />
+
+			<contact byName="Atari" titlestr="M." firstname="Nolan"
+				lastname="Bushnell" function="Fondateur" photo-refid="photo3"
+				post="" mails="atari2600@rbschange.fr" communicationlanguage="en"
+				phone="01 23 44 55 66" fax="01 23 44 55 66" address1="42 Game Street"
+				zipcode="12 324" city="Los Angeles"
+				country="United States" indexingstatus="false" publicationstatus="ACTIVE" />
+
+			<contact byName="Nintendo" titlestr="M" firstname="Shigeru"
+				lastname="Miyamoto" function="Concepteur"
+				photo-refid="photo4" post="" mails="nes@rbschange.fr"
+				communicationlanguage="fr" phone="01 23 44 55 66" fax="01 23 44 55 66"
+				address1="〒100-8994" address2="東京都中央区八重洲一丁目5番3号"
+				zipcode="東京中央郵便局" city="Kyoto" country="JAPON" indexingstatus="false"
+				publicationstatus="ACTIVE" />
+
+			<contact byName="Sega" titlestr="M" firstname="Hajime"
+				lastname="Satomi" function="Fondateur" photo-refid="photo5"
+				post="" mails="master-system@rbschange.fr" communicationlanguage="fr"
+				phone="01 23 44 55 66" fax="01 23 44 55 66" address1="大田区"
+				address2="Tokyo street" zipcode="454FD5 5" city="Tokyo"
+				country="JAPON" indexingstatus="false" publicationstatus="ACTIVE" />
+			<contact byName="Sega" titlestr="M" firstname="Mike"
+				lastname="Hayes" function="Concepteur" photo-refid="photo5"
+				post="" mails="master-system@rbschange.fr" communicationlanguage="en"
+				phone="01 23 44 55 66" fax="01 23 44 55 66" address1="11 september street"
+				zipcode="454 DS5 VB2" city="Weymouth"
+				country="Grande-Bretagne" indexingstatus="false" publicationstatus="ACTIVE" />
 		</folder>
 		<folder byLabel="Ordinateur personnel">
-			<contact byName="Commodore"
-				 titlestr="M."
-				 firstname="Amiga"
-				 lastname="1200"
-				 function="Ordinateur personnel"
-				 photo-refid="photo6"
-				 post=""
-				 mails="amiga1200@rbschange.fr"				 
-				 communicationlanguage="fr"
-				 phone="06 666 666 66"
-				 fax="08 888 888 88"
-				 address1="Dans mon salon"
-				 address2="ou Dans ma chambre"
-				 zipcode="66 666"
-				 city="Chez moi"
-				 country="FRANCE"				 
-				 indexingstatus="false"
-				 publicationstatus="ACTIVE" />
-				 
-				 <contact byName="Sinclair"
-				 titlestr="M."
-				 firstname="ZX"
-				 lastname="80"
-				 function="Ordinateur personnel"
-				 photo-refid="photo7"
-				 post=""
-				 mails="zx80@rbschange.fr"				 
-				 communicationlanguage="fr"
-				 phone="06 666 666 66"
-				 fax="08 888 888 88"			 
-				 indexingstatus="false"
-				 allowcontact="true"
-				 publicationstatus="ACTIVE" />
-				 
-				 <contact byName="Atari"
-				 titlestr="M."
-				 firstname="Atari"
-				 lastname="ST"
-				 function="Ordinateur personnel"
-				 photo-refid="photo"
-				 post=""
-				 mails="atarist@rbschange.fr"				 
-				 communicationlanguage="fr"
-				 phone="06 666 666 66"
-				 fax="08 888 888 88"			 
-				 indexingstatus="false"
-				 allowcontact="true"
-				 publicationstatus="ACTIVE" />
+			<contact byName="Commodore" titlestr="M." firstname="Irving"
+				lastname="Gould" function="Concepteur" photo-refid="photo6"
+				post="" mails="amiga1200@rbschange.fr" communicationlanguage="fr"
+				phone="01 23 44 55 66" fax="01 23 44 55 66" address1="12 Rue des arbres"
+				address2="Coin du cameo" zipcode="67 776" city="Toronto"
+				country="Canada" indexingstatus="false" publicationstatus="ACTIVE" />
+
+			<contact byName="Sinclair" titlestr="M." firstname="Clive"
+				lastname="Sinclair" function="Inventeur" photo-refid="photo7"
+				post="" mails="zx80@rbschange.fr" communicationlanguage="fr"
+				phone="01 23 44 55 66" fax="01 23 44 55 66" indexingstatus="false"
+				allowcontact="true" publicationstatus="ACTIVE" />
+
+			<contact byName="Atari" titlestr="M." firstname="Ted"
+				lastname="Dabney" function="Fondateur" photo-refid="photo"
+				post="" mails="atarist@rbschange.fr" communicationlanguage="fr"
+				phone="01 23 44 55 66" fax="01 23 44 55 66" indexingstatus="false"
+				allowcontact="true" publicationstatus="ACTIVE" />
 		</folder>
 	</rootfolder>
 </script>

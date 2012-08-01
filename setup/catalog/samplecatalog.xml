@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/sample/setup/catalog/default.xml" />
+	<website byTag="default_modules_website_default-website">
+		<menus>
+			<menu byTag="contextual_website_website_menu-main">
+				<menuitempage pageid="ShopTopic" />
+			</menu>
+		</menus>
+	</website>
+</script>

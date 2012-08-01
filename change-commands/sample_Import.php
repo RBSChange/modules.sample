@@ -169,7 +169,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'form' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'download' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'notification' . DIRECTORY_SEPARATOR . 'sample.xml';
-		$samples[] = 'contactcard' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'contactcard' . DIRECTORY_SEPARATOR . 'samplecontactcard.xml';
 		$samples[] = 'list' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'faq' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'lexicon' . DIRECTORY_SEPARATOR . 'sample.xml';
@@ -193,7 +193,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'atosserver' . DIRECTORY_SEPARATOR . 'sample.xml';
 		
 		$samples[] = 'paybox' . DIRECTORY_SEPARATOR . 'sample.xml';
-		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'default.xml';
+		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'samplecatalog.xml';
 		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'default.xml';
 		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'default.xml';
@@ -234,7 +234,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'workflow' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'form' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'notification' . DIRECTORY_SEPARATOR . 'sample.xml';
-		$samples[] = 'contactcard' . DIRECTORY_SEPARATOR . 'sample.xml';
+		$samples[] = 'contactcard' . DIRECTORY_SEPARATOR . 'samplecontactcard.xml';
 		$samples[] = 'list' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'statictext' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'rss' . DIRECTORY_SEPARATOR . 'sample.xml';
@@ -255,7 +255,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'payment' . DIRECTORY_SEPARATOR . 'sample.xml';
 		
 		$samples[] = 'paybox' . DIRECTORY_SEPARATOR . 'sample.xml';
-		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'default.xml';
+		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'samplecatalog.xml';
 		$samples[] = 'catalog' . DIRECTORY_SEPARATOR . 'sample.xml';
 		$samples[] = 'customer' . DIRECTORY_SEPARATOR . 'default.xml';
 		$samples[] = 'order' . DIRECTORY_SEPARATOR . 'default.xml';
