@@ -675,11 +675,6 @@
 			<backendpermission module="comment" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
-	<rootfolder module="compatibilityos">
-		<permissions>
-			<backendpermission module="compatibilityos" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
 	<rootfolder module="customer">
 		<permissions>
 			<backendpermission module="customer" role="Admin" user-refid="demo-user" />
@@ -835,16 +830,6 @@
 			<backendpermission module="atosserver" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
-	<rootfolder module="clustersafe">
-		<permissions>
-			<backendpermission module="clustersafe" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="clusterscale">
-		<permissions>
-			<backendpermission module="clusterscale" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
 	<rootfolder module="dashstat">
 		<permissions>
 			<backendpermission module="dashstat" role="Admin" user-refid="demo-user" />
@@ -883,11 +868,6 @@
 	<rootfolder module="marketing">
 		<permissions>
 			<backendpermission module="marketing" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="mobileapps">
-		<permissions>
-			<backendpermission module="mobileapps" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="mysqlstock">
