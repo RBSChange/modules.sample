@@ -65,9 +65,29 @@
 			<page byLabel="Comparaison de produits" navigationVisibility="Hidden-in-menu-only" />
 		</topic>
 
+		<topic byLabel="Compte client">
+			<execute method="setDocumentIdAttribute" />
+			<execute method="setDocumentTypeAttribute" />
+			<binding fileName="modules/store/setup/customerDefaultStructure.xml" />
+			<page label="Magasin préféré" indexingstatus="false" byTag="contextual_website_website_modules_store_favoritestore">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Détail d'une expédition en magasin">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+		</topic>
+
 		<topic byLabel="Communauté" id="topiccommunity">
 			<page id="pagecommunity" byLabel="Communauté" isIndexPage="true" navigationVisibility="Hidden">
-				<changecontent for="sidebar-block" append="true">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
 					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
 						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
 						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="newproducts" />
@@ -84,6 +104,48 @@
 				<execute method="setDocumentIdAttribute" />
 				<binding fileName="modules/event/setup/localDefaultStructure.xml" />
 				<binding fileName="modules/event/setup/globalDefaultStructure.xml" />
+				<page byLabel="Liste des actualité et événements">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Détail d'une actualité ou d'un événement">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Actualités et événements du site">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Actualités et événements du jour">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Détail d'une catégorie">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Détail d'une mise en avant">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Soumission d'une actualité ou d'un événement">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
 			</topic>
 			<topic byLabel="Offres d'emploi" id="topic">
 				<execute method="setDocumentIdAttribute" />
@@ -100,7 +162,7 @@
 		</topic>
 
 		<page byTag="contextual_website_website_modules_solrsearch_page-results">
-			<changecontent for="sidebar-block" append="true">
+			<changecontent for="sidebar-block">
 				<changeblock type="modules_ecomextended_Facets" />
 			</changecontent>
 			<changecontent for="content-block">
@@ -111,7 +173,9 @@
 
 		<topic byLabel="Annuaire" id="annuaire">
 			<page id="pageannuaire" byLabel="Annuaire" isIndexPage="true" navigationVisibility="Hidden">
-				<changecontent for="sidebar-block" append="true">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
 					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
 						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
 						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="promotions" />
@@ -128,6 +192,8 @@
 
 			<page byLabel="Liste des contacts" indexingstatus="false">
 				<changecontent for="sidebar-block" append="true">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
 					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
 						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
 						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="newproducts" />
@@ -140,12 +206,6 @@
 			<binding fileName="modules/store/setup/globalDefaultStructure.xml" />
 			<execute method="setDocumentIdAttribute" attribute-name="website-id" />
 			<execute method="setDocumentTypeAttribute" attribute-name="website-type" />
-			<topic byLabel="Compte client">
-				<execute method="setDocumentIdAttribute" />
-				<execute method="setDocumentTypeAttribute" />
-				<binding fileName="modules/store/setup/customerDefaultStructure.xml" />
-				<page label="Magasin préféré" indexingstatus="false" byTag="contextual_website_website_modules_store_favoritestore" isIndexPage="true" />
-			</topic>
 			<topic byLabel="Newsletter">
 				<execute method="setDocumentIdAttribute" />
 				<binding fileName="modules/sample/setup/emailing/samplepage.xml" />
@@ -154,6 +214,10 @@
 
 		<topic byLabel="Media" id="topicmedia">
 			<page id="pagemedia" byLabel="Médias" isIndexPage="true" navigationVisibility="Hidden">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="richtext">
 						<![CDATA[<p>Bienvenue dans la liste des médias installés sur votre site.</p>]]>
@@ -163,15 +227,35 @@
 			<topic byLabel="Galerie de photos" id="gallery">
 				<execute method="setDocumentIdAttribute" />
 				<binding fileName="modules/photoalbum/setup/localDefaultStructure.xml" />
+				<page byLabel="Liste des albums">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Album">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
 			</topic>
 			<topic byLabel="Galerie de vidéos" id="video">
 				<page label="Exemple de vidéo youtube" isIndexPage="true">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
 					<changecontent for="content-block">
 						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube1" />
 						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube2" />
 					</changecontent>
 				</page>
 				<page label="Exemple de vidéo flash">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
 					<changecontent for="content-block">
 						<changeblock type="modules_videos_video" __cmpref-refid="v1" />
 					</changecontent>
@@ -181,12 +265,20 @@
 
 		<topic byLabel="Outils">
 			<page label="Contact" navigationVisibility="hidden" indexingstatus="false" byTag="contextual_website_website_modules_contactcard_contact">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="modules_contactcard_contact" />
 				</changecontent>
 			</page>
 			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false"
 				byTag="contextual_website_website_modules_contactcard_page-contact">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="richtext">
 						<![CDATA[<h2 class="heading-two">Mettre ici le formulaire de contact</h2>]]>
@@ -195,6 +287,10 @@
 			</page>
 
 			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="modules_form_form" __cmpref-refid="form1" />
 				</changecontent>
@@ -226,4 +322,717 @@
 	<binding fileName="modules/sample/setup/store/sample.xml" />
 	<binding fileName="modules/sample/setup/store/sampleextranet.xml" />
 
+	<website byTag="default_modules_website_default-website" id="default-website">
+		<topic byLabel="Outils">
+			<page byLabel="Plan du site">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Mentions légales">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Aide">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Inscription">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Authentification">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Mot de passe perdu">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+		</topic>
+		<topic byLabel="Extranet">
+			<page byLabel="Bienvenue">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Changer votre mot de passe">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Modifier votre profil">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+		</topic>
+		<topic byLabel="Liste des contacts">
+			<page byLabel="Liste des contacts">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+		</topic>
+		<topic byLabel="Compte client">
+			<page byLabel="Mon compte">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Mes informations">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Mon mot de passe">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Mes adresses">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Contact">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Mes commandes">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+		</topic>
+		<topic byLabel="Commande">
+			<page byLabel="Créer un compte client">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Mon panier">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+			<page byLabel="Conditions générales de vente">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+						__depth="2" __startLevel="1" />
+				</changecontent>
+			</page>
+		</topic>
+		<topic byLabel="Communauté">
+			<topic byLabel="Forums">
+				<page byLabel="Forum" template-attr="templateHome" />
+				<page byLabel="Sujet" template-attr="templateHome" />
+				<page byLabel="Message" template-attr="templateHome" />
+				<page byLabel="Nouveau sujet" template-attr="templateHome" />
+				<page byLabel="Nouveau message" template-attr="templateHome" />
+				<page byLabel="Édition d'un message" template-attr="templateHome" />
+			</topic>
+
+			<topic byLabel="Offres d'emploi">
+				<page byLabel="Offres d'emploi">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Détail d'une offre d'emploi">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Postuler">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Candidature spontanée">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+			</topic>
+			<topic byLabel="Liste des blogs">
+				<page byLabel="Liste des blogs">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Blog">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Catégorie">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Mot clé">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Billet">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Archives">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+			</topic>
+			<topic byLabel="Messagerie privée">
+				<page byLabel="Liste des conversations">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Détail d'une conversation">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Nouvelle conversation">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Réponse à une conversation">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+			</topic>
+		</topic>
+		<topic byLabel="Annuaire">
+			<topic byLabel="Annuaire des marques">
+				<page byLabel="Annuaire des marques">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Détail d'une marque">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+			</topic>
+			<topic byLabel="Nos magasins">
+				<page byLabel="Nos magasins">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Détail d'un magasin">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Contacter un magasin">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Les services en magasin">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+			</topic>
+			<topic byLabel="Newsletter">
+				<page byLabel="Inscription à la newsletter">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Désinscription de la newsletter">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Désinscription">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Désinscription confirmée">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+				<page byLabel="Confirmation de d'inscription">
+					<changecontent for="sidebar-block">
+						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
+							__depth="2" __startLevel="1" />
+					</changecontent>
+				</page>
+			</topic>
+		</topic>
+		<topic byLabel="Membres">
+			<page byLabel="Liste des membres" template-attr="templateHome" />
+		</topic>
+	</website>
+
+	<!-- permissions -->
+	<rootfolder module="website">
+		<permissions>
+			<backendpermission module="website" role="Admin" user-refid="demo-user" />
+		</permissions>
+		<website byTag="default_modules_website_default-website">
+			<topic byLabel="Compte client">
+				<permissions>
+					<backendpermission module="website" role="Admin" user-refid="demo-user" />
+				</permissions>
+			</topic>
+			<topic byLabel="Extranet">
+				<permissions>
+					<backendpermission module="website" role="Admin" user-refid="demo-user" />
+				</permissions>
+			</topic>
+			<topic byLabel="Extranet magasin">
+				<permissions>
+					<backendpermission module="website" role="Admin" user-refid="demo-user" />
+				</permissions>
+			</topic>
+		</website>
+	</rootfolder>
+	<rootfolder module="blog">
+		<permissions>
+			<backendpermission module="blog" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="bookmarks">
+		<permissions>
+			<backendpermission module="bookmarks" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="brand">
+		<permissions>
+			<backendpermission module="brand" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="catalog">
+		<permissions>
+			<backendpermission module="catalog" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="comment">
+		<permissions>
+			<backendpermission module="comment" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="compatibilityos">
+		<permissions>
+			<backendpermission module="compatibilityos" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="customer">
+		<permissions>
+			<backendpermission module="customer" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="download">
+		<permissions>
+			<backendpermission module="download" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="event">
+		<permissions>
+			<backendpermission module="event" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="faq">
+		<permissions>
+			<backendpermission module="faq" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="forums">
+		<permissions>
+			<backendpermission module="forums" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="gmaps">
+		<permissions>
+			<backendpermission module="gmaps" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="inquiry">
+		<permissions>
+			<backendpermission module="inquiry" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="joboffer">
+		<permissions>
+			<backendpermission module="joboffer" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="lexicon">
+		<permissions>
+			<backendpermission module="lexicon" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="mapping">
+		<permissions>
+			<backendpermission module="mapping" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="markergmaps">
+		<permissions>
+			<backendpermission module="markergmaps" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="mysqlnotif">
+		<permissions>
+			<backendpermission module="mysqlnotif" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="order">
+		<permissions>
+			<backendpermission module="order" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="paybox">
+		<permissions>
+			<backendpermission module="paybox" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="payment">
+		<permissions>
+			<backendpermission module="payment" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="photoalbum">
+		<permissions>
+			<backendpermission module="photoalbum" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="polls">
+		<permissions>
+			<backendpermission module="polls" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="privatemessaging">
+		<permissions>
+			<backendpermission module="privatemessaging" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="productupdater">
+		<permissions>
+			<backendpermission module="productupdater" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="projectcare">
+		<permissions>
+			<backendpermission module="projectcare" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="richtext">
+		<permissions>
+			<backendpermission module="richtext" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="sample">
+		<permissions>
+			<backendpermission module="sample" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="sharethis">
+		<permissions>
+			<backendpermission module="sharethis" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="shipping">
+		<permissions>
+			<backendpermission module="shipping" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="shoppingmail">
+		<permissions>
+			<backendpermission module="shoppingmail" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="statictext">
+		<permissions>
+			<backendpermission module="statictext" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="testing">
+		<permissions>
+			<backendpermission module="testing" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="twitterconnect">
+		<permissions>
+			<backendpermission module="twitterconnect" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="videos">
+		<permissions>
+			<backendpermission module="videos" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="ads">
+		<permissions>
+			<backendpermission module="ads" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="atosserver">
+		<permissions>
+			<backendpermission module="atosserver" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="clustersafe">
+		<permissions>
+			<backendpermission module="clustersafe" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="clusterscale">
+		<permissions>
+			<backendpermission module="clusterscale" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="dashstat">
+		<permissions>
+			<backendpermission module="dashstat" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="ecomextended">
+		<permissions>
+			<backendpermission module="ecomextended" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="ecomwebservices">
+		<permissions>
+			<backendpermission module="ecomwebservices" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="emailing">
+		<permissions>
+			<backendpermission module="emailing" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="facebookconnect">
+		<permissions>
+			<backendpermission module="facebookconnect" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="googleshopping">
+		<permissions>
+			<backendpermission module="googleshopping" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="loyalty">
+		<permissions>
+			<backendpermission module="loyalty" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="marketing">
+		<permissions>
+			<backendpermission module="marketing" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="mobileapps">
+		<permissions>
+			<backendpermission module="mobileapps" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="mysqlstock">
+		<permissions>
+			<backendpermission module="mysqlstock" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="privatesales">
+		<permissions>
+			<backendpermission module="privatesales" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="productexporter">
+		<permissions>
+			<backendpermission module="productexporter" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="productreturns">
+		<permissions>
+			<backendpermission module="productreturns" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="socolissimo">
+		<permissions>
+			<backendpermission module="socolissimo" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="store">
+		<permissions>
+			<backendpermission module="store" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="support">
+		<permissions>
+			<backendpermission module="support" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="survey">
+		<permissions>
+			<backendpermission module="survey" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="synchronizer">
+		<permissions>
+			<backendpermission module="synchronizer" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="users">
+		<permissions>
+			<backendpermission module="users" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="webservices">
+		<permissions>
+			<backendpermission module="webservices" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="contactcard">
+		<permissions>
+			<backendpermission module="contactcard" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="filter">
+		<permissions>
+			<backendpermission module="filter" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="form">
+		<permissions>
+			<backendpermission module="form" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="markergas">
+		<permissions>
+			<backendpermission module="markergas" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="skin">
+		<permissions>
+			<backendpermission module="skin" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="useractionlogger">
+		<permissions>
+			<backendpermission module="useractionlogger" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="list">
+		<permissions>
+			<backendpermission module="list" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="media">
+		<permissions>
+			<backendpermission module="media" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="notification">
+		<permissions>
+			<backendpermission module="notification" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="preferences">
+		<permissions>
+			<backendpermission module="preferences" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="rss">
+		<permissions>
+			<backendpermission module="rss" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="seo">
+		<permissions>
+			<backendpermission module="seo" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="dashboard">
+		<permissions>
+			<backendpermission module="dashboard" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="task">
+		<permissions>
+			<backendpermission module="task" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="theme">
+		<permissions>
+			<backendpermission module="theme" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="workflow">
+		<permissions>
+			<backendpermission module="workflow" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="zone">
+		<permissions>
+			<backendpermission module="zone" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="updater">
+		<permissions>
+			<backendpermission module="updater" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
 </script>

@@ -3,64 +3,46 @@
 
 	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
 	<binding fileName="modules/sample/setup/statictext/sample.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 
 	<theme byCodename="default">
 		<pagetemplate byCodename="default/nosidebarpage">
-			<pagetemplatedeclination byCodename="default/nosidebarpagecmssample"
-				label="Sans sitebar CMS exemple">
-				<templateblock editname="footer-middle-1"
-					type="modules_website_ConfigurableMenu" __mode="tag"
-					__tag="contextual_website_website_menu-main" __displayMode="default"
-					__depth="1" />
-				<templateblock editname="footer-top-1"
-					type="modules_facebookconnect_Facebooklike" />
+			<pagetemplatedeclination byCodename="default/nosidebarpagecmssample" label="Sans sitebar CMS exemple">
+				<templateblock editname="footer-middle-1" type="modules_website_ConfigurableMenu" __mode="tag" __tag="contextual_website_website_menu-main"
+					__displayMode="default" __depth="1" />
+				<templateblock editname="footer-top-1" type="modules_facebookconnect_Facebooklike" />
 			</pagetemplatedeclination>
 		</pagetemplate>
 		<pagetemplate byCodename="default/sidebarpage">
-			<pagetemplatedeclination byCodename="default/sidebarpagecmssample"
-				label="Avec sitebar CMS exemple">
-				<templateblock editname="footer-middle-1"
-					type="modules_website_ConfigurableMenu" __mode="tag"
-					__tag="contextual_website_website_menu-main" __displayMode="default"
-					__depth="1" />
-				<templateblock editname="footer-top-1"
-					type="modules_facebookconnect_Facebooklike" />
+			<pagetemplatedeclination byCodename="default/sidebarpagecmssample" label="Avec sitebar CMS exemple">
+				<templateblock editname="footer-middle-1" type="modules_website_ConfigurableMenu" __mode="tag" __tag="contextual_website_website_menu-main"
+					__displayMode="default" __depth="1" />
+				<templateblock editname="footer-top-1" type="modules_facebookconnect_Facebooklike" />
 			</pagetemplatedeclination>
 		</pagetemplate>
 		<pagetemplate byCodename="default/nosidebarpage">
-			<pagetemplatedeclination byCodename="default/nosidebarpageecomsample"
-				label="Sans sitebar ECOM exemple">
-				<templateblock editname="header-top-2"
-					type="modules_customer_Customerinfo" />
+			<pagetemplatedeclination byCodename="default/nosidebarpageecomsample" label="Sans sitebar ECOM exemple">
+				<templateblock editname="header-top-2" type="modules_customer_Customerinfo" />
 				<templateblock editname="header-top-3" type="modules_order_ShortCart" />
-				<templateblock editname="footer-middle-1"
-					type="modules_website_ConfigurableMenu" __mode="tag"
-					__tag="contextual_website_website_menu-main" __displayMode="default"
-					__depth="1" />
-				<templateblock editname="footer-top-1"
-					type="modules_facebookconnect_Facebooklike" />
-				<templateblock editname="footer-middle-4" type="modules_statictext_Htmlcode"
-					__cmpref-refid="htmltext2" />
+				<templateblock editname="footer-middle-1" type="modules_website_ConfigurableMenu" __mode="tag" __tag="contextual_website_website_menu-main"
+					__displayMode="default" __depth="1" />
+				<templateblock editname="footer-top-1" type="modules_facebookconnect_Facebooklike" />
+				<templateblock editname="footer-middle-4" type="modules_statictext_Htmlcode" __cmpref-refid="htmltext2" />
 			</pagetemplatedeclination>
 		</pagetemplate>
 		<pagetemplate byCodename="default/sidebarpage">
-			<pagetemplatedeclination byCodename="default/sidebarpageecomsample"
-				label="Avec sitebar ECOM exemple">
-				<templateblock editname="header-top-2"
-					type="modules_customer_Customerinfo" />
+			<pagetemplatedeclination byCodename="default/sidebarpageecomsample" label="Avec sitebar ECOM exemple">
+				<templateblock editname="header-top-2" type="modules_customer_Customerinfo" />
 				<templateblock editname="header-top-3" type="modules_order_ShortCart" />
-				<templateblock editname="footer-middle-1"
-					type="modules_website_ConfigurableMenu" __mode="tag"
-					__tag="contextual_website_website_menu-main" __displayMode="default"
-					__depth="1" />
-				<templateblock editname="footer-top-1"
-					type="modules_facebookconnect_Facebooklike" />
-				<templateblock editname="footer-middle-4" type="modules_statictext_Htmlcode"
-					__cmpref-refid="htmltext2" />
+				<templateblock editname="content-middle-1" type="empty" />
+				<templateblock editname="footer-middle-1" type="modules_website_ConfigurableMenu" __mode="tag" __tag="contextual_website_website_menu-main"
+					__displayMode="default" __depth="1" />
+				<templateblock editname="footer-top-1" type="modules_facebookconnect_Facebooklike" />
+				<templateblock editname="footer-middle-4" type="modules_statictext_Htmlcode" __cmpref-refid="htmltext2" />
 			</pagetemplatedeclination>
 		</pagetemplate>
 	</theme>
-	
+
 	<binding fileName="modules/sample/setup/website/sample.xml" />
 	<binding fileName="modules/sample/setup/media/sample.xml" />
 	<binding fileName="modules/sample/setup/users/sample.xml" />
@@ -72,11 +54,19 @@
 
 	<binding fileName="modules/sample/setup/rss/sample.xml" />
 
+	<rootfolder module="users">
+		<backendgroup byLabel="Utilisateurs Change">
+			<backenduser firstname="Demo" lastname="Change" email="demo@rbs.fr" login="demo" passwordmd5="62cc2d8b4bf2d8728120d052163a77df"
+				publicationstatus="ACTIVE" id="demo-user" />
+		</backendgroup>
+		<backenduser byLogin="wwwadmin" firstname="Administrateur" lastname="Change" email="admin-webfactory@rbs.fr" isroot="true"
+			passwordmd5="2bde7e5390769fa0ad451f113d934745" publicationstatus="ACTIVE" />
+	</rootfolder>
+
 	<website byTag="default_modules_website_default-website">
 		<page byLabel="Accueil">
 			<changecontent for="content-block">
-				<changeblock type="modules_statictext_Htmlcode"
-					__cmpref-refid="htmltext" />
+				<changeblock type="modules_statictext_Htmlcode" __cmpref-refid="htmltext" />
 			</changecontent>
 		</page>
 		<topic byLabel="Contact">
