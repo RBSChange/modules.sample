@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	
+	<website byTag="default_modules_website_default-website">
+		<execute method="setDocumentIdAttribute" />
+		<topic byLabel="Annuaire de liens" id="links1">
+			<topic byLabel="RBS" id="links2" />
+			<topic byLabel="Navigateurs" id="links3" />
+			<execute method="setDocumentIdAttribute" />
+			<binding fileName="modules/bookmarks/setup/localDefaultStructure.xml" />
+			<binding fileName="modules/bookmarks/setup/globalDefaultStructure.xml" />
+		</topic>
+	</website>
+	
+	<binding fileName="modules/sample/setup/bookmarks/bookmarks-data.xml" />
+</script>

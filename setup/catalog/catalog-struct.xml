@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+	<!--
+			WARNING: before importing this file import:
+				- media/sample.xml
+				- payment/sample.xml 
+				- shipping/sample.xml
+	-->
+
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
@@ -23,5 +30,7 @@
 			<binding fileName="modules/catalog/setup/shopDefaultStructure.xml" />
 		</topic>
 	</website>
+	
+	<binding fileName="modules/sample/setup/catalog/catalog-data.xml" />
 	
 </script>

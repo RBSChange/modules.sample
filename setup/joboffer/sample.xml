@@ -26,17 +26,17 @@
 				candidacyForm-refid="sform" />
 			<offer byLabel="Défenseur du peuple" offertype-refid="cdi"
 				reference="OFFRE10"
-				description="De nature bisounours, vous participez en collaboration avec Mr Norris à la défense des gentils contre les méchants."
+				description="De nature combattante, vous participez en collaboration avec Mr Norris à la défense des gentils contre les méchants."
 				publicationstatus="ACTIVE" location="Strasbourg"
 				background="Maîtrise du coup de pied rotatif."
-				profile="Bonne répartie afin de tromper facilement le méchant (qui doit prendre des coups de pieds)."
+				profile="Bonne répartie, la karaté n'a pas de secret pour vous. Être fan de Mr Norris est un plus."
 				candidacyForm-refid="sform" />
 			<offer byLabel="Stagiaire testeur jeux vidéos"
 				offertype-refid="stage" reference="OFFRE2"
-				description="Offre de stage exceptionnel. Afin de servir le monde du jeu vidéo, nous avons besoin d'une personne motivé et doué pour finir des jeux vidéos moisis, dont le DVD ne mériterait même pas de servir comme dessous de verre. Afin de vous préparer à un entretient, je vous conseil de réviser vos classiques tel que : &quot;Les poneys : sortie à la piscine&quot; ou encore &quot;combat de poneys armés de balon de beaudruche&quot;."
-				publicationstatus="ACTIVE" location="Poneys land"
+				description="Offre de stage exceptionnel. Afin de servir le monde du jeu vidéo, nous avons besoin d'une personne motivé et doué pour finir des jeux vidéos de grande qualités"
+				publicationstatus="ACTIVE" location="San Antonio"
 				background="Boire du café. Mangez des pizzas."
-				profile="Savoir différencier un poney d'un cheval est votre principale qualité."
+				profile="Autonomie, "
 				candidacyForm-refid="sform" />
 			<offer byLabel="Nulla luctus urna felis" offertype-refid="cdi"
 				reference="OFFRE3"

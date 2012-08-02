@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 
+	<binding fileName="modules/sample/setup/sample/samplecore.xml" />
+
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/photoalbum/persistentdocument/import/photoalbum_binding.xml" />
 
@@ -27,11 +29,9 @@
 	<binding fileName="modules/sample/setup/payment/sample.xml" />
 	<binding fileName="modules/sample/setup/paybox/sample.xml" />
 	<binding fileName="modules/sample/setup/media/sample.xml" />
-	<binding fileName="modules/sample/setup/catalog/default.xml" />
-	<binding fileName="modules/sample/setup/catalog/sample.xml" />
-	<binding fileName="modules/sample/setup/customer/default.xml" />
+	<binding fileName="modules/sample/setup/catalog/catalog-struct.xml" />
+	<binding fileName="modules/sample/setup/customer/customer-struct.xml" />
 	<binding fileName="modules/sample/setup/order/default.xml" />
-	<binding fileName="modules/sample/setup/customer/sample.xml" />
 	<binding fileName="modules/sample/setup/order/sample.xml" />
 	<binding fileName="modules/sample/setup/marketing/sample.xml" />
 	<binding fileName="modules/sample/setup/videos/sample.xml" />
@@ -220,9 +220,9 @@
 	<binding fileName="modules/sample/setup/event/sample.xml" />
 	<binding fileName="modules/sample/setup/joboffer/sample.xml" />
 	<binding fileName="modules/sample/setup/photoalbum/sample.xml" />
-	<binding fileName="modules/sample/setup/blog/sample.xml" />
+	<binding fileName="modules/sample/setup/blog/blog-data.xml" />
 	<binding fileName="modules/sample/setup/forums/sample.xml" />
-	<binding fileName="modules/sample/setup/brand/sample.xml" />
+	<binding fileName="modules/sample/setup/brand/brand-data.xml" />
 	<binding fileName="modules/sample/setup/store/sample.xml" />
 	<binding fileName="modules/sample/setup/store/sampleextranet.xml" />
 

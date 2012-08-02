@@ -20,6 +20,6 @@
 		</menus>
 	</website>
 
-	<binding fileName="modules/sample/setup/blog/sample.xml" />
+	<binding fileName="modules/sample/setup/blog/blog-data.xml" />
 
 </script>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/sample/setup/website/sample.xml" />
+	<binding fileName="modules/sample/setup/shipping/sample.xml" />
+	<binding fileName="modules/sample/setup/payment/sample.xml" />
+	<binding fileName="modules/sample/setup/media/sample.xml" />
+	<binding fileName="modules/sample/setup/catalog/catalog-struct.xml" />
+</script>
+
+
+
+
+

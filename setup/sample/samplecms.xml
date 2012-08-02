@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 
-	<!-- Installation de samples du module Sample, partie CMS. -->
+	<!-- Sample CMS Side. TODO: Continue-->
 	
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding
@@ -24,16 +24,6 @@
 	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
 	
 	<binding fileName="modules/sample/setup/videos/sample.xml" />
-
-
-	<!-- <binding fileName="modules/sample/setup/download/sample.xml" /> -->
-	<!-- <binding fileName="modules/sample/setup/faq/sample.xml" /> -->
-	<!-- <binding fileName="modules/sample/setup/lexicon/sample.xml" /> -->
-	<!-- <binding fileName="modules/sample/setup/inquiry/sample.xml" /> -->
-	<!-- <binding fileName="modules/sample/setup/sharethis/sample.xml" /> -->
-	<!-- <binding fileName="modules/sample/setup/polls/sample.xml" /> -->
-	<!-- <binding fileName="modules/sample/setup/bookmarks/sample.xml" /> -->
-
 
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Communauté" id="topiccommunity">
@@ -106,7 +96,7 @@
 	<binding fileName="modules/sample/setup/event/sample.xml" />
 	<binding fileName="modules/sample/setup/joboffer/sample.xml" />
 	<binding fileName="modules/sample/setup/photoalbum/sample.xml" />
-	<binding fileName="modules/sample/setup/blog/sample.xml" />
+	<binding fileName="modules/sample/setup/blog/blog-data.xml" />
 	<binding fileName="modules/sample/setup/forums/sample.xml"/>
 
 </script>

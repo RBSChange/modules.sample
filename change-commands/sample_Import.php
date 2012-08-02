@@ -11,7 +11,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	public function getUsage()
 	{
-		return "<core|cms|ecommercecms>";
+		return "<core|cms|ecommercecms|itesting>";
 	}
 	
 	/**
@@ -36,7 +36,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	public function getParameters($completeParamCount, $params, $options, $current)
 	{
-		$components = array('core', 'cms', 'ecommercecms');
+		$components = array('core', 'cms', 'ecommercecms', 'itesting');
 		
 		return $components;
 	}
@@ -51,7 +51,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	protected function validateArgs($params, $options)
 	{
-		return (count($params) == 1 && in_array($params[0], array('core', 'cms', 'ecommercecms')));
+		return (count($params) == 1 && in_array($params[0], array('core', 'cms', 'ecommercecms', 'itesting')));
 	}
 	
 	/**
@@ -74,29 +74,33 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$batchPath = 'modules/sample/lib/bin/batchImport.php';
 		
 		// Update config
-		$this->updateConfigXML();
+		$this->updateConfigXML($params[0]);
 		$parent->executeCommand('compile-config');
 		
 		switch ($params[0])
 		{
 			case 'core' :
 				$this->message('= Import samples of your OS Core modules =');
-				$wantedSamples = $this->getOSCoreSamples();
+				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'samplecore.xml';
 				break;
 			case 'cms' :
 				$this->message('= Import samples of CMS & Core modules =');
-				$wantedSamples = $this->getCMSSamples();
+				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'samplecms.xml';
 				break;
 			case 'ecommercecms' :
 				$this->message('= Import samples of your OS Ecom & Core modules	=');
-				$wantedSamples = $this->getOSEcomSamples();
+				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'sampleecommerce.xml';
+				break;
+			case 'itesting' :
+				$this->message('= Import samples for integration testing =');
+				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'sampleitesting.xml';
 				break;
 			default :
 				$this->message('= Import only ' . $params[0] . ' =');
 				$wantedSamples = array($params[0]);
 		}
 		
-		$samples = $wantedSamples;
+		$samples = array($wantedSamples);
 		
 		$ms = ModuleService::getInstance();
 		
@@ -139,85 +143,24 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	/**
 	 * update project.xml
 	 */
-	public function updateConfigXML()
+	public function updateConfigXML($mode)
 	{
-		$file = WEBEDIT_HOME . '/config/project.xml';
+		$cs = change_ConfigurationService::getInstance();
 		
-		$doc = f_util_DOMUtils::fromPath($file);
-		
-		$nodeWebsite = $doc->findUnique('//project/config/modules/website');
-		
-		if ($nodeWebsite == NULL)
+		switch ($mode)
 		{
-			$nodeModules = $doc->findUnique('//project/config/modules');
-			$newNode = $doc->createElement("website");
-			$nodeModules->appendChild($newNode);
+			case 'ecommercecms' :
+				$cs->addProjectConfigurationEntry('modules/website/sample/defaultPageTemplate', 'default/sidebarpageecomsample');
+				$cs->addProjectConfigurationEntry('modules/website/sample/defaultNosidebarTemplate', 'default/nosidebarpageecomsample');
+				$cs->addProjectConfigurationEntry('modules/website/sample/defaultHomeTemplate', 'default/nosidebarpageecomsample');
+				$cs->addProjectConfigurationEntry('modules/website/sample/defaultPopinTemplate', 'default/popin');
+				break;
+			default :
+				$cs->addProjectConfigurationEntry('modules/website/sample/defaultPageTemplate', 'default/sidebarpage');
+				$cs->addProjectConfigurationEntry('modules/website/sample/defaultNosidebarTemplate', 'default/nosidebarpage');
+				$cs->addProjectConfigurationEntry('modules/website/sample/defaultHomeTemplate', 'default/nosidebarpage');
+				$cs->addProjectConfigurationEntry('modules/website/sample/defaultPopinTemplate', 'default/popin');
+				break;
 		}
-		
-		$nodeSample = $doc->findUnique('//project/config/modules/website/sample');
-		
-		if ($nodeSample == NULL)
-		{
-			$nodeWebsite = $doc->findUnique('//project/config/modules/website');
-			$newNode = $doc->createElement("sample");
-			$nodeWebsite->appendChild($newNode);
-			
-			$nodeSample = $doc->findUnique('//project/config/modules/website/sample');
-			
-			$nameTemplate = array('defaultPageTemplate' => 'default/sidebarpageecomsample', 
-				'defaultNosidebarTemplate' => 'default/nosidebarpageecomsample', 'defaultHomeTemplate' => 'default/nosidebarpageecomsample');
-			
-			foreach ($nameTemplate as $key => $value)
-			{
-				$newTextNode = $doc->createTextNode($value);
-				
-				$newNode = $doc->createElement("entry");
-				$newNode->setAttribute('name', $key);
-				$newNode->appendChild($newTextNode);
-				
-				$nodeSample->appendChild($newNode);
-			}
-		}
-		
-		$doc->save($file);
 	}
-	
-	
-	
-	/**
-	 * @return string[]
-	 */
-	private function getOSCoreSamples()
-	{
-		$samples = array();
-		
-		$samples[] = 'sample' . DIRECTORY_SEPARATOR . 'samplecore.xml';
-		
-		return $samples;
-	}
-	
-	/**
-	 * @return string[]
-	 */
-	private function getOSEcomSamples()
-	{
-		$samples = $this->getOSCoreSamples();
-		
-		$samples[] = 'sample' . DIRECTORY_SEPARATOR . 'sampleecommerce.xml';
-		
-		return $samples;
-	}
-	
-	/**
-	 * @return string[]
-	 */
-	private function getCMSSamples()
-	{
-		$samples = $this->getOSCoreSamples();
-		
-		$samples[] = 'sample' . DIRECTORY_SEPARATOR . 'samplecms.xml';
-		
-		return $samples;
-	}
-	
 }

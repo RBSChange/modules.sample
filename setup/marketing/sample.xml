@@ -2,7 +2,7 @@
 <script>
 	<!-- 
 		WARNING: before importing this file, import :
-			- catalog/sample.xml
+			- catalog/catalog-data.xml
 	-->
 
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />

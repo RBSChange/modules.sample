@@ -67,7 +67,7 @@
 	<binding fileName="modules/sample/setup/workflow/sample.xml" />
 	<binding fileName="modules/sample/setup/form/sample.xml" />
 	<binding fileName="modules/sample/setup/notification/sample.xml" />
-	<binding fileName="modules/sample/setup/contactcard/samplecontactcard.xml" />
+	<binding fileName="modules/sample/setup/contactcard/contactcard-struct.xml" />
 	<binding fileName="modules/sample/setup/list/sample.xml" />
 
 	<binding fileName="modules/sample/setup/rss/sample.xml" />

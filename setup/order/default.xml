@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<!-- 
-		WARNING: before importing this file, import customer/default.xml 
+		WARNING: before importing this file, import customer/customer-struct.xml 
 	-->
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />

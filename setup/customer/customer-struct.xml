@@ -60,4 +60,6 @@
 			</page>
 		</topic>
 	</website>
+	
+	<binding fileName="modules/sample/setup/customer/customer-data.xml" />
 </script>
