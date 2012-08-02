@@ -17,9 +17,9 @@
 	<customer id="customerCammy" user-refid="cammy" address-refids="cammyBillingAddress" creationdate="2010-09-01 15:49:00" />
 	 -->
 	<simpleproduct byCodeReference="NES-1985" >
-		<price shopId-refid="shop" storeWithTax="true" taxCategory="1" value="155.99" billingAreaId-refid="areagb" />
-		<price shopId-refid="shop" storeWithTax="true" taxCategory="1" value="143.90" billingAreaId-refid="areagb" 
-			valueWithoutDiscount="155.99" startpublicationdate="2012-06-01 00:00:00" endpublicationdate="2012-07-01 00:00:00"/>
+		<price shopId-refid="shop" taxCategory="1" valueWithTax="155.99" billingAreaId-refid="areagb" />
+		<price shopId-refid="shop" taxCategory="1" valueWithTax="143.90" billingAreaId-refid="areagb" 
+			oldValueWithTax="155.99" startpublicationdate="2012-06-01 00:00:00" endpublicationdate="2012-07-01 00:00:00"/>
 		
 	</simpleproduct>
 	

@@ -144,7 +144,9 @@
 			<attributeDefinition label="Zonage" code="GAMEZONE" type="text" list-refid="GAMEZONES-LIST" />
 		</attributefolder>
 	</rootfolder>
+	
 	<shop byCodeReference="DEMO" id="shop" topShelf-refids="CAT-CONSOLES,CAT-ACCESSORIES,CAT-GAMES,CAT-ARCADES,CAT-MICRO" />
+	<billingarea byCodeReference="FR" id="billingarea" />
 	
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Boutique">
@@ -180,7 +182,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 						stockQuantity="8" 
 						shippedIn="1"
 						description-attr="description-duckhunt">
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="20" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="20" />
 			<comment authorName="Gamer51" email="gamer51@rbs.fr" contentsAsBBCode="Super" rating="5" />
 	</simpleproduct>
 
@@ -196,10 +198,10 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 						axe1="attribute::COLOR" 
 						showAxeInList="0">
 		<productdeclination shippedIn="1"  visual-refid="NES-ZAPPER-1"  byCodeReference="NES-ZAPPER-GREY" id="NES-ZAPPER-GREY" label="NES Zapper (gris)" stockQuantity="5" attributes='COLOR:{ref-id:LIST-ITEM-GREY},GAMEZONE:{ref-id:EUR}'>
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="20" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="20" />
 		</productdeclination>
 		<productdeclination shippedIn="1"  visual-refid="NES-ZAPPER-2" byCodeReference="NES-ZAPPER-ORANGE" id="NES-ZAPPER-ORANGE" label="NES Zapper (orange)" stockQuantity="10" attributes='COLOR:{ref-id:LIST-ITEM-ORANGE}'>
-			<price shop-refid="shop"  storeWithTax="true" taxCategory="1" value="20" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea"  taxCategory="1" valueWithTax="20" />
 		</productdeclination>
 	</declinedproduct>
 
@@ -213,10 +215,10 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 		brand-refid="NINTENDO"
 		description-attr="description-nescontroller">
 		<productdeclination shippedIn="1"  visual-refid="NES-CONTROLLER-PIC1"  byCodeReference="NES-CONTROLLER" id="NES-CONTROLLER" label="NES" stockQuantity="8" attributes='COLOR:{ref-id:LIST-ITEM-GREY},GAMEZONE:{ref-id:EUR}'>
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="20" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="20" />
 		</productdeclination>
 		<productdeclination shippedIn="1"  visual-refid="FAMICOM-CONTROLLER-PIC1"  byCodeReference="FAMICOM-CONTROLLER" id="FAMICOM-CONTROLLER" label="Famicom" stockQuantity="8" attributes='COLOR:{ref-id:LIST-ITEM-GREY},GAMEZONE:{ref-id:JAP}'>
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="23" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="23" />
 		</productdeclination>
 	</declinedproduct>
 
@@ -232,7 +234,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 						stockQuantity="8" 
 						shippedIn="1"
 						description-attr="description-nesadvantage">
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="40" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="40" />
 	</simpleproduct>
 
 	<!-- NES -->
@@ -250,7 +252,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 					shippedIn="1"
 					description-attr="description-nes"
 					attributes='GAMEZONE:{ref-id:EUR}'>
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="179.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="179.00" />
 		<comment authorName="NostaGamer" email="ngamer@rbs.fr" contentsAsBBCode="J'avais 10 ans quand elle est sortie ! Ma console préféré !" rating="5" />
 		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Nul ! Vive la master system !!!" rating="1" />
 		<comment authorName="OldGame" email="olg@rbs.fr" contentsAsBBCode="Le tout premier Zelda était extraordinaire, seul défaut, les cartouches s'encrasse de poussières et il faut souffler dans la cartouche avant de la mettre dans la NES" rating="4" />
@@ -270,7 +272,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 					shippedIn="3"
 					description-attr="description-famicom"
 					attributes='GAMEZONE:{ref-id:JAP}'>
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="249.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="249.00" />
 	</simpleproduct>
 	
 	<!-- COLECOVISION -->
@@ -287,7 +289,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 					stockQuantity="1" 
 					description-attr="description-coleco"
 					attributes='GAMEZONE:{ref-id:EUR}'>
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="149.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="149.00" />
 	</simpleproduct>
 	
 	<!-- SMS I et II -->
@@ -302,10 +304,10 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 						brand-refid="SEGA" 
 						description-attr="description-sms">
 		<productdeclination shippedIn="1" visual-refid="MASTERSYSTEM-1985"  byCodeReference="SMS-1" id="SMS-1" label="I (1985)" stockQuantity="5" attributes='GAMEZONE:{ref-id:EUR}'>
-			<price  shop-refid="shop" storeWithTax="true" taxCategory="1" value="249" valueWithoutDiscount="299" />
+			<price  shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="249" oldValueWithTax="299" />
 		</productdeclination>
 		<productdeclination shippedIn="3" visual-refid="MASTERSYSTEM-1990" byCodeReference="SMS-2" label="II (1990)" stockQuantity="10" attributes='GAMEZONE:{ref-id:EUR}'>
-			<price shop-refid="shop"  storeWithTax="true" taxCategory="1" value="199" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea"  taxCategory="1" valueWithTax="199" />
 		</productdeclination>
 	</declinedproduct>
 	<!-- ATARI 2600 -->
@@ -323,7 +325,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 					shippedIn="2"
 					description-attr="description-atari2600"
 					attributes='GAMEZONE:{ref-id:EUR}'>
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="199.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="199.00" />
 	</simpleproduct>
 
 	<!-- ATARI 7800 -->
@@ -368,7 +370,7 @@ buts, comme le traitement de texte.</p>
 					shippedIn="1"
 					description-attr="description-atari7800"
 					attributes='GAMEZONE:{ref-id:EUR}'>
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="149.00" valueWithoutDiscount="179.00"/>
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="149.00" oldValueWithTax="179.00"/>
 	</simpleproduct>
 	
 	<!-- NEOGEO -->
@@ -385,7 +387,7 @@ buts, comme le traitement de texte.</p>
 					stockQuantity="0" 
 					description-attr="description-neogeo"
 					attributes='GAMEZONE:{ref-id:EUR}'>
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="599.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="599.00" />
 		<comment authorName="NostaGamer" email="ngamer@rbs.fr" contentsAsBBCode="Dommage quelle soit si chère !" rating="5" />
 		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Elle est juste géniale !" rating="4" />
 		<comment authorName="OldGame" email="olg@rbs.fr" contentsAsBBCode="KOF POWA !" rating="4" />
@@ -404,15 +406,15 @@ buts, comme le traitement de texte.</p>
 		description-attr="description-snes">
 		<productdeclination shippedIn="1"  visual-refid="SNESPAL-1992-1" additionnalVisual-refids="SNESPAL-1992-2" byCodeReference="SUPER-NINTENDO-EUR" 
 			id="SUPER-NINTENDO-EUR" label="PAL" stockQuantity="15" attributes='GAMEZONE:{ref-id:EUR}'>
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="199.00" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="199.00" />
 		</productdeclination>
 		<productdeclination shippedIn="1"  visual-refid="SNES-1992-1"  byCodeReference="SUPER-NINTENDO-N-USA" id="SUPER-NINTENDO-N-USA" 
 			label="Super NES" stockQuantity="1" attributes='GAMEZONE:{ref-id:N-USA}'>
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="189.00" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="189.00" />
 		</productdeclination>
 		<productdeclination shippedIn="1"  visual-refid="SUPER-FAMICOM-1"  byCodeReference="SUPER-FAMICOM" id="SUPER-FAMICOM" 
 			label="Super Famicom" stockQuantity="1" attributes='GAMEZONE:{ref-id:JAP}'>
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="210.00" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="210.00" />
 		</productdeclination>
 		<comment authorName="NostaGamer" email="ngamer@rbs.fr" contentsAsBBCode="J'avais 10 ans quand elle est sortie ! Ma console préféré !" rating="5" />
 		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Bof ! Vive la megadrive !!!" rating="2" />
@@ -432,15 +434,15 @@ buts, comme le traitement de texte.</p>
 		description-attr="description-snes-controller">
 		<productdeclination shippedIn="1"  visual-refid="SUPER-NINTENDO-CONTROLLER-1" byCodeReference="SUPER-NINTENDO-CONTROLLER-EUR" 
 			id="SUPER-NINTENDO-CONTROLLER-EUR" label="PAL" stockQuantity="15" attributes='GAMEZONE:{ref-id:EUR}'>
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="19.00" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="19.00" />
 		</productdeclination>
 		<productdeclination shippedIn="1"  visual-refid="SNES-CONTROLLER-1"  byCodeReference="SUPER-NINTENDO-CONTROLLER-N-USA" id="SUPER-NINTENDO-CONTROLLER-N-USA" 
 			label="Super NES" stockQuantity="1" attributes='GAMEZONE:{ref-id:N-USA}'>
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="18.00" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="18.00" />
 		</productdeclination>
 		<productdeclination shippedIn="1"  visual-refid="SUPER-FAMICOM-CONTROLLER-1"  byCodeReference="SUPER-FAMICOM-CONTROLLER" id="SUPER-FAMICOM-CONTROLLER" 
 			label="Super Famicom" stockQuantity="1" attributes='GAMEZONE:{ref-id:JAP}'>
-			<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="21.00" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="21.00" />
 		</productdeclination>
 	</declinedproduct>
 	
@@ -459,7 +461,7 @@ buts, comme le traitement de texte.</p>
 					stockQuantity="5" 
 					description-attr="description-zelda3"
 					attributes='GAMEZONE:{ref-id:EUR}'>
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="32.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="32.00" />
 	</simpleproduct>
 	
 	<attribute name="description-zeldatips"><![CDATA[
@@ -474,7 +476,7 @@ buts, comme le traitement de texte.</p>
 						brand-refid="NINTENDO" 
 						description-attr="description-zeldatips"
 						secureMedia-refid="SNES-DOWNLOAD-ZELDA-TIPS-FILE">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="9.90" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="9.90" />
 	</virtualproduct>
 	
 	<!-- MEGADRIVE -->
@@ -491,7 +493,7 @@ buts, comme le traitement de texte.</p>
 					stockQuantity="100" 
 					description-attr="description-megdrive"
 					attributes='GAMEZONE:{ref-id:EUR}'>
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="149.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="149.00" />
 	</simpleproduct>
 	<!--  GB -->
 	<attribute name="description-gameboy"><![CDATA[
@@ -505,13 +507,13 @@ buts, comme le traitement de texte.</p>
 						brand-refid="NINTENDO" 
 						description-attr="description-gameboy">
 		<productdeclination shippedIn="1" visual-refid="GAMEBOY-CLASSIC-PIC1" additionnalVisual-refids="GAMEBOY-CLASSIC-PIC2"  byCodeReference="GAMEBOY-CLASSIC" id="GAMEBOY-CLASSIC" label="classic (1989)" stockQuantity="3">
-			<price  shop-refid="shop" storeWithTax="true" taxCategory="1" value="85" valueWithoutDiscount="90" />
+			<price  shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="85" oldValueWithTax="90" />
 		</productdeclination>
 		<productdeclination shippedIn="2" visual-refid="GAMEBOY-POCKET-PIC1" byCodeReference="GAMEBOY-POCKET" label="pocket (1996)" stockQuantity="10" id="GAMEBOY-POCKET">
-			<price shop-refid="shop"  storeWithTax="true" taxCategory="1" value="75" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea"  taxCategory="1" valueWithTax="75" />
 		</productdeclination>
 		<productdeclination shippedIn="3" visual-refid="GAMEBOY-CLEAR-PIC1" byCodeReference="GAMEBOY-CLEAR" label="transparente (1998)" stockQuantity="10">
-			<price shop-refid="shop"  storeWithTax="true" taxCategory="1" value="180" />
+			<price shopId-refid="shop" billingAreaId-refid="billingarea"  taxCategory="1" valueWithTax="180" />
 		</productdeclination>
 	</declinedproduct>
 
@@ -526,7 +528,7 @@ buts, comme le traitement de texte.</p>
 						additionnalVisual-refids="" 
 						brand-refid="NINTENDO" 
 						description-attr="description-pokemon">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="15.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="15.00" />
 		<productdeclination shippedIn="1" visual-refid="GAMEBOY-GAME-POKEMON-RED" byCodeReference="POKEMON-GAME-RED" label="version rouge" stockQuantity="100" id="POKEMON-GAME-RED" />
 		<productdeclination shippedIn="1" visual-refid="GAMEBOY-GAME-POKEMON-BLUE" byCodeReference="POKEMON-GAME-BLUE" label="version bleu" stockQuantity="100" />
 	</declinedproduct>
@@ -543,7 +545,7 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 					brand-refid="NINTENDO" 
 					stockQuantity="100" 
 					description-attr="description-pokemon">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="19.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="19.00" />
 	</simpleproduct>
 
 	<!-- Arcade -->
@@ -557,7 +559,7 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 					brand-refid="ATARI" 
 					stockQuantity="1" 
 					description-attr="description-arcadepong">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="800.00" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="800.00" />
 	</simpleproduct>
 	
 	<!-- Micro -->
@@ -571,7 +573,7 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 					brand-refid="COMMODORE" 
 					stockQuantity="1" 
 					description-attr="description-commodore64">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="609.90" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="609.90" />
 	</simpleproduct>
 
 	<attribute name="description-atarist"><![CDATA[<p class="normal">Les Atari ST forment une famille d'ordinateurs personnels conçus par Atari dont le succès commercial a marqué la deuxième moitié des années 1980. Le succès fut autant grand public (Jeux vidéo) que professionnel (Traitement de texte, PAO et surtout MAO).(<a href="http://fr.wikipedia.org/wiki/Atari_ST" class="link">Voir l'article Wikipedia</a>)</p>]]></attribute>
@@ -584,7 +586,7 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 					brand-refid="ATARI" 
 					stockQuantity="1" 
 					description-attr="description-atarist">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="409.90" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="409.90" />
 	</simpleproduct>
 
 	<attribute name="description-amiga"><![CDATA[<p class="normal">L’Amiga est une famille d’ordinateurs personnels commercialisée par Commodore International entre 1985 et 1994. Dans les années 1990 il était très populaire sur la scène démo, parmi les amateurs de jeux vidéo et dans l'industrie du cinéma et de la télévision. L'Amiga offrait alors un affichage plus coloré et plus fluide et un multitâches supérieur à celles des produits concurrents, une interface graphique similaire à celle du Macintosh et des logiciels de traitement de texte, de musique assistée par ordinateur et de dessin.(<a href="http://fr.wikipedia.org/wiki/Amiga" class="link">Voir l'article Wikipedia</a>)</p>]]></attribute>
@@ -597,7 +599,7 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 					brand-refid="COMMODORE" 
 					stockQuantity="10" 
 					description-attr="description-amiga">
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="609.90" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="609.90" />
 	</simpleproduct>
 
 
@@ -608,16 +610,16 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 		<bundleditem product-refid="DUCK-HUNT" quantity="1" />
 		<bundleditem product-refid="NES-ZAPPER-ORANGE" quantity="1" />
 		<bundleditem product-refid="NES-CONTROLLER" quantity="2"/>
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="490" valueWithoutDiscount="500" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="470" valueWithoutDiscount="490" thresholdMin="5" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="450" valueWithoutDiscount="480" thresholdMin="10" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="490" oldValueWithTax="500" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="470" oldValueWithTax="490" thresholdMin="5" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="450" oldValueWithTax="480" thresholdMin="10" />
 	</bundleproduct>
 	
 	<bundleproduct id="SNES-ZELDA-BUNDLE" byCodeReference="SNES-ZELDA-BUNDLE" label="Soluce pack Zelda LttP"  shelf-refids="CAT-GAMES"
 		visual-refid="">
 		<bundleditem product-refid="SNES-GAME-ZELDA" quantity="1" />
 		<bundleditem product-refid="SNES-DOWNLOAD-ZELDA-TIPS" quantity="1" />
-		<price shop-refid="shop" storeWithTax="true" taxCategory="1" value="34.90" valueWithoutDiscount="40.00"/>
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="34.90" oldValueWithTax="40.00"/>
 	</bundleproduct>
 	
 	<kit id="KIT-GAMEBOY-POKEMON" byCodeReference="KIT-GAMEBOY-POKEMON" label="Kit Pokemon"  shelf-refids="CAT-GAMES,SUBCAT-PORTABLE"
