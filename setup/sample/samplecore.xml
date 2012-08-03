@@ -64,6 +64,7 @@
 	</rootfolder>
 
 	<website byTag="default_modules_website_default-website">
+	
 		<page byLabel="Accueil">
 			<changecontent for="content-block">
 				<changeblock type="modules_statictext_Htmlcode" __cmpref-refid="htmltext" />
@@ -76,16 +77,16 @@
 				</changecontent>
 			</page>
 		</topic>
+		<topic byLabel="Outils">
+			<page byTag="contextual_website_website_modules_contactcard_page-contact">
+				<changecontent for="content-block">
+					<changeblock type="modules_form_form" __cmpref-refid="contactform" />
+				</changecontent>
+			</page>
+		</topic>
 	</website>
 
-	<i18n lang="en">
-		<website byTag="default_modules_website_default-website">
-			<menus>
-				<menu byRefid="mnumain" label="Main menu">
-				</menu>
-			</menus>
-		</website>
-	</i18n>
+	
 </script>
 
 

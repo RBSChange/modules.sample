@@ -21,16 +21,16 @@
 			</page>
 		</topic>
 
-		<i18n lang="en">
-			<topic byRefid="statictexttopic" label="Static text sample">
-				<page byRefid="statictextpage1" label="Static text sample"
-					navigationVisibility="hidden">
-					<changecontent for="content-block">
-						<changeblock type="modules_statictext_Text"
-							__showLabel="true" __cmpref-refid="simpletext" />
-					</changecontent>
-				</page>
-			</topic>
-		</i18n>
+<!-- 		<i18n lang="en"> -->
+<!-- 			<topic byRefid="statictexttopic" label="Static text sample"> -->
+<!-- 				<page byRefid="statictextpage1" label="Static text sample" -->
+<!-- 					navigationVisibility="hidden"> -->
+<!-- 					<changecontent for="content-block"> -->
+<!-- 						<changeblock type="modules_statictext_Text" -->
+<!-- 							__showLabel="true" __cmpref-refid="simpletext" /> -->
+<!-- 					</changecontent> -->
+<!-- 				</page> -->
+<!-- 			</topic> -->
+<!-- 		</i18n> -->
 	</website>
 </script>

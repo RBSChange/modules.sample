@@ -2,10 +2,8 @@
 <script>
 
 	<systemfolder module="form" relatedmodule="joboffer">
-		<documentRef type="modules_form/form" byFormid="modules_joboffer/simplecandidacy"
-			id="sform" />
-		<documentRef type="modules_inquiry/inquiryform" byFormid="modules_joboffer/inquirycandidacy"
-			id="iform" />
+		<documentRef type="modules_form/form" byFormid="modules_joboffer/simplecandidacy" id="sform" />
+		<documentRef type="modules_inquiry/inquiryform" byFormid="modules_joboffer/inquirycandidacy" id="iform" />
 	</systemfolder>
 
 	<systemfolder module="list" relatedmodule="joboffer">
@@ -18,60 +16,31 @@
 
 	<rootfolder module="joboffer">
 		<linkedtopic refid="topic">
-			<offer byLabel="Développeur web" offertype-refid="cdi"
-				reference="OFFRE1"
-				description="Vous participerez au développement du CMS open source RBS Change."
-				publicationstatus="ACTIVE" location="Strasbourg"
-				background="Minimum deux ans dans le développement web." profile="Bonne maitrise de la programmation orientée objet."
+			<offer byLabel="Développeur web" offertype-refid="cdi" reference="OFFRE1" description="Vous participerez au développement du CMS open source RBS Change."
+				publicationstatus="ACTIVE" location="Strasbourg" background="Minimum deux ans dans le développement web." profile="Bonne maitrise de la programmation orientée objet."
 				candidacyForm-refid="sform" />
-			<offer byLabel="Défenseur du peuple" offertype-refid="cdi"
-				reference="OFFRE10"
-				description="De nature combattante, vous participez en collaboration avec Mr Norris à la défense des gentils contre les méchants."
-				publicationstatus="ACTIVE" location="Strasbourg"
-				background="Maîtrise du coup de pied rotatif."
-				profile="Bonne répartie, la karaté n'a pas de secret pour vous. Être fan de Mr Norris est un plus."
+			<attribute name="offer-cdp"><![CDATA[En relation avec les équipes techniques et commerciales vous prendrez en charge les projets de nos clients. Vous réalisez les projets dans le respect des budgets et des délais.<br/>
+<br/>
+Vous aurez en charge comme missions principales :<br/>
+<ul>
+<li>Assurer le pilotage du projet</li>
+<li>Contribuer à la satisfaction du client</li>
+<li>Assurer la conception du projet, sa gestion et son contrôle</li>
+<li>Veiller au respect des engagements contractuels</li>
+<li>Animer et gérer l'équipe projet</li>
+<li>Assurer le reporting</li>
+</ul><br/>
+Accompagné de nos ressources de production, vous aurez la capacité à réaliser et de mener à bien nos différents projets.]]></attribute>
+			<offer byLabel="Chef de projets" offertype-refid="cdi" reference="OFFRE10" description-attr="offer-cdp" publicationstatus="ACTIVE" location="Strasbourg"
+				background="vous justifiez d'une expérience minimale de 2 années dans la gestion de projet au sein d'une SSII. Doté d'un excellent relationnel, vous savez vous adapter aux divers interlocuteurs dans l'entreprise."
+				profile="De formations supérieure Bac +4/5. La pratique des outils informatiques (Word, Excel, Powerpoint, Internet, Outlook) est indispensable, la maîtrise de l'anglais serait un plus."
 				candidacyForm-refid="sform" />
-			<offer byLabel="Stagiaire testeur jeux vidéos"
-				offertype-refid="stage" reference="OFFRE2"
+			<offer byLabel="Stagiaire testeur jeux vidéos" offertype-refid="stage" reference="OFFRE2"
 				description="Offre de stage exceptionnel. Afin de servir le monde du jeu vidéo, nous avons besoin d'une personne motivé et doué pour finir des jeux vidéos de grande qualités"
 				publicationstatus="ACTIVE" location="San Antonio"
-				background="Boire du café. Mangez des pizzas."
-				profile="Autonomie, "
-				candidacyForm-refid="sform" />
-			<offer byLabel="Nulla luctus urna felis" offertype-refid="cdi"
-				reference="OFFRE3"
-				description="Aenean a egestas turpis. Mauris luctus lorem facilisis tellus bibendum sagittis. Integer nisi felis, iaculis eu mattis eu, congue vel lectus. Quisque ac dui ac erat condimentum hendrerit quis eget mauris. Vestibulum facilisis, erat tempus feugiat imperdiet, eros massa tincidunt mi, vitae auctor purus dui vitae dolor. Nunc tortor lacus, ultricies vel mattis in, congue quis orci. Sed lobortis condimentum auctor. In in nisi leo, at tempus nisl. Phasellus hendrerit tortor eget metus ornare vulputate. Quisque sit amet consequat arcu. Donec consequat ligula ut nibh euismod vel volutpat est ultrices. Cras leo nunc, dignissim vitae aliquet quis, faucibus et tellus. Nullam libero massa, egestas nec feugiat vitae, volutpat sed sapien. Sed accumsan magna sit amet tellus aliquet aliquet. Morbi id gravida felis. Cras posuere sagittis massa et condimentum. Donec quis neque et massa ornare mollis. Donec commodo viverra ante nec eleifend. Pellentesque aliquam neque ac dui mattis id tristique mi venenatis."
-				publicationstatus="ACTIVE" location="Paris"
-				background="Cras leo nunc, dignissim vitae aliquet quis, faucibus et tellus."
-				profile="Donec consequat ligula ut nibh euismod vel volutpat est ultrices."
-				candidacyForm-refid="iform" />
-			<offer byLabel="Nullam sit amet interdum odio" offertype-refid="cdd"
-				reference="OFFRE4"
-				description="Praesent gravida enim vitae dolor feugiat ac rutrum sapien fringilla. Sed ac enim nisi, a aliquam lacus. Nulla eu sapien a diam mollis blandit. Vivamus non odio odio, vel posuere turpis. In hendrerit tincidunt egestas. Etiam tempor dolor vel justo ullamcorper a vulputate tortor adipiscing. Mauris mattis ipsum ut dui consectetur varius. Sed tincidunt enim eros. Duis laoreet pulvinar orci et pretium."
-				publicationstatus="ACTIVE" location="Lyon"
-				background="Curabitur lectus nisi, blandit a tincidunt a, volutpat euismod tellus."
-				profile="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
-				candidacyForm-refid="iform" />
-			<offer byLabel="In porta neque mi, in suscipit arcu"
-				offertype-refid="stage" reference="OFFRE5"
-				description="Mauris orci justo, mollis et consequat ultrices, lacinia ac sapien. Quisque blandit placerat magna vel laoreet. In hac habitasse platea dictumst. Aenean quis magna eu enim ullamcorper egestas. In hac habitasse platea dictumst. Nunc in ipsum eu arcu ultrices porta non ac diam. Fusce congue pretium leo in pharetra. Sed lacinia facilisis luctus. Morbi vel ante lacinia felis ultrices vehicula."
-				publicationstatus="ACTIVE" location="Lyon"
-				background="Nulla facilisi. Mauris nibh mauris, vehicula non congue quis, venenatis vitae nibh. Integer vitae ante turpis. Curabitur sit amet mi a purus varius feugiat ut ac lacus. Duis placerat arcu fringilla tellus aliquet viverra."
-				profile="Vestibulum at sapien elit." candidacyForm-refid="iform" />
-			<offer byLabel="Donec elementum, est ut rhoncus tempor"
-				offertype-refid="cdi" reference="OFFRE6"
-				description="Erat nunc sollicitudin neque, eget vestibulum lectus enim facilisis nisl. Duis quis dictum enim. Suspendisse nibh mauris, euismod ac imperdiet at, tempor eget lacus. Integer porta condimentum est, rutrum commodo elit ultrices vel. Duis eget porta massa. Aliquam malesuada nulla ut nunc rutrum scelerisque."
-				publicationstatus="ACTIVE" location="Strasbourg"
-				background="Suspendisse vulputate hendrerit ligula eu tincidunt."
-				profile="Morbi accumsan convallis ipsum, ut sagittis risus accumsan a."
-				candidacyForm-refid="sform" />
-			<offer byLabel="Sed consequat pellentesque velit sit amet pellentesque"
-				offertype-refid="stage" reference="OFFRE7"
-				description="Sed non nulla risus. Maecenas diam massa, volutpat ac porta ut, aliquet eu purus. Duis pharetra nunc eu odio tristique quis lacinia libero sollicitudin. Sed vitae venenatis massa. Aenean placerat lobortis odio, id luctus tortor feugiat non. Mauris sit amet urna et elit interdum varius."
-				publicationstatus="ACTIVE" location="Strasbourg"
-				background="am id nulla purus, vulputate euismod felis." profile="Curabitur tristique mattis rhoncus."
-				candidacyForm-refid="sform" />
+				background="Vous faites preuve d'autonomie, de rigueur, d'esprit de synthèse. Vos qualités d'écoute, vos qualités pédagogiques et votre aisance relationnelle sont de solides atouts."
+				profile="De niveau bac, vous justifiez d'une expérience de 2 ans minimum sur un poste similaire." candidacyForm-refid="sform" />
 		</linkedtopic>
-		<spontaneous byLabel="m.joboffer.document.spontaneous.document-name" candidacyForm-refid="sform" offertype-refid="cdi"></spontaneous> 
+		<spontaneous byLabel="m.joboffer.document.spontaneous.document-name" candidacyForm-refid="sform" offertype-refid="cdi"></spontaneous>
 	</rootfolder>
 </script>

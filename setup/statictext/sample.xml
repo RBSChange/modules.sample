@@ -16,10 +16,10 @@
 					<![CDATA[<p style="color: white;">Site de démo créé pour vous présenter un maximum de fonctionnalité de Change.</p>]]>
 			</attribute>
 			<htmlcode byLabel="info" text-attr="footertext" id="htmltext2" />
-			<i18n lang="en">
-				<text byRefid="simpletext" label="Copyright"
-					text="Copyright(R) RBS 2012 &lt;br /&gt; 11 rue Icare, 67960 Entzheim, FRANCE - Tél. +33 (0)3 88 764 764"></text>
-			</i18n>
+<!-- 			<i18n lang="en"> -->
+<!-- 				<text byRefid="simpletext" label="Copyright" -->
+<!-- 					text="Copyright(R) RBS 2012 &lt;br /&gt; 11 rue Icare, 67960 Entzheim, FRANCE - Tél. +33 (0)3 88 764 764"></text> -->
+<!-- 			</i18n> -->
 		</folder>
 	</rootfolder>
 

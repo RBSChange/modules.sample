@@ -40,9 +40,10 @@
 	<binding fileName="modules/sample/setup/ecomextended/ecomextended-data.xml" />
 
 	<mailinglist id="mailingtest" byLabel="Mailing RBS" />
+	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform"/>
 
 	<website byTag="default_modules_website_default-website" id="default-website">
-
+	
 		<page byLabel="Accueil">
 			<changecontent for="content-block" append="true">
 				<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
@@ -280,9 +281,7 @@
 						__depth="2" __startLevel="1" />
 				</changecontent>
 				<changecontent for="content-block">
-					<changeblock type="richtext">
-						<![CDATA[<h2 class="heading-two">Mettre ici le formulaire de contact</h2>]]>
-					</changeblock>
+					<changeblock type="modules_form_form" __cmpref-refid="contactform" />
 				</changecontent>
 			</page>
 
@@ -644,6 +643,11 @@
 				</permissions>
 			</topic>
 			<topic byLabel="Extranet magasin">
+				<permissions>
+					<backendpermission module="website" role="Admin" user-refid="demo-user" />
+				</permissions>
+			</topic>
+			<topic byLabel="Messagerie privée">
 				<permissions>
 					<backendpermission module="website" role="Admin" user-refid="demo-user" />
 				</permissions>

@@ -56,7 +56,7 @@
 		<synchronizer
 			label="Export : En-têtes des commandes"
 			code="entete_commande"
-			notificationsrecipients="renaud.jenny@rbs.fr"
+			notificationsrecipients="change.synchronizer@rbs.fr"
 			stoponerror="true"
 			notificationError-refid="notiferrors"
 			notificationWarning-refid="notifwarnings"
@@ -65,7 +65,7 @@
 		<synchronizer
 			label="Export : Lignes des commandes"
 			code="ligne_commande"
-			notificationsrecipients="renaud.jenny@rbs.fr"
+			notificationsrecipients="change.synchronizer@rbs.fr"
 			stoponerror="true"
 			notificationError-refid="notiferrors"
 			notificationWarning-refid="notifwarnings"
@@ -74,7 +74,7 @@
 		<synchronizer
 			label="Export : Factures des commandes"
 			code="factures_commande_change"
-			notificationsrecipients="renaud.jenny@rbs.fr"
+			notificationsrecipients="change.synchronizer@rbs.fr"
 			stoponerror="true"
 			notificationError-refid="notiferrors"
 			notificationWarning-refid="notifwarnings"
@@ -83,7 +83,7 @@
 		<synchronizer
 			label="Export : Expéditions des commandes"
 			code="expeditions_commande_change"
-			notificationsrecipients="renaud.jenny@rbs.fr"
+			notificationsrecipients="change.synchronizer@rbs.fr"
 			stoponerror="true"
 			notificationError-refid="notiferrors"
 			notificationWarning-refid="notifwarnings"
@@ -93,7 +93,7 @@
 		<synchronizer
 			label="Import : Status des factures"
 			code="facture_commande"
-			notificationsrecipients="renaud.jenny@rbs.fr"
+			notificationsrecipients="change.synchronizer@rbs.fr"
 			stoponerror="true"
 			notificationError-refid="notiferrors"
 			notificationWarning-refid="notifwarnings"
@@ -102,7 +102,7 @@
 		<synchronizer
 			label="Import : Status des expéditions"
 			code="expedition_commande"
-			notificationsrecipients="renaud.jenny@rbs.fr"
+			notificationsrecipients="change.synchronizer@rbs.fr"
 			stoponerror="true"
 			notificationError-refid="notiferrors"
 			notificationWarning-refid="notifwarnings"
@@ -112,7 +112,7 @@
 		<synchronizer
 			label="Export : Comptes clients"
 			code="comptes_clients"
-			notificationsrecipients="renaud.jenny@rbs.fr"
+			notificationsrecipients="change.synchronizer@rbs.fr"
 			stoponerror="true"
 			notificationError-refid="notiferrors"
 			notificationWarning-refid="notifwarnings"

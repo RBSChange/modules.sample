@@ -8,6 +8,8 @@
 		<frontendgroup id="customersGroup" byTag="default_modules_customer_customer-website-user-group" label="Utilisateurs disposant d'un compte client" />
 	</rootfolder>
 	
+	
+	
 	<systemfolder module="form" relatedmodule="customer">
 		<form byFormid="modules_customer/contact" id="contactForm" />
 	</systemfolder>
@@ -45,7 +47,9 @@
 		</topic>
 		
 		<topic byLabel="Outils">
-			<page label="Mot de passe perdu" byTag="contextual_website_website_modules_customer_password-lost">
+			<page byLabel="Mot de passe perdu">
+				<tag name="contextual_website_website_modules_customer_password-lost" />
+				<tag name="contextual_website_website_modules_users_reset-password" />
 				<changecontent for="content-block">
 					<changeblock type="modules_users_resetpassword" />
 				</changecontent>

@@ -4,26 +4,20 @@
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder label="store">
-				<media path="modules/sample/setup/store/media/change_logo.png"
-					byLabel="RBS Change Store" id="media1" />
-				<media path="modules/sample/setup/store/media/terre.jpg"
-					byLabel="Terre" id="media2" />
-				<media path="modules/sample/setup/store/media/instoremode_visual.png"
-					label="Retrait en magasin" id="instore_visual" />
-				<media path="modules/sample/setup/store/media/SAV.png" label="SAV"
-					id="sav_visual" />
-				<media path="modules/sample/setup/store/media/clock.png"
-					label="24/24" id="clock_visual" />
+				<media path="modules/sample/setup/store/media/change_logo.png" byLabel="RBS Change Store" id="media1" />
+				<media path="modules/sample/setup/store/media/terre.jpg" byLabel="Terre" id="media2" />
+				<media path="modules/sample/setup/store/media/instoremode_visual.png" label="Retrait en magasin" id="instore_visual" />
+				<media path="modules/sample/setup/store/media/SAV.png" label="SAV" id="sav_visual" />
+				<media path="modules/sample/setup/store/media/clock.png" label="24/24" id="clock_visual" />
 			</folder>
 		</folder>
 	</rootfolder>
 
 	<rootfolder module="contactcard">
 		<folder byLabel="Exemples de magasins">
-			<contact id="contact1" name="Boutique Change" city="Entzeim"
-				country="France" phone="0388999999" mails="store@rbschange.fr" />
-			<contact id="contact2" name="Boutique Change Paris" city="Paris"
-				country="France" phone="0388666666" mails="store-paris@rbschange.fr" />
+			<contact id="contact1" name="Boutique Change" city="Entzeim" country="France" phone="0388999999" mails="store@rbschange.fr" />
+			<contact id="contact2" name="Boutique Change Paris" city="Paris" country="France" phone="0188666666" mails="store-paris@rbschange.fr" />
+			<contact id="contact1" name="Boutique Change" city="Selestat" country="France" phone="0388999888" mails="store-selestat@rbschange.fr" />
 		</folder>
 	</rootfolder>
 
@@ -41,34 +35,34 @@
 
 	<rootfolder module="store">
 		<folder byLabel="m.store.document.storeservicefolder.document-name">
-			<storeservice publicationstatus="PUBLICATED"
-				byCodeReference="SAV" id="SAV" label="S.A.V" pictogram-refid="sav_visual"
+			<storeservice publicationstatus="PUBLICATED" byCodeReference="SAV" id="SAV" label="S.A.V" pictogram-refid="sav_visual"
 				description-attr="" />
-			<storeservice publicationstatus="PUBLICATED"
-				byCodeReference="24/24" id="2424" label="Ouverture 24h/24h &amp; 7j/7j"
-				pictogram-refid="clock_visual" description-attr="" />
+			<storeservice publicationstatus="PUBLICATED" byCodeReference="24/24" id="2424" label="Ouverture 24h/24h &amp; 7j/7j" pictogram-refid="clock_visual"
+				description-attr="" />
 		</folder>
 		<folder byLabel="m.generic.bo.general.samples">
-			<store id="store1" byCodeReference="Change" label="Boutique Change"
-				visual-refid="media1" description-attr="" services-refids="SAV,2424"
-				openingHours-attr="opening-1" contact-refids="contact1" latitude="48.5463108"
-				longitude="7.65184339" addressLine1="AEROPARC 1" addressLine2="11 rue Icare"
+			<store id="store1" byCodeReference="Change" label="Boutique Change" visual-refid="media1" description-attr="" services-refids="SAV,2424"
+				openingHours-attr="opening-1" contact-refids="contact1" latitude="48.5463108" longitude="7.65184339" addressLine1="AEROPARC 1" addressLine2="11 rue Icare"
 				zipCode="67836" city="ENTZHEIM" countryId-refid="fr" website-refids="default-website" />
 
-			<store id="store2" byCodeReference="ChangeParis" label="Boutique Change Paris"
-				visual-refid="media1" description-attr="" services-refids="SAV"
-				isShippingRelay="false" openingHours-attr="opening-2"
-				contact-refids="contact2" latitude="48.863473" longitude="2.348127"
-				addressLine1="25 Boulevard de Sébastopol" zipCode="75001" city="Paris"
-				countryId-refid="fr" website-refids="default-website" />
-		</folder>
+			<store id="store2" byCodeReference="ChangeParis" label="SAV Change Paris" visual-refid="media1" description-attr="" services-refids="SAV"
+				isShippingRelay="false" openingHours-attr="opening-2" contact-refids="contact2" latitude="48.863473" longitude="2.348127" addressLine1="25 Boulevard de Sébastopol"
+				zipCode="75001" city="Paris" countryId-refid="fr" website-refids="default-website" />
+
+			<store id="store3" byCodeReference="ChangeSelestat" label="Boutique Change" visual-refid="media1" description-attr="" services-refids="SAV,2424"
+				openingHours-attr="opening-1" contact-refids="contact1" latitude="48.265427" longitude="7.451563" addressLine1="22 Rue des jeux vidéos" zipCode="67200"
+				city="SELESTAT" countryId-refid="fr" website-refids="default-website" />
+
+			<store id="store4" byCodeReference="ChangeParisBoutique" label="Boutique Change Paris" visual-refid="media1" description-attr=""
+				services-refids="2424" openingHours-attr="opening-2" contact-refids="contact2" latitude="48.869105" longitude="2.310079" addressLine1="42 Rue des bus"
+				zipCode="75001" city="Paris" countryId-refid="fr" website-refids="default-website" />
+		</folder>l
 
 	</rootfolder>
 
 	<rootfolder module="shipping">
 		<folder byLabel="m.generic.bo.general.samples">
-			<instore byLabel="Retrait en magasin" description="Retrait en magasin"
-				code="InStore" codeReference="InStore" visual-refid="instore_visual" />
+			<instore byLabel="Retrait en magasin" description="Retrait en magasin" code="InStore" codeReference="InStore" visual-refid="instore_visual" />
 		</folder>
 	</rootfolder>
 </script>
