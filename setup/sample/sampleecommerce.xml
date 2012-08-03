@@ -26,16 +26,15 @@
 	<binding fileName="modules/emailing/persistentdocument/import/emailing_binding.xml" />
 
 	<binding fileName="modules/sample/setup/shipping/sample.xml" />
-	<binding fileName="modules/sample/setup/payment/sample.xml" />
-	<binding fileName="modules/sample/setup/paybox/sample.xml" />
-	<binding fileName="modules/sample/setup/media/sample.xml" />
+	<binding fileName="modules/sample/setup/payment/payment-data.xml" />
+	<binding fileName="modules/sample/setup/paybox/paybox-data.xml" />
+	<binding fileName="modules/sample/setup/media/media-data.xml" />
 	<binding fileName="modules/sample/setup/catalog/catalog-struct.xml" />
 	<binding fileName="modules/sample/setup/customer/customer-struct.xml" />
-	<binding fileName="modules/sample/setup/order/default.xml" />
-	<binding fileName="modules/sample/setup/order/sample.xml" />
-	<binding fileName="modules/sample/setup/marketing/sample.xml" />
+	<binding fileName="modules/sample/setup/order/order-struct.xml" />
+	<binding fileName="modules/sample/setup/marketing/marketing-data.xml" />
 	<binding fileName="modules/sample/setup/videos/sample.xml" />
-	<binding fileName="modules/sample/setup/emailing/sample.xml" />
+	<binding fileName="modules/sample/setup/emailing/emailing-data.xml" />
 	<binding fileName="modules/sample/setup/sharethis/sample.xml" />
 	<binding fileName="modules/sample/setup/ecomextended/ecomextended-data.xml" />
 
@@ -209,7 +208,7 @@
 			<execute method="setDocumentTypeAttribute" attribute-name="website-type" />
 			<topic byLabel="Newsletter">
 				<execute method="setDocumentIdAttribute" />
-				<binding fileName="modules/sample/setup/emailing/samplepage.xml" />
+				<binding fileName="modules/sample/setup/emailing/emailing-page.xml" />
 			</topic>
 		</topic>
 
@@ -312,14 +311,15 @@
 		</menus>
 	</website>
 
-	<binding fileName="modules/sample/setup/event/sample.xml" />
-	<binding fileName="modules/sample/setup/joboffer/sample.xml" />
-	<binding fileName="modules/sample/setup/photoalbum/sample.xml" />
+	<binding fileName="modules/sample/setup/event/event-data.xml" />
+	<binding fileName="modules/sample/setup/joboffer/joboffer-data.xml" />
+	<binding fileName="modules/sample/setup/photoalbum/photoalbum-data.xml" />
 	<binding fileName="modules/sample/setup/blog/blog-data.xml" />
-	<binding fileName="modules/sample/setup/forums/sample.xml" />
+	<binding fileName="modules/sample/setup/forums/forum-data.xml" />
 	<binding fileName="modules/sample/setup/brand/brand-data.xml" />
 	<binding fileName="modules/sample/setup/store/sample.xml" />
 	<binding fileName="modules/sample/setup/store/sampleextranet.xml" />
+	<binding fileName="modules/sample/setup/loyalty/loyalty-struct.xml" />
 
 	<website byTag="default_modules_website_default-website" id="default-website">
 		<topic byLabel="Outils">

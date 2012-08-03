@@ -93,10 +93,10 @@
 		</menus>
 	</website>
 
-	<binding fileName="modules/sample/setup/event/sample.xml" />
-	<binding fileName="modules/sample/setup/joboffer/sample.xml" />
-	<binding fileName="modules/sample/setup/photoalbum/sample.xml" />
+	<binding fileName="modules/sample/setup/event/event-data.xml" />
+	<binding fileName="modules/sample/setup/joboffer/joboffer-data.xml" />
+	<binding fileName="modules/sample/setup/photoalbum/photoalbum-data.xml" />
 	<binding fileName="modules/sample/setup/blog/blog-data.xml" />
-	<binding fileName="modules/sample/setup/forums/sample.xml"/>
+	<binding fileName="modules/sample/setup/forums/forum-data.xml"/>
 
 </script>

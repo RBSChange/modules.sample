@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
-	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 	
 	<rootfolder module="list">
@@ -61,16 +59,4 @@
 				validators="blank:false;maxSize:1000" />						
 		</form>
 	</rootfolder>
-	
-	<website byTag="default_modules_website_default-website">
-		<topic byLabel="Système">
-			<page label="Previsualisation de formulaire" id="formPreview" indexingstatus="false" navigationVisibility="hidden">
-			    <changecontent for="content-block">
-					<changeblock type="modules_form_form" />
-				</changecontent>
-			</page>
-		</topic>
-	</website>
-	
-	<preferences previewpage-refid="formPreview" />
 </script>

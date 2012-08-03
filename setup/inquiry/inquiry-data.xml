@@ -43,26 +43,4 @@
 			<fieldtext fieldName="message" label="Message" required="true" multiline="true" cols="50" rows="10" maxlength="1000" validators="blank:false;maxSize:1000" />
 		</inquiryform>
 	</rootfolder>
-
-	<website byTag="default_modules_website_default-website">
-		<topic byLabel="Demandes d'informations">
-			<page label="Formulaire de demande" indexingstatus="true" isIndexPage="true" navigationVisibility="hidden">
-				<changecontent for="content-block">
-					<changeblock type="modules_inquiry_inquiryform" __cmpref-refid="inquiryform" />
-				</changecontent>
-			</page>
-			<page byLabel="Détail d'une demande" indexingstatus="false" navigationVisibility="hidden">
-				<tag name="contextual_website_website_modules_inquiry_inquiry" />
-				<changecontent for="content-block">
-					<changeblock type="modules_inquiry_inquiry" />
-				</changecontent>
-			</page>
-			<page label="Mes demandes" indexingstatus="true">
-				<tag name="contextual_website_website_modules_inquiry_inquirylist" />
-				<changecontent for="content-block">
-					<changeblock type="modules_inquiry_inquirylist" />
-				</changecontent>
-			</page>
-		</topic>
-	</website>
 </script>

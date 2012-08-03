@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+	<binding fileName="modules/emailing/persistentdocument/import/emailing_binding.xml" />
+	
 	<rootfolder module="emailing">
 		<mailinglistfolder label="Listes d'abonnés" byLabel="Listes d'abonnés">
 			<mailinglist id="mailingtest" label="Mailing RBS" description="Mailing Test">
@@ -19,7 +21,7 @@
 					<fieldvalue name="function" value="Enseignant" />
 				</subscriber>
 				<subscriber publicationstatus="ACTIVE" label="prince@rbs.fr">
-					<fieldvalue name="lastname" value="ROMANI" />
+					<fieldvalue name="lastname" value="ARMINO" />
 					<fieldvalue name="firstname" value="Aladin" />
 					<fieldvalue name="function" value="Prince de Perse" />
 				</subscriber>
@@ -42,10 +44,9 @@
 		</mailinglistfolder>
 
 		<folder label="Campagnes" byLabel="Campagnes">
-			<campaign label="Newletter interne RBS" fromemail="no-reply@rbs.fr"
-				fromname="Webmaster RBS" mailinglists-refid="mailingtest" website-refid="website">
-				<mailing label="Contenu 1" fromemail="no-reply@rbs.fr"
-					fromname="Webmaster RBS" edittype="1"
+			<campaign label="Newletter interne RBS" fromemail="no-reply@rbs.fr" fromname="Webmaster RBS" mailinglists-refid="mailingtest"
+				website-refid="website">
+				<mailing label="Contenu 1" fromemail="no-reply@rbs.fr" fromname="Webmaster RBS" edittype="1"
 					simplexhtmlcontent="
 &lt;h1&gt;Newletter interne RBS Test 1&lt;/h1&gt;
 &lt;p&gt;Bonjour {subscriber.firstname} {subscriber.lastname} Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
@@ -88,14 +89,11 @@ Curabitur nec leo. Pellentesque eleifend vehicula nisl. Fusce ut mauris. Donec v
 	</rootfolder>
 
 	<rootfolder module="users">
-		<documentRef type="modules_users/backendgroup" byLabel="Utilisateurs Change"
-			id="bousergroup" />
+		<documentRef type="modules_users/backendgroup" byLabel="Utilisateurs Change" id="bousergroup" />
 	</rootfolder>
 
 	<systemfolder module="emailing" relatedmodule="users">
-		<dynamicmailinglist label="Utilisateurs backoffice"
-			className="users_MailinglistGroupFeederService"
-			parameter-groupId-refid="bousergroup">
+		<dynamicmailinglist label="Utilisateurs backoffice" className="users_MailinglistGroupFeederService" parameter-groupId-refid="bousergroup">
 			<subscriberrofield label="Nom" mailingname="lastname" />
 			<subscriberrofield label="Prénom" mailingname="firstname" />
 			<subscriberrofield label="Civilité" mailingname="title" />

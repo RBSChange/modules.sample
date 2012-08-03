@@ -5,7 +5,6 @@
 			- catalog/catalog-data.xml
 	-->
 
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/customer/persistentdocument/import/customer_binding.xml" />
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
 	<binding fileName="modules/payment/persistentdocument/import/payment_binding.xml" />

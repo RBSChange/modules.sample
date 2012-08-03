@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 
+	<binding fileName="modules/joboffer/persistentdocument/import/joboffer_binding.xml" />
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
+	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
+	<binding fileName="modules/inquiry/persistentdocument/import/inquiry_binding.xml" />
+
 	<systemfolder module="form" relatedmodule="joboffer">
 		<documentRef type="modules_form/form" byFormid="modules_joboffer/simplecandidacy" id="sform" />
 		<documentRef type="modules_inquiry/inquiryform" byFormid="modules_joboffer/inquirycandidacy" id="iform" />
@@ -31,7 +36,7 @@ Vous aurez en charge comme missions principales :<br/>
 <li>Assurer le reporting</li>
 </ul><br/>
 Accompagné de nos ressources de production, vous aurez la capacité à réaliser et de mener à bien nos différents projets.]]></attribute>
-			<offer byLabel="Chef de projets" offertype-refid="cdi" reference="OFFRE10" description-attr="offer-cdp" publicationstatus="ACTIVE" location="Strasbourg"
+			<offer byLabel="Chef de projets" offertype-refid="cdi" reference="OFFRE10" description-attr="offer-cdp" publicationstatus="ACTIVE" location="Paris"
 				background="vous justifiez d'une expérience minimale de 2 années dans la gestion de projet au sein d'une SSII. Doté d'un excellent relationnel, vous savez vous adapter aux divers interlocuteurs dans l'entreprise."
 				profile="De formations supérieure Bac +4/5. La pratique des outils informatiques (Word, Excel, Powerpoint, Internet, Outlook) est indispensable, la maîtrise de l'anglais serait un plus."
 				candidacyForm-refid="sform" />

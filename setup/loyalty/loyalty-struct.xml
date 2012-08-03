@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Commande">
+			<page label="Inscription d'un filleul" isIndexPage="false" indexingstatus="true" navigationVisibility="visible"
+				byTag="contextual_website_website_modules_loyalty_godchildregistration">
+				<changecontent for="content-block">
+					<changeblock type="modules_loyalty_GodchildRegistration" />
+				</changecontent>
+			</page>
+			<page label="Système de fidélisation" isIndexPage="false" indexingstatus="true" navigationVisibility="visible"
+				byTag="contextual_website_website_modules_loyalty_loyalty-rules">
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[<p>Système de fidélisation...</p>]]>
+					</changeblock>
+				</changecontent>
+			</page>
+		</topic>
+
+		<topic byLabel="Compte client">
+			<page label="Parrainage" isIndexPage="false" indexingstatus="false" navigationVisibility="visible"
+				byTag="contextual_website_website_modules_loyalty_godchildlist">
+				<changecontent for="content-block">
+					<changeblock type="modules_loyalty_ProposingForm" />
+					<changeblock type="modules_loyalty_GodchildList" />
+				</changecontent>
+			</page>
+			<page label="Avantages fidélité" isIndexPage="false" indexingstatus="false" navigationVisibility="visible"
+				byTag="contextual_website_website_modules_loyalty_rewardlist">
+				<changecontent for="content-block">
+					<changeblock type="modules_loyalty_RewardList" />
+				</changecontent>
+			</page>
+		</topic>
+	</website>
+	
+	<binding fileName="modules/sample/setup/loyalty/loyalty-data.xml" />
+	
+</script>

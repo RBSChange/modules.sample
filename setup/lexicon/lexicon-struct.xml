@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/lexicon/persistentdocument/import/lexicon_binding.xml" />
+	
+	<website byTag="default_modules_website_default-website">
+		<topic label="Lexique" id="lexicontopic">
+			<topic label="Sous rubrique" id="lexicontopicsub"></topic>			
+			<topic label="A venir..."></topic>
+			
+			<page label="Lexique"  isIndexPage="true" indexingstatus="false" navigationVisibility="hidden">
+				<tag name="functional_lexicon_word-list" />
+				<changecontent for="content-block">
+					<changeblock type="modules_lexicon_wordContextuallist" />
+				</changecontent>
+				<execute method="setPageRefAsIndex" />
+			</page>
+
+			<page label="Terme" isIndexPage="false" indexingstatus="false" navigationVisibility="hidden" robotsmeta="noindex,follow">
+				<tag name="functional_lexicon_word-detail" />
+				<changecontent for="content-block">
+					<changeblock type="modules_lexicon_word" />
+				</changecontent>
+			</page>				
+		</topic>
+	</website>
+	
+	<binding fileName="modules/sample/setup/lexicon/lexicon-data.xml" />
+	
+</script>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/payment/persistentdocument/import/payment_binding.xml" />
 	<binding fileName="modules/productreturns/persistentdocument/import/productreturns_binding.xml" />
 
@@ -11,14 +10,4 @@
 			<paymentfilter byLabel="Chèque" connector-refid="payment" query-attr="" />
 		</paymentfolder>
 	</rootfolder>
-
-	<website byTag="default_modules_website_default-website">
-		<execute method="setDocumentIdAttribute" attribute-name="website-id" />
-		<execute method="setDocumentTypeAttribute" attribute-name="website-type" />
-		<topic byLabel="Compte client">
-			<execute method="setDocumentIdAttribute" />
-			<execute method="setDocumentTypeAttribute" />
-			<binding fileName="modules/productreturns/setup/customerDefaultStructure.xml" />
-		</topic>
-	</website>
 </script>

@@ -68,4 +68,5 @@
 	</website>
 	
 	<binding fileName="modules/order/setup/standardProccess.xml" />
+	<binding fileName="modules/sample/setup/order/order-data.xml" />
 </script>

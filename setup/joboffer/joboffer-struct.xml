@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />	
+
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Offres d'emploi" id="topic" />
+		<execute method="setDocumentIdAttribute" />
+		<binding fileName="modules/joboffer/setup/topicDefaultStructure.xml" />
+	</topic>
+	</website>
+
+	<binding fileName="modules/sample/setup/joboffer/joboffer-data.xml" />
+
+</script>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	
+	<website byTag="default_modules_website_default-website">
+		<execute method="setDocumentIdAttribute" />
+		<topic byLabel="Documents à télécharger" id="t1">
+			<topic byLabel="Plans d'accès RBS" id="t2" />
+			<topic byLabel="RBS Change" id="t3" />
+			<execute method="setDocumentIdAttribute" />
+			<binding fileName="modules/download/setup/localDefaultStructure.xml" />
+			<binding fileName="modules/download/setup/globalDefaultStructure.xml" />
+		</topic>
+	</website>
+	
+	<binding fileName="modules/sample/setup/download/download-data.xml" />
+</script>

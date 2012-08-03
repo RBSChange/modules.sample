@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<!--
 			WARNING: before importing this file import:
-				- media/sample.xml
-				- payment/sample.xml 
+				- media/media-data.xml
+				- payment/payment-data.xml 
 				- shipping/sample.xml
 	-->
 

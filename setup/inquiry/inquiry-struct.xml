@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+	<binding fileName="modules/notification/persistentdocument/import/notification_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
+	<binding fileName="modules/inquiry/persistentdocument/import/inquiry_binding.xml" />
+	
+	<binding fileName="modules/sample/setup/inquiry/inquiry-data.xml" />
+
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Demandes d'informations">
+			<page label="Formulaire de demande" indexingstatus="true" isIndexPage="true" navigationVisibility="hidden">
+				<changecontent for="content-block">
+					<changeblock type="modules_inquiry_inquiryform" __cmpref-refid="inquiryform" />
+				</changecontent>
+			</page>
+			<page byLabel="Détail d'une demande" indexingstatus="false" navigationVisibility="hidden">
+				<tag name="contextual_website_website_modules_inquiry_inquiry" />
+				<changecontent for="content-block">
+					<changeblock type="modules_inquiry_inquiry" />
+				</changecontent>
+			</page>
+			<page label="Mes demandes" indexingstatus="true">
+				<tag name="contextual_website_website_modules_inquiry_inquirylist" />
+				<changecontent for="content-block">
+					<changeblock type="modules_inquiry_inquirylist" />
+				</changecontent>
+			</page>
+		</topic>
+	</website>
+</script>

@@ -44,15 +44,14 @@
 	</theme>
 
 	<binding fileName="modules/sample/setup/website/sample.xml" />
-	<binding fileName="modules/sample/setup/media/sample.xml" />
+	<binding fileName="modules/sample/setup/media/media-data.xml" />
 	<binding fileName="modules/sample/setup/users/sample.xml" />
 	<binding fileName="modules/sample/setup/workflow/sample.xml" />
-	<binding fileName="modules/sample/setup/form/sample.xml" />
-	<binding fileName="modules/sample/setup/notification/sample.xml" />
+	<binding fileName="modules/sample/setup/form/form-struct.xml" />
+	<binding fileName="modules/sample/setup/notification/notification-data.xml" />
 	<binding fileName="modules/sample/setup/contactcard/contactcard-struct.xml" />
-	<binding fileName="modules/sample/setup/list/sample.xml" />
-
-	<binding fileName="modules/sample/setup/rss/sample.xml" />
+	<binding fileName="modules/sample/setup/list/list-data.xml" />
+	<binding fileName="modules/sample/setup/rss/rss-data.xml" />
 
 	<rootfolder module="users">
 		<backendgroup byLabel="Utilisateurs Change">

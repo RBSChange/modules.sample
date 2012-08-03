@@ -1,12 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+l<?xml version="1.0" encoding="UTF-8"?>
 <script>
 
-	<binding
-		fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
-	<binding fileName="modules/event/persistentdocument/import/event_binding.xml" />
-	<binding
-		fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Actualités et événements" id="events1">
@@ -17,7 +12,7 @@
 			<binding fileName="modules/event/setup/globalDefaultStructure.xml" />
 		</topic>
 	</website>
-	
-	<binding fileName="modules/sample/setup/event/sample.xml" />
+
+	<binding fileName="modules/sample/setup/event/event-data.xml" />
 
 </script>
