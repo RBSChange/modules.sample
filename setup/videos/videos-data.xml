@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 
+	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
+
 	<rootfolder module="media">
 		<folder byLabel="Exemples de vidéos">
 			<media path="modules/sample/setup/videos/media/barsandtone.flv" byLabel="Video 1" id="mv1" />

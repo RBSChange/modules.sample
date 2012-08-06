@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 
-	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
-	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
-	<binding
-		fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
-	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
-	<binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
-	<binding
-		fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
 	<website byTag="default_modules_website_default-website" id="default-website">
 		<execute method="setDocumentIdAttribute" />
@@ -28,7 +20,7 @@
 			</menu>
 		</menus>
 	</website>
-	
+
 	<binding fileName="modules/sample/setup/store/store-data.xml" />
 
 </script>
