@@ -81,19 +81,19 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		{
 			case 'core' :
 				$this->message('= Import samples of your OS Core modules =');
-				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'samplecore.xml';
+				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'core.xml';
 				break;
 			case 'cms' :
 				$this->message('= Import samples of CMS & Core modules =');
-				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'samplecms.xml';
+				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'cms.xml';
 				break;
 			case 'ecommercecms' :
 				$this->message('= Import samples of your OS Ecom & Core modules	=');
-				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'sampleecommerce.xml';
+				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'ecommerce.xml';
 				break;
 			case 'itesting' :
 				$this->message('= Import samples for integration testing =');
-				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'sampleitesting.xml';
+				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'itesting.xml';
 				break;
 			default :
 				$this->message('= Import only ' . $params[0] . ' =');

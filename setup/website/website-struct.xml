@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<!-- "template", "templateHome" and "templatePopin" attributes are automatically set with the configuration values: - modules/website/sample/defaultPageTemplate 
-		- modules/website/sample/defaultHomeTemplate - modules/website/sample/defaultPopinTemplate WARNING: before importing this file, you need to install the 
-		theme. -->
+	<!-- "template", "templateHome" and "templatePopin" attributes are automatically set with the configuration values: 
+	- modules/website/sample/defaultPageTemplate 
+	- modules/website/sample/defaultHomeTemplate 
+	- modules/website/sample/defaultPopinTemplate WARNING: before importing this file, you need to install the theme. -->
 
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />

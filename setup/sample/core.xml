@@ -2,7 +2,7 @@
 <script>
 
 	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
-	<binding fileName="modules/sample/setup/statictext/sample.xml" />
+	<binding fileName="modules/sample/setup/statictext/statictext-data.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 
 	<theme byCodename="default">
@@ -43,10 +43,10 @@
 		</pagetemplate>
 	</theme>
 
-	<binding fileName="modules/sample/setup/website/sample.xml" />
+	<binding fileName="modules/sample/setup/website/website-struct.xml" />
 	<binding fileName="modules/sample/setup/media/media-data.xml" />
-	<binding fileName="modules/sample/setup/users/sample.xml" />
-	<binding fileName="modules/sample/setup/workflow/sample.xml" />
+	<binding fileName="modules/sample/setup/users/users-struct.xml" />
+	<binding fileName="modules/sample/setup/workflow/workflow-data.xml" />
 	<binding fileName="modules/sample/setup/form/form-struct.xml" />
 	<binding fileName="modules/sample/setup/notification/notification-data.xml" />
 	<binding fileName="modules/sample/setup/contactcard/contactcard-struct.xml" />

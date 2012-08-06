@@ -23,7 +23,7 @@
 	<binding fileName="modules/blog/persistentdocument/import/blog_binding.xml" />
 	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
 	
-	<binding fileName="modules/sample/setup/videos/sample.xml" />
+	<binding fileName="modules/sample/setup/videos/videos-data.xml" />
 
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Communauté" id="topiccommunity">

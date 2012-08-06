@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/notification/persistentdocument/import/notification_binding.xml" />
+	<binding fileName="modules/synchronizer/persistentdocument/import/synchronizer_binding.xml" />
+	<binding fileName="modules/task/persistentdocument/import/task_binding.xml" />
+
+	<systemfolder module="notification" relatedmodule="synchronizer">
+		<notification label="Succès de la synchronisation" id="notifsuccess" codename="modules_synchronizer/notificationSuccess"
+			availableparameters="{label}, {code}" subject=" Succès de la synchronisation" header=""
+			body="Vous recevez cet e-mail pour vous signaler que la synchronisation {label} code : {code} 
+						s'est déroulé avec succès.&lt;br /&gt;"
+			footer="Cordialement, votre administrateur Change" />
+
+		<notification label="Warnings lors de la synchronisation" id="notifwarnings" codename="modules_synchronizer/notificationWarnings"
+			availableparameters="{label}, {code}, {warnings}" subject="Erreurs lors de la synchronisation" header=""
+			body="Vous recevez cet e-mail pour vous signaler que la synchronisation {label} code : {code} 
+						s'est déroulé en générant des erreurs.&lt;br /&gt;
+						{warnings};&lt;br /&gt;"
+			footer="Cordialement, votre administrateur Change" />
+
+		<notification label="Erreurs lors de la synchronisation" id="notiferrors" codename="modules_synchronizer/notificationErrors"
+			availableparameters="{label}, {code}, {errormsg}, {errordata}" subject="Erreurs bloquante lors de la synchronisation" header=""
+			body="Vous recevez cet e-mail pour vous signaler que la synchronisation {label} code : {code} 
+						s'est arrêtée en générant des erreurs.&lt;br /&gt;
+						{errormsg} &lt;br /&gt;"
+			footer="Cordialement, votre administrateur Change" />
+
+		<notification label="Démarrage de la synchronisation" id="notifstart" codename="modules_synchronizer/notificationStart"
+			availableparameters="{label}, {code}" subject="Synchronisation" header=""
+			body="Vous recevez cet e-mail pour vous signaler que la synchronisation {label} code : {code}
+						a démarré.&lt;br /&gt;" footer="Cordialement, votre administrateur Change" />
+	</systemfolder>
+
+	<rootfolder module="synchronizer">
+		<synchronizer label="Export : En-têtes des commandes" code="entete_commande" notificationsrecipients="change.synchronizer@rbs.fr"
+			stoponerror="true" notificationError-refid="notiferrors" notificationWarning-refid="notifwarnings" notificationStart-refid="notifstart"
+			notificationSuccess-refid="notifsuccess" />
+		<synchronizer label="Export : Lignes des commandes" code="ligne_commande" notificationsrecipients="change.synchronizer@rbs.fr"
+			stoponerror="true" notificationError-refid="notiferrors" notificationWarning-refid="notifwarnings" notificationStart-refid="notifstart"
+			notificationSuccess-refid="notifsuccess" />
+		<synchronizer label="Export : Factures des commandes" code="factures_commande_change" notificationsrecipients="change.synchronizer@rbs.fr"
+			stoponerror="true" notificationError-refid="notiferrors" notificationWarning-refid="notifwarnings" notificationStart-refid="notifstart"
+			notificationSuccess-refid="notifsuccess" />
+		<synchronizer label="Export : Expéditions des commandes" code="expeditions_commande_change" notificationsrecipients="change.synchronizer@rbs.fr"
+			stoponerror="true" notificationError-refid="notiferrors" notificationWarning-refid="notifwarnings" notificationStart-refid="notifstart"
+			notificationSuccess-refid="notifsuccess" />
+
+		<synchronizer label="Import : Status des factures" code="facture_commande" notificationsrecipients="change.synchronizer@rbs.fr"
+			stoponerror="true" notificationError-refid="notiferrors" notificationWarning-refid="notifwarnings" notificationStart-refid="notifstart"
+			notificationSuccess-refid="notifsuccess" />
+		<synchronizer label="Import : Status des expéditions" code="expedition_commande" notificationsrecipients="change.synchronizer@rbs.fr"
+			stoponerror="true" notificationError-refid="notiferrors" notificationWarning-refid="notifwarnings" notificationStart-refid="notifstart"
+			notificationSuccess-refid="notifsuccess" />
+
+		<synchronizer label="Export : Comptes clients" code="comptes_clients" notificationsrecipients="change.synchronizer@rbs.fr" stoponerror="true"
+			notificationError-refid="notiferrors" notificationWarning-refid="notifwarnings" notificationStart-refid="notifstart" notificationSuccess-refid="notifsuccess" />
+	</rootfolder>
+
+	<systemfolder module="task" relatedmodule="synchronizer">
+		<plannedtask label="Import : Status des factures" systemtaskclassname="synchronizer_GetBillsStatusFromERPTask" publicationstatus="DEACTIVATED" />
+		<plannedtask label="Import : Status des expéditions" systemtaskclassname="synchronizer_GetExpeditionsStatusFromERPTask"
+			publicationstatus="DEACTIVATED" />
+
+		<plannedtask label="Export : En-têtes des commandes" systemtaskclassname="synchronizer_SendOrderHeadersToERPTask" publicationstatus="DEACTIVATED" />
+		<plannedtask label="Export : Lignes des commandes" systemtaskclassname="synchronizer_SendOrderLinesToERPTask" publicationstatus="DEACTIVATED" />
+		<plannedtask label="Export : Factures des commandes" systemtaskclassname="synchronizer_SendOrderBillsToERPTask" publicationstatus="DEACTIVATED" />
+		<plannedtask label="Export : Expéditions des commandes" systemtaskclassname="synchronizer_SendOrderExpeditionsToERPTask"
+			publicationstatus="DEACTIVATED" />
+		<plannedtask label="Export : Comptes clients" systemtaskclassname="synchronizer_SendCustomerToERPTask" publicationstatus="DEACTIVATED" />
+	</systemfolder>
+</script>

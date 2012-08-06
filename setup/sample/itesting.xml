@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/sample/setup/website/sample.xml" />
-	<binding fileName="modules/sample/setup/shipping/sample.xml" />
+	<binding fileName="modules/sample/setup/website/website-struct.xml" />
+	<binding fileName="modules/sample/setup/shipping/shipping-data.xml" />
 	<binding fileName="modules/sample/setup/payment/payment-data.xml" />
 	<binding fileName="modules/sample/setup/media/media-data.xml" />
 	<binding fileName="modules/sample/setup/catalog/catalog-struct.xml" />

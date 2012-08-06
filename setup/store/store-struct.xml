@@ -29,6 +29,6 @@
 		</menus>
 	</website>
 	
-	<binding fileName="modules/sample/setup/store/sample.xml" />
+	<binding fileName="modules/sample/setup/store/store-data.xml" />
 
 </script>

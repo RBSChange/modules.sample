@@ -3,7 +3,7 @@
 			WARNING: before importing this file import:
 				- media/media-data.xml
 				- payment/payment-data.xml 
-				- shipping/sample.xml
+				- shipping/shipping-data.xml
 	-->
 
 <script>

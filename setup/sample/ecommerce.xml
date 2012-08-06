@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 
-	<binding fileName="modules/sample/setup/sample/samplecore.xml" />
+	<binding fileName="modules/sample/setup/sample/core.xml" />
 
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/photoalbum/persistentdocument/import/photoalbum_binding.xml" />
@@ -25,7 +25,7 @@
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/emailing/persistentdocument/import/emailing_binding.xml" />
 
-	<binding fileName="modules/sample/setup/shipping/sample.xml" />
+	<binding fileName="modules/sample/setup/shipping/shipping-data.xml" />
 	<binding fileName="modules/sample/setup/payment/payment-data.xml" />
 	<binding fileName="modules/sample/setup/paybox/paybox-data.xml" />
 	<binding fileName="modules/sample/setup/media/media-data.xml" />
@@ -33,9 +33,9 @@
 	<binding fileName="modules/sample/setup/customer/customer-struct.xml" />
 	<binding fileName="modules/sample/setup/order/order-struct.xml" />
 	<binding fileName="modules/sample/setup/marketing/marketing-data.xml" />
-	<binding fileName="modules/sample/setup/videos/sample.xml" />
+	<binding fileName="modules/sample/setup/videos/videos-data.xml" />
 	<binding fileName="modules/sample/setup/emailing/emailing-data.xml" />
-	<binding fileName="modules/sample/setup/sharethis/sample.xml" />
+	<binding fileName="modules/sample/setup/sharethis/sharethis-data.xml" />
 	<binding fileName="modules/sample/setup/ecomextended/ecomextended-data.xml" />
 
 	<mailinglist id="mailingtest" byLabel="Mailing RBS" />
@@ -317,8 +317,8 @@
 	<binding fileName="modules/sample/setup/blog/blog-data.xml" />
 	<binding fileName="modules/sample/setup/forums/forum-data.xml" />
 	<binding fileName="modules/sample/setup/brand/brand-data.xml" />
-	<binding fileName="modules/sample/setup/store/sample.xml" />
-	<binding fileName="modules/sample/setup/store/sampleextranet.xml" />
+	<binding fileName="modules/sample/setup/store/store-data.xml" />
+	<binding fileName="modules/sample/setup/store/store-extranet.xml" />
 	<binding fileName="modules/sample/setup/loyalty/loyalty-struct.xml" />
 
 	<website byTag="default_modules_website_default-website" id="default-website">

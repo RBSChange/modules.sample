@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 
-	<binding fileName="modules/sample/setup/statictext/sample.xml" />
+	<binding fileName="modules/sample/setup/statictext/statictext-data.xml" />
 
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Exemple Texte statique" id="statictexttopic">

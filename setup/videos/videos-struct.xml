@@ -4,22 +4,19 @@
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
 
-	<binding fileName="modules/sample/setup/videos/sample.xml" />
+	<binding fileName="modules/sample/setup/videos/videos-data.xml" />
 
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Galerie de vidéos" id="video">
 			<page label="Exemple de vidéo youtube" isIndexPage="true" id="pagevideo">
 				<changecontent for="content-block">
-					<changeblock type="modules_videos_youtubevideo"
-						__cmpref-refid="videoyoutube1" />
-					<changeblock type="modules_videos_youtubevideo"
-						__cmpref-refid="videoyoutube2" />
+					<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube1" />
+					<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube2" />
 				</changecontent>
 			</page>
 			<page label="Exemple de vidéo flash">
 				<changecontent for="content-block">
-					<changeblock type="modules_videos_video"
-						__cmpref-refid="v1" />
+					<changeblock type="modules_videos_video" __cmpref-refid="v1" />
 			</page>
 		</topic>
 	</website>
