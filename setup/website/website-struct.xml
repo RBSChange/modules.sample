@@ -3,13 +3,14 @@
 	<!-- "template", "templateHome" and "templatePopin" attributes are automatically set with the configuration values: 
 	- modules/website/sample/defaultPageTemplate 
 	- modules/website/sample/defaultHomeTemplate 
-	- modules/website/sample/defaultPopinTemplate WARNING: before importing this file, you need to install the theme. -->
+	- modules/website/sample/defaultPopinTemplate 
+	WARNING: before importing this file, you need to install the theme. -->
 
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
 
-	<attribute name="label" default="true">Site web par défaut</attribute>
-	<attribute name="labelen" default="true">Default website</attribute>
+	<attribute name="label" default="true">Site de démonstration</attribute>
+	<attribute name="labelen" default="true">Demonstration website</attribute>
 
 	<attribute name="protocol" default="true">http</attribute>
 	<attribute name="localizebypath" default="true">true</attribute>
