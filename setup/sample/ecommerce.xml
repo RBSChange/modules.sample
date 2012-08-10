@@ -161,15 +161,17 @@
 			</topic>
 		</topic>
 
-		<page byTag="contextual_website_website_modules_solrsearch_page-results">
-			<changecontent for="sidebar-block">
-				<changeblock type="modules_ecomextended_Facets" />
-			</changecontent>
-			<changecontent for="content-block">
-				<changeblock type="modules_ecomextended_ManageFacetsFilter" />
-				<changeblock type="modules_solrsearch_results" __facets-refids="documentModel,shelfIdCompiled,brand" __complete="true" />
-			</changecontent>
-		</page>
+		<topic byLabel="Système">
+			<page byTag="contextual_website_website_modules_solrsearch_page-results">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_ecomextended_Facets" />
+				</changecontent>
+				<changecontent for="content-block">
+					<changeblock type="modules_ecomextended_ManageFacetsFilter" />
+					<changeblock type="modules_solrsearch_results" __facets-refids="documentModel,shelfIdCompiled,brand" __complete="true" />
+				</changecontent>
+			</page>
+		</topic>
 
 		<topic byLabel="Annuaire" id="annuaire">
 			<page id="pageannuaire" byLabel="Annuaire" isIndexPage="true" navigationVisibility="Hidden">
