@@ -6,7 +6,7 @@
 		<folder byLabel="Exemples">
 			<text byLabel="Copyright" text="Copyright(R) RBS 2012 &lt;br /&gt; 11 rue Icare, 67960 Entzheim, FRANCE - Tél. +33 (0)3 88 764 764" id="simpletext"></text>
 			<attribute name="warningtext">
-					<![CDATA[<p class="warnings">--- WARNING --- WARNING --- Site de demo --- Réinitialisation toutes les 30 min. --- WARNING --- WARNING ---</p>]]>
+					<![CDATA[<p class="warnings text-align-center">Ceci est un site de démonstration de la plateforme <a class="link" href="http://www.rbschange.com">CMS E-Commerce Open Source RBS Change</a></p>]]>
 			</attribute>
 			<htmlcode byLabel="Warning" text-attr="warningtext" id="htmltext" />
 			<attribute name="footertext">

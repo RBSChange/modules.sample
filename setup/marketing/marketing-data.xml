@@ -81,10 +81,10 @@
 	<!-- Animations -->
 	<rootfolder module="marketing">
 		<folder byLabel="m.generic.bo.general.samples">
-			<editableanim product-refids="product1,product2,product3,product4,product5,product6" byLabel="Produit d'occasion" description="Notre sélection de produit facilement trouvable d'occasion !" shop-refid="shop" id="editanim" />
-			<dynamicanim query='[{"class":"order_MostFrequentlyOrderedFilter","parameters":{"maxcount":[null,null,"5"]}}]' byLabel="Top Ventes" shop-refid="shop" id="topventes" />
-			<dynamicanim query='[{"class":"marketing_LastProductFilter","parameters":{"count":[null,null,"10"],"datetype":[null,null,"creation"]}}]' byLabel="Nouveautés" shop-refid="shop" id="newproducts" />
-			<dynamicanim query='[{"class":"marketing_ProductPriceFilter","parameters":{}}]' byLabel="Promotions" shop-refid="shop" id="promotions" />
+			<editableanim product-refids="product1,product2,product3,product4,product5,product6" byLabel="Nos bonnes affaires" description="Une sélection de nos bonnes affaires! Profitez-en avant qu'il ne soit trop tard" shop-refid="shop" id="editanim" />
+			<dynamicanim query='[{"class":"order_MostFrequentlyOrderedFilter","parameters":{"maxcount":[null,null,"5"]}}]' byLabel="Nos meilleures ventes" shop-refid="shop" id="topventes" />
+			<dynamicanim query='[{"class":"marketing_LastProductFilter","parameters":{"count":[null,null,"10"],"datetype":[null,null,"creation"]}}]' byLabel="Nos nouveautés" shop-refid="shop" id="newproducts" />
+			<dynamicanim query='[{"class":"marketing_ProductPriceFilter","parameters":{}}]' byLabel="Nos promotions" shop-refid="shop" id="promotions" />
 		</folder>
 	</rootfolder>
 	

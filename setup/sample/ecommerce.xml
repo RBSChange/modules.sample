@@ -37,6 +37,7 @@
 	<binding fileName="modules/sample/setup/emailing/emailing-data.xml" />
 	<binding fileName="modules/sample/setup/sharethis/sharethis-data.xml" />
 	<binding fileName="modules/sample/setup/ecomextended/ecomextended-data.xml" />
+	<binding fileName="modules/sample/setup/ecomextended/ecomextended-struct.xml" />
 
 	<mailinglist id="mailingtest" byLabel="Mailing RBS" />
 	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform"/>
@@ -44,7 +45,7 @@
 	<website byTag="default_modules_website_default-website" id="default-website">
 	
 		<page byLabel="Accueil">
-			<changecontent for="content-block" append="true">
+			<changecontent for="content-block">
 				<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
 					__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
 					__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="editanim" />
@@ -52,104 +53,53 @@
 		</page>
 
 		<topic byLabel="Boutique">
-			<page byLabel="Contenu du rayon">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_ecomextended_Facets" />
-				</changecontent>
-				<changecontent for="content-block">
-					<changeblock type="modules_catalog_shelfContextualList" />
-					<changeblock type="modules_ecomextended_ManageFacetsFilter" />
-					<changeblock type="modules_ecomextended_ProductList" __complete="true" />
-				</changecontent>
-			</page>
-			<page byLabel="Comparaison de produits" navigationVisibility="Hidden-in-menu-only" />
+			<page byLabel="Comparaison de produits" navigationVisibility="hidden" />
 		</topic>
 
 		<topic byLabel="Compte client">
 			<execute method="setDocumentIdAttribute" />
 			<execute method="setDocumentTypeAttribute" />
 			<binding fileName="modules/store/setup/customerDefaultStructure.xml" />
-			<page label="Magasin préféré" indexingstatus="false" byTag="contextual_website_website_modules_store_favoritestore">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Détail d'une expédition en magasin">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
 		</topic>
 
 		<topic byLabel="Communauté" id="topiccommunity">
 			<page id="pagecommunity" byLabel="Communauté" isIndexPage="true" navigationVisibility="Hidden">
 				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
 					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
 						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
 						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="newproducts" />
 				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="richtext">
-						<![CDATA[<p>Bienvenue dans la liste des modules CMS installés sur votre site.</p>]]>
+						<![CDATA[
+						    <h1 class="heading-one">Besoin de fédérer une communauté?</h1>
+							<p class="normal">RBS Change vous propose des modules qui peuvent vous aider dans cette tâche : mise en ligne de <strong>galeries de photos ou videos</strong>,
+							<strong>forums</strong>, <strong>blogging</strong>, ...
+							</p>
+						]]>
 					</changeblock>
 				</changecontent>
 			</page>
-			<topic byLabel="Actualités et événements" id="events1">
-				<topic byLabel="Actualités abandonware" id="events2" />
-				<topic byLabel="Consoles Retro" id="events3" />
+			<topic byLabel="Galerie de photos" id="gallery">
 				<execute method="setDocumentIdAttribute" />
-				<binding fileName="modules/event/setup/localDefaultStructure.xml" />
-				<binding fileName="modules/event/setup/globalDefaultStructure.xml" />
-				<page byLabel="Liste des actualité et événements">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
+				<binding fileName="modules/photoalbum/setup/localDefaultStructure.xml" />
+				<page byLabel="Liste des albums">
 				</page>
-				<page byLabel="Détail d'une actualité ou d'un événement">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Actualités et événements du site">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Actualités et événements du jour">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Détail d'une catégorie">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Détail d'une mise en avant">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Soumission d'une actualité ou d'un événement">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
+				<page byLabel="Album">
 				</page>
 			</topic>
-			<topic byLabel="Offres d'emploi" id="topic">
-				<execute method="setDocumentIdAttribute" />
-				<binding fileName="modules/joboffer/setup/topicDefaultStructure.xml" />
+			<topic byLabel="Galerie de vidéos" id="video">
+				<page label="Exemple de vidéo youtube" isIndexPage="true">
+					<changecontent for="content-block">
+						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube1" />
+						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube2" />
+					</changecontent>
+				</page>
+				<page label="Exemple de vidéo flash">
+					<changecontent for="content-block">
+						<changeblock type="modules_videos_video" __cmpref-refid="v1" />
+					</changecontent>
+				</page>
 			</topic>
 			<topic byLabel="Liste des blogs" id="blogs">
 				<execute method="setDocumentIdAttribute" />
@@ -172,12 +122,10 @@
 				</changecontent>
 			</page>
 		</topic>
-
-		<topic byLabel="Annuaire" id="annuaire">
+		
+		<!--topic byLabel="Annuaire" id="annuaire">
 			<page id="pageannuaire" byLabel="Annuaire" isIndexPage="true" navigationVisibility="Hidden">
 				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
 					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
 						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
 						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="promotions" />
@@ -191,11 +139,42 @@
 
 			<execute method="setDocumentIdAttribute" />
 			<binding fileName="modules/brand/setup/globalDefaultStructure.xml" />
-
-			<page byLabel="Liste des contacts" indexingstatus="false">
+		
+			
+		</topic  -->
+		
+		<execute method="setDocumentIdAttribute" />
+		<binding fileName="modules/store/setup/globalDefaultStructure.xml" />
+		
+		<execute method="setDocumentIdAttribute" attribute-name="website-id" />
+		<execute method="setDocumentTypeAttribute" attribute-name="website-type" />
+			
+		<topic byLabel="À propos" id="topicabout">
+			<topic byLabel="Actualités et événements" id="events1">
+				<topic byLabel="Actualités abandonware" id="events2" />
+				<topic byLabel="Consoles Retro" id="events3" />
+				<execute method="setDocumentIdAttribute" />
+				<binding fileName="modules/event/setup/localDefaultStructure.xml" />
+				<binding fileName="modules/event/setup/globalDefaultStructure.xml" />
+				<page byLabel="Liste des actualité et événements">
+				</page>
+				<page byLabel="Détail d'une actualité ou d'un événement">
+				</page>
+				<page byLabel="Actualités et événements du site">
+				</page>
+				<page byLabel="Actualités et événements du jour">
+				</page>
+				<page byLabel="Détail d'une catégorie">
+					
+				</page>
+				<page byLabel="Détail d'une mise en avant">
+					
+				</page>
+				<page byLabel="Soumission d'une actualité ou d'un événement">					
+				</page>
+			</topic>
+			<page byLabel="Annuaire" indexingstatus="false">
 				<changecontent for="sidebar-block" append="true">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
 					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
 						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
 						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="newproducts" />
@@ -204,111 +183,46 @@
 					<changeblock type="modules_contactcard_contactlist" __showContactpageLink="false" />
 				</changecontent>
 			</page>
-			<execute method="setDocumentIdAttribute" />
-			<binding fileName="modules/store/setup/globalDefaultStructure.xml" />
-			<execute method="setDocumentIdAttribute" attribute-name="website-id" />
-			<execute method="setDocumentTypeAttribute" attribute-name="website-type" />
-			<topic byLabel="Newsletter">
+			<topic byLabel="Offres d'emploi" id="topic">
+				<execute method="setDocumentIdAttribute" />
+				<binding fileName="modules/joboffer/setup/topicDefaultStructure.xml" />
+			</topic>
+			<topic byLabel="Inscription Newsletter">
 				<execute method="setDocumentIdAttribute" />
 				<binding fileName="modules/sample/setup/emailing/emailing-page.xml" />
 			</topic>
 		</topic>
 
-		<topic byLabel="Media" id="topicmedia">
-			<page id="pagemedia" byLabel="Médias" isIndexPage="true" navigationVisibility="Hidden">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-				<changecontent for="content-block">
-					<changeblock type="richtext">
-						<![CDATA[<p>Bienvenue dans la liste des médias installés sur votre site.</p>]]>
-					</changeblock>
-				</changecontent>
-			</page>
-			<topic byLabel="Galerie de photos" id="gallery">
-				<execute method="setDocumentIdAttribute" />
-				<binding fileName="modules/photoalbum/setup/localDefaultStructure.xml" />
-				<page byLabel="Liste des albums">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Album">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-			</topic>
-			<topic byLabel="Galerie de vidéos" id="video">
-				<page label="Exemple de vidéo youtube" isIndexPage="true">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-					<changecontent for="content-block">
-						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube1" />
-						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube2" />
-					</changecontent>
-				</page>
-				<page label="Exemple de vidéo flash">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-					<changecontent for="content-block">
-						<changeblock type="modules_videos_video" __cmpref-refid="v1" />
-					</changecontent>
-				</page>
-			</topic>
-		</topic>
-
 		<topic byLabel="Outils">
 			<page label="Contact" navigationVisibility="hidden" indexingstatus="false" byTag="contextual_website_website_modules_contactcard_contact">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="modules_contactcard_contact" />
 				</changecontent>
 			</page>
 			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false"
 				byTag="contextual_website_website_modules_contactcard_page-contact">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="modules_form_form" __cmpref-refid="contactform" />
 				</changecontent>
 			</page>
 
 			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="modules_form_form" __cmpref-refid="form1" />
 				</changecontent>
 			</page>
 		</topic>
-		<topic byLabel="Contact" id="topiccontact" />
-
+		<topic byLabel="Nos magasins" id="topicstores" />
 		<menus>
 			<menu byTag="contextual_website_website_menu-main">
 				<menuitempage pageid="consoles" />
-				<menuitempage pageid="accessoiries" />
 				<menuitempage pageid="games" />
 				<menuitempage pageid="arcades" />
 				<menuitempage pageid="micro" />
+				<menuitempage pageid="accessoiries" />
 				<menuitempage pageid="topiccommunity" />
-				<menuitempage pageid="annuaire" />
-				<menuitempage pageid="topicmedia" />
-				<menuitempage pageid="topiccontact" />
+				<menuitempage pageid="topicstores" />
+				<menuitempage pageid="topicabout" />
 			</menu>
 		</menus>
 	</website>
@@ -324,130 +238,6 @@
 	<binding fileName="modules/sample/setup/loyalty/loyalty-struct.xml" />
 
 	<website byTag="default_modules_website_default-website" id="default-website">
-		<topic byLabel="Outils">
-			<page byLabel="Plan du site">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Mentions légales">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Aide">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Inscription">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Authentification">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Mot de passe perdu">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-		</topic>
-		<topic byLabel="Extranet">
-			<page byLabel="Bienvenue">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Changer votre mot de passe">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Modifier votre profil">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-		</topic>
-		<topic byLabel="Liste des contacts">
-			<page byLabel="Liste des contacts">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-		</topic>
-		<topic byLabel="Compte client">
-			<page byLabel="Mon compte">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Mes informations">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Mon mot de passe">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Mes adresses">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Contact">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Mes commandes">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-		</topic>
-		<topic byLabel="Commande">
-			<page byLabel="Créer un compte client">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Mon panier">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-			<page byLabel="Conditions générales de vente">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-						__depth="2" __startLevel="1" />
-				</changecontent>
-			</page>
-		</topic>
 		<topic byLabel="Communauté">
 			<topic byLabel="Forums">
 				<page byLabel="Forum" template-attr="templateHome" />
@@ -457,174 +247,35 @@
 				<page byLabel="Nouveau message" template-attr="templateHome" />
 				<page byLabel="Édition d'un message" template-attr="templateHome" />
 			</topic>
-
-			<topic byLabel="Offres d'emploi">
-				<page byLabel="Offres d'emploi">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
+			<topic byLabel="Membres">
+				<page label="Liste des membres" isIndexPage="true" navigationVisibility="hidden" indexingstatus="false">
+					<tag name="contextual_website_website_modules_forums_memberlist" />
+					<changecontent for="content-block">
+						<changeblock type="modules_forums_memberlist" />
 					</changecontent>
 				</page>
-				<page byLabel="Détail d'une offre d'emploi">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
+			
+				<page label="Membre" navigationVisibility="hidden" indexingstatus="false" metatitle="{forums_member.login} - Profil du membre" description="Profil de {forums_member.login} - membre depuis {forums_member.registrationdate}" keywords="profil, membre, {forums_member.login}">
+					<tag name="contextual_website_website_modules_forums_member" />
+					<changecontent for="content-block">
+						<changeblock type="modules_forums_member" />
 					</changecontent>
 				</page>
-				<page byLabel="Postuler">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
+				
+				<page label="Modifier le profil d'un membre" navigationVisibility="hidden" indexingstatus="false">
+					<tag name="contextual_website_website_modules_forums_editprofile" />
+					<changecontent for="content-block">
+						<changeblock type="modules_forums_editprofile" />
 					</changecontent>
 				</page>
-				<page byLabel="Candidature spontanée">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-			</topic>
-			<topic byLabel="Liste des blogs">
-				<page byLabel="Liste des blogs">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Blog">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Catégorie">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Mot clé">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Billet">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Archives">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
+				
+				<page label="Bannir un membre" navigationVisibility="hidden" indexingstatus="false">
+					<tag name="contextual_website_website_modules_forums_memberban" />
+					<changecontent for="content-block">
+						<changeblock type="modules_forums_memberban" />
 					</changecontent>
 				</page>
 			</topic>
-			<topic byLabel="Messagerie privée">
-				<page byLabel="Liste des conversations">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Détail d'une conversation">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Nouvelle conversation">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Réponse à une conversation">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-			</topic>
-		</topic>
-		<topic byLabel="Annuaire">
-			<topic byLabel="Annuaire des marques">
-				<page byLabel="Annuaire des marques">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Détail d'une marque">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-			</topic>
-			<topic byLabel="Nos magasins">
-				<page byLabel="Nos magasins">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Détail d'un magasin">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Contacter un magasin">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Les services en magasin">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-			</topic>
-			<topic byLabel="Newsletter">
-				<page byLabel="Inscription à la newsletter">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Désinscription de la newsletter">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Désinscription">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Désinscription confirmée">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-				<page byLabel="Confirmation de d'inscription">
-					<changecontent for="sidebar-block">
-						<changeblock type="modules_website_ConfigurableMenu" __mode="contextual" __displayMode="contextual" __deployAll="false" __showTitle="true"
-							__depth="2" __startLevel="1" />
-					</changecontent>
-				</page>
-			</topic>
-		</topic>
-		<topic byLabel="Membres">
-			<page byLabel="Liste des membres" template-attr="templateHome" />
 		</topic>
 	</website>
 

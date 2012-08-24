@@ -130,19 +130,20 @@
 		</folder>
 	</rootfolder>
 	<rootfolder module="catalog">
-		<topshelf byLabel="Consoles" visual-refid="NES-1985-1" id="CAT-CONSOLES">
+		<topshelf byLabel="Consoles de jeux" visual-refid="NES-1985-1" id="CAT-CONSOLES">
 			<shelf byLabel="Portables" visual-refid="GAMEBOY-ALL" id="SUBCAT-PORTABLE" />
 			<shelf byLabel="Salon" visual-refid="NES-1985-1" id="SUBCAT-SALON" />
 		</topshelf>
-		<topshelf byLabel="Accessoires" visual-refid="NES-ZAPPER-1" id="CAT-ACCESSORIES" />
 		<topshelf byLabel="Jeux" visual-refid="DUCK-HUNT-BOX" id="CAT-GAMES" />
-		<topshelf byLabel="Arcade" visual-refid="ARCADE-PONG-PIC1" id="CAT-ARCADES" />
-		<topshelf byLabel="Micro" visual-refid="MICRO-COMMODORE64-PIC1" id="CAT-MICRO" />
+		<topshelf byLabel="Bornes d'arcade" visual-refid="ARCADE-PONG-PIC1" id="CAT-ARCADES" />
+		<topshelf byLabel="Ordinateurs" visual-refid="MICRO-COMMODORE64-PIC1" id="CAT-MICRO" />
+		<topshelf byLabel="Accessoires" visual-refid="NES-ZAPPER-1" id="CAT-ACCESSORIES" />
 		<attributefolder label="m.catalog.document.attributefolder.document-name">
 			<attributeDefinition label="Couleur" code="COLOR" type="text" list-refid="COLORS-LIST" />
 			<attributeDefinition label="Standard vidéo" code="VIDEOSTD" type="text" list-refid="VIDEOSTD-LIST" />
 			<attributeDefinition label="Zonage" code="GAMEZONE" type="text" list-refid="GAMEZONES-LIST" />
 		</attributefolder>
+		
 	</rootfolder>
 	
 	<shop byCodeReference="DEMO" id="shop" topShelf-refids="CAT-CONSOLES,CAT-ACCESSORIES,CAT-GAMES,CAT-ARCADES,CAT-MICRO" />
@@ -150,11 +151,11 @@
 	
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Boutique">
-			<topic byLabel="Consoles" id="consoles" />
+			<topic byLabel="Consoles de jeux" id="consoles" />
 			<topic byLabel="Accessoires" id="accessoiries" />
 			<topic byLabel="Jeux" id="games" />
-			<topic byLabel="Arcade" id="arcades" />
-			<topic byLabel="Micro" id="micro" />
+			<topic byLabel="Bornes d'arcade" id="arcades" />
+			<topic byLabel="Ordinateurs" id="micro" />
 		</topic>
 	</website>
 	

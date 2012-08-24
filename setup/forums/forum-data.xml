@@ -129,7 +129,8 @@
 					user-refid="userb" />
 			</permissions>
 			<execute method="setDocumentIdAttributeWithWebsite" />
-			<binding fileName="modules/forums/setup/membersDefaultStructure.xml" />
+			<!-- binding fileName="modules/forums/setup/membersDefaultStructure.xml" /-->
+			
 			<forumgroup label="Forums" mountParent-refid="topiccommunity"
 				publicationstatus="ACTIVE" flagList-refid="flags">
 				<documenturl lang="fr" url="/forums" />
