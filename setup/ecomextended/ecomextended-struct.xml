@@ -22,7 +22,7 @@
 				</changecontent>
 			    <changecontent for="content-block">
 			    	<changeblock type="modules_ecomextended_ManageFacetsFilter" />
-			    	<changeblock type="modules_solrsearch_results" __facets-refids="documentModel,shelfIdCompiled,brand" __complete="true" />
+			    	<changeblock type="modules_ecomextended_SearchResult" __facets-refids="documentModel,shelfIdCompiled,brand" __complete="true" />
 				</changecontent>
 			</page>
 		</topic>
