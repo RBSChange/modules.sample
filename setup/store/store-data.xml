@@ -21,9 +21,9 @@
 
 	<rootfolder module="contactcard">
 		<folder byLabel="Exemples de magasins">
-			<contact id="contact1" name="Boutique Change" city="Entzeim" country="France" phone="0388999999" mails="store@rbschange.fr" />
+			<contact id="contact1" name="Boutique Change Entzeim" city="Entzeim" country="France" phone="0388999999" mails="store@rbschange.fr" />
 			<contact id="contact2" name="Boutique Change Paris" city="Paris" country="France" phone="0188666666" mails="store-paris@rbschange.fr" />
-			<contact id="contact1" name="Boutique Change" city="Selestat" country="France" phone="0388999888" mails="store-selestat@rbschange.fr" />
+			<contact id="contact1" name="Boutique Change Selestat" city="Selestat" country="France" phone="0388999888" mails="store-selestat@rbschange.fr" />
 		</folder>
 	</rootfolder>
 
@@ -47,7 +47,7 @@
 				description-attr="" />
 		</folder>
 		<folder byLabel="m.generic.bo.general.samples">
-			<store id="store1" byCodeReference="Change" label="Boutique Change" visual-refid="media1" description-attr="" services-refids="SAV,2424"
+			<store id="store1" byCodeReference="Change" label="Boutique Change Entzeim" visual-refid="media1" description-attr="" services-refids="SAV,2424"
 				openingHours-attr="opening-1" contact-refids="contact1" latitude="48.5463108" longitude="7.65184339" addressLine1="AEROPARC 1" addressLine2="11 rue Icare"
 				zipCode="67836" city="ENTZHEIM" countryId-refid="fr" website-refids="default-website" />
 
@@ -55,7 +55,7 @@
 				isShippingRelay="false" openingHours-attr="opening-2" contact-refids="contact2" latitude="48.863473" longitude="2.348127" addressLine1="25 Boulevard de Sébastopol"
 				zipCode="75001" city="Paris" countryId-refid="fr" website-refids="default-website" />
 
-			<store id="store3" byCodeReference="ChangeSelestat" label="Boutique Change" visual-refid="media1" description-attr="" services-refids="SAV,2424"
+			<store id="store3" byCodeReference="ChangeSelestat" label="Boutique Change Selestat" visual-refid="media1" description-attr="" services-refids="SAV,2424"
 				openingHours-attr="opening-1" contact-refids="contact1" latitude="48.265427" longitude="7.451563" addressLine1="22 Rue des jeux vidéos" zipCode="67200"
 				city="SELESTAT" countryId-refid="fr" website-refids="default-website" />
 

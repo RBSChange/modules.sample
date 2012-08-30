@@ -81,19 +81,19 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		{
 			case 'core' :
 				$this->message('= Import samples of your OS Core modules =');
-				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'core.xml';
+				$wantedSamples = 'sample/core.xml';
 				break;
 			case 'cms' :
 				$this->message('= Import samples of CMS & Core modules =');
-				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'cms.xml';
+				$wantedSamples = 'sample/cms.xml';
 				break;
 			case 'ecommercecms' :
 				$this->message('= Import samples of your OS Ecom & Core modules	=');
-				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'ecommerce.xml';
+				$wantedSamples = 'sample/ecommerce.xml';
 				break;
 			case 'itesting' :
 				$this->message('= Import samples for integration testing =');
-				$wantedSamples = 'sample' . DIRECTORY_SEPARATOR . 'itesting.xml';
+				$wantedSamples = 'sample/itesting.xml';
 				break;
 			default :
 				$this->message('= Import only ' . $params[0] . ' =');
@@ -111,7 +111,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 			$moduleName = preg_replace('/\/.*/', '', $sampleName);
 			if ($ms->isInstalled($moduleName))
 			{
-				$result = f_util_System::execHTTPScript($batchPath, $chunk);
+				$result = f_util_System::execScript($batchPath, $chunk);
 				// Log fatal errors...
 				if ($result != 'OK')
 				{
