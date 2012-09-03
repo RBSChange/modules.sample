@@ -18,7 +18,7 @@
 		<eventfilter byLabel="Commande du filleul" targetCode="godfather" shop-refid="shop" event-refid="order-completed" applicationstrategy="loyalty_OrderAmountPointStrategy" strategyParams-serialized='a:1:{s:16:"amountPercentage";s:3:"100";}' publicationstatus="ACTIVE" />
 		<eventfilter byLabel="Commande supérieur à 300€" shop-refid="shop" event-refid="order-completed" applicationstrategy="loyalty_OrderAmountPointStrategy" filter='{"operator":"and","elements":[{"class":"customer_LastOrderCustomerFilter","parameters":{"field":["modules_order/order.totalAmountWithTax","ge","300"]}}]}' strategyParams-serialized='a:1:{s:16:"amountPercentage";s:4:"1000";}' publicationstatus="ACTIVE" />
 		<reward byLabel="Réduction de 10€" shop-refid="shop" pointCost="5500" id="reward10" description="Une réduction de 10€ pour vous remercier de votre fidélité" code="REDUC-15E" couponFilter='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["totalAmountWithTax","gt","15"]}}]}' />
-		<reward byLabel="Réduction de 3%" shop-refid="shop" pointCost="7500" id="reward3pc" description="Une réduction de 3% pour vous remercier de votre fidélité" code="REDUC-3P" />
+		<reward byLabel="Réduction de 30%" shop-refid="shop" pointCost="7500" id="reward3pc" description="Une réduction de 30% pour vous remercier de votre fidélité" code="REDUC-30P" />
 	</shop>
 
 	<rootfolder module="marketing">
@@ -27,10 +27,10 @@
 				shop-refid="shop" publicationstatus="ACTIVE"
 				query='{"operator":"and","elements":[{"class":"loyalty_RewardCouponCartFilter","parameters":{"reward":[null,null,"{ref-id:reward10}"]}}]}'
 				strategy='{"value":10,"strategylabel":"Réduction de 10€"}' />
-			<discount byLabel="Coupon de réduction de 3%" description="Réduction de 3% à valoir sur le total de votre panier" applicationstrategy="GlobalPercentDiscount" 
+			<discount byLabel="Coupon de réduction de 30%" description="Réduction de 30% à valoir sur le total de votre panier" applicationstrategy="GlobalPercentDiscount" 
 				shop-refid="shop" publicationstatus="ACTIVE"
 				query='{"operator":"and","elements":[{"class":"loyalty_RewardCouponCartFilter","parameters":{"reward":[null,null,"{ref-id:reward3pc}"]}}]}'
-				strategy='{"value":3,"strategylabel":"Réduction de 3%"}' />
+				strategy='{"value":0.3,"strategylabel":"Réduction de 30%"}' />
 		</folder>
 	</rootfolder>
 	

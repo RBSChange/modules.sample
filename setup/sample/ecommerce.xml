@@ -46,9 +46,7 @@
 	
 		<page byLabel="Accueil">
 			<changecontent for="content-block">
-				<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
-					__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
-					__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="editanim" />
+				<changeblock type="modules_marketing_animationList" __displayMode="slide"  __cmpref-refid="editanim" />
 			</changecontent>
 		</page>
 
@@ -65,9 +63,7 @@
 		<topic byLabel="Communauté" id="topiccommunity">
 			<page id="pagecommunity" byLabel="Communauté" isIndexPage="true" navigationVisibility="Hidden">
 				<changecontent for="sidebar-block">
-					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false"
-						__displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false"
-						__displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="newproducts" />
+					<changeblock type="modules_marketing_animationList" __displayMode="slide"  __cmpref-refid="newproducts" />
 				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="richtext">
