@@ -32,5 +32,4 @@
 	</website>
 	
 	<binding fileName="modules/sample/setup/catalog/catalog-data.xml" />
-	
 </script>

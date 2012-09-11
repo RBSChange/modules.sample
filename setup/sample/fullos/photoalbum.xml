@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<topic byLabel="Communauté">
+		<execute method="setDocumentIdAttribute" attribute-name="rootId" />
+	</topic>
+
+	<binding fileName="modules/sample/setup/photoalbum/photoalbum-struct.xml" />
+	<binding fileName="modules/sample/setup/photoalbum/photoalbum-data.xml" />
+</script>

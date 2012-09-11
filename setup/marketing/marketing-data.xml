@@ -87,5 +87,4 @@
 			<dynamicanim query='[{"class":"marketing_ProductPriceFilter","parameters":{}}]' byLabel="Nos promotions" shop-refid="shop" id="promotions" />
 		</folder>
 	</rootfolder>
-	
 </script>

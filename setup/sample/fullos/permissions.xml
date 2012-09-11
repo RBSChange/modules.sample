@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>	
+	<binding fileName="modules/sample/setup/sample/core/permissions.xml" />
+	
+	<rootfolder module="website">
+		<website byTag="default_modules_website_default-website">
+			<topic byLabel="Compte client">
+				<permissions>
+					<backendpermission module="website" role="Admin" user-refid="demo-user" />
+				</permissions>
+			</topic>
+			<topic byLabel="Messagerie privée">
+				<permissions>
+					<backendpermission module="website" role="Admin" user-refid="demo-user" />
+				</permissions>
+			</topic>
+		</website>
+	</rootfolder>
+	<rootfolder module="blog">
+		<permissions>
+			<backendpermission module="blog" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="bookmarks">
+		<permissions>
+			<backendpermission module="bookmarks" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="brand">
+		<permissions>
+			<backendpermission module="brand" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="catalog">
+		<permissions>
+			<backendpermission module="catalog" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="comment">
+		<permissions>
+			<backendpermission module="comment" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="customer">
+		<permissions>
+			<backendpermission module="customer" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="download">
+		<permissions>
+			<backendpermission module="download" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="event">
+		<permissions>
+			<backendpermission module="event" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="faq">
+		<permissions>
+			<backendpermission module="faq" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="forums">
+		<permissions>
+			<backendpermission module="forums" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="gmaps">
+		<permissions>
+			<backendpermission module="gmaps" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="inquiry">
+		<permissions>
+			<backendpermission module="inquiry" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="joboffer">
+		<permissions>
+			<backendpermission module="joboffer" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="lexicon">
+		<permissions>
+			<backendpermission module="lexicon" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="mapping">
+		<permissions>
+			<backendpermission module="mapping" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="markergmaps">
+		<permissions>
+			<backendpermission module="markergmaps" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="mysqlnotif">
+		<permissions>
+			<backendpermission module="mysqlnotif" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="order">
+		<permissions>
+			<backendpermission module="order" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="paybox">
+		<permissions>
+			<backendpermission module="paybox" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="payment">
+		<permissions>
+			<backendpermission module="payment" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="photoalbum">
+		<permissions>
+			<backendpermission module="photoalbum" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="polls">
+		<permissions>
+			<backendpermission module="polls" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="privatemessaging">
+		<permissions>
+			<backendpermission module="privatemessaging" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="productupdater">
+		<permissions>
+			<backendpermission module="productupdater" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="richtext">
+		<permissions>
+			<backendpermission module="richtext" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="sample">
+		<permissions>
+			<backendpermission module="sample" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="sharethis">
+		<permissions>
+			<backendpermission module="sharethis" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="shipping">
+		<permissions>
+			<backendpermission module="shipping" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="shoppingmail">
+		<permissions>
+			<backendpermission module="shoppingmail" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="testing">
+		<permissions>
+			<backendpermission module="testing" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="twitterconnect">
+		<permissions>
+			<backendpermission module="twitterconnect" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="videos">
+		<permissions>
+			<backendpermission module="videos" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+</script>

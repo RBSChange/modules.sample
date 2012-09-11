@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="/modules/statictext/persistentdocument/import/statictext_binding.xml" />
+	<binding fileName="modules/statictext/persistentdocument/import/statictext_binding.xml" />
 
 	<rootfolder module="statictext">
 		<folder byLabel="Exemples">
@@ -19,7 +19,4 @@
 			<!-- </i18n> -->
 		</folder>
 	</rootfolder>
-
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-
 </script>

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 
-	<binding fileName="modules/sample/setup/users/users-data.xml" />
-
-	<website byTag="default_modules_website_default-website">
+	<documentRef byDocumentId-attr="rootId">
 		<topic byLabel="Outils">
 			<page label="Inscription" navigationVisibility="visible" id="register">
 				<tag name="contextual_website_website_modules_users_register" />
@@ -55,5 +54,5 @@
 				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="websitefrontendgroup" />
 			</permissions>
 		</topic>
-	</website>
+	</documentRef>
 </script>

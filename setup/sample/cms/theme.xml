@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
+
+	<theme byCodename="default">
+		<pagetemplate byCodename="default/nosidebarpage">
+			<pagetemplatedeclination byCodename="default/nosidebarpagecmssample" label="Sans sidebar, gestion de contenus">
+				<templateblock editname="footer-middle-1" type="modules_website_ConfigurableMenu" __mode="tag"
+					__tag="contextual_website_website_menu-main" __displayMode="default" __depth="1" />
+				<templateblock editname="footer-top-1" type="modules_facebookconnect_Facebooklike" />
+			</pagetemplatedeclination>
+		</pagetemplate>
+		<pagetemplate byCodename="default/sidebarpage">
+			<pagetemplatedeclination byCodename="default/sidebarpagecmssample" label="Avec sidebar, gestion de contenus">
+				<templateblock editname="footer-middle-1" type="modules_website_ConfigurableMenu" __mode="tag"
+					__tag="contextual_website_website_menu-main" __displayMode="default" __depth="1" />
+			</pagetemplatedeclination>
+		</pagetemplate>
+	</theme>
+</script>

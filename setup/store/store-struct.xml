@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
-	<website byTag="default_modules_website_default-website" id="default-website">
+	<website byRefid="default-website">
 		<execute method="setDocumentIdAttribute" />
 		<binding fileName="modules/store/setup/globalDefaultStructure.xml" />
 		<execute method="setDocumentIdAttribute" attribute-name="website-id" />
@@ -13,14 +12,5 @@
 			<execute method="setDocumentTypeAttribute" />
 			<binding fileName="modules/store/setup/customerDefaultStructure.xml" />
 		</topic>
-		<topic byLabel="Nos magasins" id="storetopic" />
-		<menus>
-			<menu byTag="contextual_website_website_menu-main">
-				<menuitempage pageid="storetopic" />
-			</menu>
-		</menus>
 	</website>
-
-	<binding fileName="modules/sample/setup/store/store-data.xml" />
-
 </script>

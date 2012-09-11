@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<website byTag="default_modules_website_default-website" id="default-website" />
+
+	<binding fileName="modules/sample/setup/store/store-struct.xml" />
+	<binding fileName="modules/sample/setup/store/store-data.xml" />
+		
+	<website byTag="default_modules_website_default-website" id="extws" />
+	
+	<binding fileName="modules/sample/setup/store/store-extranet.xml" />
+</script>

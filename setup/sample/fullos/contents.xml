@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
+	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+
+	<binding fileName="modules/sample/setup/sample/ecom/theme-contents.xml" />
+
+	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform" />
+	<documentRef type="modules_form/form" byLabel="Partager un lien" id="sharelinkform" />
+	<documentRef type="modules_videos/youtubevideo" byLabel="RBS CHANGE, du propriétaire à l'Open Source" id="videoyoutube1" />
+	<documentRef type="modules_videos/youtubevideo" byLabel="Webinar CMS RBS Change - chapitre 1" id="videoyoutube2" />
+	<documentRef type="modules_videos/video" byLabel="Video 1" id="video1" />
+	<documentRef type="modules_website/systemtopic" byLabel="Consoles de jeux" id="consoles" />
+	<documentRef type="modules_website/systemtopic" byLabel="Accessoires" id="accessoiries" />
+	<documentRef type="modules_website/systemtopic" byLabel="Jeux" id="games" />
+	<documentRef type="modules_website/systemtopic" byLabel="Bornes d'arcade" id="arcades" />
+	<documentRef type="modules_website/systemtopic" byLabel="Ordinateurs" id="micro" />
+	
+	<product id="product1" byCodeReference="NES-1985" />
+	<product id="product2" byCodeReference="COLECO-1982" />
+	<product id="product3" byCodeReference="ATARI2600-1978" />
+	<product id="product4" byCodeReference="NEOGEO-1990" />
+	<productdeclination id="product5" byCodeReference="SUPER-NINTENDO-EUR" />
+	<product id="product6" byCodeReference="MICRO-AMIGA" />
+	
+	<documentRef type="modules_website/page" byLabel="Mes commandes" id="myorders" />
+	<documentRef type="modules_website/page" byLabel="Mes informations" id="myinfos" />
+	<documentRef type="modules_website/topic" byLabel="Galerie de photos" id="photos" />
+	<documentRef type="modules_website/topic" byLabel="Forums" id="forums" />
+	<documentRef type="modules_website/topic" byLabel="Membres" id="members" />
+
+	<website byTag="default_modules_website_default-website" id="default-website">
+		<page byLabel="Accueil">
+			<changecontent for="content-block">
+				<changeblock type="modules_catalog_productpromotion" __displayMode="slide" __label="Nos bonnes affaires" __products-refids="product1,product2,product3,product4,product5,product6" />
+			</changecontent>
+		</page>
+
+		<topic byLabel="Boutique">
+			<page byLabel="Comparaison de produits" navigationVisibility="hidden" />
+		</topic>
+
+		<topic byLabel="Communauté" id="topiccommunity">
+			<page id="pagecommunity" byLabel="Communauté" isIndexPage="true" navigationVisibility="Hidden">
+				<changecontent for="sidebar-block">
+					<changeblock type="modules_catalog_productpromotion" __displayMode="slide" __label="Nos bonnes affaires" __products-refids="product1,product2,product3,product4,product5,product6" />
+				</changecontent>
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[
+						    <h1 class="heading-one">Besoin de fédérer une communauté ?</h1>
+							<p class="normal">RBS Change vous propose des modules qui peuvent vous aider dans cette tâche : mise en ligne de <strong>galeries de photos ou videos</strong>,
+							<strong>forums</strong>, <strong>blogging</strong>, ...
+							</p>
+						]]>
+					</changeblock>
+				</changecontent>
+			</page>
+			<topic byLabel="Galerie de vidéos" id="videos">
+				<page label="Exemple de vidéo youtube" isIndexPage="true">
+					<changecontent for="content-block">
+						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube1" />
+						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube2" />
+					</changecontent>
+				</page>
+				<page label="Exemple de vidéo flash">
+					<changecontent for="content-block">
+						<changeblock type="modules_videos_video" __cmpref-refid="video1" />
+					</changecontent>
+				</page>
+			</topic>
+		</topic>
+
+		<topic byLabel="À propos" id="topicabout">
+			<page byLabel="Annuaire" indexingstatus="false">
+				<changecontent for="sidebar-block" append="true">
+					<changeblock type="modules_catalog_productpromotion" __displayMode="slide" __label="Nos bonnes affaires" __products-refids="product1,product2,product3,product4,product5,product6" />
+				</changecontent>
+				<changecontent for="content-block">
+					<changeblock type="modules_contactcard_contactlist" __showContactpageLink="false" />
+				</changecontent>
+			</page>
+			<page byLabel="Nous contacter" isIndexPage="true" navigationVisibility="visible" template-attr="templateHome" id="contactus">
+				<changecontent>
+					<changeblock type="modules_form_form" __cmpref-refid="contactform" />
+				</changecontent>
+			</page>
+		</topic>
+		
+		<topic byLabel="Outils">
+			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
+				<changecontent for="content-block">
+					<changeblock type="modules_form_form" __cmpref-refid="sharelinkform" />
+				</changecontent>
+			</page>
+		</topic>
+		
+		<menus>
+			<menu byTag="contextual_website_website_menu-main">
+				<menuitempage pageid="consoles" />
+				<menuitempage pageid="games" />
+				<menuitempage pageid="arcades" />
+				<menuitempage pageid="micro" />
+				<menuitempage pageid="accessoiries" />
+				<menuitempage pageid="topiccommunity" />
+				<menuitempage pageid="topicabout" />
+			</menu>
+			<menu id="footer-1" byLabel="Catalogue">
+				<menuitempage pageid="consoles" />
+				<menuitempage pageid="games" />
+				<menuitempage pageid="arcades" />
+				<menuitempage pageid="micro" />
+				<menuitempage pageid="accessoiries" />
+			</menu>
+			<menu id="footer-2" byLabel="Communauté">
+				<menuitempage pageid="photos" />
+				<menuitempage pageid="videos" />
+				<menuitempage pageid="forums" />
+				<menuitempage pageid="members" />
+			</menu>
+			<menu id="footer-3" byLabel="Mon compte">
+				<menuitempage pageid="myorders" />
+				<menuitempage pageid="myinfos" />
+			</menu>
+			<menu id="footer-4" byLabel="À propos">
+				<menuitempage pageid="contactus" />
+			</menu>
+		</menus>
+	</website>
+</script>

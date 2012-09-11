@@ -8,13 +8,11 @@
 		<frontendgroup id="customersGroup" byTag="default_modules_customer_customer-website-user-group" label="Utilisateurs disposant d'un compte client" />
 	</rootfolder>
 	
-	
-	
 	<systemfolder module="form" relatedmodule="customer">
 		<form byFormid="modules_customer/contact" id="contactForm" />
 	</systemfolder>
 	
-	<website byTag="default_modules_website_default-website">
+	<documentRef byDocumentId-attr="rootId">
 		<topic byLabel="Compte client">
 			<page label="Mon compte" isIndexPage="true" byTag="contextual_website_website_modules_customer_my-account">
 				<changecontent for="content-block">
@@ -63,7 +61,5 @@
 				</changecontent>
 			</page>
 		</topic>
-	</website>
-	
-	<binding fileName="modules/sample/setup/customer/customer-data.xml" />
+	</documentRef>
 </script>

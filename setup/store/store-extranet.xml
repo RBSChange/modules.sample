@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding
-	fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
 	
-	<website byTag="default_modules_website_default-website" id="extws">
+	<website byRefid="extws">
 		<execute method="setDocumentIdAttribute" />
 		<execute method="setDocumentTypeAttribute" />
 	</website>
@@ -26,6 +25,5 @@
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
 	<instore byLabel="Retrait en magasin" id="instore" />
 	<shop byLabel="Boutique" id="shop" />
-	<shippingfilter id="shippingfilter" byLabel="Retrait en magasin" shop-refid="shop" mode-refid="instore" 
-		taxCategory="0" valueWithoutTax="0" />
+	<shippingfilter id="shippingfilter" byLabel="Retrait en magasin" shop-refid="shop" mode-refid="instore" taxCategory="0" valueWithoutTax="0" />
 </script>

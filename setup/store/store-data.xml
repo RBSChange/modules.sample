@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
 	<binding fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
@@ -62,8 +61,7 @@
 			<store id="store4" byCodeReference="ChangeParisBoutique" label="Boutique Change Paris" visual-refid="media1" description-attr=""
 				services-refids="2424" openingHours-attr="opening-2" contact-refids="contact2" latitude="48.869105" longitude="2.310079" addressLine1="42 Rue des bus"
 				zipCode="75001" city="Paris" countryId-refid="fr" website-refids="default-website" />
-		</folder>l
-
+		</folder>
 	</rootfolder>
 
 	<rootfolder module="shipping">

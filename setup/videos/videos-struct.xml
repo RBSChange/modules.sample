@@ -14,6 +14,7 @@
 			<page label="Exemple de vidéo flash">
 				<changecontent for="content-block">
 					<changeblock type="modules_videos_video" __cmpref-refid="v1" />
+				</changecontent>
 			</page>
 		</topic>
 	</website>
@@ -23,5 +24,4 @@
 			<menuitempage pageid="pagevideo" />
 		</menu>
 	</menus>
-
 </script>

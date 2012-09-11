@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/joboffer/persistentdocument/import/joboffer_binding.xml" />
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
@@ -20,7 +20,7 @@
 	</systemfolder>
 
 	<rootfolder module="joboffer">
-		<linkedtopic refid="topic">
+		<linkedtopic refid="joboffertopic">
 			<offer byLabel="Développeur web" offertype-refid="cdi" reference="OFFRE1" description="Vous participerez au développement du CMS open source RBS Change."
 				publicationstatus="ACTIVE" location="Strasbourg" background="Minimum deux ans dans le développement web." profile="Bonne maitrise de la programmation orientée objet."
 				candidacyForm-refid="sform" />

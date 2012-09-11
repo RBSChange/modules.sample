@@ -1,8 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
-	<systemfolder module="form" relatedmodule="sharethis">
-		<documentRef type="modules_form/form" id="form1" byLabel="Partager un lien" />
-	</systemfolder>
-
 </script>

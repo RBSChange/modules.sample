@@ -15,10 +15,12 @@ $scriptReader = import_ScriptReader::getInstance();
 foreach ($samples as $sampleXMLArray)
 {
 	Framework::info(date_Calendar::getInstance()->toString() . " Import data $sampleXMLArray ...");
-	try {
+	try
+	{
 		$scriptReader->executeModuleScript('sample', $sampleXMLArray);
 		echo 'OK';
-	} catch (Exception $e)
+	}
+	catch (Exception $e)
 	{
 		echo $e->getMessage();
 	}

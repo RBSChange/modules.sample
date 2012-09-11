@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	
+	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform" />
+
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="À propos">
+			<page byLabel="Nous contacter" isIndexPage="true" navigationVisibility="Hidden" template-attr="templateHome">
+				<changecontent>
+					<changeblock type="modules_form_form" __cmpref-refid="contactform" />
+				</changecontent>
+			</page>
+		</topic>
+	</website>
+</script>

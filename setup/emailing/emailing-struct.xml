@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 
-	<bindig fileName="modules/sample/setup/emailing/emailing-data.xml" />
-
-	<website byTag="default_modules_website_default-website" id="website">
+	<documentRef byDocumentId-attr="rootId">
 		<topic byLabel="Newsletter">
 			<execute method="setDocumentIdAttribute" />
 			<binding fileName="modules/sample/setup/emailing/emailing-page.xml" />
 		</topic>
-	</website>
-
+	</documentRef>
 </script>

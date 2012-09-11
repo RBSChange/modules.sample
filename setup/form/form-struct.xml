@@ -2,10 +2,9 @@
 <script>
 	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 	
-	<binding fileName="modules/sample/setup/form/form-data.xml" />
-	
-	<website byTag="default_modules_website_default-website">
+	<documentRef byDocumentId-attr="rootId">
 		<topic byLabel="Système">
 			<page label="Previsualisation de formulaire" id="formPreview" indexingstatus="false" navigationVisibility="hidden">
 			    <changecontent for="content-block">
@@ -13,7 +12,7 @@
 				</changecontent>
 			</page>
 		</topic>
-	</website>
+	</documentRef>
 	
 	<preferences previewpage-refid="formPreview" />
 </script>

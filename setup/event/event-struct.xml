@@ -1,9 +1,8 @@
-l<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <script>
-
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
-	<website byTag="default_modules_website_default-website">
+	<documentRef byDocumentId-attr="rootId">
 		<topic byLabel="Actualités et événements" id="events1">
 			<topic byLabel="Actualités abandonware" id="events2" />
 			<topic byLabel="Consoles Retro" id="events3" />
@@ -11,8 +10,5 @@ l<?xml version="1.0" encoding="UTF-8"?>
 			<binding fileName="modules/event/setup/localDefaultStructure.xml" />
 			<binding fileName="modules/event/setup/globalDefaultStructure.xml" />
 		</topic>
-	</website>
-
-	<binding fileName="modules/sample/setup/event/event-data.xml" />
-
+	</documentRef>
 </script>

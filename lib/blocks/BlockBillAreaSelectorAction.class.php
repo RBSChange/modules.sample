@@ -1,7 +1,7 @@
 <?php
 /**
- * sample_BlockBillAreaSelectorAction
- * @package modules.sample.lib.blocks
+ * @package modules.sample
+ * @method sample_BlockBillAreaSelectorConfiguration getConfiguration()
  */
 class sample_BlockBillAreaSelectorAction extends website_BlockAction
 {

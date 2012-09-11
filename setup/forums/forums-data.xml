@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/forums/persistentdocument/import/forums_binding.xml" />
@@ -74,8 +73,6 @@
 			password="abcd123" />
 	</websitefrontendgroup>
 
-	<website byTag="default_modules_website_default-website" id="website" />
-
 	<rank byLabel="Débutant" thresholdMin="0" visual-refid="visual-new"
 		website-refid="website" />
 	<rank byLabel="Confirmé" thresholdMin="5" visual-refid="visual-bronze"
@@ -91,7 +88,7 @@
 	<title byLabel="Super-modérateur" visual-refid="visual-smod"
 		website-refid="website" id="title-smod" />
 
-	<website byTag="default_modules_website_default-website" id="website">
+	<website byRefid="website">
 		<member id="mod1" user-refid="usera" publicationstatus="ACTIVE"
 			title-refids="title-mod" country-refid="fr" />
 		<bbcodeattribute name="memberSignature">
@@ -122,15 +119,14 @@
 		<member id="member9" user-refid="user9" publicationstatus="ACTIVE"
 			displayname="true" />
 	</website>
+	
 	<rootfolder module="forums">
 		<websitefolder byWebsite-refid="website">
 			<permissions>
 				<frontendpermission module="forums" role="SuperModerator"
 					user-refid="userb" />
 			</permissions>
-			<execute method="setDocumentIdAttributeWithWebsite" />
-			<!-- binding fileName="modules/forums/setup/membersDefaultStructure.xml" /-->
-			
+			<execute method="setDocumentIdAttributeWithWebsite" />			
 			<forumgroup label="Forums" mountParent-refid="topiccommunity"
 				publicationstatus="ACTIVE" flagList-refid="flags">
 				<documenturl lang="fr" url="/forums" />

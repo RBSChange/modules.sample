@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<website byTag="default_modules_website_default-website">
+		<execute method="setDocumentIdAttribute" attribute-name="rootId" />
+	</website>
+	
+	<binding fileName="modules/sample/setup/contactcard/contactcard-data.xml" />
+	<binding fileName="modules/sample/setup/contactcard/contactcard-struct.xml" />
+</script>

@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
-	<!-- Sample CMS Side. TODO: Continue-->
-	
+	<!-- Sample CMS Side. TODO: Continue -->
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
-	<binding
-		fileName="modules/photoalbum/persistentdocument/import/photoalbum_binding.xml" />
+	<binding fileName="modules/photoalbum/persistentdocument/import/photoalbum_binding.xml" />
 
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
-	<binding
-		fileName="modules/inquiry/persistentdocument/import/inquiry_binding.xml" />
-	<binding
-		fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	<binding
-		fileName="modules/joboffer/persistentdocument/import/joboffer_binding.xml" />
+	<binding fileName="modules/inquiry/persistentdocument/import/inquiry_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/joboffer/persistentdocument/import/joboffer_binding.xml" />
 	<binding fileName="modules/event/persistentdocument/import/event_binding.xml" />
-	<binding
-		fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
-	<binding
-		fileName="modules/privatemessaging/persistentdocument/import/privatemessaging_binding.xml" />
+	<binding fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
+	<binding fileName="modules/privatemessaging/persistentdocument/import/privatemessaging_binding.xml" />
 	<binding fileName="modules/blog/persistentdocument/import/blog_binding.xml" />
 	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
-	
+
 	<binding fileName="modules/sample/setup/videos/videos-data.xml" />
 
 	<website byTag="default_modules_website_default-website">
@@ -70,21 +62,17 @@
 			<topic byLabel="Galerie de vidéos" id="video">
 				<page label="Exemple de vidéo youtube" isIndexPage="true">
 					<changecontent for="content-block">
-						<changeblock type="modules_videos_youtubevideo"
-							__cmpref-refid="videoyoutube1" />
-						<changeblock type="modules_videos_youtubevideo"
-							__cmpref-refid="videoyoutube2" />
+						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube1" />
+						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube2" />
 					</changecontent>
 				</page>
 				<page label="Exemple de vidéo flash">
 					<changecontent for="content-block">
-						<changeblock type="modules_videos_video"
-							__cmpref-refid="v1" />
+						<changeblock type="modules_videos_video" __cmpref-refid="v1" />
 					</changecontent>
 				</page>
 			</topic>
 		</topic>
-
 		<menus>
 			<menu byTag="contextual_website_website_menu-main">
 				<menuitempage pageid="topiccommunity" />
@@ -97,6 +85,5 @@
 	<binding fileName="modules/sample/setup/joboffer/joboffer-data.xml" />
 	<binding fileName="modules/sample/setup/photoalbum/photoalbum-data.xml" />
 	<binding fileName="modules/sample/setup/blog/blog-data.xml" />
-	<binding fileName="modules/sample/setup/forums/forum-data.xml"/>
-
+	<binding fileName="modules/sample/setup/forums/forum-data.xml" />
 </script>

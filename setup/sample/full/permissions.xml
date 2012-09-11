@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>	
+	<binding fileName="modules/sample/setup/sample/fullos/permissions.xml" />
+	
+	<rootfolder module="website">
+		<website byTag="default_modules_website_default-website">
+			<topic byLabel="Extranet magasin">
+				<permissions>
+					<backendpermission module="website" role="Admin" user-refid="demo-user" />
+				</permissions>
+			</topic>
+		</website>
+	</rootfolder>
+	<rootfolder module="ads">
+		<permissions>
+			<backendpermission module="ads" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="atosserver">
+		<permissions>
+			<backendpermission module="atosserver" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="dashstat">
+		<permissions>
+			<backendpermission module="dashstat" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="ecomextended">
+		<permissions>
+			<backendpermission module="ecomextended" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="ecomwebservices">
+		<permissions>
+			<backendpermission module="ecomwebservices" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="emailing">
+		<permissions>
+			<backendpermission module="emailing" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="facebookconnect">
+		<permissions>
+			<backendpermission module="facebookconnect" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="googleshopping">
+		<permissions>
+			<backendpermission module="googleshopping" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="loyalty">
+		<permissions>
+			<backendpermission module="loyalty" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="marketing">
+		<permissions>
+			<backendpermission module="marketing" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="mysqlstock">
+		<permissions>
+			<backendpermission module="mysqlstock" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="privatesales">
+		<permissions>
+			<backendpermission module="privatesales" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="productexporter">
+		<permissions>
+			<backendpermission module="productexporter" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="productreturns">
+		<permissions>
+			<backendpermission module="productreturns" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="socolissimo">
+		<permissions>
+			<backendpermission module="socolissimo" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="store">
+		<permissions>
+			<backendpermission module="store" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="support">
+		<permissions>
+			<backendpermission module="support" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="survey">
+		<permissions>
+			<backendpermission module="survey" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="synchronizer">
+		<permissions>
+			<backendpermission module="synchronizer" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+</script>

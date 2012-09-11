@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
+	<!-- 
+		WARNING: before importing this file, import:
+			- form/form-data.xml
+	-->
 
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	<binding fileName="modules/sample/setup/contactcard/contactcard-data.xml" />
-
-	<website byTag="default_modules_website_default-website">
+	
+	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform" />
+	
+	<documentRef byDocumentId-attr="rootId">
 		<topic byLabel="Outils">
 			<page label="Contact" navigationVisibility="hidden" indexingstatus="false" byTag="contextual_website_website_modules_contactcard_contact">
 				<changecontent for="content-block">
 					<changeblock type="modules_contactcard_contact" />
 				</changecontent>
 			</page>
-
 			<page label="Envoyer un mail à ce contact" navigationVisibility="hidden" indexingstatus="false"
 				byTag="contextual_website_website_modules_contactcard_page-contact">
 				<changecontent for="content-block">
-					<changeblock type="richtext">
-						<![CDATA[<h2 class="heading-two">Mettre ici le formulaire de contact</h2>]]>
-					</changeblock>
+					<changeblock type="modules_form_form" __cmpref-refid="contactform" />
 				</changecontent>
 			</page>
 		</topic>
@@ -28,6 +30,5 @@
 				</changecontent>
 			</page>
 		</topic>
-	</website>
-
+	</documentRef>
 </script>

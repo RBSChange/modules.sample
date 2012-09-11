@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<websitefrontendgroup for-default-website="true" id="websitefrontendgroup" />
+
+	<topic byLabel="Communauté">
+		<execute method="setDocumentIdAttribute" attribute-name="rootId" />
+	</topic>
+
+	<binding fileName="modules/sample/setup/privatemessaging/privatemessaging-struct.xml" />
+</script>
