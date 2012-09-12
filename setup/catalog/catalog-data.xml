@@ -258,6 +258,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Nul ! Vive la master system !!!" rating="1" />
 		<comment authorName="OldGame" email="olg@rbs.fr" contentsAsBBCode="Le tout premier Zelda était extraordinaire, seul défaut, les cartouches s'encrasse de poussières et il faut souffler dans la cartouche avant de la mettre dans la NES" rating="4" />
 	</simpleproduct>
+	
 	<!-- FAMICOM -->
 	<attribute name="description-famicom"><![CDATA[
 		<p class="normal">La Famicom (ファミコン, Famikon), ou Family Computer (ファミリーコンピュータ, Famirī Konpyūta), est une console de jeux vidéo créée par Nintendo en 1983. Elle est sortie dans une version légèrement différente en Europe et aux États-Unis, sous le nom Nintendo Entertainment System (NES).Son nom est la réduction de Family Computer. À sa sortie au Japon, la Famicom se vend à 500 000 exemplaires en deux semaines. Son succès vient du fait qu'aucun concurrent n'est présent alors. L'industrie des jeux vidéo sort d'une vaste crise, et personne ne s'imagine le succès de la Famicom. Cependant, imitant Nintendo, Sega sort la Sega Mark III (Master System en Europe et aux États-Unis).Nintendo élargit sa clientèle en exportant en 1985 aux États-Unis, la console rebaptisée Nintendo Entertainment System. Encore une fois ongné des contrats avec les éditeurs tiers afin de s'assurer un bon catalogue de jeux. Nintendo, et son patron Hiroshi Yamauchi, sont persuadés que les jeux sont l'argument de vente numéro un.</p><p class="normal">Cette console connut un succès phénoménal, Nintendo estimant en avoir vendu 61 millions. À la fin des années 1980, au Japon et aux États-Unis, un foyer sur trois était équipé de Famicom. À l'époque, Nintendo fut l'entreprise japonaise la plus rentable, devant Toyota. Plus de 1 200 jeux furent développés pour cette console.</p><p class="normal">Il existe plusieurs versions de la console : la Famicom au Japon, la NES en Europe, aux États-Unis et en Australie, la AV Famicom qui est une version relookée et la Twin Famicom qui regroupe la console et le Disk System en une seule machine. (<a href="http://fr.wikipedia.org/wiki/Famicom" class="link">Voir l'article Wikipedia</a>)</p>
@@ -311,6 +312,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 			<price shopId-refid="shop" billingAreaId-refid="billingarea"  taxCategory="1" valueWithTax="199" />
 		</productdeclination>
 	</declinedproduct>
+	
 	<!-- ATARI 2600 -->
 	<attribute name="description-atari2600"><![CDATA[
 	<p class="normal">L’Atari 2600 est lancée en octobre 1977 au prix de 199 USD (de l’époque), livrée avec une paire de joysticks et le jeu Combat. C’est la troisième console à cartouches, après la Channel F de Fairchild et la RCA Studio II, commercialisée un an plus tôt (les précédentes consoles du marché intègrent un ou plusieurs jeux sans la possibilité d’en adjoindre d’autres). À l’origine, le nom de la console est Atari VCS, pour Video Computer System. Le nom Atari 2600 est utilisé pour la première fois en 1982 lors de la sortie de l’Atari 5200. Avec entre 25 et 40 millions d’unités vendues, l’Atari 2600 est la console la plus populaire de sa génération. Le succès est historique, marquant l’avènement d’un marché de masse pour le jeu vidéo. La console rapporte beaucoup d’argent à la société Atari jusqu’en 1983 et la crise du marché du jeu vidéo aux États-Unis. Vendue principalement aux États-Unis et en Europe, elle est produite jusqu’en 1991, ce qui constitue un record de longévité sur les marchés occidentaux.</p>
@@ -351,14 +353,13 @@ appelé l'Atari 3600, rebaptisé ensuite l'Atari 7800.</p>
 Atari a fait face à la pression montante du ColecoVision, qui affichait 
 alors des graphismes plus aptes à refléter les jeux d'arcade de l'époque
  par rapport à l'Atari 2600. Deuxièmement, l'Atari 5200 (le successeur 
-de l'Atari 2600 ) avait été largement critiquée pour l'incapacité à 
+de l'Atari 2600) avait été largement critiquée pour l'incapacité à 
 jouer aux jeux d'Atari 2600 sans adaptateur. Finalement, laissant tomber
  les prix d'ordinateurs familiaux qui ont fait de la Commodore 64 un 
 échec car l'achat d'un ordinateur familial était un meilleur 
 investissement, un PC offre à l'époque la possibilité de jouer à des 
 jeux au gameplay plus performant et pouvait être utilisé dans d'autres 
 buts, comme le traitement de texte.</p>
-	
 	]]></attribute>
 	<simpleproduct 	byCodeReference="ATARI7800-1986" 
 					label="Atari 7800" 
@@ -447,8 +448,7 @@ buts, comme le traitement de texte.</p>
 		</productdeclination>
 	</declinedproduct>
 	
-	<!-- SNES GAMES -->
-	
+	<!-- SNES GAMES -->	
 	<attribute name="description-zelda3"><![CDATA[
 	<p class="normal">The Legend of Zelda: A Link to the Past (ゼルダの伝説 神々のトライフォース, Zeruda no Densetsu Kamigami no Toraifōsu, litt. La Légende de Zelda : La Triforce des dieux) est un jeu vidéo d'action-aventure édité par Nintendo et développé par Nintendo EAD sorti sur Super Nintendo le 21 novembre 1991 au Japon, le 13 avril 1992 aux États-Unis et le 24 septembre 1992 en Europe, sur Game Boy Advance le 2 décembre 2002 aux États-Unis, le 14 mars 2003 au Japon et le 28 mars 2003 en Europe ainsi que sur la console virtuelle le 2 décembre 2006 au Japon, le 22 janvier 2007 aux États-Unis et le 23 mars 2007 en Europe.(<a href="http://fr.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past" class="link">Voir l'article Wikipedia</a>)</p>
 	]]></attribute>
@@ -477,11 +477,10 @@ buts, comme le traitement de texte.</p>
 						brand-refid="NINTENDO" 
 						description-attr="description-zeldatips"
 						secureMedia-refid="SNES-DOWNLOAD-ZELDA-TIPS-FILE">
-		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="9.90" />
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="11" valueWithTax="9.90" />
 	</virtualproduct>
 	
-	<!-- MEGADRIVE -->
-	
+	<!-- MEGADRIVE -->	
 	<attribute name="description-megdrive"><![CDATA[
 	]]></attribute>
 	<simpleproduct 	byCodeReference="MEGADRIVE-1988" 
@@ -496,9 +495,10 @@ buts, comme le traitement de texte.</p>
 					attributes='GAMEZONE:{ref-id:EUR}'>
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="149.00" />
 	</simpleproduct>
-	<!--  GB -->
+	
+	<!-- GB -->
 	<attribute name="description-gameboy"><![CDATA[
-	<p class="normal">Le (ou la) Game Boy (ゲームボーイ, Gēmu Bōi) est une console de jeux vidéo portable créée par Nintendo en 1989.(<a href="http://fr.wikipedia.org/wiki/Gameboy" class="link">Voir l'article Wikipedia</a>)</p>
+	<p class="normal">Le (ou la) Game Boy (ゲームボーイ, Gēmu Bōi) est une console de jeux vidéo portable créée par Nintendo en 1989. (<a href="http://fr.wikipedia.org/wiki/Gameboy" class="link">Voir l'article Wikipedia</a>)</p>
 	]]></attribute>
 	<declinedproduct	id="GAMEBOY"
 						byCodeReference="GAMEBOY" 	
@@ -603,7 +603,6 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="609.90" />
 	</simpleproduct>
 
-
 	<!-- Bundle -->
 	<bundleproduct id="NES-BUNDLE" byCodeReference="NES-BUNDLE" label="Starter pack Nes"  shelf-refids="CAT-CONSOLES,CAT-ACCESSORIES,CAT-GAMES"
 		visual-refid="PACK-NES-PIC1">
@@ -672,7 +671,4 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 	<crossitem targetDocument-refid="FAMICOM-1983" linkedDocument-refid="NEOGEO-1990" linkType="upsell" />
 	<crossitem targetDocument-refid="ATARI2600-1978" linkedDocument-refid="ATARI7800-1986" linkType="upsell" />
 	<crossitem targetDocument-refid="SMS-MULTI" linkedDocument-refid="MEGADRIVE-1988" linkType="upsell" />
-
-	
-	
 </script>

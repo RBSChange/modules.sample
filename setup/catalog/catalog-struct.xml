@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<script>
 	<!--
 			WARNING: before importing this file import:
 				- media/media-data.xml
 				- payment/payment-data.xml 
 				- shipping/shipping-data.xml
 	-->
-
-<script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
