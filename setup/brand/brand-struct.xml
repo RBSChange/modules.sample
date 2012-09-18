@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	
 	<website byTag="default_modules_website_default-website">
 		<execute method="setDocumentIdAttribute" />
 		<binding fileName="modules/brand/setup/globalDefaultStructure.xml" />
 	</website>
-	
 	<binding fileName="modules/sample/setup/brand/brand-data.xml" />
-
 </script>

@@ -2,7 +2,6 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/sample/setup/videos/videos-data.xml" />
-
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Galerie de vidéos" id="video">
 			<page label="Exemple de vidéo youtube" isIndexPage="true" id="pagevideo">
@@ -18,7 +17,6 @@
 			</page>
 		</topic>
 	</website>
-
 	<menus>
 		<menu byTag="contextual_website_website_menu-main">
 			<menuitempage pageid="pagevideo" />

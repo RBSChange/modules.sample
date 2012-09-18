@@ -2,9 +2,7 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
-	
 	<binding fileName="modules/sample/setup/sample/ecom/theme-contents.xml" />
-
 	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform" />
 	<documentRef type="modules_form/form" byLabel="Partager un lien" id="sharelinkform" />
 	<documentRef type="modules_marketing/editableanim" byLabel="Nos bonnes affaires" id="editanim" />
@@ -20,39 +18,33 @@
 	<documentRef type="modules_website/systemtopic" byLabel="Jeux" id="games" />
 	<documentRef type="modules_website/systemtopic" byLabel="Bornes d'arcade" id="arcades" />
 	<documentRef type="modules_website/systemtopic" byLabel="Ordinateurs" id="micro" />
-	
 	<documentRef type="modules_website/page" byLabel="Mes commandes" id="myorders" />
 	<documentRef type="modules_website/page" byLabel="Mes informations" id="myinfos" />
 	<documentRef type="modules_website/page" byLabel="Avantages fidélité" id="loyalty" />
 	<documentRef type="modules_website/topic" byLabel="Galerie de photos" id="photos" />
 	<documentRef type="modules_website/topic" byLabel="Forums" id="forums" />
 	<documentRef type="modules_website/topic" byLabel="Membres" id="members" />
-	
 	<website byTag="default_modules_website_default-website" id="default-website">
 		<page byLabel="Accueil">
 			<changecontent for="content-block">
 				<changeblock type="modules_marketing_animationList" __displayMode="slide" __cmpref-refid="editanim" />
 			</changecontent>
 		</page>
-
 		<topic byLabel="Boutique">
 			<page byLabel="Comparaison de produits" navigationVisibility="hidden" />
 		</topic>
-
 		<topic byLabel="Communauté" id="topiccommunity">
 			<page id="pagecommunity" byLabel="Communauté" isIndexPage="true" navigationVisibility="Hidden">
 				<changecontent for="sidebar-block">
 					<changeblock type="modules_marketing_animationList" __displayMode="slide" __cmpref-refid="newproducts" />
 				</changecontent>
 				<changecontent for="content-block">
-					<changeblock type="richtext">
-						<![CDATA[
-						    <h1 class="heading-one">Besoin de fédérer une communauté ?</h1>
+					<changeblock type="richtext"><![CDATA[
+							<h1 class="heading-one">Besoin de fédérer une communauté ?</h1>
 							<p class="normal">RBS Change vous propose des modules qui peuvent vous aider dans cette tâche : mise en ligne de <strong>galeries de photos ou videos</strong>,
 							<strong>forums</strong>, <strong>blogging</strong>, ...
 							</p>
-						]]>
-					</changeblock>
+						]]></changeblock>
 				</changecontent>
 			</page>
 			<topic byLabel="Galerie de vidéos" id="videos">
@@ -69,13 +61,10 @@
 				</page>
 			</topic>
 		</topic>
-
 		<topic byLabel="À propos" id="topicabout">
 			<page byLabel="Annuaire" indexingstatus="false">
 				<changecontent for="sidebar-block" append="true">
-					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false"
-						__addlinktoall="false" __displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false"
-						__displayratingaverage="false" __displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="newproducts" />
+					<changeblock type="modules_marketing_animationList" __displayMode="slide" __sortRandom="true" __addrssfeed="false" __addlinktoall="false" __displayaddtocart="false" __useAddToCartPopin="false" __showaddtofavorite="false" __displayavailability="false" __displayratingaverage="false" __displayproductpicto="false" __displayCustomerPrice="false" __cmpref-refid="newproducts" />
 				</changecontent>
 				<changecontent for="content-block">
 					<changeblock type="modules_contactcard_contactlist" __showContactpageLink="false" />
@@ -87,7 +76,6 @@
 				</changecontent>
 			</page>
 		</topic>
-		
 		<topic byLabel="Outils">
 			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
 				<changecontent for="content-block">
@@ -95,7 +83,6 @@
 				</changecontent>
 			</page>
 		</topic>
-		
 		<topic byLabel="Nos magasins" id="topicstores" />
 		<menus>
 			<menu byTag="contextual_website_website_menu-main">

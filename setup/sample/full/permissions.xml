@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<script>	
+<script>
 	<binding fileName="modules/sample/setup/sample/fullos/permissions.xml" />
-	
 	<rootfolder module="website">
 		<website byTag="default_modules_website_default-website">
 			<topic byLabel="Extranet magasin">

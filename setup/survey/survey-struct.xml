@@ -2,14 +2,13 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/sample/setup/survey/survey-data.xml" />
-	
 	<website byTag="default_modules_website_default-website">
-		<topic byLabel="Enquête">			
+		<topic byLabel="Enquête">
 			<page byLabel="Enquête de satisfaction clients" isIndexPage="true" indexingstatus="false">
 				<changecontent for="content-block">
 					<changeblock type="modules_survey_survey" __cmpref-refid="testsurvey" />
 				</changecontent>
-			</page>	
+			</page>
 		</topic>
 	</website>
 </script>

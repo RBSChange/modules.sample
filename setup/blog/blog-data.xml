@@ -4,35 +4,23 @@
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="blog">
-				<media path="modules/sample/setup/blog/media/voiture-1950.jpg"
-					label="Voiture 1950" id="media1" />
-				<media path="modules/sample/setup/blog/media/voiture-cugnot.jpg"
-					label="Fardier de Cugnot" id="media2" />
+				<media path="modules/sample/setup/blog/media/voiture-1950.jpg" label="Voiture 1950" id="media1" />
+				<media path="modules/sample/setup/blog/media/voiture-cugnot.jpg" label="Fardier de Cugnot" id="media2" />
 			</folder>
 		</folder>
 	</rootfolder>
 	<rootfolder module="blog">
 		<linkedtopic refid="blogs">
 			<blog byLabel="La voiture" description="Ce blog traite de l'apparition de la voiture.">
-				<category byLabel="Etymologie et vocabulaire" id="cat1"
-					description="Les champs lexicaux de la voiture depuis ses débuts à aujourd'hui" />
-
-				<category byLabel="Économie" id="cat2"
-					description="L'essort de la voiture a permis la création et le développement de tout un secteur d'industrie très réumnérateur">
-					<category byLabel="Le secteur industriel automobile" id="cat21"
-						description="Le secteur industriel automobile" />
-					<category
-						byLabel="Principaux producteurs mondiaux d'automobiles, par groupe, en 2010"
-						id="cat22"
-						description="Principaux producteurs mondiaux d'automobiles, par groupe, en 2010" />
-					<category byLabel="Le secteur de la vente d'automobiles"
-						id="cat23" description="Le secteur de la vente d'automobiles" />
+				<category byLabel="Etymologie et vocabulaire" id="cat1" description="Les champs lexicaux de la voiture depuis ses débuts à aujourd'hui" />
+				<category byLabel="Économie" id="cat2" description="L'essort de la voiture a permis la création et le développement de tout un secteur d'industrie très réumnérateur">
+					<category byLabel="Le secteur industriel automobile" id="cat21" description="Le secteur industriel automobile" />
+					<category byLabel="Principaux producteurs mondiaux d'automobiles, par groupe, en 2010" id="cat22" description="Principaux producteurs mondiaux d'automobiles, par groupe, en 2010" />
+					<category byLabel="Le secteur de la vente d'automobiles" id="cat23" description="Le secteur de la vente d'automobiles" />
 				</category>
-
 				<attribute name="contents-post"><![CDATA[
 					Le terme « automobile » est à l'origine un adjectif issu de la concaténation d'un préfixe grec, αὐτός (soi-même), et d'un suffixe latin, mobilis (mobile). Il a été créé lors de l'invention des premières « voitures sans chevaux » car elles étaient munies d'un moteur avec source d'énergie embarquée alors que les autres « voitures », diligences, calèches, carrioles, chariots et autres véhicules terrestres étaient mus par un ou des chevaux (hippomobiles) ou un ou des bœufs.<br />
 					<br />
@@ -40,44 +28,23 @@
 					<br />
 					En raison de sa large diffusion, et de son usage dans les milieux les plus variés, l'automobile est aujourd'hui appelée par de nombreux noms, familiers ou argotiques comme auto, voiture, bagnole, tacot ainsi que caisse, tire, guimbarde, chignole, charrette en Europe ainsi que char et minoune en Amérique du Nord francophone. Le terme char est par contre standard chez les francophones du sud des États-Unis.
 				]]></attribute>
-
-				<post byLabel="Etymologie et vocabulaire" contents-attr="contents-post"
-					categories="cat1" keywordsText="vocabulaire, champ lexical, automobile"
-					postDate="2009-01-16 17:39:00">
+				<post byLabel="Etymologie et vocabulaire" contents-attr="contents-post" categories="cat1" keywordsText="vocabulaire, champ lexical, automobile" postDate="2009-01-16 17:39:00">
 				</post>
-
 				<attribute name="contents-post"><![CDATA[
 					<img lang="fr" alt="RBS Change 4" cmpref="{ref-id:media1}" width="400" height="295.46" /><br />
 					L'industrie automobile prend une place importante dans l'industrie de plusieurs grands pays industrialisés. Elle prend parfois un aspect stratégique compte tenu à la fois de sa proximité historique avec les industries militaires, de l'importance qu'elle peut prendre dans le produit intérieur brut et l'emploi de certains pays (États-Unis, France, Grande-Bretagne, Allemagne) et de l'image que l'automobile peut donner d'un pays auprès de l'extérieur (le design italien, l'american way of life, la mécanique allemande, le zéro défaut japonais, l'innovation française, etc.).
 				]]></attribute>
-
-				<post byLabel="L'industrie" contents-attr="contents-post"
-					summary="L'industrie automobile prend une place importante dans l'industrie de plusieurs grands pays industrialisés."
-					categories="cat21" keywordsText="industrie, automobile, europe"
-					postDate="2009-03-19 15:49:00">
-					<comment authorName="Maxkarting" email="max@maxkarting.fr"
-						contentsAsBBCode="Merci pour cet historique de l'industrie automobile !"
-						rating="3" />
+				<post byLabel="L'industrie" contents-attr="contents-post" summary="L'industrie automobile prend une place importante dans l'industrie de plusieurs grands pays industrialisés." categories="cat21" keywordsText="industrie, automobile, europe" postDate="2009-03-19 15:49:00">
+					<comment authorName="Maxkarting" email="max@maxkarting.fr" contentsAsBBCode="Merci pour cet historique de l'industrie automobile !" rating="3" />
 				</post>
-
 				<attribute name="contents-post"><![CDATA[
 					"Le secteur de l'industrie automobile est aujourd'hui organisé en grands groupes d'assembleurs finaux qui utilisent des pièces en provenance d'un grand nombre de fournisseurs et de sous-traitants, mais qui maintiennent généralement en interne les activités industrielles les plus lourdes comme la tôlerie ou la production des moteurs. La production globale s'élève en 2010 à 60 millions de voitures particulières10, dont 7,3 millions pour le groupe Toyota, 7,1 millions pour le groupe Volkswagen AG et 6,3 millions pour le groupe General Motors. Les principaux équipementiers, dont le chiffre d'affaires est supérieur à 10 milliards d'euros, sont Denso, Delphi, Visteon, Valeo, Faurecia, Magna International, Bosch…;
 				]]></attribute>
-
-				<post byLabel="Le secteur industriel" contents-attr="contents-post"
-					summary="Le secteur de l'industrie automobile est aujourd'hui organisé en grands groupes d'assembleurs finaux."
-					showSummaryOnDetail="true" categories="cat21"
-					keywordsText="industrie, secteur, automobile, europe" postDate="2009-03-18 11:19:00" />
-
+				<post byLabel="Le secteur industriel" contents-attr="contents-post" summary="Le secteur de l'industrie automobile est aujourd'hui organisé en grands groupes d'assembleurs finaux." showSummaryOnDetail="true" categories="cat21" keywordsText="industrie, secteur, automobile, europe" postDate="2009-03-18 11:19:00" />
 				<attribute name="contents-post"><![CDATA[
 					Voici la liste des principaux producteurs mondiaux dans l'industrie automobile.
 				]]></attribute>
-
-				<post byLabel="Introduction" contents-attr="contents-post"
-					categories="cat22"
-					keywordsText="liste, introduction, producteurs, automobile, industrie, europe"
-					postDate="2009-02-18 10:09:00" />
-
+				<post byLabel="Introduction" contents-attr="contents-post" categories="cat22" keywordsText="liste, introduction, producteurs, automobile, industrie, europe" postDate="2009-02-18 10:09:00" />
 				<bbcodeattribute name="contents-post"><![CDATA[
 					[b]Toyota[/b] (Toyota, Lexus et Daihatsu) : 7 267 535
 					[b]Volkswagen AG[/b] (Volkswagen, Audi, Škoda, Seat, etc.) : 7 20 532
@@ -90,23 +57,15 @@
 					[b]Suzuki[/b] : 2 503 436
 					[b]Fiat Group[/b] (Fiat, Lancia, Alfa Romeo, etc.) : 1 781 385.
 				]]></bbcodeattribute>
-
-				<post byLabel="Liste" contents-attr="contents-post" categories="cat21"
-					keywordsText="constructeurs, automobile, liste, industrie"
-					postDate="2009-02-19 18:09:00">
+				<post byLabel="Liste" contents-attr="contents-post" categories="cat21" keywordsText="constructeurs, automobile, liste, industrie" postDate="2009-02-19 18:09:00">
 				</post>
 			</blog>
-
 			<blog byLabel="La moto">
-				<category byLabel="Présentation de la moto" id="cat3"
-					description="Cette catégorie renferme le ou les posts de description de l'autre véhicule très connu : la motocyclette" />
-
+				<category byLabel="Présentation de la moto" id="cat3" description="Cette catégorie renferme le ou les posts de description de l'autre véhicule très connu : la motocyclette" />
 				<attribute name="contents-post"><![CDATA[
 					« Motocyclette » est un nom propre, déposé en 1897 par les frères Eugène et Michel Werner, fabricants installés à Levallois-Perret, puis devenu nom générique. Il semble bien que ce soit le préfet de Paris qui, trouvant ce nom fort approprié, ait décidé d'autorité qu'il désignerait, désormais, l'ensemble des véhicules à deux roues motorisés.
 				]]></attribute>
-
-				<post byLabel="Présentation de la motocyclette" contents-attr="contents-post"
-					categories="cat3" keywordsText="moto, roue, klaxon" postDate="2009-03-19 15:49:00" />
+				<post byLabel="Présentation de la motocyclette" contents-attr="contents-post" categories="cat3" keywordsText="moto, roue, klaxon" postDate="2009-03-19 15:49:00" />
 			</blog>
 		</linkedtopic>
 	</rootfolder>

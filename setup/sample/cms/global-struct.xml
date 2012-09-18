@@ -3,7 +3,6 @@
 	<!-- Sample CMS Side. TODO: Continue -->
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/photoalbum/persistentdocument/import/photoalbum_binding.xml" />
-
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 	<binding fileName="modules/inquiry/persistentdocument/import/inquiry_binding.xml" />
@@ -14,16 +13,12 @@
 	<binding fileName="modules/privatemessaging/persistentdocument/import/privatemessaging_binding.xml" />
 	<binding fileName="modules/blog/persistentdocument/import/blog_binding.xml" />
 	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
-
 	<binding fileName="modules/sample/setup/videos/videos-data.xml" />
-
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Communauté" id="topiccommunity">
 			<page id="pagecommunity" byLabel="Communauté" isIndexPage="true" navigationVisibility="Hidden">
 				<changecontent for="content-block">
-					<changeblock type="richtext">
-						<![CDATA[<p>Bienvenu dans la liste des modules CMS installé sur votre site.</p>]]>
-					</changeblock>
+					<changeblock type="richtext"><![CDATA[<p>Bienvenu dans la liste des modules CMS installé sur votre site.</p>]]></changeblock>
 				</changecontent>
 			</page>
 			<topic byLabel="Actualités et événements" id="events1">
@@ -46,13 +41,10 @@
 				<binding fileName="modules/privatemessaging/setup/globalDefaultStructure.xml" />
 			</topic>
 		</topic>
-
 		<topic byLabel="Media" id="topicmedia">
 			<page id="pagemedia" byLabel="Médias" isIndexPage="true" navigationVisibility="Hidden">
 				<changecontent for="content-block">
-					<changeblock type="richtext">
-						<![CDATA[<p>Bienvenu dans la liste des médias installé sur votre site.</p>]]>
-					</changeblock>
+					<changeblock type="richtext"><![CDATA[<p>Bienvenu dans la liste des médias installé sur votre site.</p>]]></changeblock>
 				</changecontent>
 			</page>
 			<topic byLabel="Galerie de photos" id="gallery">
@@ -80,7 +72,6 @@
 			</menu>
 		</menus>
 	</website>
-
 	<binding fileName="modules/sample/setup/event/event-data.xml" />
 	<binding fileName="modules/sample/setup/joboffer/joboffer-data.xml" />
 	<binding fileName="modules/sample/setup/photoalbum/photoalbum-data.xml" />

@@ -1,14 +1,6 @@
 <?php
-if (!defined("WEBEDIT_HOME"))
-{
-	define("WEBEDIT_HOME", realpath('.'));
-	require_once WEBEDIT_HOME . "/framework/Framework.php";
-	$samples = array_slice($_SERVER['argv'], 1);
-}
-else
-{
-	$samples = $_POST['argv'];
-}
+$arguments = isset($arguments) ? $arguments : array();
+$samples = $arguments;
 
 $scriptReader = import_ScriptReader::getInstance();
 

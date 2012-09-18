@@ -2,39 +2,37 @@
 <script>
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/survey/persistentdocument/import/survey_binding.xml" />
-	
 	<rootfolder module="list">
 		<folder byLabel="Listes de l'exemple d'enquêtes">
 			<editablelist id="liste1" listid="modules_survey/sampleliste1" label="Liste raisons choix RBS">
-				<item byLabel="Qualité de service" /> 
-				<item byLabel="Qualité des produits" /> 
-				<item byLabel="Rapport qualité/prix" /> 
-				<item byLabel="Professionnalisme" /> 
-				<item byLabel="Confiance dans l'équipe" /> 
-				<item byLabel="Étendue de la gamme" /> 
-				<item byLabel="Renommée" /> 
-				<item byLabel="Proximité" /> 
-			</editablelist>			
+				<item byLabel="Qualité de service" />
+				<item byLabel="Qualité des produits" />
+				<item byLabel="Rapport qualité/prix" />
+				<item byLabel="Professionnalisme" />
+				<item byLabel="Confiance dans l'équipe" />
+				<item byLabel="Étendue de la gamme" />
+				<item byLabel="Renommée" />
+				<item byLabel="Proximité" />
+			</editablelist>
 			<valuededitablelist id="liste2" listid="modules_survey/sampleliste2" label="Echelle de Likert standard">
-				<valueditem label="1 (Très mauvais)" byValue="1" /> 
-				<valueditem label="2" byValue="2" /> 
-				<valueditem label="3" byValue="3" /> 
-				<valueditem label="4" byValue="4" /> 
-				<valueditem label="5" byValue="5" /> 
-				<valueditem label="6" byValue="6" /> 
-				<valueditem label="7 (Très bon)" byValue="7" /> 
+				<valueditem label="1 (Très mauvais)" byValue="1" />
+				<valueditem label="2" byValue="2" />
+				<valueditem label="3" byValue="3" />
+				<valueditem label="4" byValue="4" />
+				<valueditem label="5" byValue="5" />
+				<valueditem label="6" byValue="6" />
+				<valueditem label="7 (Très bon)" byValue="7" />
 			</valuededitablelist>
 			<editablelist id="liste3" listid="modules_survey/sampleliste3" label="Secteurs d'activités">
-				<item byLabel="Agroalimentaire" /> 
-				<item byLabel="Autres services" /> 
-				<item byLabel="BTP" /> 
-				<item byLabel="Informatique" /> 
-				<item byLabel="Mécanique" /> 
+				<item byLabel="Agroalimentaire" />
+				<item byLabel="Autres services" />
+				<item byLabel="BTP" />
+				<item byLabel="Informatique" />
+				<item byLabel="Mécanique" />
 				<item byLabel="Transport/Logistique" />
 			</editablelist>
 		</folder>
-	</rootfolder>	
-	
+	</rootfolder>
 	<rootfolder module="survey">
 		<survey id="testsurvey" byLabel="Enquête de satisfaction clients" description="Dans l'objectif d'améliorer la qualité de nos services et de mieux satisfaire vos attentes, merci de bien vouloir consacrer un peu de temps pour répondre à ce questionnaire..." endMessage="Nous vous remercions d'avoir pris le temps de remplir ce questionnaire..." public="true" publicationstatus="ACTIVE">
 			<step byLabel="L'entreprise">

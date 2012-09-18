@@ -2,13 +2,12 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
-	
 	<documentRef byDocumentId-attr="rootId">
 		<topic byLabel="Messagerie privée">
 			<execute method="setDocumentIdAttribute" />
 			<binding fileName="modules/privatemessaging/setup/globalDefaultStructure.xml" />
 			<permissions>
-				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="websitefrontendgroup"/>
+				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="websitefrontendgroup" />
 			</permissions>
 		</topic>
 	</documentRef>

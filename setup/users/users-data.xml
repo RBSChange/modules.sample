@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
-
 	<rootfolder module="users">
 		<backendgroup byLabel="Utilisateurs Change">
-			<backenduser firstname="Demo" lastname="Change" email="demo@rbs.fr" login="demo" passwordmd5="62cc2d8b4bf2d8728120d052163a77df"
-				publicationstatus="ACTIVE" id="demo-user" />
+			<backenduser firstname="Demo" lastname="Change" email="demo@rbs.fr" login="demo" passwordmd5="62cc2d8b4bf2d8728120d052163a77df" publicationstatus="ACTIVE" id="demo-user" />
 		</backendgroup>
 	</rootfolder>
 </script>

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-
 	<website byTag="default_modules_website_default-website" id="default-website">
 		<topic byLabel="Communauté" />
 		<topic byLabel="À propos" />
 		<menus>
-			<menu byLabel="Catalogue"></menu>
-			<menu byLabel="Communauté"></menu>
-			<menu byLabel="Mon compte"></menu>
-			<menu byLabel="À propos"></menu>
+			<menu byLabel="Catalogue" />
+			<menu byLabel="Communauté" />
+			<menu byLabel="Mon compte" />
+			<menu byLabel="À propos" />
 		</menus>
 	</website>
 </script>

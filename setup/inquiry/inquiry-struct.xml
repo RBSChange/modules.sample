@@ -6,9 +6,7 @@
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 	<binding fileName="modules/inquiry/persistentdocument/import/inquiry_binding.xml" />
-	
 	<binding fileName="modules/sample/setup/inquiry/inquiry-data.xml" />
-
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Demandes d'informations">
 			<page label="Formulaire de demande" indexingstatus="true" isIndexPage="true" navigationVisibility="hidden">

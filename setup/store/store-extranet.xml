@@ -3,25 +3,18 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
-	
 	<website byRefid="extws">
 		<execute method="setDocumentIdAttribute" />
 		<execute method="setDocumentTypeAttribute" />
 	</website>
-	
 	<websitefrontendgroup for-default-website="true">
-		<execute method="setDocumentIdAttribute" attribute-name="groupId"/>
-		<execute method="setDocumentTypeAttribute" attribute-name="groupType"/>
-		
+		<execute method="setDocumentIdAttribute" attribute-name="groupId" />
+		<execute method="setDocumentTypeAttribute" attribute-name="groupType" />
 		<websitefrontenduser id="userchange" byLogin="extchange" firstname="RBS Change Store" lastname="extranet user" email="extchange@rbs.fr" password="abcd123" />
 	</websitefrontendgroup>
-	
 	<binding fileName="modules/store/setup/extranetDefaultStructure.xml" />
-	
-	<store id="store1" byCodeReference="Change" isShippingRelay="true" />		
-	
-	<storeextranet id="extstore1" byLabel="RBS Change Store" store-refid="store1" website-refid="extws" users-refids="userchange" remindDaysNotif="7" />	
-	
+	<store id="store1" byCodeReference="Change" isShippingRelay="true" />
+	<storeextranet id="extstore1" byLabel="RBS Change Store" store-refid="store1" website-refid="extws" users-refids="userchange" remindDaysNotif="7" />
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
 	<instore byLabel="Retrait en magasin" id="instore" />
 	<shop byLabel="Boutique" id="shop" />

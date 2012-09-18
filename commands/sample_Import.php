@@ -2,12 +2,12 @@
 /**
  * @package modules.sample
  */
-class commands_sample_Import extends commands_AbstractChangeCommand
+class commands_sample_Import extends c_ChangescriptCommand
 {
 	/**
 	 * @var string[]
 	 */
-	protected $validValues = array('core', 'full-os', 'full');
+	protected $validValues = array('core', 'ecomcore', 'full-os', 'full');
 	
 	/**
 	 * @return string
@@ -29,10 +29,10 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 * This method is used to handle auto-completion for this command.
 	 *
 	 * @param integer $completeParamCount
-	 *        	the parameters that are already complete in the command line
-	 * @param string[] $params        	
+	 *			the parameters that are already complete in the command line
+	 * @param string[] $params			
 	 * @param array<string, string> $options where the option array key is
-	 *        	the option name, the potential option value or true
+	 *			the option name, the potential option value or true
 	 * @return string[] or null
 	 */
 	public function getParameters($completeParamCount, $params, $options, $current)
@@ -41,9 +41,9 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	}
 	
 	/**
-	 * @param string[] $params        	
+	 * @param string[] $params			
 	 * @param array<string, string> $options where the option array key is
-	 *        	the option name, the potential option value or true
+	 *			the option name, the potential option value or true
 	 * @return boolean
 	 */
 	protected function validateArgs($params, $options)
@@ -69,6 +69,45 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		
 		$samples[] = 'sample/core/contents.xml';
 		$samples[] = 'sample/core/permissions.xml';
+	}
+	
+	/**
+	 * @param string[] $samples
+	 */
+	protected function addEcomCoreSamples(&$samples)
+	{
+		$samples[] = 'sample/ecom/theme.xml';
+		
+		// Core modules.
+		$samples[] = 'website/website-struct.xml';
+		$samples[] = 'media/media-data.xml';
+		$samples[] = 'sample/core/users.xml';
+		$samples[] = 'workflow/workflow-data.xml';
+		$samples[] = 'sample/core/form.xml';
+		$samples[] = 'notification/notification-data.xml';
+		$samples[] = 'sample/core/contactcard.xml';
+		$samples[] = 'list/list-data.xml';
+		$samples[] = 'rss/rss-data.xml';
+		
+		$samples[] = 'sample/ecom/structure.xml';
+		
+		// CMS modules.
+		$samples[] = 'media/media-data.xml';
+		$samples[] = 'videos/videos-data.xml';
+		$samples[] = 'sample/fullos/privatemessaging.xml';
+		$samples[] = 'sample/fullos/forums.xml';
+		$samples[] = 'brand/brand-data.xml';
+
+		// ECOM modules.
+		$samples[] = 'shipping/shipping-data.xml';
+		$samples[] = 'payment/payment-data.xml';
+		//$samples[] = 'paybox/paybox-data.xml';
+		$samples[] = 'catalog/catalog-struct.xml';
+		$samples[] = 'sample/fullos/customer.xml';
+		$samples[] = 'order/order-struct.xml';
+		
+		$samples[] = 'sample/ecomcore/contents.xml';
+		$samples[] = 'sample/ecomcore/permissions.xml';
 	}
 	
 	/**
@@ -170,9 +209,9 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	}
 	
 	/**
-	 * @param string[] $params        	
+	 * @param string[] $params			
 	 * @param array<string, string> $options where the option array key is
-	 *        	the option name, the potential option value or true
+	 *			the option name, the potential option value or true
 	 * @see c_ChangescriptCommand::parseArgs($args)
 	 */
 	public function _execute($params, $options)
@@ -181,14 +220,14 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		
 		$this->loadFramework();
 		
-		$parent = $this->getParent();
-		$parent->executeCommand('disable-site');
-		$parent->executeCommand('theme.install');
+
+		$this->executeCommand('disable-site');
+		$this->executeCommand('theme.install');
 		$batchPath = 'modules/sample/lib/bin/batchImport.php';
 		
 		// Update config
 		$this->updateConfigXML($params[0]);
-		$parent->executeCommand('compile-config');
+		$this->executeCommand('compile-config');
 		
 		$samples = array();
 		switch ($params[0])
@@ -196,6 +235,10 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 			case 'core':
 				$this->message('= Import samples of your OS Core modules =');
 				$this->addCoreSamples($samples);
+				break;
+			case 'ecomcore':
+				$this->message('= Import samples of your OS Ecom Core modules =');
+				$this->addEcomCoreSamples($samples);
 				break;
 			case 'full-os':
 				$this->message('= Import samples of all OS modules =');
@@ -239,12 +282,12 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		{
 			if ($ms->isInstalled('mysqlstock'))
 			{
-				$parent->executeCommand('mysqlstock.reset-products-stock');
+				$this->executeCommand('mysqlstock.reset-products-stock');
 			}
-			$parent->executeCommand('catalog.compile-catalog');
+			$this->executeCommand('catalog.compile');
 		}
 		
-		$parent->executeCommand('enable-site');
+		$this->executeCommand('enable-site');
 		
 		$this->quitOk("Command successfully executed");
 	}
@@ -260,6 +303,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		{
 			case 'full':
 			case 'full-os':
+			case 'ecomcore':
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultPageTemplate', 'default/sidebarpageecomsample');
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultNosidebarTemplate', 'default/nosidebarpageecomsample');
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultHomeTemplate', 'default/nosidebarpageecomsample');

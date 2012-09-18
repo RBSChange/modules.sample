@@ -2,9 +2,8 @@
 <script>
 	<binding fileName="modules/payment/persistentdocument/import/payment_binding.xml" />
 	<binding fileName="modules/productreturns/persistentdocument/import/productreturns_binding.xml" />
-
 	<chequeconnector id="payment" byLabel="Paiement par chèque" />
-	<rootfolder module="productreturns">		
+	<rootfolder module="productreturns">
 		<paymentfolder byLabel="m.productreturns.document.paymentfolder.label-content">
 			<attribute name="query"><![CDATA[{"operator":"and","elements":[{"class":"productreturns_ReshipmentFeesReturnFilter","parameters":{"reshipmentFees":[null,"gt","0"]}}]}]]></attribute>
 			<paymentfilter byLabel="Chèque" connector-refid="payment" query-attr="" />

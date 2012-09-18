@@ -2,7 +2,6 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/sample/setup/ecomextended/ecomextended-data.xml" />
-
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Boutique">
 			<page byTag="functional_catalog_product-list" template="default/sidebarpageemptyecom">
@@ -13,16 +12,16 @@
 					<changeblock type="modules_ecomextended_ManageFacetsFilter" />
 					<changeblock type="modules_ecomextended_ProductList" __complete="true" />
 				</changecontent>
-			</page>	
+			</page>
 		</topic>
 		<topic byLabel="Système">
 			<page byTag="contextual_website_website_modules_solrsearch_page-results" template="default/sidebarpageemptyecom">
-			    <changecontent for="sidebar-block">
+				<changecontent for="sidebar-block">
 					<changeblock type="modules_ecomextended_Facets" />
 				</changecontent>
-			    <changecontent for="content-block">
-			    	<changeblock type="modules_ecomextended_ManageFacetsFilter" />
-			    	<changeblock type="modules_ecomextended_SearchResult" __facets-refids="documentModel,shelfIdCompiled,brand" __complete="true" />
+				<changecontent for="content-block">
+					<changeblock type="modules_ecomextended_ManageFacetsFilter" />
+					<changeblock type="modules_ecomextended_SearchResult" __facets-refids="documentModel,shelfIdCompiled,brand" __complete="true" />
 				</changecontent>
 			</page>
 		</topic>

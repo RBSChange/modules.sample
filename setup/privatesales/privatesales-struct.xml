@@ -2,11 +2,9 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/privatesales/persistentdocument/import/privatesales_binding.xml" />
-	
 	<website byTag="default_modules_website_default-website">
 		<topic byLabel="Compte client">
-			<page label="Ventes auxquelles je suis inscrit" isIndexPage="false" indexingstatus="false" navigationVisibility="visible"
-				byTag="contextual_website_website_modules_privatesales_myregisteredsales">
+			<page label="Ventes auxquelles je suis inscrit" isIndexPage="false" indexingstatus="false" navigationVisibility="visible" byTag="contextual_website_website_modules_privatesales_myregisteredsales">
 				<changecontent for="content-block">
 					<changeblock type="modules_privatesales_myRegisteredSales" />
 				</changecontent>

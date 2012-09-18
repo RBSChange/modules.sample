@@ -2,13 +2,11 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
-
 	<rootfolder module="users">
 		<backendgroup byLabel="Utilisateurs Change">
 			<backenduser byLogin="demo" id="demo-user" />
 		</backendgroup>
 	</rootfolder>
-	
 	<rootfolder module="website">
 		<permissions>
 			<backendpermission module="website" role="Admin" user-refid="demo-user" />

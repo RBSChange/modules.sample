@@ -2,13 +2,11 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
-
 	<website byTag="default_modules_website_default-website">
 		<execute method="setDocumentIdAttribute" attribute-name="rootId" />
+		<execute method="setDocumentIdAttribute" />
 	</website>
-	
 	<websitefrontendgroup for-default-website="true" id="websitefrontendgroup" />
-	
 	<binding fileName="modules/sample/setup/users/users-data.xml" />
 	<binding fileName="modules/sample/setup/users/users-struct.xml" />
 </script>

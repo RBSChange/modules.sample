@@ -2,14 +2,12 @@
 <script>
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/emailing/persistentdocument/import/emailing_binding.xml" />
-	
 	<rootfolder module="emailing">
 		<mailinglistfolder label="Listes d'abonnés" byLabel="Listes d'abonnés">
 			<mailinglist id="mailingtest" label="Mailing RBS" description="Mailing Test">
 				<subscriberfield label="Nom" mailingname="lastname" />
 				<subscriberfield label="Prénom" mailingname="firstname" />
 				<subscriberfield label="Fonction" mailingname="function" />
-
 				<subscriber publicationstatus="ACTIVE" label="link@rbs.fr">
 					<fieldvalue name="lastname" value="SWORD" />
 					<fieldvalue name="firstname" value="Link" />
@@ -42,56 +40,15 @@
 				</subscriber>
 			</mailinglist>
 		</mailinglistfolder>
-
 		<folder label="Campagnes" byLabel="Campagnes">
-			<campaign label="Newletter interne RBS" fromemail="no-reply@rbs.fr" fromname="Webmaster RBS" mailinglists-refid="mailingtest"
-				website-refid="website">
-				<mailing label="Contenu 1" fromemail="no-reply@rbs.fr" fromname="Webmaster RBS" edittype="1"
-					simplexhtmlcontent="
-&lt;h1&gt;Newletter interne RBS Test 1&lt;/h1&gt;
-&lt;p&gt;Bonjour {subscriber.firstname} {subscriber.lastname} Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-posuere cubilia Curae; Pellentesque pede. Proin aliquam felis non lorem.
-In velit. Praesent euismod dictum nibh? Etiam volutpat lacus. Duis eu
-ante. Nullam eleifend. Fusce eros velit, cursus at, volutpat id, iaculis
-vel, nisl. Quisque ultricies diam in est. Morbi enim. Mauris rutrum
-turpis non felis. Fusce bibendum accumsan mauris! Sed luctus ullamcorper
-sapien. Fusce luctus. Sed tempus dignissim lectus. Proin non mi.&lt;/p&gt;
-&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Sed lacus velit, tincidunt non,
-rutrum pulvinar, auctor in, est. Quisque metus odio, imperdiet eget,
-eleifend et, hendrerit nec; ante. Etiam porttitor luctus mauris. Fusce
-tincidunt elit eu dui. Vivamus eget augue ut nunc gravida accumsan. Sed
-auctor urna at lacus feugiat porttitor! Aenean augue mauris, tincidunt
-et, varius ac, gravida nec; est. Phasellus a mauris eu ligula laoreet
-bibendum. Donec mi nisl, posuere eu, aliquam ut, placerat id, ipsum.
-Pellentesque ac sem! Proin sit amet ipsum eget ligula ornare auctor. In
-ante est, vulputate ullamcorper, tempor posuere, porttitor vel, nisi. In
-sit amet orci id justo rutrum congue.&lt;/p&gt;
-&lt;p&gt;Cras in libero eu nibh pellentesque semper. Nullam porta elit id
-nunc. Curabitur nec leo. Pellentesque eleifend vehicula nisl. Fusce ut
-mauris. Donec vehicula bibendum erat. Nulla facilisi. Ut felis lacus,
-hendrerit in, condimentum eu, cursus non, augue. Curabitur quis nibh id
-nibh viverra imperdiet. Nam id sem sit amet nulla tincidunt ornare!
-Maecenas lacinia elementum arcu. Aenean eu diam ornare mi mattis
-viverra. Vivamus eleifend augue vel pede. Praesent justo nunc, porta in,
-euismod id, facilisis eu, justo. Suspendisse ut sem vel lectus tempus
-imperdiet. Vivamus condimentum vehicula ante. Nulla facilisi. Nam tempus
-enim eget diam. Sed purus libero; fermentum at; condimentum sit amet,
-aliquam et, turpis.&lt;/p&gt;"
-					txtcontent="Newletter interne RBS Test 1
-Bonjour {subscriber.firstname} {subscriber.lastname}
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque pede. Proin aliquam felis non lorem. In velit. Praesent euismod dictum nibh? Etiam volutpat lacus. Duis eu ante. Nullam eleifend. Fusce eros velit, cursus at, volutpat id, iaculis vel, nisl. Quisque ultricies diam in est. Morbi enim. Mauris rutrum turpis non felis. Fusce bibendum accumsan mauris! Sed luctus ullamcorper sapien. Fusce luctus. Sed tempus dignissim lectus. Proin non mi.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lacus velit, tincidunt non, rutrum pulvinar, auctor in, est. Quisque metus odio, imperdiet eget, eleifend et, hendrerit nec; ante. Etiam porttitor luctus mauris. Fusce tincidunt elit eu dui. Vivamus eget augue ut nunc gravida accumsan. Sed auctor urna at lacus feugiat porttitor! Aenean augue mauris, tincidunt et, varius ac, gravida nec; est. Phasellus a mauris eu ligula laoreet bibendum. Donec mi nisl, posuere eu, aliquam ut, placerat id, ipsum. Pellentesque ac sem! Proin sit amet ipsum eget ligula ornare auctor. In ante est, vulputate ullamcorper, tempor posuere, porttitor vel, nisi. In sit amet orci id justo rutrum congue. Cras in libero eu nibh pellentesque semper. Nullam porta elit id nunc.
-Curabitur nec leo. Pellentesque eleifend vehicula nisl. Fusce ut mauris. Donec vehicula bibendum erat. Nulla facilisi. Ut felis lacus, hendrerit in, condimentum eu, cursus non, augue. Curabitur quis nibh id nibh viverra imperdiet. Nam id sem sit amet nulla tincidunt ornare! Maecenas lacinia elementum arcu. Aenean eu diam ornare mi mattis viverra. Vivamus eleifend augue vel pede. Praesent justo nunc, porta in, euismod id, facilisis eu, justo. Suspendisse ut sem vel lectus tempus imperdiet. Vivamus condimentum vehicula ante. Nulla facilisi. Nam tempus enim eget diam. Sed purus libero; fermentum at; condimentum sit amet, aliquam et, turpis."
-					unsuscribelabel="Ce desinscrire de la Newletter interne RBS" />
+			<campaign label="Newletter interne RBS" fromemail="no-reply@rbs.fr" fromname="Webmaster RBS" mailinglists-refid="mailingtest" website-refid="website">
+				<mailing label="Contenu 1" fromemail="no-reply@rbs.fr" fromname="Webmaster RBS" edittype="1" simplexhtmlcontent=" &lt;h1&gt;Newletter interne RBS Test 1&lt;/h1&gt; &lt;p&gt;Bonjour {subscriber.firstname} {subscriber.lastname} Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque pede. Proin aliquam felis non lorem. In velit. Praesent euismod dictum nibh? Etiam volutpat lacus. Duis eu ante. Nullam eleifend. Fusce eros velit, cursus at, volutpat id, iaculis vel, nisl. Quisque ultricies diam in est. Morbi enim. Mauris rutrum turpis non felis. Fusce bibendum accumsan mauris! Sed luctus ullamcorper sapien. Fusce luctus. Sed tempus dignissim lectus. Proin non mi.&lt;/p&gt; &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lacus velit, tincidunt non, rutrum pulvinar, auctor in, est. Quisque metus odio, imperdiet eget, eleifend et, hendrerit nec; ante. Etiam porttitor luctus mauris. Fusce tincidunt elit eu dui. Vivamus eget augue ut nunc gravida accumsan. Sed auctor urna at lacus feugiat porttitor! Aenean augue mauris, tincidunt et, varius ac, gravida nec; est. Phasellus a mauris eu ligula laoreet bibendum. Donec mi nisl, posuere eu, aliquam ut, placerat id, ipsum. Pellentesque ac sem! Proin sit amet ipsum eget ligula ornare auctor. In ante est, vulputate ullamcorper, tempor posuere, porttitor vel, nisi. In sit amet orci id justo rutrum congue.&lt;/p&gt; &lt;p&gt;Cras in libero eu nibh pellentesque semper. Nullam porta elit id nunc. Curabitur nec leo. Pellentesque eleifend vehicula nisl. Fusce ut mauris. Donec vehicula bibendum erat. Nulla facilisi. Ut felis lacus, hendrerit in, condimentum eu, cursus non, augue. Curabitur quis nibh id nibh viverra imperdiet. Nam id sem sit amet nulla tincidunt ornare! Maecenas lacinia elementum arcu. Aenean eu diam ornare mi mattis viverra. Vivamus eleifend augue vel pede. Praesent justo nunc, porta in, euismod id, facilisis eu, justo. Suspendisse ut sem vel lectus tempus imperdiet. Vivamus condimentum vehicula ante. Nulla facilisi. Nam tempus enim eget diam. Sed purus libero; fermentum at; condimentum sit amet, aliquam et, turpis.&lt;/p&gt;" txtcontent="Newletter interne RBS Test 1 Bonjour {subscriber.firstname} {subscriber.lastname} Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque pede. Proin aliquam felis non lorem. In velit. Praesent euismod dictum nibh? Etiam volutpat lacus. Duis eu ante. Nullam eleifend. Fusce eros velit, cursus at, volutpat id, iaculis vel, nisl. Quisque ultricies diam in est. Morbi enim. Mauris rutrum turpis non felis. Fusce bibendum accumsan mauris! Sed luctus ullamcorper sapien. Fusce luctus. Sed tempus dignissim lectus. Proin non mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lacus velit, tincidunt non, rutrum pulvinar, auctor in, est. Quisque metus odio, imperdiet eget, eleifend et, hendrerit nec; ante. Etiam porttitor luctus mauris. Fusce tincidunt elit eu dui. Vivamus eget augue ut nunc gravida accumsan. Sed auctor urna at lacus feugiat porttitor! Aenean augue mauris, tincidunt et, varius ac, gravida nec; est. Phasellus a mauris eu ligula laoreet bibendum. Donec mi nisl, posuere eu, aliquam ut, placerat id, ipsum. Pellentesque ac sem! Proin sit amet ipsum eget ligula ornare auctor. In ante est, vulputate ullamcorper, tempor posuere, porttitor vel, nisi. In sit amet orci id justo rutrum congue. Cras in libero eu nibh pellentesque semper. Nullam porta elit id nunc. Curabitur nec leo. Pellentesque eleifend vehicula nisl. Fusce ut mauris. Donec vehicula bibendum erat. Nulla facilisi. Ut felis lacus, hendrerit in, condimentum eu, cursus non, augue. Curabitur quis nibh id nibh viverra imperdiet. Nam id sem sit amet nulla tincidunt ornare! Maecenas lacinia elementum arcu. Aenean eu diam ornare mi mattis viverra. Vivamus eleifend augue vel pede. Praesent justo nunc, porta in, euismod id, facilisis eu, justo. Suspendisse ut sem vel lectus tempus imperdiet. Vivamus condimentum vehicula ante. Nulla facilisi. Nam tempus enim eget diam. Sed purus libero; fermentum at; condimentum sit amet, aliquam et, turpis." unsuscribelabel="Ce desinscrire de la Newletter interne RBS" />
 			</campaign>
 		</folder>
 	</rootfolder>
-
 	<rootfolder module="users">
 		<documentRef type="modules_users/backendgroup" byLabel="Utilisateurs Change" id="bousergroup" />
 	</rootfolder>
-
 	<systemfolder module="emailing" relatedmodule="users">
 		<dynamicmailinglist label="Utilisateurs backoffice" className="users_MailinglistGroupFeederService" parameter-groupId-refid="bousergroup">
 			<subscriberrofield label="Nom" mailingname="lastname" />

@@ -8,7 +8,7 @@ class sample_BlockBillAreaSelectorAction extends website_BlockAction
 	/**
 	 * @param f_mvc_Request $request
 	 * @param f_mvc_Response $response
-	 * @return String
+	 * @return string
 	 */
 	public function execute($request, $response)
 	{
@@ -32,12 +32,12 @@ class sample_BlockBillAreaSelectorAction extends website_BlockAction
 	/**
 	 * @param f_mvc_Request $request
 	 * @param f_mvc_Response $response
-	 * @return String
+	 * @return string
 	 */
 	public function executeShopAndBillAreaSelection($request, $response)
 	{
  		$billingAreaId = $this->getDocumentIdParameter('billingArea');
- 		Controller::getInstance()->getContext()->getStorage()->write('userBillingAreaSelected', $billingAreaId);
+ 		change_Controller::getInstance()->getContext()->getStorage()->write('userBillingAreaSelected', $billingAreaId);
  		$shop = catalog_ShopService::getInstance()->getCurrentShop();
  		
  		$shop->getCurrentBillingArea(true);

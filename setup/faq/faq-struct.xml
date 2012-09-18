@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	
 	<website byTag="default_modules_website_default-website">
 		<topic label="Foire aux questions" id="faqtopic">
-			<topic label="Sous rubrique" id="faqtopicsub"></topic>
-			
-			<topic label="A venir..."></topic>
-			
+			<topic label="Sous rubrique" id="faqtopicsub" />
+			<topic label="A venir..." />
 			<page label="Foire aux questions" isIndexPage="true" indexingstatus="false" navigationVisibility="hidden">
 				<tag name="functional_faq_faq-list" />
 				<changecontent for="content-block">
@@ -15,15 +12,13 @@
 				</changecontent>
 				<execute method="setPageRefAsIndex" />
 			</page>
-			
 			<page label="Question / réponses" indexingstatus="false" navigationVisibility="hidden">
 				<tag name="functional_faq_faq-detail" />
 				<changecontent for="content-block">
 					<changeblock type="modules_faq_detail" />
 				</changecontent>
-			</page>		
+			</page>
 		</topic>
 	</website>
-	
 	<binding fileName="modules/sample/setup/faq/faq-data.xml" />
 </script>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/polls/persistentdocument/import/polls_binding.xml" />
-	
 	<rootfolder module="polls">
 		<folder byLabel="Exemples">
 			<attribute name="description"><![CDATA[<p class="normal">Sondage d'exemple à <em>plusieurs questions</em> sur le temps qu'il fait.</p><p class="normal">Ce sondage est à durée illimitée.</p>]]></attribute>
@@ -46,6 +45,6 @@
 					<answer byLabel="Noir" votes="12" />
 				</question>
 			</poll>
-		</folder>	
+		</folder>
 	</rootfolder>
 </script>

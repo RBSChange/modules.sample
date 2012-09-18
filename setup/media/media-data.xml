@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
-
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="media">
@@ -9,7 +8,7 @@
 					<media path="modules/sample/setup/media/media/NES-1985-1.jpg" byLabel="NES (set)" id="NES-1985-1" />
 					<media path="modules/sample/setup/media/media/NES-1985-2.jpg" byLabel="NES (controller)" id="NES-1985-2" />
 					<media path="modules/sample/setup/media/media/NES-ZAPPER.jpg" byLabel="NES Zapper" id="NES-ZAPPER-1" />
-					<media path="modules/sample/setup/media/media/NES-ZAPPER-2.jpg" byLabel="NES Zapper Orange" id="NES-ZAPPER-2" />						
+					<media path="modules/sample/setup/media/media/NES-ZAPPER-2.jpg" byLabel="NES Zapper Orange" id="NES-ZAPPER-2" />
 					<media path="modules/sample/setup/media/media/FAMICOM-1983-1.png" byLabel="FAMICOM (set)" id="FAMICOM-1983-1" />
 					<media path="modules/sample/setup/media/media/FAMICOM-1983-2.jpg" byLabel="FAMICOM (controller)" id="FAMICOM-1983-2" />
 					<media path="modules/sample/setup/media/media/NEOGEO-1990-1.jpg" byLabel="NEO-GEO Main" id="NEOGEO-1990-1" />

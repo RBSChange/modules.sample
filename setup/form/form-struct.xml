@@ -3,16 +3,14 @@
 	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
-	
 	<documentRef byDocumentId-attr="rootId">
 		<topic byLabel="Système">
 			<page label="Previsualisation de formulaire" id="formPreview" indexingstatus="false" navigationVisibility="hidden">
-			    <changecontent for="content-block">
+				<changecontent for="content-block">
 					<changeblock type="modules_form_form" />
 				</changecontent>
 			</page>
 		</topic>
 	</documentRef>
-	
 	<preferences previewpage-refid="formPreview" />
 </script>

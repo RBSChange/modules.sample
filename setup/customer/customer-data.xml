@@ -3,53 +3,34 @@
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
 	<binding fileName="modules/customer/persistentdocument/import/customer_binding.xml" />
-
 	<country byLabel="France" id="fr" />
-
 	<websitefrontendgroup for-default-website="true">
 		<websitefrontenduser id="mario" login="mario" firstname="Mario" lastname="Bros" email="mario.bros@rbs.fr" password="abcd123" />
 		<websitefrontenduser id="luigi" login="luigi" firstname="Luigi" lastname="Bros" email="luigi.bros@rbs.fr" password="abcd123" />
 		<websitefrontenduser id="donkey" login="donkey" firstname="Donkey" lastname="Kong" email="donkey.kong@rbs.fr" password="abcd123" />
 		<websitefrontenduser id="peach" login="peach" firstname="Princess" lastname="Peach" email="princess.peach@rbs.fr" password="abcd123" />
 	</websitefrontendgroup>
-
 	<rootfolder module="customer">
 		<tarifcustomergroupfolder byLabel="m.customer.document.tarifcustomergroupfolder.document-name">
 			<tarifcustomergroup byLabel="Premier groupe tarifaire d'exemple" description="Premier groupe tarifaire d'exemple" id="tarif1" />
 			<tarifcustomergroup byLabel="Second groupe tarifaire d'exemple" description="Second groupe tarifaire d'exemple" id="tarif2" />
 		</tarifcustomergroupfolder>
 	</rootfolder>
-
-	<address id="bill1" label="L'adresse de facturation de Mario" firstname="Mario" lastname="Bros" email="mario.bros@rbs.fr" addressLine1="10 rue Level One"
-		zipCode="67000" city="Strasbourg" country-refid="fr" />
-	<address id="ship1" label="L'adresse de livraison de Mario" firstname="Mario" lastname="Bros" email="mario.bros@rbs.fr" addressLine1="10 rue Level One"
-		zipCode="67000" city="Strasbourg" country-refid="fr" />
+	<address id="bill1" label="L'adresse de facturation de Mario" firstname="Mario" lastname="Bros" email="mario.bros@rbs.fr" addressLine1="10 rue Level One" zipCode="67000" city="Strasbourg" country-refid="fr" />
+	<address id="ship1" label="L'adresse de livraison de Mario" firstname="Mario" lastname="Bros" email="mario.bros@rbs.fr" addressLine1="10 rue Level One" zipCode="67000" city="Strasbourg" country-refid="fr" />
 	<customer id="c1" user-refid="mario" address-refids="bill1,ship1" creationdate="2004-09-01 15:49:00" tarifGroup-refid="tarif1" />
-
-	<address id="bill2" label="L'adresse de facturation de luigi" firstname="Luigi" lastname="Bros" email="luigi.bros@rbs.fr" addressLine1="42 rue des Tuyaux"
-		zipCode="67000" city="Strasbourg" country-refid="fr" />
-	<address id="ship2" label="L'adresse de livraison de Luigi" firstname="Luigi" lastname="Bros" email="luigi.bros@rbs.fr" addressLine1="42 rue des Tuyaux"
-		zipCode="67000" city="Strasbourg" country-refid="fr" />
-	<address id="ship22" label="L'adresse de livraison de son frère" firstname="Mario" lastname="Bros" email="mario.bros@rbs.fr" addressLine1="10 rue Level One"
-		zipCode="67000" city="Strasbourg" country-refid="fr" />
+	<address id="bill2" label="L'adresse de facturation de luigi" firstname="Luigi" lastname="Bros" email="luigi.bros@rbs.fr" addressLine1="42 rue des Tuyaux" zipCode="67000" city="Strasbourg" country-refid="fr" />
+	<address id="ship2" label="L'adresse de livraison de Luigi" firstname="Luigi" lastname="Bros" email="luigi.bros@rbs.fr" addressLine1="42 rue des Tuyaux" zipCode="67000" city="Strasbourg" country-refid="fr" />
+	<address id="ship22" label="L'adresse de livraison de son frère" firstname="Mario" lastname="Bros" email="mario.bros@rbs.fr" addressLine1="10 rue Level One" zipCode="67000" city="Strasbourg" country-refid="fr" />
 	<customer id="c2" user-refid="luigi" address-refids="bill2,ship2,ship22" creationdate="2005-08-01 15:49:00" tarifGroup-refid="tarif1" />
-
-	<address id="bill3" label="L'adresse de facturation de Donkey Kong" firstname="Donkey" lastname="Kong" email="donkey.kong@rbs.fr"
-		addressLine1="24 Bananas Island" zipCode="67000" city="Strasbourg" country-refid="fr" />
-	<address id="ship3" label="L'adresse de livraison de Donkey Kong" firstname="Donkey" lastname="Kong" email="donkey.kong@rbs.fr" addressLine1="24 Bananas Island"
-		zipCode="67000" city="Strasbourg" country-refid="fr" />
+	<address id="bill3" label="L'adresse de facturation de Donkey Kong" firstname="Donkey" lastname="Kong" email="donkey.kong@rbs.fr" addressLine1="24 Bananas Island" zipCode="67000" city="Strasbourg" country-refid="fr" />
+	<address id="ship3" label="L'adresse de livraison de Donkey Kong" firstname="Donkey" lastname="Kong" email="donkey.kong@rbs.fr" addressLine1="24 Bananas Island" zipCode="67000" city="Strasbourg" country-refid="fr" />
 	<customer id="c3" user-refid="donkey" address-refids="bill3,ship3" tarifGroup-refid="tarif2" />
-
-	<address id="bill4" label="L'adresse de facturation de Peach" firstname="Princess" lastname="Peach" email="princess.peach@rbs.fr"
-		addressLine1="10 rue du Chateau" zipCode="68000" city="Mulhouse" country-refid="fr" />
-	<address id="ship4" label="L'adresse de livraison de Peach" firstname="Princess" lastname="Peach" email="princess.peach@rbs.fr" addressLine1="10 rue du Chateau"
-		zipCode="68000" city="Mulhouse" country-refid="fr" />
+	<address id="bill4" label="L'adresse de facturation de Peach" firstname="Princess" lastname="Peach" email="princess.peach@rbs.fr" addressLine1="10 rue du Chateau" zipCode="68000" city="Mulhouse" country-refid="fr" />
+	<address id="ship4" label="L'adresse de livraison de Peach" firstname="Princess" lastname="Peach" email="princess.peach@rbs.fr" addressLine1="10 rue du Chateau" zipCode="68000" city="Mulhouse" country-refid="fr" />
 	<customer id="c4" user-refid="peach" address-refids="bill4,ship4" />
-
 	<rootfolder module="customer">
-		<editablecustomergroup byLabel="Exemple de groupe client éditable" description="Clients importés dans le fichier d'exemple."
-			members-refids="c1,c2,c3,c4" />
-		<dynamiccustomergroup byLabel="Clients incrits cette année"
-			query='{"operator":"and","elements":[{"class":"customer_CreationDateFilter","parameters":{"count":[null,null,"1"],"unit":[null,null,"year"]}}]}' />
+		<editablecustomergroup byLabel="Exemple de groupe client éditable" description="Clients importés dans le fichier d'exemple." members-refids="c1,c2,c3,c4" />
+		<dynamiccustomergroup byLabel="Clients incrits cette année" query="{&quot;operator&quot;:&quot;and&quot;,&quot;elements&quot;:[{&quot;class&quot;:&quot;customer_CreationDateFilter&quot;,&quot;parameters&quot;:{&quot;count&quot;:[null,null,&quot;1&quot;],&quot;unit&quot;:[null,null,&quot;year&quot;]}}]}" />
 	</rootfolder>
 </script>

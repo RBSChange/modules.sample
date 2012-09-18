@@ -7,44 +7,31 @@
 	<binding fileName="modules/customer/persistentdocument/import/customer_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
-
 	<event byCode="GODCHILD_REGISTERED" id="godchild" />
 	<event byCode="ORDER_COMPLETED" id="order-completed" />
-	<notification byCodename="modules_loyalty/godchildregistered" id="godchild-notification"/>
-	
+	<notification byCodename="modules_loyalty/godchildregistered" id="godchild-notification" />
 	<shop byCodeReference="DEMO" id="shop">
-		<eventfilter byLabel="Inscription par votre parrain" shop-refid="shop" event-refid="godchild" notification-refid="godchild-notification" applicationstrategy="loyalty_DefaultPointStrategy" strategyParams-serialized='a:1:{s:10:"pointCount";s:4:"1000";}' publicationstatus="ACTIVE" />
-		<eventfilter byLabel="Inscription d'un filleul" targetCode="godfather" shop-refid="shop" event-refid="godchild" notification-refid="godchild-notification" applicationstrategy="loyalty_DefaultPointStrategy" strategyParams-serialized='a:1:{s:10:"pointCount";s:4:"6000";}' publicationstatus="ACTIVE" />
-		<eventfilter byLabel="Commande du filleul" targetCode="godfather" shop-refid="shop" event-refid="order-completed" applicationstrategy="loyalty_OrderAmountPointStrategy" strategyParams-serialized='a:1:{s:16:"amountPercentage";s:3:"100";}' publicationstatus="ACTIVE" />
-		<eventfilter byLabel="Commande supérieur à 300€" shop-refid="shop" event-refid="order-completed" applicationstrategy="loyalty_OrderAmountPointStrategy" filter='{"operator":"and","elements":[{"class":"customer_LastOrderCustomerFilter","parameters":{"field":["modules_order/order.totalAmountWithTax","ge","300"]}}]}' strategyParams-serialized='a:1:{s:16:"amountPercentage";s:4:"1000";}' publicationstatus="ACTIVE" />
-		<reward byLabel="Réduction de 10€" shop-refid="shop" pointCost="5500" id="reward10" description="Une réduction de 10€ pour vous remercier de votre fidélité" code="REDUC-15E" couponFilter='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["totalAmountWithTax","gt","15"]}}]}' />
+		<eventfilter byLabel="Inscription par votre parrain" shop-refid="shop" event-refid="godchild" notification-refid="godchild-notification" applicationstrategy="loyalty_DefaultPointStrategy" strategyParams-serialized="a:1:{s:10:&quot;pointCount&quot;;s:4:&quot;1000&quot;;}" publicationstatus="ACTIVE" />
+		<eventfilter byLabel="Inscription d'un filleul" targetCode="godfather" shop-refid="shop" event-refid="godchild" notification-refid="godchild-notification" applicationstrategy="loyalty_DefaultPointStrategy" strategyParams-serialized="a:1:{s:10:&quot;pointCount&quot;;s:4:&quot;6000&quot;;}" publicationstatus="ACTIVE" />
+		<eventfilter byLabel="Commande du filleul" targetCode="godfather" shop-refid="shop" event-refid="order-completed" applicationstrategy="loyalty_OrderAmountPointStrategy" strategyParams-serialized="a:1:{s:16:&quot;amountPercentage&quot;;s:3:&quot;100&quot;;}" publicationstatus="ACTIVE" />
+		<eventfilter byLabel="Commande supérieur à 300€" shop-refid="shop" event-refid="order-completed" applicationstrategy="loyalty_OrderAmountPointStrategy" filter="{&quot;operator&quot;:&quot;and&quot;,&quot;elements&quot;:[{&quot;class&quot;:&quot;customer_LastOrderCustomerFilter&quot;,&quot;parameters&quot;:{&quot;field&quot;:[&quot;modules_order/order.totalAmountWithTax&quot;,&quot;ge&quot;,&quot;300&quot;]}}]}" strategyParams-serialized="a:1:{s:16:&quot;amountPercentage&quot;;s:4:&quot;1000&quot;;}" publicationstatus="ACTIVE" />
+		<reward byLabel="Réduction de 10€" shop-refid="shop" pointCost="5500" id="reward10" description="Une réduction de 10€ pour vous remercier de votre fidélité" code="REDUC-15E" couponFilter="{&quot;operator&quot;:&quot;and&quot;,&quot;elements&quot;:[{&quot;class&quot;:&quot;order_CartFilter&quot;,&quot;parameters&quot;:{&quot;cart&quot;:[&quot;totalAmountWithTax&quot;,&quot;gt&quot;,&quot;15&quot;]}}]}" />
 		<reward byLabel="Réduction de 30%" shop-refid="shop" pointCost="7500" id="reward3pc" description="Une réduction de 30% pour vous remercier de votre fidélité" code="REDUC-30P" />
 	</shop>
-
 	<rootfolder module="marketing">
 		<folder byLabel="m.generic.bo.general.samples">
-			<discount byLabel="Coupon de réduction de 10€" description="Réduction de 10€ à valoir sur le total de votre panier si celui ci est d'un montant total TTC supérieur à 10€" applicationstrategy="GlobalValueDiscount" 
-				shop-refid="shop" publicationstatus="ACTIVE"
-				query='{"operator":"and","elements":[{"class":"loyalty_RewardCouponCartFilter","parameters":{"reward":[null,null,"{ref-id:reward10}"]}}]}'
-				strategy='{"value":10,"strategylabel":"Réduction de 10€"}' />
-			<discount byLabel="Coupon de réduction de 30%" description="Réduction de 30% à valoir sur le total de votre panier" applicationstrategy="GlobalPercentDiscount" 
-				shop-refid="shop" publicationstatus="ACTIVE"
-				query='{"operator":"and","elements":[{"class":"loyalty_RewardCouponCartFilter","parameters":{"reward":[null,null,"{ref-id:reward3pc}"]}}]}'
-				strategy='{"value":0.3,"strategylabel":"Réduction de 30%"}' />
+			<discount byLabel="Coupon de réduction de 10€" description="Réduction de 10€ à valoir sur le total de votre panier si celui ci est d'un montant total TTC supérieur à 10€" applicationstrategy="GlobalValueDiscount" shop-refid="shop" publicationstatus="ACTIVE" query="{&quot;operator&quot;:&quot;and&quot;,&quot;elements&quot;:[{&quot;class&quot;:&quot;loyalty_RewardCouponCartFilter&quot;,&quot;parameters&quot;:{&quot;reward&quot;:[null,null,&quot;{ref-id:reward10}&quot;]}}]}" strategy="{&quot;value&quot;:10,&quot;strategylabel&quot;:&quot;Réduction de 10€&quot;}" />
+			<discount byLabel="Coupon de réduction de 30%" description="Réduction de 30% à valoir sur le total de votre panier" applicationstrategy="GlobalPercentDiscount" shop-refid="shop" publicationstatus="ACTIVE" query="{&quot;operator&quot;:&quot;and&quot;,&quot;elements&quot;:[{&quot;class&quot;:&quot;loyalty_RewardCouponCartFilter&quot;,&quot;parameters&quot;:{&quot;reward&quot;:[null,null,&quot;{ref-id:reward3pc}&quot;]}}]}" strategy="{&quot;value&quot;:0.3,&quot;strategylabel&quot;:&quot;Réduction de 30%&quot;}" />
 		</folder>
 	</rootfolder>
-	
 	<customer id="luigi" byLogin="luigi" />
 	<loyaltyinfos customer-refid="luigi" points="6000" />
-	
 	<customer id="mario" byLogin="mario" />
 	<websitefrontendgroup for-default-website="true">
 		<websitefrontenduser id="yoshi" byLogin="yoshi@rbs.fr" firstname="Yoshi" lastname="Egg" email="yoshi@rbs.fr" password="abcd123" />
 	</websitefrontendgroup>
 	<country byLabel="France" id="fr" />
-	<address id="yoshiAddress" label="L'adresse de facturation de Yoshi" firstname="Yoshi" lastname="Egg"
-		email="yoshi@rbs.fr" addressLine1="150 île aux arbres" zipCode="67000" city="Strasbourg" country-refid="fr" />
-	<customer id="yoshiCustomer" user-refid="yoshi" address-refids="yoshiAddress" creationdate="2011-09-01 15:49:00"/>
+	<address id="yoshiAddress" label="L'adresse de facturation de Yoshi" firstname="Yoshi" lastname="Egg" email="yoshi@rbs.fr" addressLine1="150 île aux arbres" zipCode="67000" city="Strasbourg" country-refid="fr" />
+	<customer id="yoshiCustomer" user-refid="yoshi" address-refids="yoshiAddress" creationdate="2011-09-01 15:49:00" />
 	<proposing godfatherId-refid="mario" godchildEmail="yoshi@rbs.fr" godchildId-refid="yoshiCustomer" code="SuPr-123" />
-	
 </script>

@@ -7,7 +7,7 @@ class sample_BillingAreaSelectorStrategy
 	 */
 	public function getCurrentBillingArea($shop)
 	{
-		$data = Controller::getInstance()->getContext()->getStorage()->read('userBillingAreaSelected');
+		$data = change_Controller::getInstance()->getContext()->getStorage()->read('userBillingAreaSelected');
 		if (is_numeric($data))
 		{
 			$billingArea = DocumentHelper::getDocumentInstanceIfExists($data);
@@ -15,7 +15,7 @@ class sample_BillingAreaSelectorStrategy
 			{
 				return $billingArea;
 			}
-			Controller::getInstance()->getContext()->getStorage()->write('userBillingAreaSelected', null);
+			change_Controller::getInstance()->getContext()->getStorage()->write('userBillingAreaSelected', null);
 		}
 		return null;
 	}

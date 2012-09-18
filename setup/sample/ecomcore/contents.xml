@@ -3,9 +3,9 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
-	<binding fileName="modules/sample/setup/sample/ecom/theme-contents.xml" />
+	<binding fileName="modules/sample/setup/sample/ecomcore/theme-contents.xml" />
 	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform" />
-	<documentRef type="modules_form/form" byLabel="Partager un lien" id="sharelinkform" />
+<!-- 	<documentRef type="modules_form/form" byLabel="Partager un lien" id="sharelinkform" /> -->
 	<documentRef type="modules_videos/youtubevideo" byLabel="RBS CHANGE, du propriétaire à l'Open Source" id="videoyoutube1" />
 	<documentRef type="modules_videos/youtubevideo" byLabel="Webinar CMS RBS Change - chapitre 1" id="videoyoutube2" />
 	<documentRef type="modules_videos/video" byLabel="Video 1" id="video1" />
@@ -22,7 +22,7 @@
 	<product id="product6" byCodeReference="MICRO-AMIGA" />
 	<documentRef type="modules_website/page" byLabel="Mes commandes" id="myorders" />
 	<documentRef type="modules_website/page" byLabel="Mes informations" id="myinfos" />
-	<documentRef type="modules_website/topic" byLabel="Galerie de photos" id="photos" />
+	<!-- <documentRef type="modules_website/topic" byLabel="Galerie de photos" id="photos" />  -->
 	<documentRef type="modules_website/topic" byLabel="Forums" id="forums" />
 	<documentRef type="modules_website/topic" byLabel="Membres" id="members" />
 	<website byTag="default_modules_website_default-website" id="default-website">
@@ -77,6 +77,7 @@
 				</changecontent>
 			</page>
 		</topic>
+<!-- 		
 		<topic byLabel="Outils">
 			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
 				<changecontent for="content-block">
@@ -84,6 +85,7 @@
 				</changecontent>
 			</page>
 		</topic>
+-->
 		<menus>
 			<menu byTag="contextual_website_website_menu-main">
 				<menuitempage pageid="consoles" />
@@ -102,7 +104,7 @@
 				<menuitempage pageid="accessoiries" />
 			</menu>
 			<menu id="footer-2" byLabel="Communauté">
-				<menuitempage pageid="photos" />
+				<!-- <menuitempage pageid="photos" />  -->
 				<menuitempage pageid="videos" />
 				<menuitempage pageid="forums" />
 				<menuitempage pageid="members" />

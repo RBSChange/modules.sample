@@ -15,6 +15,7 @@
 			</topic>
 		</website>
 	</rootfolder>
+	<!-- 
 	<rootfolder module="blog">
 		<permissions>
 			<backendpermission module="blog" role="Admin" user-refid="demo-user" />
@@ -23,26 +24,6 @@
 	<rootfolder module="bookmarks">
 		<permissions>
 			<backendpermission module="bookmarks" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="brand">
-		<permissions>
-			<backendpermission module="brand" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="catalog">
-		<permissions>
-			<backendpermission module="catalog" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="comment">
-		<permissions>
-			<backendpermission module="comment" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="customer">
-		<permissions>
-			<backendpermission module="customer" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="download">
@@ -58,11 +39,6 @@
 	<rootfolder module="faq">
 		<permissions>
 			<backendpermission module="faq" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="forums">
-		<permissions>
-			<backendpermission module="forums" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="gmaps">
@@ -100,24 +76,9 @@
 			<backendpermission module="mysqlnotif" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
-	<rootfolder module="order">
-		<permissions>
-			<backendpermission module="order" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
 	<rootfolder module="paybox">
 		<permissions>
 			<backendpermission module="paybox" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="payment">
-		<permissions>
-			<backendpermission module="payment" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="photoalbum">
-		<permissions>
-			<backendpermission module="photoalbum" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="polls">
@@ -125,34 +86,14 @@
 			<backendpermission module="polls" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
-	<rootfolder module="privatemessaging">
-		<permissions>
-			<backendpermission module="privatemessaging" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
 	<rootfolder module="productupdater">
 		<permissions>
 			<backendpermission module="productupdater" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
-	<rootfolder module="richtext">
-		<permissions>
-			<backendpermission module="richtext" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="sample">
-		<permissions>
-			<backendpermission module="sample" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
 	<rootfolder module="sharethis">
 		<permissions>
 			<backendpermission module="sharethis" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
-	<rootfolder module="shipping">
-		<permissions>
-			<backendpermission module="shipping" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="shoppingmail">
@@ -168,6 +109,62 @@
 	<rootfolder module="twitterconnect">
 		<permissions>
 			<backendpermission module="twitterconnect" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="photoalbum">
+		<permissions>
+			<backendpermission module="photoalbum" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	 -->
+	<rootfolder module="brand">
+		<permissions>
+			<backendpermission module="brand" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="catalog">
+		<permissions>
+			<backendpermission module="catalog" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="comment">
+		<permissions>
+			<backendpermission module="comment" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="customer">
+		<permissions>
+			<backendpermission module="customer" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="forums">
+		<permissions>
+			<backendpermission module="forums" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="order">
+		<permissions>
+			<backendpermission module="order" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="payment">
+		<permissions>
+			<backendpermission module="payment" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="privatemessaging">
+		<permissions>
+			<backendpermission module="privatemessaging" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="richtext">
+		<permissions>
+			<backendpermission module="richtext" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="shipping">
+		<permissions>
+			<backendpermission module="shipping" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="videos">

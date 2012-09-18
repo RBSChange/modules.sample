@@ -5,12 +5,10 @@
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 	<binding fileName="modules/inquiry/persistentdocument/import/inquiry_binding.xml" />
-
 	<systemfolder module="form" relatedmodule="joboffer">
 		<documentRef type="modules_form/form" byFormid="modules_joboffer/simplecandidacy" id="sform" />
 		<documentRef type="modules_inquiry/inquiryform" byFormid="modules_joboffer/inquirycandidacy" id="iform" />
 	</systemfolder>
-
 	<systemfolder module="list" relatedmodule="joboffer">
 		<editablelist byListid="modules_joboffer/offertype">
 			<item byLabel="CDI" id="cdi" />
@@ -18,12 +16,9 @@
 			<item byLabel="Stage" id="stage" />
 		</editablelist>
 	</systemfolder>
-
 	<rootfolder module="joboffer">
 		<linkedtopic refid="joboffertopic">
-			<offer byLabel="Développeur web" offertype-refid="cdi" reference="OFFRE1" description="Vous participerez au développement du CMS open source RBS Change."
-				publicationstatus="ACTIVE" location="Strasbourg" background="Minimum deux ans dans le développement web." profile="Bonne maitrise de la programmation orientée objet."
-				candidacyForm-refid="sform" />
+			<offer byLabel="Développeur web" offertype-refid="cdi" reference="OFFRE1" description="Vous participerez au développement du CMS open source RBS Change." publicationstatus="ACTIVE" location="Strasbourg" background="Minimum deux ans dans le développement web." profile="Bonne maitrise de la programmation orientée objet." candidacyForm-refid="sform" />
 			<attribute name="offer-cdp"><![CDATA[En relation avec les équipes techniques et commerciales vous prendrez en charge les projets de nos clients. Vous réalisez les projets dans le respect des budgets et des délais.<br/>
 <br/>
 Vous aurez en charge comme missions principales :<br/>
@@ -36,16 +31,9 @@ Vous aurez en charge comme missions principales :<br/>
 <li>Assurer le reporting</li>
 </ul><br/>
 Accompagné de nos ressources de production, vous aurez la capacité à réaliser et de mener à bien nos différents projets.]]></attribute>
-			<offer byLabel="Chef de projets" offertype-refid="cdi" reference="OFFRE10" description-attr="offer-cdp" publicationstatus="ACTIVE" location="Paris"
-				background="vous justifiez d'une expérience minimale de 2 années dans la gestion de projet au sein d'une SSII. Doté d'un excellent relationnel, vous savez vous adapter aux divers interlocuteurs dans l'entreprise."
-				profile="De formations supérieure Bac +4/5. La pratique des outils informatiques (Word, Excel, Powerpoint, Internet, Outlook) est indispensable, la maîtrise de l'anglais serait un plus."
-				candidacyForm-refid="sform" />
-			<offer byLabel="Stagiaire testeur jeux vidéos" offertype-refid="stage" reference="OFFRE2"
-				description="Offre de stage exceptionnel. Afin de servir le monde du jeu vidéo, nous avons besoin d'une personne motivé et doué pour finir des jeux vidéos de grande qualités"
-				publicationstatus="ACTIVE" location="San Antonio"
-				background="Vous faites preuve d'autonomie, de rigueur, d'esprit de synthèse. Vos qualités d'écoute, vos qualités pédagogiques et votre aisance relationnelle sont de solides atouts."
-				profile="De niveau bac, vous justifiez d'une expérience de 2 ans minimum sur un poste similaire." candidacyForm-refid="sform" />
+			<offer byLabel="Chef de projets" offertype-refid="cdi" reference="OFFRE10" description-attr="offer-cdp" publicationstatus="ACTIVE" location="Paris" background="vous justifiez d'une expérience minimale de 2 années dans la gestion de projet au sein d'une SSII. Doté d'un excellent relationnel, vous savez vous adapter aux divers interlocuteurs dans l'entreprise." profile="De formations supérieure Bac +4/5. La pratique des outils informatiques (Word, Excel, Powerpoint, Internet, Outlook) est indispensable, la maîtrise de l'anglais serait un plus." candidacyForm-refid="sform" />
+			<offer byLabel="Stagiaire testeur jeux vidéos" offertype-refid="stage" reference="OFFRE2" description="Offre de stage exceptionnel. Afin de servir le monde du jeu vidéo, nous avons besoin d'une personne motivé et doué pour finir des jeux vidéos de grande qualités" publicationstatus="ACTIVE" location="San Antonio" background="Vous faites preuve d'autonomie, de rigueur, d'esprit de synthèse. Vos qualités d'écoute, vos qualités pédagogiques et votre aisance relationnelle sont de solides atouts." profile="De niveau bac, vous justifiez d'une expérience de 2 ans minimum sur un poste similaire." candidacyForm-refid="sform" />
 		</linkedtopic>
-		<spontaneous byLabel="m.joboffer.document.spontaneous.document-name" candidacyForm-refid="sform" offertype-refid="cdi"></spontaneous>
+		<spontaneous byLabel="m.joboffer.document.spontaneous.document-name" candidacyForm-refid="sform" offertype-refid="cdi" />
 	</rootfolder>
 </script>

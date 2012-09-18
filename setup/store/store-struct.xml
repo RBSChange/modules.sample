@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-
 	<website byRefid="default-website">
 		<execute method="setDocumentIdAttribute" />
 		<binding fileName="modules/store/setup/globalDefaultStructure.xml" />

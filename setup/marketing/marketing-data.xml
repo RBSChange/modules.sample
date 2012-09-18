@@ -4,23 +4,19 @@
 		WARNING: before importing this file, import :
 			- catalog/catalog-data.xml
 	-->
-
 	<binding fileName="modules/customer/persistentdocument/import/customer_binding.xml" />
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
 	<binding fileName="modules/payment/persistentdocument/import/payment_binding.xml" />
 	<binding fileName="modules/shipping/persistentdocument/import/shipping_binding.xml" />
 	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
 	<binding fileName="modules/marketing/persistentdocument/import/marketing_binding.xml" />
-	
 	<!-- Include page structure. -->
 	<binding fileName="modules/marketing/setup/default.xml" />
-	
 	<!-- Look for required documents. -->
 	<documentRef byLabel="Boutique" id="shop" type="modules_catalog/shop" />
 	<documentRef id="shipping" byLabel="Colissimo" type="modules_shipping/mode" />
 	<documentRef id="payment" byLabel="Paiement par chèque" type="modules_payment/chequeconnector" />
 	<shippingfilter id="shippingfilter" byLabel="Colissimo" />
-	
 	<product id="product1" byCodeReference="NES-1985" />
 	<product id="product2" byCodeReference="COLECO-1982" />
 	<product id="product3" byCodeReference="ATARI2600-1978" />
@@ -30,61 +26,38 @@
 	<customer id="customer1" byLogin="mario" />
 	<customer id="customer2" byLogin="luigi" />
 	<address id="address" byLabel="L'adresse de livraison de Mario" />
-		
 	<!-- Coupons and discount samples. -->
 	<rootfolder module="marketing">
 		<folder byLabel="m.generic.bo.general.samples">
-			<coupon id="coupon1" byLabel="Réduction de 5%" code="test1" shop-refid="shop" publicationstatus="ACTIVE"/>
-			<coupon id="coupon2" byLabel="Réduction de 15€" code="test2" shop-refid="shop" publicationstatus="ACTIVE"/>
-			
-			<discount byLabel="Coupon de réduction de 5%" applicationstrategy="GlobalPercentDiscount" 
-				shop-refid="shop" publicationstatus="ACTIVE" 
-				query='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["coupon","in","{ref-id:coupon1}"]}}]}'
-				strategy='{"value":0.05,"strategylabel":"Réduction de 5%"}' />
-			<discount byLabel="Coupon de réduction de 15€" description="Réduction de 15€ à valoir sur le total de votre panier celui ci est d'un montant total TTC supérieur à 15€" applicationstrategy="GlobalValueDiscount" 
-				shop-refid="shop" publicationstatus="ACTIVE"
-				query='{"operator":"and","elements":[{"class":"order_CartFilter","parameters":{"cart":["coupon","in","{ref-id:coupon2}"]}},{"class":"order_CartFilter","parameters":{"cart":["totalAmountWithTax","gt","15"]}}]}'
-				strategy='{"value":15,"strategylabel":"Réduction de 15€"}' />
+			<coupon id="coupon1" byLabel="Réduction de 5%" code="test1" shop-refid="shop" publicationstatus="ACTIVE" />
+			<coupon id="coupon2" byLabel="Réduction de 15€" code="test2" shop-refid="shop" publicationstatus="ACTIVE" />
+			<discount byLabel="Coupon de réduction de 5%" applicationstrategy="GlobalPercentDiscount" shop-refid="shop" publicationstatus="ACTIVE" query="{&quot;operator&quot;:&quot;and&quot;,&quot;elements&quot;:[{&quot;class&quot;:&quot;order_CartFilter&quot;,&quot;parameters&quot;:{&quot;cart&quot;:[&quot;coupon&quot;,&quot;in&quot;,&quot;{ref-id:coupon1}&quot;]}}]}" strategy="{&quot;value&quot;:0.05,&quot;strategylabel&quot;:&quot;Réduction de 5%&quot;}" />
+			<discount byLabel="Coupon de réduction de 15€" description="Réduction de 15€ à valoir sur le total de votre panier celui ci est d'un montant total TTC supérieur à 15€" applicationstrategy="GlobalValueDiscount" shop-refid="shop" publicationstatus="ACTIVE" query="{&quot;operator&quot;:&quot;and&quot;,&quot;elements&quot;:[{&quot;class&quot;:&quot;order_CartFilter&quot;,&quot;parameters&quot;:{&quot;cart&quot;:[&quot;coupon&quot;,&quot;in&quot;,&quot;{ref-id:coupon2}&quot;]}},{&quot;class&quot;:&quot;order_CartFilter&quot;,&quot;parameters&quot;:{&quot;cart&quot;:[&quot;totalAmountWithTax&quot;,&quot;gt&quot;,&quot;15&quot;]}}]}" strategy="{&quot;value&quot;:15,&quot;strategylabel&quot;:&quot;Réduction de 15€&quot;}" />
 		</folder>
 	</rootfolder>
-	
 	<!-- Orders using coupons. -->
-	<cart id="cart1" shop-refid="shop" customer-refid="customer2" 
-		address-refid="address" shippingFilter-refid="shippingfilter"
-		coupon-refid="coupon2"
-		billingMode-refid="payment"
-		creationdate="2010-04-01 08:16:12">
+	<cart id="cart1" shop-refid="shop" customer-refid="customer2" address-refid="address" shippingFilter-refid="shippingfilter" coupon-refid="coupon2" billingMode-refid="payment" creationdate="2010-04-01 08:16:12">
 		<cartline product-refid="product1" quantity="1" />
 		<cartline product-refid="product2" quantity="2" />
 	</cart>
 	<order cart-refid="cart1">
-		<bill transactionId="CHQ-523312564" creationdate="2010-04-01 08:16:12"
-			transactionDate="2010-04-03 10:45:12" transactionText="Chèque receptionné le 2010-04-03"
-			status="success"/>
+		<bill transactionId="CHQ-523312564" creationdate="2010-04-01 08:16:12" transactionDate="2010-04-03 10:45:12" transactionText="Chèque receptionné le 2010-04-03" status="success" />
 	</order>
-	
-	<cart id="cart2" shop-refid="shop" customer-refid="customer1" 
-		address-refid="address" shippingFilter-refid="shippingfilter" 
-		coupon-refid="coupon1"
-		billingMode-refid="payment"
-		creationdate="2010-04-01 09:12:12">
+	<cart id="cart2" shop-refid="shop" customer-refid="customer1" address-refid="address" shippingFilter-refid="shippingfilter" coupon-refid="coupon1" billingMode-refid="payment" creationdate="2010-04-01 09:12:12">
 		<cartline product-refid="product4" quantity="1" />
 		<cartline product-refid="product5" quantity="2" />
 		<cartline product-refid="product3" quantity="1" />
 	</cart>
 	<order cart-refid="cart2">
-		<bill transactionId="CHQ-566621231" creationdate="2010-04-01 09:12:12"
-			transactionDate="2010-04-04 09:45:12" transactionText="Chèque receptionné le 2010-04-04"
-			status="success"/>
+		<bill transactionId="CHQ-566621231" creationdate="2010-04-01 09:12:12" transactionDate="2010-04-04 09:45:12" transactionText="Chèque receptionné le 2010-04-04" status="success" />
 	</order>
-	
 	<!-- Animations -->
 	<rootfolder module="marketing">
 		<folder byLabel="m.generic.bo.general.samples">
 			<editableanim product-refids="product1,product2,product3,product4,product5,product6" byLabel="Nos bonnes affaires" description="Une sélection de nos bonnes affaires! Profitez-en avant qu'il ne soit trop tard" shop-refid="shop" id="editanim" />
-			<dynamicanim query='[{"class":"order_MostFrequentlyOrderedFilter","parameters":{"maxcount":[null,null,"5"]}}]' byLabel="Nos meilleures ventes" shop-refid="shop" id="topventes" />
-			<dynamicanim query='[{"class":"marketing_LastProductFilter","parameters":{"count":[null,null,"10"],"datetype":[null,null,"creation"]}}]' byLabel="Nos nouveautés" shop-refid="shop" id="newproducts" />
-			<dynamicanim query='[{"class":"marketing_ProductPriceFilter","parameters":{}}]' byLabel="Nos promotions" shop-refid="shop" id="promotions" />
+			<dynamicanim query="[{&quot;class&quot;:&quot;order_MostFrequentlyOrderedFilter&quot;,&quot;parameters&quot;:{&quot;maxcount&quot;:[null,null,&quot;5&quot;]}}]" byLabel="Nos meilleures ventes" shop-refid="shop" id="topventes" />
+			<dynamicanim query="[{&quot;class&quot;:&quot;marketing_LastProductFilter&quot;,&quot;parameters&quot;:{&quot;count&quot;:[null,null,&quot;10&quot;],&quot;datetype&quot;:[null,null,&quot;creation&quot;]}}]" byLabel="Nos nouveautés" shop-refid="shop" id="newproducts" />
+			<dynamicanim query="[{&quot;class&quot;:&quot;marketing_ProductPriceFilter&quot;,&quot;parameters&quot;:{}}]" byLabel="Nos promotions" shop-refid="shop" id="promotions" />
 		</folder>
 	</rootfolder>
 </script>

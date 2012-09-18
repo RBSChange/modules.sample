@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-
 	<website byTag="default_modules_website_default-website" id="website">
 		<topic byLabel="Communauté" id="topiccommunity">
 			<execute method="setDocumentIdAttribute" attribute-name="rootId" />
 			<binding fileName="modules/sample/setup/forums/forums-struct.xml" />
 			<binding fileName="modules/sample/setup/forums/forums-data.xml" />
-			
 			<topic byLabel="Forums">
 				<page byLabel="Forum" template-attr="templateHome" />
 				<page byLabel="Sujet" template-attr="templateHome" />

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-
 	<binding fileName="modules/sample/setup/productreturns/productreturns-data.xml" />
-
 	<website byTag="default_modules_website_default-website">
 		<execute method="setDocumentIdAttribute" attribute-name="website-id" />
 		<execute method="setDocumentTypeAttribute" attribute-name="website-type" />

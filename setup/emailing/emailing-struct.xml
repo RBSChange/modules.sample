@@ -2,7 +2,6 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
-
 	<documentRef byDocumentId-attr="rootId">
 		<topic byLabel="Newsletter">
 			<execute method="setDocumentIdAttribute" />
