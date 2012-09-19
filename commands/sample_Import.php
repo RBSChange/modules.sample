@@ -95,6 +95,7 @@ class commands_sample_Import extends c_ChangescriptCommand
 		$samples[] = 'media/media-data.xml';
 		$samples[] = 'videos/videos-data.xml';
 		$samples[] = 'sample/fullos/privatemessaging.xml';
+		$samples[] = 'sample/fullos/event.xml';
 		$samples[] = 'sample/fullos/forums.xml';
 		$samples[] = 'brand/brand-data.xml';
 
