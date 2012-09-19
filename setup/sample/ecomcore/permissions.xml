@@ -31,11 +31,6 @@
 			<backendpermission module="download" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
-	<rootfolder module="event">
-		<permissions>
-			<backendpermission module="event" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
 	<rootfolder module="faq">
 		<permissions>
 			<backendpermission module="faq" role="Admin" user-refid="demo-user" />
@@ -91,11 +86,6 @@
 			<backendpermission module="productupdater" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
-	<rootfolder module="sharethis">
-		<permissions>
-			<backendpermission module="sharethis" role="Admin" user-refid="demo-user" />
-		</permissions>
-	</rootfolder>
 	<rootfolder module="shoppingmail">
 		<permissions>
 			<backendpermission module="shoppingmail" role="Admin" user-refid="demo-user" />
@@ -137,6 +127,11 @@
 			<backendpermission module="customer" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
+	<rootfolder module="event">
+		<permissions>
+			<backendpermission module="event" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
 	<rootfolder module="forums">
 		<permissions>
 			<backendpermission module="forums" role="Admin" user-refid="demo-user" />
@@ -160,6 +155,11 @@
 	<rootfolder module="richtext">
 		<permissions>
 			<backendpermission module="richtext" role="Admin" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+	<rootfolder module="sharethis">
+		<permissions>
+			<backendpermission module="sharethis" role="Admin" user-refid="demo-user" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="shipping">
