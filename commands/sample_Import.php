@@ -98,6 +98,7 @@ class commands_sample_Import extends c_ChangescriptCommand
 		$samples[] = 'sample/fullos/event.xml';
 		$samples[] = 'sample/fullos/forums.xml';
 		$samples[] = 'brand/brand-data.xml';
+		$samples[] = 'sample/fullos/statictext.xml';
 
 		// ECOM modules.
 		$samples[] = 'shipping/shipping-data.xml';
