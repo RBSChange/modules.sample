@@ -10,12 +10,12 @@
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="forum">
-				<media path="modules/forums/setup/media/sample/new.png" byLabel="Nouveau" id="visual-new" />
-				<media path="modules/forums/setup/media/sample/award_star_bronze_2.png" byLabel="Médaille de bronze" id="visual-bronze" />
-				<media path="modules/forums/setup/media/sample/award_star_silver_2.png" byLabel="Médaille d'argent" id="visual-silver" />
-				<media path="modules/forums/setup/media/sample/award_star_gold_2.png" byLabel="Médaille d'or" id="visual-gold" />
-				<media path="modules/forums/setup/media/sample/medal_silver_1.png" byLabel="Modérateur" id="visual-mod" />
-				<media path="modules/forums/setup/media/sample/medal_gold_1.png" byLabel="Super-modérateur" id="visual-smod" />
+				<media path="modules/sample/setup/forums/media/new.png" byLabel="Nouveau" id="visual-new" />
+				<media path="modules/sample/setup/forums/media/award_star_bronze_2.png" byLabel="Médaille de bronze" id="visual-bronze" />
+				<media path="modules/sample/setup/forums/media/award_star_silver_2.png" byLabel="Médaille d'argent" id="visual-silver" />
+				<media path="modules/sample/setup/forums/media/award_star_gold_2.png" byLabel="Médaille d'or" id="visual-gold" />
+				<media path="modules/sample/setup/forums/media/medal_silver_1.png" byLabel="Modérateur" id="visual-mod" />
+				<media path="modules/sample/setup/forums/media/medal_gold_1.png" byLabel="Super-modérateur" id="visual-smod" />
 			</folder>
 		</folder>
 	</rootfolder>
