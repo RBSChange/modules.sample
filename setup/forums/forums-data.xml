@@ -87,7 +87,7 @@
 				<permission module="forums" role="SuperModerator" user-refid="mod2" />
 			</permissions>
 			<execute method="setDocumentIdAttributeWithWebsite" />
-			<forumgroup label="Forums" mountParent-refid="topiccommunity" publicationstatus="ACTIVE" flagList-refid="flags">
+			<forumgroup byLabel="Forums" mountParent-refid="topiccommunity" publicationstatus="ACTIVE" flagList-refid="flags">
 				<documenturl lang="fr" url="/forums" />
 				<permissions>
 					<permission module="forums" role="SuperModerator" user-refid="mod2" />
@@ -95,7 +95,7 @@
 				</permissions>
 				<execute method="setDocumentIdAttributeWithTopic" />
 				<binding fileName="modules/forums/setup/forumgroupDefaultStructure.xml" />
-				<forum label="Les jeux du grenier" nbPostPerPage="10" publicationstatus="ACTIVE" description="Pour parler d'anciens jeux qui ont marqué la culture du jeu vidéo.">
+				<forum byLabel="Les jeux du grenier" nbPostPerPage="10" publicationstatus="ACTIVE" description="Pour parler d'anciens jeux qui ont marqué la culture du jeu vidéo.">
 					<documenturl lang="fr" url="/forums/grenier" />
 					<thread label="Game &amp; Watch" authorid-refid="user1">
 						<bbcodeattribute name="postText"><![CDATA[Les Game & Watch sont des jeux électroniques de poches produits par la société Nintendo de 1980 à 1991, ils font également office de montres et de réveils.
@@ -147,7 +147,7 @@ Dr. Mario a été bien accueilli par la critique et est, aujourd'hui encore, cit
 						<post authorid-refid="user1" text-attr="postText" />
 					</thread>
 				</forum>
-				<forum label="BlaBla général" nbPostPerPage="10" publicationstatus="ACTIVE" description="Discutons de tout et de rien">
+				<forum byLabel="BlaBla général" nbPostPerPage="10" publicationstatus="ACTIVE" description="Discutons de tout et de rien">
 					<documenturl lang="fr" url="/forums/blabla" />
 					<thread label="Présentation des nouveaux Retrogamers" authorid-refid="mod1" level="40" flag="fellowship">
 						<post authorid-refid="mod1" textAsBBCode="Salut à toi petit nouveau et bienvenue sur les forums. Une petite présentation ça fait toujours bien plaisir à la communauté, c'est pourquoi tu es invité à te présenter." />
@@ -563,14 +563,14 @@ Merci d'avance.]]></bbcodeattribute>
 						authorid-refid="user1" text-attr="postText" /> </thread> -->
 					<!-- end of lorem - should have 12 threads before -->
 				</forum>
-				<forum label="News du Forum" nbPostPerPage="10" publicationstatus="ACTIVE" description="Ici vous seront présenté, les nouveautés, les améliorations, les maintenances">
+				<forum byLabel="News du Forum" nbPostPerPage="10" publicationstatus="ACTIVE" description="Ici vous seront présenté, les nouveautés, les améliorations, les maintenances">
 					<documenturl lang="fr" url="/forums/news" />
 					<thread label="Mise en place des présentations" authorid-refid="mod1">
 						<post authorid-refid="mod1" textAsBBCode="Comme vous pouvez le voir, en annonce globale, j'ai ouvert un nouveau sujet pour que chacun puisse se présenter et que nous puissions faire connaissance." />
 						<post authorid-refid="user2" textAsBBCode="Merci, monsieur." />
 					</thread>
 				</forum>
-				<forum label="Boîte à idées - Vos suggestions" nbPostPerPage="10" publicationstatus="ACTIVE" description="Déposez ici vos idées de forums, sujets, rubriques, catégories ... Afin de faire avancer le forum dans votre sens">
+				<forum byLabel="Boîte à idées - Vos suggestions" nbPostPerPage="10" publicationstatus="ACTIVE" description="Déposez ici vos idées de forums, sujets, rubriques, catégories ... Afin de faire avancer le forum dans votre sens">
 					<thread label="Diam mauris, in" authorid-refid="user2">
 						<post authorid-refid="user2" textAsBBCode="Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
 						<post authorid-refid="mod2" textAsBBCode="Pellentesque nisl urna, lacinia eget, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque." />
