@@ -34,8 +34,8 @@
 	<country byCode="FR" id="fr" />
 	<rootfolder module="store">
 		<folder byLabel="m.store.document.storeservicefolder.document-name">
-			<storeservice publicationstatus="PUBLICATED" byCodeReference="SAV" id="SAV" label="S.A.V" pictogram-refid="sav_visual" description-attr="" />
-			<storeservice publicationstatus="PUBLICATED" byCodeReference="24/24" id="2424" label="Ouverture 24h/24h &amp; 7j/7j" pictogram-refid="clock_visual" description-attr="" />
+			<storeservice publicationstatus="PUBLISHED" byCodeReference="SAV" id="SAV" label="S.A.V" pictogram-refid="sav_visual" description-attr="" />
+			<storeservice publicationstatus="PUBLISHED" byCodeReference="24/24" id="2424" label="Ouverture 24h/24h &amp; 7j/7j" pictogram-refid="clock_visual" description-attr="" />
 		</folder>
 		<folder byLabel="m.generic.bo.general.samples">
 			<store id="store1" byCodeReference="Change" label="Boutique Change Entzeim" visual-refid="media1" description-attr="" services-refids="SAV,2424" openingHours-attr="opening-1" contact-refids="contact1" latitude="48.5463108" longitude="7.65184339" addressLine1="AEROPARC 1" addressLine2="11 rue Icare" zipCode="67836" city="ENTZHEIM" countryId-refid="fr" website-refids="default-website" />
