@@ -143,7 +143,6 @@
 			<attributeDefinition label="Standard vidéo" code="VIDEOSTD" type="text" list-refid="VIDEOSTD-LIST" />
 			<attributeDefinition label="Zonage" code="GAMEZONE" type="text" list-refid="GAMEZONES-LIST" />
 		</attributefolder>
-		
 	</rootfolder>
 	
 	<shop byCodeReference="DEMO" id="shop" topShelf-refids="CAT-CONSOLES,CAT-ACCESSORIES,CAT-GAMES,CAT-ARCADES,CAT-MICRO" />
@@ -163,7 +162,7 @@
 	<mode id="shipping" byCode="ColiPoste" />
 	<chequeconnector id="payment" byCode="CHQ" />
 	<freeconnector id="freepayment" byCode="FREE" />
-	<shippingfilter byLabel="Colissimo" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="8.361204013377927" />
+	<shippingfilter byLabel="Colissimo" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="8.04" />
 	<paymentfilter byLabel="Chèque" shop-refid="shop" connector-refid="payment" />
 	<paymentfilter byLabel="Avoir/Commande offerte" shop-refid="shop" connector-refid="freepayment" />
 
