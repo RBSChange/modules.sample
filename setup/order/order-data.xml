@@ -12,7 +12,6 @@
 	<binding fileName="modules/customer/persistentdocument/import/customer_binding.xml" />
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
 	<binding fileName="modules/payment/persistentdocument/import/payment_binding.xml" />
-	<binding fileName="modules/shipping/persistentdocument/import/shipping_binding.xml" />
 	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
 	<!--	Begin -->
 	<shop byLabel="Boutique" id="shop" />
@@ -20,8 +19,7 @@
 	<customer id="customer2" byLogin="luigi" />
 	<customer id="customer3" byLogin="donkey" />
 	<customer id="customer4" byLogin="peach" />
-	<mode id="shipping" byLabel="Colissimo" />
-	<shippingfilter id="shippingfilter" byLabel="Colissimo" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="8.04" />
+	<shippingfilter id="shippingfilter" byLabel="Colissimo" />
 	<chequeconnector id="payment" byLabel="Paiement par chèque" />
 	<simpleproduct id="product1" byCodeReference="NES-1985" />
 	<simpleproduct id="product2" byCodeReference="COLECO-1982" />

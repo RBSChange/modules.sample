@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<!-- 
-		WARNING: before importing this file, import :
+		WARNING: before importing this file, import:
 			- catalog/catalog-data.xml
 	-->
 	<binding fileName="modules/customer/persistentdocument/import/customer_binding.xml" />
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
 	<binding fileName="modules/payment/persistentdocument/import/payment_binding.xml" />
-	<binding fileName="modules/shipping/persistentdocument/import/shipping_binding.xml" />
 	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
 	<binding fileName="modules/marketing/persistentdocument/import/marketing_binding.xml" />
 	<!-- Include page structure. -->
 	<binding fileName="modules/marketing/setup/default.xml" />
 	<!-- Look for required documents. -->
 	<documentRef byLabel="Boutique" id="shop" type="modules_catalog/shop" />
-	<documentRef id="shipping" byLabel="Colissimo" type="modules_shipping/mode" />
 	<documentRef id="payment" byLabel="Paiement par chèque" type="modules_payment/chequeconnector" />
 	<shippingfilter id="shippingfilter" byLabel="Colissimo" />
 	<product id="product1" byCodeReference="NES-1985" />
