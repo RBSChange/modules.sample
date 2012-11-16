@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	
+	<website byTag="default_modules_website_default-website" id="website">
+		<execute method="setDocumentIdAttribute" />
+		<execute method="setDocumentTypeAttribute" />
+	</website>
+
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+
+	<rootfolder module="users">
+		<backendgroup byLabel="Utilisateurs Change">
+			<backenduser byLogin="demo" id="demo-user" />
+		</backendgroup>
+	</rootfolder>
+	
+	<frontendgroup id="grpextstore" byLabel="Extranet Magasin" />
+	<frontendgroup id="grpcustserv" byLabel="Service Client" />
+	
+	<websitefrontendgroup for-default-website="true" id="">
+		<websitefrontenduser id="extchange" byLogin="extchange" firstname="RBS Change Store" lastname="extranet user" 
+			email="extchange@rbs.fr" password="abcd123" 
+			groups-refids="grpextstore" />
+			
+		<websitefrontenduser id="extchange2" byLogin="extchange2" firstname="RBS Change Store Selestat" lastname="extranet user" 
+			email="extchange2@rbs.fr" password="abcd123" 
+			groups-refids="grpextstore" />
+			
+		<websitefrontenduser id="sercli" byLogin="sercli" firstname="Service" lastname="Client" 
+			email="sercli@rbs.fr" password="abcd123" 
+			groups-refids="grpcustserv" />
+	</websitefrontendgroup>
+	
+	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
+	<store id="store1" byCodeReference="Change" 
+		usePreparation="true" customerServiceGroup-refid="grpcustserv" />
+	<store id="store3" byCodeReference="ChangeSelestat"
+		usePreparation="true" customerServiceGroup-refid="grpcustserv" />
+	
+	<storeextranet id="extstore3" byLabel="RBS Change Store Selestat" store-refid="store3" website-refid="website" 
+		users-refids="extchange2" remindDaysNotif="7" />
+					
+	<!--  Nintendo Entertainment System (NES)  -->
+	<documentRef type="modules_catalog/product" byCodeReference="NES-1985" id="NES-1985" />
+	<!--  Duck Hunt -->
+	<documentRef type="modules_catalog/product" byCodeReference="DUCK-HUNT" id="DUCK-HUNT" />
+	<!--  Joystick pour la NES -->
+	<documentRef type="modules_catalog/product" byCodeReference="NES-ADVANTAGE" id="NES-ADVANTAGE" />
+	<!--  Neo-Geo AES -->
+	<documentRef type="modules_catalog/product" byCodeReference="NEOGEO-1990" id="NEOGEO-1990" />
+	
+	<storewarehouse byCodeReference="Change" store-refid="store1">
+		<warehousestock product-refid="NES-1985" stock="10" lowquantity="5" />
+		<warehousestock product-refid="NEOGEO-1990" stock="25" lowquantity="5" />
+		<warehousestock product-refid="DUCK-HUNT" stock="250" lowquantity="5" />
+		<warehousestock product-refid="NES-ADVANTAGE" stock="300" lowquantity="5" />
+	</storewarehouse>
+	
+	<storewarehouse byCodeReference="ChangeSelestat" store-refid="store3">
+		<warehousestock product-refid="NES-1985" stock="50" lowquantity="5" />
+		<warehousestock product-refid="NEOGEO-1990" stock="80" lowquantity="5" />
+		<warehousestock product-refid="DUCK-HUNT" stock="1000" lowquantity="5" />
+		<warehousestock product-refid="NES-ADVANTAGE" stock="500" lowquantity="5" />
+	</storewarehouse>
+	
+	<documentRef byDocumentId-attr="" type-attr="">
+		<topic byLabel="Extranet magasin">
+			<permissions>
+				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="grpextstore" />
+				<backendpermission module="website" role="Admin" user-refid="demo-user" />
+			</permissions>
+			
+			<topic byLabel="Click &amp; Collect">
+				<page byTag="contextual_website_website_modules_store_clickandcollect" Label="Click &amp; Collect" 
+					isIndexPage="true" navigationVisibility="hidden" indexingstatus="false" >
+					<changecontent for="content-block">
+						<changeblock type="modules_store_Clickandcollect" />
+					</changecontent>
+				</page>
+				
+				<page byTag="contextual_website_website_modules_store_preparation-list" label="Commandes en préparation"
+					indexingstatus="false">
+					<changecontent for="content-block">
+						<changeblock type="modules_store_Orderpreparationlist" />
+					</changecontent>
+				</page>	
+				
+				<page byTag="contextual_website_website_modules_store_preparation" label="Préparer une commande"
+					indexingstatus="false" navigationVisibility="hidden">
+					<changecontent for="content-block">
+						<changeblock type="modules_store_Orderpreparation" />
+					</changecontent>
+				</page>
+			</topic>
+		</topic>
+		
+		<topic byLabel="Service client">
+			<permissions>
+				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="grpcustserv" />
+				<backendpermission module="website" role="Admin" user-refid="demo-user" />
+			</permissions>
+			<page byTag="contextual_website_website_modules_store_customerservice" label="Accueil Service Client"
+				isIndexPage="true" indexingstatus="false" navigationVisibility="hidden">
+				<changecontent for="content-block">
+					<changeblock type="modules_store_Customerservicehome" />
+				</changecontent>
+			</page>
+		</topic>
+		
+		<topic byLabel="Boutique">
+			<page byLabel="Selection Magasin" id="popin" template-attr="templatePopin" navigationVisibility="hidden" indexingstatus="false" >
+				<changecontent for="content-block">
+					<changeblock type="modules_store_SelectStoreForCart" />
+				</changecontent>
+			</page>
+			
+			<page byTag="functional_catalog_product-detail">
+				<changecontent for="content-block">
+					<changeblock type="modules_catalog_product" />
+					<changeblock type="modules_store_AddProductToStoreCart" __selectStorePopIn-refid="popin" />
+					<changeblock type="modules_catalog_ProductDescription" />
+					<changeblock type="modules_catalog_CrossSelling" __linkType="complementary" />
+					<changeblock type="modules_catalog_CrossSelling" __linkType="similar" />
+					<changeblock type="modules_catalog_CrossSelling" __linkType="upsell" />
+					<changeblock type="modules_catalog_bundleListByProduct" />
+					<changeblock type="modules_catalog_comments" />
+				</changecontent>
+			</page>
+		</topic>
+		
+		<topic byLabel="Compte client">
+			<page byLabel="Détail d'une commande">
+				<changecontent for="content-block">
+					<changeblock type="modules_order_order" />
+					<changeblock type="modules_store_Customerpreparationconfirm" />
+				</changecontent>
+			</page>
+		</topic>
+	</documentRef>
+	
+	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<attribute name="query">
+		<![CDATA[{"operator":"and","elements":[{"class":"store_StoreCartFilter","parameters":{"isStore":[null,null,"false"]}}]}]]>
+	</attribute>
+	<shippingfilter byLabel="Colissimo" query-attr="" />
+</script>
