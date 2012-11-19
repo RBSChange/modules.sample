@@ -10,5 +10,6 @@
 	<website byTag="default_modules_website_default-website" id="extws" />
 	
 	<binding fileName="modules/sample/setup/store/store-extranet.xml" />
+	
 	<binding fileName="modules/sample/setup/store/store-preparation.xml" />
 </script>

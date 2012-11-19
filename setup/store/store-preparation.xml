@@ -7,6 +7,8 @@
 		<execute method="setDocumentIdAttribute" />
 		<execute method="setDocumentTypeAttribute" />
 	</website>
+	
+	<binding fileName="modules/store/setup/clickandcollectDefaultStructure.xml" />
 
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 
@@ -68,45 +70,14 @@
 	<documentRef byDocumentId-attr="" type-attr="">
 		<topic byLabel="Extranet magasin">
 			<permissions>
-				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="grpextstore" />
 				<backendpermission module="website" role="Admin" user-refid="demo-user" />
 			</permissions>
-			
-			<topic byLabel="Click &amp; Collect">
-				<page byTag="contextual_website_website_modules_store_clickandcollect" Label="Click &amp; Collect" 
-					isIndexPage="true" navigationVisibility="hidden" indexingstatus="false" >
-					<changecontent for="content-block">
-						<changeblock type="modules_store_Clickandcollect" />
-					</changecontent>
-				</page>
-				
-				<page byTag="contextual_website_website_modules_store_preparation-list" label="Commandes en préparation"
-					indexingstatus="false">
-					<changecontent for="content-block">
-						<changeblock type="modules_store_Orderpreparationlist" />
-					</changecontent>
-				</page>	
-				
-				<page byTag="contextual_website_website_modules_store_preparation" label="Préparer une commande"
-					indexingstatus="false" navigationVisibility="hidden">
-					<changecontent for="content-block">
-						<changeblock type="modules_store_Orderpreparation" />
-					</changecontent>
-				</page>
-			</topic>
 		</topic>
 		
 		<topic byLabel="Service client">
 			<permissions>
-				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="grpcustserv" />
 				<backendpermission module="website" role="Admin" user-refid="demo-user" />
 			</permissions>
-			<page byTag="contextual_website_website_modules_store_customerservice" label="Accueil Service Client"
-				isIndexPage="true" indexingstatus="false" navigationVisibility="hidden">
-				<changecontent for="content-block">
-					<changeblock type="modules_store_Customerservicehome" />
-				</changecontent>
-			</page>
 		</topic>
 		
 		<topic byLabel="Boutique">
@@ -126,15 +97,6 @@
 					<changeblock type="modules_catalog_CrossSelling" __linkType="upsell" />
 					<changeblock type="modules_catalog_bundleListByProduct" />
 					<changeblock type="modules_catalog_comments" />
-				</changecontent>
-			</page>
-		</topic>
-		
-		<topic byLabel="Compte client">
-			<page byLabel="Détail d'une commande">
-				<changecontent for="content-block">
-					<changeblock type="modules_order_order" />
-					<changeblock type="modules_store_Customerpreparationconfirm" />
 				</changecontent>
 			</page>
 		</topic>

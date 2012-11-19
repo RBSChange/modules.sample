@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
-	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
 	
+	<frontendgroup id="grpextstore" byLabel="Extranet Magasin" />
+	<websitefrontendgroup for-default-website="true">
+		<websitefrontenduser id="userchange" byLogin="extchange" firstname="RBS Change Store" lastname="extranet user" 
+			email="extchange@rbs.fr" password="abcd123" 
+			groups-refids="grpextstore" />
+	</websitefrontendgroup>	
+	
+	
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<website byRefid="extws">
 		<execute method="setDocumentIdAttribute" />
 		<execute method="setDocumentTypeAttribute" />
 	</website>
-	
-	<websitefrontendgroup for-default-website="true">
-		<execute method="setDocumentIdAttribute" attribute-name="groupId"/>
-		<execute method="setDocumentTypeAttribute" attribute-name="groupType"/>
-		
-		<websitefrontenduser id="userchange" byLogin="extchange" firstname="RBS Change Store" lastname="extranet user" email="extchange@rbs.fr" password="abcd123" />
-	</websitefrontendgroup>
-	
 	<binding fileName="modules/store/setup/extranetDefaultStructure.xml" />
 	
+	<binding fileName="modules/store/persistentdocument/import/store_binding.xml" />
 	<store id="store1" byCodeReference="Change" isShippingRelay="true" />		
 	
 	<storeextranet id="extstore1" byLabel="RBS Change Store" store-refid="store1" website-refid="extws" users-refids="userchange" remindDaysNotif="7" />	
