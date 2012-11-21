@@ -52,11 +52,29 @@
 	<!--  Neo-Geo AES -->
 	<documentRef type="modules_catalog/product" byCodeReference="NEOGEO-1990" id="NEOGEO-1990" />
 	
+	<!-- NES Zapper -->
+	<documentRef type="modules_catalog/product" byCodeReference="NES-ZAPPER-GREY" id="NES-ZAPPER-GREY" />
+	<documentRef type="modules_catalog/product" byCodeReference="NES-ZAPPER-ORANGE" id="NES-ZAPPER-ORANGE" />
+	
+	<!-- Kit Pokemon -->
+	<documentRef type="modules_catalog/product" byCodeReference="GAMEBOY-POCKET" id="GAMEBOY-POCKET" />
+	<documentRef type="modules_catalog/product" byCodeReference="GAMEBOY-LINKCABLE" id="GAMEBOY-LINKCABLE" />
+	<documentRef type="modules_catalog/product" byCodeReference="POKEMON-GAME-RED" id="POKEMON-GAME-RED" />
+	<documentRef type="modules_catalog/product" byCodeReference="POKEMON-GAME-BLUE" id="POKEMON-GAME-BLUE" />
+	
 	<storewarehouse byCodeReference="Change" store-refid="store1">
 		<warehousestock product-refid="NES-1985" stock="10" lowquantity="5" />
 		<warehousestock product-refid="NEOGEO-1990" stock="25" lowquantity="5" />
 		<warehousestock product-refid="DUCK-HUNT" stock="250" lowquantity="5" />
 		<warehousestock product-refid="NES-ADVANTAGE" stock="300" lowquantity="5" />
+		
+		<warehousestock product-refid="NES-ZAPPER-GREY" stock="50" lowquantity="5" />
+		<warehousestock product-refid="NES-ZAPPER-ORANGE" stock="50" lowquantity="5" />
+		
+		<warehousestock product-refid="GAMEBOY-POCKET" stock="50" lowquantity="5" />
+		<warehousestock product-refid="GAMEBOY-LINKCABLE" stock="50" lowquantity="5" />
+		<warehousestock product-refid="POKEMON-GAME-RED" stock="50" lowquantity="5" />
+		<warehousestock product-refid="POKEMON-GAME-BLUE" stock="50" lowquantity="5" />
 	</storewarehouse>
 	
 	<storewarehouse byCodeReference="ChangeSelestat" store-refid="store3">
@@ -64,6 +82,14 @@
 		<warehousestock product-refid="NEOGEO-1990" stock="80" lowquantity="5" />
 		<warehousestock product-refid="DUCK-HUNT" stock="1000" lowquantity="5" />
 		<warehousestock product-refid="NES-ADVANTAGE" stock="500" lowquantity="5" />
+		
+		<warehousestock product-refid="NES-ZAPPER-GREY" stock="50" lowquantity="5" />
+		<warehousestock product-refid="NES-ZAPPER-ORANGE" stock="0" lowquantity="5" />
+		
+		<warehousestock product-refid="GAMEBOY-POCKET" stock="50" lowquantity="5" />
+		<warehousestock product-refid="GAMEBOY-LINKCABLE" stock="15" lowquantity="20" />
+		<warehousestock product-refid="POKEMON-GAME-RED" stock="0" lowquantity="5" />
+		<warehousestock product-refid="POKEMON-GAME-BLUE" stock="100" lowquantity="5" />
 	</storewarehouse>
 	
 	<documentRef byDocumentId-attr="" type-attr="">
