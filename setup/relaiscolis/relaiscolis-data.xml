@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+	<binding fileName="modules/relaiscolis/persistentdocument/import/relaiscolis_binding.xml" />
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+
+	<rootfolder module="media">
+		<folder byLabel="m.generic.bo.general.samples">
+			<folder byLabel="shipping">
+				<media path="modules/relaiscolis/setup/logo_relaiscolis.png" byLabel="Relais Colis" id="visual" />
+			</folder>
+		</folder>
+	</rootfolder>
+
+	<rootfolder module="shipping">
+		<folder byLabel="m.generic.bo.general.samples">
+			<relaiscolismode byLabel="Relais Colis" visual-refid="visual" description="Livraison Relais Colis" code="RelaisColis"
+				codeReference="RelaisColis" username="webservices@tnt.fr" password="test" id="shipping" />
+		</folder>
+	</rootfolder>
+
+	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<shippingfilter byLabel="Relais Colis" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="0" />
+</script>

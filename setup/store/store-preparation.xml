@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	
 	<website byTag="default_modules_website_default-website" id="website">
@@ -107,4 +106,8 @@
 		<![CDATA[{"operator":"and","elements":[{"class":"store_StoreCartFilter","parameters":{"isStore":[null,null,"false"]}}]}]]>
 	</attribute>
 	<shippingfilter byLabel="Colissimo" query-attr="" />
+	<shippingfilter byLabel="Kiala" query-attr="" />
+	<shippingfilter byLabel="Mondial Relay" query-attr="" />
+	<shippingfilter byLabel="Ici Relais" query-attr="" />
+	<shippingfilter byLabel="Relais Colis" query-attr="" />
 </script>

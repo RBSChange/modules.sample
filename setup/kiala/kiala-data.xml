@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+	<binding fileName="modules/kiala/persistentdocument/import/kiala_binding.xml" />
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+
+	<rootfolder module="media">
+		<folder byLabel="m.generic.bo.general.samples">
+			<folder byLabel="shipping">
+				<media path="modules/kiala/setup/logo_kiala.gif" byLabel="Kiala" id="visual" />
+			</folder>
+		</folder>
+	</rootfolder>
+
+	<rootfolder module="shipping">
+		<folder byLabel="m.generic.bo.general.samples">
+			<kialamode byLabel="Kiala" visual-refid="visual" description="Livraison Kiala" code="Kiala" codeReference="Kiala" dspid="DEMO_DSP"
+				id="shipping" />
+		</folder>
+	</rootfolder>
+
+	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<shippingfilter byLabel="Kiala" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="0" />
+</script>

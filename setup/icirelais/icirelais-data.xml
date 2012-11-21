@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+	<binding fileName="modules/icirelais/persistentdocument/import/icirelais_binding.xml" />
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+
+	<rootfolder module="media">
+		<folder byLabel="m.generic.bo.general.samples">
+			<folder byLabel="shipping">
+				<media path="modules/icirelais/setup/logo_icirelais.png" byLabel="Ici Relais" id="visual" />
+			</folder>
+		</folder>
+	</rootfolder>
+
+	<rootfolder module="shipping">
+		<folder byLabel="m.generic.bo.general.samples">
+			<attribute name="trackingUrl">
+				<![CDATA[http://e-trace.ils-consult.fr/ici-webtrace/webclients.aspx?sdg_landnr={1}&sdg_mandnr={2}&sdg_lfdnr={3}&cmd=SDG_SEARCH_EXACT]]>
+			</attribute>
+			<icirelaismode byLabel="Ici Relais" visual-refid="visual" description="Livraison Ici Relais" code="IciRelais"
+				codeReference="IciRelais" trackingUrl-attr="" id="shipping" />
+		</folder>
+	</rootfolder>
+	
+	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<shippingfilter byLabel="Ici Relais" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="0" />
+</script>
