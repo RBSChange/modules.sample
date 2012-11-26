@@ -160,6 +160,10 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'catalog/catalog-struct.xml';
 		$samples[] = 'sample/fullos/customer.xml';
 		$samples[] = 'order/order-struct.xml';
+		$samples[] = 'sample/fullos/kiala.xml';
+		$samples[] = 'sample/fullos/mondialrelay.xml';
+		$samples[] = 'sample/fullos/icirelais.xml';
+		$samples[] = 'sample/fullos/relaiscolis.xml';
 		
 		// Non-OS modules.
 		$samples[] = 'marketing/marketing-data.xml';

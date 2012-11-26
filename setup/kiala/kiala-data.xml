@@ -15,7 +15,7 @@
 	<rootfolder module="shipping">
 		<folder byLabel="m.generic.bo.general.samples">
 			<kialamode byLabel="Kiala" visual-refid="visual" description="Livraison Kiala" code="Kiala" codeReference="Kiala" dspid="DEMO_DSP"
-				id="shipping" />
+				id="shipping" groupName="RBSChange" />
 		</folder>
 	</rootfolder>
 

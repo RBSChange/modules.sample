@@ -134,6 +134,6 @@
 	<shippingfilter byLabel="Colissimo" query-attr="" />
 	<shippingfilter byLabel="Kiala" query-attr="" />
 	<shippingfilter byLabel="Mondial Relay" query-attr="" />
-	<shippingfilter byLabel="Ici Relais" query-attr="" />
+	<shippingfilter byLabel="ICI Relais" query-attr="" />
 	<shippingfilter byLabel="Relais Colis" query-attr="" />
 </script>
