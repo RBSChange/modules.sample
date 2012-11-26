@@ -7,7 +7,7 @@
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="shipping">
-				<media path="modules/icirelais/setup/logo_icirelais.png" byLabel="Ici Relais" id="visual" />
+				<media path="modules/icirelais/setup/logo_icirelais.png" byLabel="ICI Relais" id="visual" />
 			</folder>
 		</folder>
 	</rootfolder>
@@ -17,11 +17,11 @@
 			<attribute name="trackingUrl">
 				<![CDATA[http://e-trace.ils-consult.fr/ici-webtrace/webclients.aspx?sdg_landnr={1}&sdg_mandnr={2}&sdg_lfdnr={3}&cmd=SDG_SEARCH_EXACT]]>
 			</attribute>
-			<icirelaismode byLabel="Ici Relais" visual-refid="visual" description="Livraison Ici Relais" code="IciRelais"
+			<icirelaismode byLabel="ICI Relais" visual-refid="visual" description="Livraison en 24/48H dans l’un des 5 500 points relais" code="IciRelais"
 				codeReference="IciRelais" trackingUrl-attr="" id="shipping" />
 		</folder>
 	</rootfolder>
 	
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
-	<shippingfilter byLabel="Ici Relais" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="0" />
+	<shippingfilter byLabel="ICI Relais" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="0" />
 </script>
