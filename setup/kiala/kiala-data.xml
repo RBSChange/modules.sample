@@ -7,7 +7,7 @@
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="shipping">
-				<media path="modules/kiala/setup/logo_kiala.gif" byLabel="Kiala" id="visual" />
+				<media path="modules/kiala/setup/logo_kiala.JPG" byLabel="Kiala" id="visual" />
 			</folder>
 		</folder>
 	</rootfolder>
