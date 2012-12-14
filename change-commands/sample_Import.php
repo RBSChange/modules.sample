@@ -172,6 +172,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'sample/full/emailing.xml';
 		$samples[] = 'sample/full/store.xml';
 		$samples[] = 'loyalty/loyalty-struct.xml';
+		//$samples[] = 'productreturns/productreturns-struct.xml';
 		
 		$samples[] = 'sample/full/contents.xml';
 		$samples[] = 'sample/full/permissions.xml';

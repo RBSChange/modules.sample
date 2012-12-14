@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
+
 	<binding fileName="modules/payment/persistentdocument/import/payment_binding.xml" />
 	<binding fileName="modules/productreturns/persistentdocument/import/productreturns_binding.xml" />
 
@@ -10,4 +11,193 @@
 			<paymentfilter byLabel="Chèque" connector-refid="payment" query-attr="" />
 		</paymentfolder>
 	</rootfolder>
+	
+	<binding fileName="modules/productreturns/setup/workflowStandard.xml" />
+	<binding fileName="modules/productreturns/setup/workflowStandardNPAI.xml" />
+	<binding fileName="modules/productreturns/setup/workflowStandardBo.xml" />
+
+ 	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+ 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+ 	
+ 	<backenduser byLogin="demo" id="demo-user" />
+ 	<rootfolder module="users">
+		<backendgroup byLabel="Retour - Service Client" id="sercliGroup">
+			<backenduser firstname="Service" lastname="Client Gestion Des Retours" email="retour.sercli@rbs.fr" byLogin="sercli" passwordmd5="79cfeb94595de33b3326c06ab1c7dbda"
+				publicationstatus="ACTIVE" id="sercli" />
+		</backendgroup>
+		<backendgroup byLabel="Retour - Logistique" id="logisticGroupe">	
+			<backenduser firstname="Logi" lastname="Stique Gestion Des Retours" email="retour.logistique@rbs.fr" byLogin="logistique" passwordmd5="79cfeb94595de33b3326c06ab1c7dbda"
+				publicationstatus="ACTIVE" id="logistique" />
+		</backendgroup>
+		<backendgroup byLabel="Retour - Comptabilité" id="comptaGroupe">
+			<backenduser firstname="Compta" lastname="Bilite Gestion Des Retours" email="retour.comptabilite@rbs.fr" byLogin="comptabilite" passwordmd5="79cfeb94595de33b3326c06ab1c7dbda"
+				publicationstatus="ACTIVE" id="comptabilite" />
+		</backendgroup>
+	</rootfolder>
+	<rootfolder module="productreturns">
+		<permissions>
+			<backendpermission module="productreturns" role="Customersupport" group-refid="sercliGroup" />
+			<backendpermission module="productreturns" role="Logistics" group-refid="logisticGroupe" />
+			<backendpermission module="productreturns" role="Accounting" group-refid="comptaGroupe" />
+			<backendpermission module="productreturns" role="Customersupport" user-refid="demo-user" />
+			<backendpermission module="productreturns" role="Logistics" user-refid="demo-user" />
+			<backendpermission module="productreturns" role="Accounting" user-refid="demo-user" />
+		</permissions>
+	</rootfolder>
+
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+	<binding fileName="modules/customer/persistentdocument/import/customer_binding.xml" />
+	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<binding fileName="modules/payment/persistentdocument/import/payment_binding.xml" />
+	<binding fileName="modules/shipping/persistentdocument/import/shipping_binding.xml" />
+	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
+	
+	<shop byLabel="Boutique" id="shop" />
+	<customer id="customer1" byLogin="mario" />
+	<mode id="shipping" byLabel="Colissimo" />
+	<shippingfilter id="shippingfilter" byLabel="Colissimo"/>
+	<chequeconnector id="payment" byLabel="Paiement par chèque" />
+	<simpleproduct id="product1" byCodeReference="NES-1985" />
+	<simpleproduct id="product2" byCodeReference="COLECO-1982" />
+	<productdeclination id="product3" byCodeReference="SUPER-NINTENDO-EUR" />
+	<simpleproduct id="product4" byCodeReference="MEGADRIVE-1988" />
+	<simpleproduct id="product5" byCodeReference="NEOGEO-1990" />
+	<simpleproduct id="product6" byCodeReference="ATARI2600-1978" />
+	<productdeclination id="product7" byCodeReference="NES-ZAPPER-GREY" />
+	<address id="address1" byLabel="L'adresse de livraison de Mario" />
+    <shippingaddress id="shippingAddress1" byLabel="Mario Bros" fromAddress="address1" />
+	
+	<website id="website" byTag="default_modules_website_default-website" />
+	
+	<!-- Orders -->
+	<order id="order39480" customer-refid="customer1" shopId-refid="shop"
+		websiteId-refid="website" creationdate="2009-09-09 07:09:09"
+		autoTotalAmount="true" billingModeId-refid="payment"
+		billingAddress-refid="address1" shippingModeDocument-refid="shipping"
+		shippingDataSerialized="{&quot;{ref-id:shipping}&quot;:{&quot;lines&quot;:[0], &quot;filter&quot;:{&quot;id&quot;:&quot;{ref-id:shippingfilter}&quot;,&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;,&quot;feesId&quot;:false}}}"
+		addressIdByModeIdSeralized="{&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;, &quot;addressId&quot;:&quot;{ref-id:shippingAddress1}&quot;}">
+		<orderline product-refid="product1" quantity="3" />
+		<bill transactionId="CHQ-129076087" creationdate="2009-09-09 07:15:09"
+			transactionDate="2009-09-10 07:09:09" transactionText="Chèque receptionné le 2009-09-10"
+			status="success" />
+		<expedition id="npaiReturn1" creationdate="2009-09-12 07:09:09" status="shipped"
+			shippingdate="2009-09-13 08:10:10" trackingnumber="TRACK92789509915KTHXBYE" />
+	</order>
+	<order id="order39481" customer-refid="customer1" shopId-refid="shop"
+		websiteId-refid="website" creationdate="2009-06-09 07:09:09"
+		autoTotalAmount="true" billingModeId-refid="payment"
+		billingAddress-refid="address1" shippingModeDocument-refid="shipping"
+		shippingDataSerialized="{&quot;{ref-id:shipping}&quot;:{&quot;lines&quot;:[0,1], &quot;filter&quot;:{&quot;id&quot;:&quot;{ref-id:shippingfilter}&quot;,&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;,&quot;feesId&quot;:false}}}"
+		addressIdByModeIdSeralized="{&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;, &quot;addressId&quot;:&quot;{ref-id:shippingAddress1}&quot;}">
+		<orderline product-refid="product1" quantity="3" />
+		<orderline product-refid="product2" quantity="1" />
+		<bill transactionId="CHQ-129076087" creationdate="2009-06-09 07:15:09"
+			transactionDate="2009-06-10 07:09:09" transactionText="Chèque receptionné le 2009-06-10"
+			status="success" />
+		<expedition id="npaiReturn2" creationdate="2009-06-12 07:09:09" status="shipped"
+			shippingdate="2009-06-13 08:10:10" trackingnumber="TRACK92789509915KTHXBYE" />
+	</order>
+	<order id="order39482" customer-refid="customer1" shopId-refid="shop"
+		websiteId-refid="website" creationdate="2010-10-10 08:10:10"
+		autoTotalAmount="true" billingModeId-refid="payment"
+		billingAddress-refid="address1" shippingModeDocument-refid="shipping"
+		shippingDataSerialized="{&quot;{ref-id:shipping}&quot;:{&quot;lines&quot;:[0], &quot;filter&quot;:{&quot;id&quot;:&quot;{ref-id:shippingfilter}&quot;,&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;,&quot;feesId&quot;:false}}}"
+		addressIdByModeIdSeralized="{&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;, &quot;addressId&quot;:&quot;{ref-id:shippingAddress1}&quot;}">
+		<orderline product-refid="product1" quantity="3" />
+		<bill transactionId="CHQ-129076087" creationdate="2010-10-10 08:15:30"
+			transactionDate="2010-10-12 08:10:10" transactionText="Chèque receptionné le 2010-10-12"
+			status="success" />
+		<expedition creationdate="2010-10-13 08:10:10" status="shipped"
+			shippingdate="2010-10-14 08:10:10" trackingnumber="TRACK92789509915KTHXBYE" />
+	</order>
+	<order id="order73878" customer-refid="customer1" shopId-refid="shop"
+		websiteId-refid="website" creationdate="2011-11-11 10:11:11"
+		autoTotalAmount="true" billingModeId-refid="payment"
+		billingAddress-refid="address1" shippingModeDocument-refid="shipping"
+		shippingDataSerialized="{&quot;{ref-id:shipping}&quot;:{&quot;lines&quot;:[0,1,2,3,4,5], &quot;filter&quot;:{&quot;id&quot;:&quot;{ref-id:shippingfilter}&quot;,&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;,&quot;feesId&quot;:false}}}"
+		addressIdByModeIdSeralized="{&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;, &quot;addressId&quot;:&quot;{ref-id:shippingAddress1}&quot;}">
+		<orderline product-refid="product7" quantity="4" />
+		<orderline id="2011orderline1" product-refid="product1" quantity="2" />
+		<orderline id="2011orderline2" product-refid="product2" quantity="1" />
+		<orderline product-refid="product6" quantity="3" />
+		<orderline product-refid="product4" quantity="3" />
+		<orderline product-refid="product3" quantity="2" />
+		<bill transactionId="CHQ-5508598" creationdate="2011-11-11 10:15:11"
+			transactionDate="2011-11-12 10:11:11" transactionText="Chèque receptionné le 2011-11-12"
+			status="success" />
+		<expedition creationdate="2011-11-13 10:11:11" status="shipped"
+			shippingdate="2011-11-14 10:11:11" trackingnumber="TRACK98909338335KTHXBYE" />
+	</order>
+	<order id="order74949" customer-refid="customer1" shopId-refid="shop"
+		websiteId-refid="website" creationdate="2012-12-12 11:12:12"
+		autoTotalAmount="true" billingModeId-refid="payment"
+		billingAddress-refid="address1" shippingModeDocument-refid="shipping"
+		shippingDataSerialized="{&quot;{ref-id:shipping}&quot;:{&quot;lines&quot;:[0,1], &quot;filter&quot;:{&quot;id&quot;:&quot;{ref-id:shippingfilter}&quot;,&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;,&quot;feesId&quot;:false}}}"
+		addressIdByModeIdSeralized="{&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;, &quot;addressId&quot;:&quot;{ref-id:shippingAddress1}&quot;}">
+		<orderline id="2012orderline" product-refid="product5" quantity="4" />
+		<orderline product-refid="product4" quantity="5" />
+		<bill transactionId="CHQ-673031476" creationdate="2012-12-12 11:15:12"
+			transactionDate="2012-12-13 11:12:12" transactionText="Chèque receptionné le 2012-12-13"
+			status="success" />
+		<expedition creationdate="2012-12-14 11:12:12" status="shipped"
+			shippingdate="2012-12-15 11:12:12" trackingnumber="TRACK93944790731KTHXBYE" />
+	</order>
+	<order id="order61949" customer-refid="customer1" shopId-refid="shop"
+		websiteId-refid="website" creationdate="2009-02-10 22:55:21"
+		autoTotalAmount="true" billingModeId-refid="payment"
+		billingAddress-refid="address1" shippingModeDocument-refid="shipping"
+		shippingDataSerialized="{&quot;{ref-id:shipping}&quot;:{&quot;lines&quot;:[0,1,2,3,4,5,6], &quot;filter&quot;:{&quot;id&quot;:&quot;{ref-id:shippingfilter}&quot;,&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;,&quot;feesId&quot;:false}}}"
+		addressIdByModeIdSeralized="{&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;, &quot;addressId&quot;:&quot;{ref-id:shippingAddress1}&quot;}">
+		<orderline product-refid="product7" quantity="2" />
+		<orderline product-refid="product5" quantity="5" />
+		<orderline product-refid="product3" quantity="3" />
+		<orderline product-refid="product4" quantity="1" />
+		<orderline product-refid="product2" quantity="5" />
+		<orderline product-refid="product1" quantity="3" />
+		<orderline product-refid="product6" quantity="2" />
+		<bill transactionId="CHQ-479227510" creationdate="2009-02-10 23:47:21"
+			transactionDate="2009-02-12 12:09:21" transactionText="Chèque receptionné le 2009-02-12"
+			status="success" />
+		<expedition creationdate="2009-02-15 04:43:21" status="shipped"
+			shippingdate="2009-02-18 09:12:21" trackingnumber="TRACK34516291366KTHXBYE" />
+	</order>
+	<order id="order90414" customer-refid="customer1" shopId-refid="shop"
+		websiteId-refid="website" creationdate="2009-02-17 11:16:02"
+		autoTotalAmount="true" billingModeId-refid="payment"
+		billingAddress-refid="address1" shippingModeDocument-refid="shipping"
+		shippingDataSerialized="{&quot;{ref-id:shipping}&quot;:{&quot;lines&quot;:[0,1,2,3,4,5,6], &quot;filter&quot;:{&quot;id&quot;:&quot;{ref-id:shippingfilter}&quot;,&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;,&quot;feesId&quot;:false}}}"
+		addressIdByModeIdSeralized="{&quot;modeId&quot;:&quot;{ref-id:shipping}&quot;, &quot;addressId&quot;:&quot;{ref-id:shippingAddress1}&quot;}">
+		<orderline product-refid="product1" quantity="5" />
+		<orderline product-refid="product5" quantity="1" />
+		<orderline product-refid="product2" quantity="4" />
+		<orderline product-refid="product6" quantity="5" />
+		<orderline product-refid="product4" quantity="4" />
+		<orderline product-refid="product3" quantity="3" />
+		<orderline product-refid="product7" quantity="1" />
+		<bill transactionId="CHQ-660019271" creationdate="2009-02-17 13:48:02"
+			transactionDate="2009-02-19 03:51:02" transactionText="Chèque receptionné le 2009-02-19"
+			status="success" />
+		<expedition creationdate="2009-02-21 17:28:02" status="shipped"
+			shippingdate="2009-02-25 07:04:02" trackingnumber="TRACK70096407462KTHXBYE" />
+	</order>
+
+	<reason byCode="withdrawal"/>
+	<reason byCode="defective" id="defective" />
+	<reason byCode="broken" id="reasonBroken" />
+	<reason byCode="badproduct" />
+	<reason byCode="npai" id="npai" />
+	<reason byCode="unclaimed" />
+			
+	<return order-refid="order74949" reasonId-refid="reasonBroken" reasonCode-refid="reasonBroken" reasonDetails="L'une des NEOGEO est cassée" status="new" startWorkflow="true">
+		<returnline orderlineid-refid="2012orderline" quantity="1" />
+	</return>
+	
+	<return order-refid="order73878" reasonId-refid="defective" reasonCode-refid="reasonBroken" reasonDetails="Je n'ai pas d'image sur mon écran lorsque que j'allume les NES (les deux sont défectueuses), la COLECO affiche un écran bleu et rien ne se passe" status="new" startWorkflow="true">
+		<returnline orderlineid-refid="2011orderline1" quantity="2" />
+		<returnline orderlineid-refid="2011orderline2" quantity="1" />
+	</return>
+	
+	<npaireturn order-refid="order39480" reasonId-refid="npai" expedition-refid="npaiReturn1" reasonDetails="N'habite pas à l'adresse indiquée" status="new" needsPayment="true" />
+	<npaireturn order-refid="order39481" reasonId-refid="npai" expedition-refid="npaiReturn2" reasonDetails="N'habite pas à l'adresse indiquée" status="new" />
 </script>
