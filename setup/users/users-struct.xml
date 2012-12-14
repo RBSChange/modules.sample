@@ -11,16 +11,16 @@
 					<changeblock type="modules_users_register" />
 				</changecontent>
 			</page>
-			<page label="Authentification">
+			<page byLabel="Connexion" template-attr="templateNosidebar">
 				<tag name="contextual_website_website_error401-1" />
 				<changecontent for="content-block">
 					<changeblock type="richtext">
-						<![CDATA[Pour accéder à cet espace, vous devez être authentifié.]]>
+						<![CDATA[Pour continuer, vous devez vous connecter ou vous inscrire.]]>
 					</changeblock>
 					<changeblock type="modules_users_authentication" />
 				</changecontent>
 			</page>
-			<page byLabel="Mot de passe perdu">
+			<page byLabel="Mot de passe perdu" template-attr="templateNosidebar">
 				<tag name="contextual_website_website_modules_users_reset-password" />
 				<changecontent for="content-block">
 					<changeblock type="modules_users_resetpassword" />

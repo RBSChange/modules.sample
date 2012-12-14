@@ -55,7 +55,7 @@
 		</topic>
 			
 		<topic byLabel="Commande">
-			<page label="Créer un compte client" byTag="contextual_website_website_modules_customer_new-account">
+			<page label="Créer un compte" byTag="contextual_website_website_modules_customer_new-account" template-attr="templateNosidebar">
 				<changecontent for="content-block">
 					<changeblock type="modules_customer_createaccount" />
 				</changecontent>
