@@ -9,6 +9,9 @@
 	<country byCode="FR" id="fr" />
 	<country byCode="CH" id="ch" />
 
+	<frontendgroup id="grpsupermoderator" byLabel="Super modérateur de forum" />
+	<frontendgroup id="grpmoderator" byLabel="Modérateur de forum" />
+
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="forum">
@@ -42,9 +45,10 @@
 	<websitefrontendgroup for-default-website="true">
 		<websitefrontenduser id="usera" byLogin="doug42"
 			firstname="Douglas" lastname="Adams" email="douglas.adams@rbs.fr"
-			password="abcd123" />
+			password="abcd123" groups-refids="grpmoderator" />
 		<websitefrontenduser id="userb" byLogin="jp"
-			firstname="Jean" lastname="Paoli" email="jean.paoli@rbs.fr" password="abcd123" />
+			firstname="Jean" lastname="Paoli" email="jean.paoli@rbs.fr" password="abcd123"
+			groups-refids="grpsupermoderator" />
 		<websitefrontenduser id="user1" byLogin="gern"
 			firstname="François" lastname="Gernelle" email="francois.gernelle@rbs.fr"
 			password="abcd123" />
@@ -119,22 +123,22 @@
 		<member id="member9" user-refid="user9" publicationstatus="ACTIVE"
 			displayname="true" />
 	</website>
-	
+
 	<rootfolder module="forums">
 		<websitefolder byWebsite-refid="website">
-			<permissions>
+			<permissions inherits="true">
 				<frontendpermission module="forums" role="SuperModerator"
-					user-refid="userb" />
+					group-refid="grpsupermoderator" />
 			</permissions>
-			<execute method="setDocumentIdAttributeWithWebsite" />			
+			<execute method="setDocumentIdAttributeWithWebsite" />
 			<forumgroup label="Forums" mountParent-refid="topiccommunity"
 				publicationstatus="ACTIVE" flagList-refid="flags">
 				<documenturl lang="fr" url="/forums" />
-				<permissions>
+				<permissions inherits="true">
 					<frontendpermission module="forums" role="SuperModerator"
-						user-refid="userb" />
+						group-refid="grpsupermoderator" />
 					<frontendpermission module="forums" role="Moderator"
-						user-refid="usera" />
+						group-refid="grpmoderator" />
 				</permissions>
 				<execute method="setDocumentIdAttributeWithTopic" />
 				<binding fileName="modules/forums/setup/forumgroupDefaultStructure.xml" />

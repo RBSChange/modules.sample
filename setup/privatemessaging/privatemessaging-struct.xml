@@ -7,7 +7,7 @@
 		<topic byLabel="Messagerie privée">
 			<execute method="setDocumentIdAttribute" />
 			<binding fileName="modules/privatemessaging/setup/globalDefaultStructure.xml" />
-			<permissions>
+			<permissions inherits="true">
 				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="websitefrontendgroup"/>
 			</permissions>
 		</topic>

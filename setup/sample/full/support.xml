@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<binding fileName="modules/support/setup/ticketworkflow.xml" />
+
+	<website byTag="default_modules_website_default-website" id="default-website" >
+		<execute method="setDocumentIdAttribute" attribute-name="websiteId" />
+		<topic byLabel="Compte client">
+			<execute method="setDocumentIdAttribute" />
+			<execute method="setDocumentTypeAttribute" />
+			<binding fileName="modules/support/setup/customerDefaultStructure.xml" />
+		</topic>
+	</website>
+
+	<binding fileName="modules/sample/setup/support/support-data.xml" />
+
+</script>

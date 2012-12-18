@@ -56,6 +56,8 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	protected function addCoreSamples(&$samples)
 	{
+		$samples[] = 'sample/core/permissions.xml';
+		
 		// Core modules.
 		$samples[] = 'website/website-struct.xml';
 		$samples[] = 'media/media-data.xml';
@@ -68,7 +70,6 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'rss/rss-data.xml';
 		
 		$samples[] = 'sample/core/contents.xml';
-		$samples[] = 'sample/core/permissions.xml';
 	}
 	
 	/**
@@ -76,6 +77,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	protected function addFullOsSamples(&$samples)
 	{
+		$samples[] = 'sample/fullos/permissions.xml';
 		$samples[] = 'sample/ecom/theme.xml';
 		
 		// Core modules.
@@ -117,7 +119,6 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'sample/fullos/relaiscolis.xml';
 		
 		$samples[] = 'sample/fullos/contents.xml';
-		$samples[] = 'sample/fullos/permissions.xml';
 	}
 	
 	/**
@@ -125,6 +126,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	 */
 	protected function addFullSamples(&$samples)
 	{
+		$samples[] = 'sample/full/permissions.xml';
 		$samples[] = 'sample/ecom/theme.xml';
 		
 		// Core modules.
@@ -150,10 +152,12 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'sample/fullos/photoalbum.xml';
 		$samples[] = 'sample/fullos/blog.xml';
 		$samples[] = 'sample/fullos/forums.xml';
-		$samples[] = 'brand/brand-data.xml';
 		$samples[] = 'sample/fullos/statictext.xml';
+		$samples[] = 'sample/fullos/polls.xml';
+		$samples[] = 'sample/fullos/bookmarks.xml';
 		
 		// ECOM modules.
+		$samples[] = 'sample/fullos/brand.xml';
 		$samples[] = 'shipping/shipping-data.xml';
 		$samples[] = 'payment/payment-data.xml';
 		$samples[] = 'paybox/paybox-data.xml';
@@ -173,9 +177,11 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'sample/full/store.xml';
 		$samples[] = 'loyalty/loyalty-struct.xml';
 		//$samples[] = 'productreturns/productreturns-struct.xml';
+		$samples[] = 'sample/full/support.xml';
+		//$samples[] = 'sample/full/privatesales.xml';
+		$samples[] = 'atosserver/atosserver-data.xml';
 		
 		$samples[] = 'sample/full/contents.xml';
-		$samples[] = 'sample/full/permissions.xml';
 	}
 	
 	/**
@@ -202,15 +208,15 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples = array();
 		switch ($params[0])
 		{
-			case 'core':
+			case 'core' :
 				$this->message('= Import samples of your OS Core modules =');
 				$this->addCoreSamples($samples);
 				break;
-			case 'full-os':
+			case 'full-os' :
 				$this->message('= Import samples of all OS modules =');
 				$this->addFullOsSamples($samples);
 				break;
-			case 'full':
+			case 'full' :
 				$this->message('= Import samples of all modules	=');
 				$this->addFullSamples($samples);
 				break;
@@ -218,7 +224,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 				$this->message('= Import samples for integration testing =');
 				$samples[] = 'sample/itesting.xml';
 				break;*/
-			default:
+			default :
 				$this->message('= Import only ' . $params[0] . ' =');
 				$samples[] = $params[0];
 		}
@@ -267,8 +273,8 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$cs = change_ConfigurationService::getInstance();
 		switch ($mode)
 		{
-			case 'full':
-			case 'full-os':
+			case 'full' :
+			case 'full-os' :
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultPageTemplate', 'default/sidebarpageecomsample');
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultNosidebarTemplate', 'default/nosidebarpageecomsample');
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultHomeTemplate', 'default/nosidebarpageecomsample');
@@ -280,7 +286,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultHomeTemplate', 'default/nosidebarpagecmssample');
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultPopinTemplate', 'default/popin');
 				break;*/
-			default:
+			default :
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultPageTemplate', 'default/sidebarpage');
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultNosidebarTemplate', 'default/nosidebarpage');
 				$cs->addProjectConfigurationEntry('modules/website/sample/defaultHomeTemplate', 'default/nosidebarpage');

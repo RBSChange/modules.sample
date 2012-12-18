@@ -50,7 +50,7 @@
 					<changeblock type="modules_users_editprofil" />
 				</changecontent>
 			</page>
-			<permissions>
+			<permissions inherits="true">
 				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="websitefrontendgroup" />
 			</permissions>
 		</topic>

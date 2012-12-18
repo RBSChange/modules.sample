@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/sample/setup/brand/brand-struct.xml" />
+	<binding fileName="modules/sample/setup/brand/brand-data.xml" />
+
+</script>

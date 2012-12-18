@@ -26,4 +26,5 @@
 	<instore byLabel="Retrait en magasin" id="instore" />
 	<shop byLabel="Boutique" id="shop" />
 	<shippingfilter id="shippingfilter" byLabel="Retrait en magasin" shop-refid="shop" mode-refid="instore" taxCategory="0" valueWithoutTax="0" />
+	
 </script>

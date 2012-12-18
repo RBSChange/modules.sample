@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+
+	<frontendgroup id="grpsupport" byLabel="Opérateur du support client" />
+	<frontendgroup id="grpsupportadmin" byLabel="Administrateur du support client" />
+
+	<websitefrontendgroup for-default-website="true">
+		<websitefrontenduser id="op-support-user" byLogin="operatorsupportclient"
+			firstname="Opérateur Support client" lastname="RBS Change"
+			email="supportclient@rbschange.fr" password="abcd123" groups-refids="grpsupport" />
+		<websitefrontenduser id="admin-support-user"
+			byLogin="adminsupportclient" firstname="Administrateur Support client"
+			lastname="RBS Change" email="supportclient@rbschange.fr" password="abcd123"
+			groups-refids="grpsupportadmin" />
+	</websitefrontendgroup>
+
+	<binding
+		fileName="modules/support/persistentdocument/import/support_binding.xml" />
+
+	<rootfolder module="support">
+		<space byLabel="Support client" managedsites-refid="default-website"
+			publicationsite-refid="default-website" firstAssignAuto="true"
+			assignAfterAnswerAuto="true" publicationstatus="ACTIVE">
+			<permissions inherits="true">
+				<frontendpermission module="support" role="SupportAdmin"
+					group-refid="grpsupportadmin" />
+				<frontendpermission module="support" role="Support"
+					group-refid="grpsupport" />
+			</permissions>
+
+			<categoryfolder byLabel="catégories">
+				<category id="category1" byLabel="Question au sujet de la livraison"
+					users-refid="op-support-user" publicationstatus="ACTIVE">
+					<execute method="setDocumentIdAttribute" attribute-name="category1Id" />
+				</category>
+				<category id="category2" byLabel="Question au sujet du paiement"
+					users-refid="op-support-user" publicationstatus="ACTIVE">
+					<execute method="setDocumentIdAttribute" attribute-name="category2Id" />
+				</category>
+				<category id="category3" byLabel="Question sur le retour d'un produit"
+					publicationstatus="ACTIVE"></category>
+				<category id="category4" byLabel="Question sur la garantie d'un produit"
+					publicationstatus="ACTIVE">
+					<execute method="setDocumentIdAttribute" attribute-name="category4Id" />
+				</category>
+			</categoryfolder>
+		</space>
+	</rootfolder>
+
+	<website byTag="default_modules_website_default-website">
+		<systemtopic byLabel="Support client">
+			<permissions inherits="true">
+				<frontendpermission module="website"
+					role="AuthenticatedFrontUser" user-refid="grpsupport" />
+			</permissions>
+		</systemtopic>
+	</website>
+
+	<websitefrontenduser id="frontenduser" byLogin="mario" />
+
+	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
+	<order id="order1" byOrderNumber="201200000014"></order>
+	<bbcodeattribute name="message">
+		<![CDATA[Bonjour,
+
+J'ai envoyé le chèque concernant le paiement de la commande il y a 1 semaine mais celle ci n'est toujours pas expédiée.
+
+Puis-je savoir pourquoi ?
+
+Cordialement,
+Mario Bros]]>
+	</bbcodeattribute>
+	<ticket user-refid="frontenduser" authorid-refid="frontenduser"
+		category-attr="category1Id" order-refid="order1" websiteId-attr="websiteId"
+		subject="Ma commande n'est toujours pas expédiée" message-attr="message" state="NEW">
+	</ticket>
+
+	<order id="order2" byOrderNumber="201200000009"></order>
+	<bbcodeattribute name="message">
+		<![CDATA[Bonjour,
+
+Un des produits de ma commande ne fonctionne plus, comment procéder à son remplacement ?
+
+Cordialement,
+Mario Bros]]>
+	</bbcodeattribute>
+	<ticket user-refid="frontenduser" authorid-refid="frontenduser"
+		category-attr="category4Id" order-refid="order2" websiteId-attr="websiteId"
+		subject="Garantie d'un produit" message-attr="message" state="NEW">
+	</ticket>
+
+	<order id="order3" byOrderNumber="201200000012"></order>
+	<bbcodeattribute name="message">
+		<![CDATA[Bonjour,
+
+Je n'arrive pas à payer ma commande, que puis-je faire ?
+
+Cordialement,
+Mario Bros]]>
+	</bbcodeattribute>
+	<ticket user-refid="frontenduser" authorid-refid="frontenduser"
+		category-attr="category2Id" order-refid="order3" websiteId-attr="websiteId"
+		subject="Problème pour payer ma commande" message-attr="message" state="NEW">
+	</ticket>
+
+</script>

@@ -39,7 +39,7 @@
 					<changeblock type="modules_form_form" __cmpref-refid="contactForm" />
 				</changecontent>
 			</page>						
-			<permissions>
+			<permissions inherits="true">
 				<frontendpermission module="website" role="AuthenticatedFrontUser" group-refid="customersGroup" />
 			</permissions>
 		</topic>

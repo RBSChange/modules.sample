@@ -2,10 +2,12 @@
 <script>
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 
+	<backendgroup id="grp-back-admin" byLabel="Administrateur backoffice" />
+
 	<rootfolder module="users">
 		<backendgroup byLabel="Utilisateurs Change">
 			<backenduser firstname="Demo" lastname="Change" email="demo@rbs.fr" login="demo" passwordmd5="62cc2d8b4bf2d8728120d052163a77df"
-				publicationstatus="ACTIVE" id="demo-user" />
+				publicationstatus="ACTIVE" id="demo-user" groups-refids="grp-back-admin"/>
 		</backendgroup>
 	</rootfolder>
 </script>

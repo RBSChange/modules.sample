@@ -7,7 +7,5 @@
 		<execute method="setDocumentIdAttribute" />
 		<binding fileName="modules/brand/setup/globalDefaultStructure.xml" />
 	</website>
-	
-	<binding fileName="modules/sample/setup/brand/brand-data.xml" />
 
 </script>

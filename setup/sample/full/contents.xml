@@ -24,6 +24,7 @@
 	<documentRef type="modules_website/page" byLabel="Mes commandes" id="myorders" />
 	<documentRef type="modules_website/page" byLabel="Mes informations" id="myinfos" />
 	<documentRef type="modules_website/page" byLabel="Avantages fidélité" id="loyalty" />
+	<documentRef type="modules_website/page" byLabel="Support client" id="mysupport" />
 	<documentRef type="modules_website/topic" byLabel="Galerie de photos" id="photos" />
 	<documentRef type="modules_website/topic" byLabel="Forums" id="forums" />
 	<documentRef type="modules_website/topic" byLabel="Membres" id="members" />
@@ -125,6 +126,7 @@
 				<menuitempage pageid="myorders" />
 				<menuitempage pageid="myinfos" />
 				<menuitempage pageid="loyalty" />
+				<menuitempage pageid="mysupport" />
 			</menu>
 			<menu id="footer-4" byLabel="À propos">
 				<menuitempage pageid="contactus" />

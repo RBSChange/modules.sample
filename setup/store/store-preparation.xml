@@ -93,17 +93,17 @@
 	</storewarehouse>
 	
 	<documentRef byDocumentId-attr="" type-attr="">
-		<topic byLabel="Extranet magasin">
-			<permissions>
-				<backendpermission module="website" role="Admin" user-refid="demo-user" />
-			</permissions>
-		</topic>
+<!-- 		<topic byLabel="Extranet magasin"> -->
+<!-- 			<permissions > -->
+<!-- 				<backendpermission module="website" role="Admin" user-refid="demo-user" /> -->
+<!-- 			</permissions> -->
+<!-- 		</topic> -->
 		
-		<topic byLabel="Service client">
-			<permissions>
-				<backendpermission module="website" role="Admin" user-refid="demo-user" />
-			</permissions>
-		</topic>
+<!-- 		<topic byLabel="Service client"> -->
+<!-- 			<permissions> -->
+<!-- 				<backendpermission module="website" role="Admin" user-refid="demo-user" /> -->
+<!-- 			</permissions> -->
+<!-- 		</topic> -->
 		
 		<topic byLabel="Boutique">
 			<page byLabel="Selection Magasin" id="popin" template-attr="templatePopin" navigationVisibility="hidden" indexingstatus="false" >

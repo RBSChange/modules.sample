@@ -20,5 +20,12 @@
 	</rootfolder>
 
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
-	<shippingfilter byLabel="Kiala" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="0" />
+	<shippingfilter byLabel="Kiala" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="8" />
+	
+	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
+	<fees byLabel="Frais d'envoi : Kiala" applicationstrategy="order_CartPriceShippingStrategy">
+		<execute method="setStrategyParam" name="taxcategory" value="1" />
+		<execute method="setStrategyParam" name="valuewithouttax" value="8" />
+		<execute method="setStrategyParam" name="ranges" value="200=0,100=4" />
+	</fees>
 </script>

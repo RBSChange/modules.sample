@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+
+	<binding
+		fileName="modules/privatesales/persistentdocument/import/privatesales_binding.xml" />
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding
+		fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<binding fileName="modules/brand/persistentdocument/import/brand_binding.xml" />
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+
+	<website byTag="default_modules_website_default-website" id="default-website" />
+	<billingarea byCodeReference="FR" id="billingarea" />
+
+	<brand id="nintendo" byLabel="Nintendo"></brand>
+	<brand id="sega" byLabel="Sega"></brand>
+	<brand id="atari" byLabel="Atari"></brand>
+
+	<frontendgroup id="grpprivatesalesaccess" byLabel="Accès aux ventes privées" />
+	<websitefrontenduser id="frontenduser" byLogin="mario" groups-refids="grpprivatesalesaccess"/>
+
+	<media path="modules/sample/setup/media/media/NES-ZAPPER.jpg"
+		byLabel="NES Zapper" id="NES-ZAPPER-1" />
+	<media path="modules/sample/setup/media/media/NES-1985-1.jpg"
+		byLabel="NES (set)" id="NES-1985-1" />
+	<media path="modules/sample/setup/media/media/MASTERSYSTEM-1985-1.png"
+		byLabel="SMS I" id="MASTERSYSTEM-1985" />
+
+	<rootfolder module="privatesales">
+		<sale id="sale-nintendo" byLabel="Accessoires Nintendo"
+			brand-refid="nintendo" saleStartDate="2012-12-12 08:00:00"
+			saleEndDate="2014-01-12 00:00:00">
+			<privateshelf byLabel="Jeux" visual-refid="NES-1985-1"
+				id="shelf1">
+			</privateshelf>
+			<privateshelf byLabel="Accessoires" visual-refid="NES-ZAPPER-1"
+				id="shelf2">
+			</privateshelf>
+		</sale>
+		<sale id="sale-sega" byLabel="Accessoires Sega" brand-refid="sega"
+			previewStartDate="2012-12-13 08:00:00" saleStartDate="2014-12-13 08:00:00"
+			saleEndDate="2015-01-12 00:00:00">
+			<privateshelf byLabel="Consoles" visual-refid="MASTERSYSTEM-1985"
+				id="shelf3" />
+		</sale>
+		<sale id="sale-atari" byLabel="Atari" brand-refid="atari"
+			saleStartDate="2012-11-12 00:00:00" saleEndDate="2012-12-12 00:00:00">
+			<privateshelf byLabel="Consoles" id="shelf4" />
+		</sale>
+	</rootfolder>
+
+	<privateshop label="Ventes privées" mountParent-refid="default-website"
+		billingAreas-refid="billingarea" byCodeReference="PRIVATESALES"
+		displayPriceWithTax="true" displayPriceWithoutTax="true"
+		displayOutOfStock="true" orderProcessClassName="order_StandardOrderProcess"
+		id="private-shop" topShelf-refids="sale-nintendo,sale-sega,sale-atari">
+	</privateshop>
+	
+	<groupacl group-refid="grpprivatesalesaccess" role="modules_privatesales.SaleAccessor" documentId-refid="sale-nintendo" startpublicationdate="2012-12-12 08:00:00" endpublicationdate="2014-01-12 00:00:00"></groupacl>
+	<groupacl group-refid="grpprivatesalesaccess" role="modules_privatesales.SaleAccessor" documentId-refid="sale-sega" startpublicationdate="2014-12-13 08:00:00" endpublicationdate="2015-01-12 00:00:00"></groupacl>
+	<groupacl group-refid="grpprivatesalesaccess" role="modules_privatesales.SaleAccessor" documentId-refid="sale-atari" startpublicationdate="2012-11-12 00:00:00" endpublicationdate="2012-12-12 00:00:00"></groupacl>
+
+	<simpleproduct byCodeReference="DUCK-HUNT" shelf-refids="shelf1">
+		<price shopId-refid="private-shop" billingAreaId-refid="billingarea"
+			taxCategory="1" valueWithTax="10" />
+	</simpleproduct>
+
+	<simpleproduct byCodeReference="NES-ADVANTAGE"
+		shelf-refids="shelf2">
+		<price shopId-refid="private-shop" billingAreaId-refid="billingarea"
+			taxCategory="1" valueWithTax="15" />
+	</simpleproduct>
+
+	<simpleproduct byCodeReference="ATARI2600-1978"
+		shelf-refids="shelf4">
+		<price shopId-refid="private-shop" billingAreaId-refid="billingarea"
+			taxCategory="1" valueWithTax="99" />
+	</simpleproduct>
+
+	<simpleproduct byCodeReference="ATARI2600-1978"
+		shelf-refids="shelf4">
+		<price shopId-refid="private-shop" billingAreaId-refid="billingarea"
+			taxCategory="1" valueWithTax="99" />
+	</simpleproduct>
+
+	<simpleproduct byCodeReference="MEGADRIVE-1988"
+		shelf-refids="shelf3">
+		<price shopId-refid="private-shop" billingAreaId-refid="billingarea"
+			taxCategory="1" valueWithTax="99" />
+	</simpleproduct>
+
+	<website byTag="default_modules_website_default-website">
+		<topic byLabel="Ventes privées" id="ShopTopic">
+			<execute method="setDocumentIdAttribute" />
+			<binding fileName="modules/privatesales/setup/privateshopDefaultStructure.xml" />
+		</topic>
+	</website>
+
+	<sale byLabel="Atari">
+		<execute method="compileSaleAcl" />
+	</sale>
+	
+	<sale byLabel="Accessoires Sega">
+		<execute method="compileSaleAcl" />
+	</sale>
+	
+	<sale byLabel="Accessoires Nintendo">
+		<execute method="compileSaleAcl" />
+	</sale>
+
+</script>

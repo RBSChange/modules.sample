@@ -3,127 +3,124 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 
-	<rootfolder module="users">
-		<backendgroup byLabel="Utilisateurs Change">
-			<backenduser byLogin="demo" id="demo-user" />
-		</backendgroup>
-	</rootfolder>
+	<backendgroup id="grp-back-admin" byLabel="Administrateur backoffice" />
 	
 	<rootfolder module="website">
 		<permissions>
-			<backendpermission module="website" role="Admin" user-refid="demo-user" />
+			<backendpermission module="website" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
-		<website byTag="default_modules_website_default-website">
-			<topic byLabel="Extranet">
-				<permissions>
-					<backendpermission module="website" role="Admin" user-refid="demo-user" />
-				</permissions>
-			</topic>
-		</website>
+<!-- 		<website byTag="default_modules_website_default-website"> -->
+<!-- 			<topic byLabel="Extranet"> -->
+<!-- 				<permissions> -->
+<!-- 					<backendpermission module="website" role="Admin" user-refid="demo-user" /> -->
+<!-- 				</permissions> -->
+<!-- 			</topic> -->
+<!-- 		</website> -->
 	</rootfolder>
+	
 	<rootfolder module="projectcare">
 		<permissions>
-			<backendpermission module="projectcare" role="Admin" user-refid="demo-user" />
+			<backendpermission module="projectcare" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="statictext">
 		<permissions>
-			<backendpermission module="statictext" role="Admin" user-refid="demo-user" />
+			<backendpermission module="statictext" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="users">
 		<permissions>
-			<backendpermission module="users" role="Admin" user-refid="demo-user" />
+			<backendpermission module="users" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="webservices">
 		<permissions>
-			<backendpermission module="webservices" role="Admin" user-refid="demo-user" />
+			<backendpermission module="webservices" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="contactcard">
 		<permissions>
-			<backendpermission module="contactcard" role="Admin" user-refid="demo-user" />
+			<backendpermission module="contactcard" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="form">
 		<permissions>
-			<backendpermission module="form" role="Admin" user-refid="demo-user" />
+			<backendpermission module="form" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="markergas">
 		<permissions>
-			<backendpermission module="markergas" role="Admin" user-refid="demo-user" />
+			<backendpermission module="markergas" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="skin">
 		<permissions>
-			<backendpermission module="skin" role="Admin" user-refid="demo-user" />
+			<backendpermission module="skin" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="useractionlogger">
 		<permissions>
-			<backendpermission module="useractionlogger" role="Admin" user-refid="demo-user" />
+			<backendpermission module="useractionlogger" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="list">
 		<permissions>
-			<backendpermission module="list" role="Admin" user-refid="demo-user" />
+			<backendpermission module="list" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="media">
 		<permissions>
-			<backendpermission module="media" role="Admin" user-refid="demo-user" />
+			<backendpermission module="media" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="notification">
 		<permissions>
-			<backendpermission module="notification" role="Admin" user-refid="demo-user" />
+			<backendpermission module="notification" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="preferences">
 		<permissions>
-			<backendpermission module="preferences" role="Admin" user-refid="demo-user" />
+			<backendpermission module="preferences" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="rss">
 		<permissions>
-			<backendpermission module="rss" role="Admin" user-refid="demo-user" />
+			<backendpermission module="rss" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="seo">
 		<permissions>
-			<backendpermission module="seo" role="Admin" user-refid="demo-user" />
+			<backendpermission module="seo" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="dashboard">
 		<permissions>
-			<backendpermission module="dashboard" role="Admin" user-refid="demo-user" />
+			<backendpermission module="dashboard" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="task">
 		<permissions>
-			<backendpermission module="task" role="Admin" user-refid="demo-user" />
+			<backendpermission module="task" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="theme">
 		<permissions>
-			<backendpermission module="theme" role="Admin" user-refid="demo-user" />
+			<backendpermission module="theme" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="workflow">
 		<permissions>
-			<backendpermission module="workflow" role="Admin" user-refid="demo-user" />
+			<backendpermission module="workflow" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="zone">
 		<permissions>
-			<backendpermission module="zone" role="Admin" user-refid="demo-user" />
+			<backendpermission module="zone" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 	<rootfolder module="updater">
 		<permissions>
-			<backendpermission module="updater" role="Admin" user-refid="demo-user" />
+			<backendpermission module="updater" role="Admin" group-refid="grp-back-admin" />
 		</permissions>
 	</rootfolder>
 </script>

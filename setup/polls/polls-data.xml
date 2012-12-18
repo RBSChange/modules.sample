@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
 	<binding fileName="modules/polls/persistentdocument/import/polls_binding.xml" />
-	
+
 	<rootfolder module="polls">
-		<folder byLabel="Exemples">
-			<attribute name="description"><![CDATA[<p class="normal">Sondage d'exemple à <em>plusieurs questions</em> sur le temps qu'il fait.</p><p class="normal">Ce sondage est à durée illimitée.</p>]]></attribute>
-			<poll byLabel="Sondage à questions multiples" description-attr="" allowAnonymousVote="true">
-				<attribute name="description"><![CDATA[<p class="normal">Question à choix multiple.</p>]]></attribute>
-				<question byLabel="Quel temps fait-il ?" description-attr="" maxAnswers="-1">
-					<answer byLabel="Pluvieux" />
-					<answer byLabel="Brouillard" />
-					<answer byLabel="Grêle" />
-					<answer byLabel="Neigeux" />
-					<answer byLabel="Nuageux" />
-					<answer byLabel="Ciel bleu" />
-					<answer byLabel="Venteux" />
-					<answer byLabel="Orageux" />
+		<folder byLabel="m.generic.bo.general.samples">
+			<attribute name="description"><![CDATA[<p class="normal">Sondage sur l'utilisation des consoles de jeux</p>]]></attribute>
+			<poll byLabel="Sondage sur l'utilisation des consoles de jeux"
+				description-attr="" allowAnonymousVote="true">
+
+				<attribute name="description"><![CDATA[<p class="normal">Question à choix unique sur le temps d'utilisation</p>]]></attribute>
+				<question byLabel="Conbien de temps utilisez-vous votre console par jour ?"
+					maxAnswers="1" description-attr="">
+					<answer byLabel="0 à 10 min" description="Très peu" />
+					<answer byLabel="11 à 30 min" />
+					<answer byLabel="30 min à 1h" />
+					<answer byLabel="1h à 3h" />
+					<answer byLabel="3h et plus" description="Trop longtemps" />
 				</question>
-				<attribute name="description"><![CDATA[<p class="normal">Question à choix unique.</p>]]></attribute>
-				<question byLabel="Quel niveau de température ?" maxAnswers="1" description-attr="">
-					<answer byLabel="Canicule" description="Très très chaud !" />
-					<answer byLabel="Chaud" />
-					<answer byLabel="Bon" />
-					<answer byLabel="Froid" />
-					<answer byLabel="Glacial" description="Très très froid !" />
+
+				<attribute name="description"><![CDATA[<p class="normal">Question à choix multiple sur les types de jeux</p>]]></attribute>
+				<question byLabel="À quel genre de jeux jouez-vous ?"
+					description-attr="" maxAnswers="-1">
+					<answer byLabel="FPS" />
+					<answer byLabel="Simulation conduite" />
+					<answer byLabel="Simulateur d'avion" />
+					<answer byLabel="Plateforme" />
+					<answer byLabel="Réflexion" />
+				</question>
+
+			</poll>
+			<poll byLabel="Marque préférée">
+				<question byLabel="Quel est votre marque de console préférée ?"
+					maxAnswers="1">
+					<answer byLabel="Nintendo" />
+					<answer byLabel="SNK" />
+					<answer byLabel="Sega" />
+					<answer byLabel="Coleco" />
+					<answer byLabel="Atari" />
 				</question>
 			</poll>
-			<poll byLabel="Sondage à question unique">
-				<question byLabel="C'est Good ?" maxAnswers="1">
-					<answer byLabel="Good." />
-					<answer byLabel="Yeah !" />
-					<answer byLabel="No way." />
-					<answer byLabel="Top of mind !" />
-				</question>
-			</poll>
-			<poll byLabel="Sondage terminé" voterCount="39" endDate="2011-07-21 12:12:55">
-				<question byLabel="Votre couleur préférée" maxAnswers="1">
+
+			<poll byLabel="Couleur des futures consoles" voterCount="39"
+				endDate="2011-07-21 12:12:55">
+				<question byLabel="De quelle couleur sera votre prochaine console ?"
+					maxAnswers="1">
 					<answer byLabel="Bleu" votes="8" />
 					<answer byLabel="Rouge" votes="5" />
 					<answer byLabel="Vert" votes="2" />
@@ -46,6 +54,7 @@
 					<answer byLabel="Noir" votes="12" />
 				</question>
 			</poll>
-		</folder>	
+
+		</folder>
 	</rootfolder>
 </script>
