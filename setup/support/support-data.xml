@@ -61,7 +61,7 @@
 	<websitefrontenduser id="frontenduser" byLogin="mario" />
 
 	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
-	<order id="order1" byOrderNumber="201200000014"></order>
+	<order id="order1" byOrderNumber="201200000005"></order>
 	<bbcodeattribute name="message">
 		<![CDATA[Bonjour,
 
@@ -77,7 +77,7 @@ Mario Bros]]>
 		subject="Ma commande n'est toujours pas expédiée" message-attr="message" state="NEW">
 	</ticket>
 
-	<order id="order2" byOrderNumber="201200000009"></order>
+	<order id="order2" byOrderNumber="201000000009"></order>
 	<bbcodeattribute name="message">
 		<![CDATA[Bonjour,
 
@@ -91,7 +91,7 @@ Mario Bros]]>
 		subject="Garantie d'un produit" message-attr="message" state="NEW">
 	</ticket>
 
-	<order id="order3" byOrderNumber="201200000012"></order>
+	<order id="order3" byOrderNumber="201200000003"></order>
 	<bbcodeattribute name="message">
 		<![CDATA[Bonjour,
 

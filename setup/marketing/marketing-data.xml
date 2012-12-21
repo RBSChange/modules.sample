@@ -51,13 +51,13 @@
 		address-refid="address" shippingFilter-refid="shippingfilter"
 		coupon-refid="coupon2"
 		billingMode-refid="payment"
-		creationdate="2010-04-01 08:16:12">
+		creationdate="2011-04-01 08:16:12">
 		<cartline product-refid="product1" quantity="1" />
 		<cartline product-refid="product2" quantity="2" />
 	</cart>
-	<order cart-refid="cart1">
-		<bill transactionId="CHQ-523312564" creationdate="2010-04-01 08:16:12"
-			transactionDate="2010-04-03 10:45:12" transactionText="Chèque receptionné le 2010-04-03"
+	<order cart-refid="cart1" orderNumber="201100000001">
+		<bill transactionId="CHQ-523312564" creationdate="2011-04-01 08:16:12"
+			transactionDate="2011-04-03 10:45:12" transactionText="Chèque receptionné le 2010-04-03"
 			status="success"/>
 	</order>
 	
@@ -65,14 +65,14 @@
 		address-refid="address" shippingFilter-refid="shippingfilter" 
 		coupon-refid="coupon1"
 		billingMode-refid="payment"
-		creationdate="2010-04-01 09:12:12">
+		creationdate="2011-04-01 09:12:12">
 		<cartline product-refid="product4" quantity="1" />
 		<cartline product-refid="product5" quantity="2" />
 		<cartline product-refid="product3" quantity="1" />
 	</cart>
-	<order cart-refid="cart2">
-		<bill transactionId="CHQ-566621231" creationdate="2010-04-01 09:12:12"
-			transactionDate="2010-04-04 09:45:12" transactionText="Chèque receptionné le 2010-04-04"
+	<order cart-refid="cart2" orderNumber="201100000002">
+		<bill transactionId="CHQ-566621231" creationdate="2011-04-01 09:12:12"
+			transactionDate="2011-04-04 09:45:12" transactionText="Chèque receptionné le 2010-04-04"
 			status="success"/>
 	</order>
 	

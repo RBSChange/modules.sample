@@ -9,9 +9,9 @@
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="shipping">
-				<media	path="modules/sample/setup/shipping/media/banner.gif" label="Coliposte" id="coliposte_visual" />
-				<media	path="modules/sample/setup/shipping/media/ups.gif" label="UPS" id="ups_visual" />	
-				<media	path="modules/sample/setup/shipping/media/download_icon.gif" label="Download" id="download_visual" />
+				<media path="modules/sample/setup/shipping/media/banner.gif" label="Coliposte" id="coliposte_visual" />
+				<media path="modules/sample/setup/shipping/media/ups.gif" label="UPS" id="ups_visual" />
+				<media path="modules/sample/setup/shipping/media/download_icon.gif" label="Download" id="download_visual" />
 			</folder>
 		</folder>
 	</rootfolder>
@@ -20,21 +20,21 @@
 	<rootfolder module="shipping">
 		<folder byLabel="m.generic.bo.general.samples">
 			<mode byLabel="Colissimo"
-				  visual-refid="coliposte_visual"
-				  description="Livraison ColiPoste"
-				  code="ColiPoste" codeReference="ColiPoste"
-				  trackingUrl="http://www.coliposte.net/gp/services/main.jsp?m=10003005&amp;colispart={NumeroColis}" />
-				  
+				visual-refid="coliposte_visual"
+				description="Livraison ColiPoste"
+				code="ColiPoste" codeReference="ColiPoste"
+				trackingUrl="http://www.coliposte.net/gp/services/main.jsp?m=10003005&amp;colispart={NumeroColis}" />
+			
 			<mode byLabel="UPS"
-				  visual-refid="ups_visual"
-				  description="Livraison UPS"
-				  code="UPS" codeReference="UPS"
-				  trackingUrl="http://wwwapps.ups.com/WebTracking/track?loc=fr_FR&amp;loc=fr_FR&amp;trackNums={NumeroColis}" />
-				  
-			<virtualmode byLabel="Download" label="Download"
-				  visual-refid="download_visual"
-				  description="Telechargement"
-				  code="DWL" codeReference="DWL" />
+				visual-refid="ups_visual"
+				description="Livraison UPS"
+				code="UPS" codeReference="UPS"
+				trackingUrl="http://wwwapps.ups.com/WebTracking/track?loc=fr_FR&amp;loc=fr_FR&amp;trackNums={NumeroColis}" />
+			
+			<virtualmode byLabel="Téléchargement"
+				visual-refid="download_visual"
+				description="Téléchargement de produits immatériels"
+				code="DWL" codeReference="DWL" />
 		</folder>
 	</rootfolder>
 	

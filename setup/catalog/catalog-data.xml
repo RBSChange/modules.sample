@@ -160,9 +160,11 @@
 	
 	<!-- MOP/MOS -->
 	<mode id="shipping" byCode="ColiPoste" />
+	<mode id="download" byCode="DWL" />
 	<chequeconnector id="payment" byCode="CHQ" />
 	<freeconnector id="freepayment" byCode="FREE" />
 	<shippingfilter byLabel="Colissimo" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="8.04" />
+	<shippingfilter byLabel="Téléchargement" shop-refid="shop" mode-refid="download" selectbyproduct="true" />
 	<paymentfilter byLabel="Chèque" shop-refid="shop" connector-refid="payment" />
 	<paymentfilter byLabel="Avoir/Commande offerte" shop-refid="shop" connector-refid="freepayment" />
 
@@ -467,15 +469,16 @@ buts, comme le traitement de texte.</p>
 	<attribute name="description-zeldatips"><![CDATA[
 	<p class="normal">La soluce du jeu The Legend of Zelda: A Link to the Past, téléchargeable au format PDF</p>
 	]]></attribute>
-	<virtualproduct 	byCodeReference="SNES-DOWNLOAD-ZELDA-TIPS" 
-						label="Soluce de Zelda LttP" 
-						shelf-refids="CAT-GAMES" 
-						id="SNES-DOWNLOAD-ZELDA-TIPS" 
-						visual-refid="SNES-DOWNLOAD-ZELDA-PIC1" 
-						additionnalVisual-refids="" 
-						brand-refid="NINTENDO" 
-						description-attr="description-zeldatips"
-						secureMedia-refid="SNES-DOWNLOAD-ZELDA-TIPS-FILE">
+	<virtualproduct	byCodeReference="SNES-DOWNLOAD-ZELDA-TIPS" 
+					label="Soluce de Zelda LttP" 
+					shelf-refids="CAT-GAMES" 
+					id="SNES-DOWNLOAD-ZELDA-TIPS" 
+					visual-refid="SNES-DOWNLOAD-ZELDA-PIC1" 
+					additionnalVisual-refids="" 
+					brand-refid="NINTENDO" 
+					description-attr="description-zeldatips"
+					secureMedia-refid="SNES-DOWNLOAD-ZELDA-TIPS-FILE"
+					shippingModeId-refid="download">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="11" valueWithTax="9.90" />
 	</virtualproduct>
 	
@@ -520,7 +523,7 @@ buts, comme le traitement de texte.</p>
 	<!-- GB Games -->
 	<attribute name="description-pokemon"><![CDATA[<p class="normal">Pokémon version rouge et Pokémon version bleue sont les deux éditions du premier jeu vidéo de rôle japonais de la licence Pokémon développé par Game Freak sous la direction de Satoshi Tajiri. Elles sont éditées par Nintendo sur la console portable Game Boy au Japon en 1996 (originellement dans des versions version rouge et version verte), en Amérique du Nord en 1998, puis en Europe et en Australie en 1999.(<a href="http://fr.wikipedia.org/wiki/Pok%C3%A9mon_Rouge_et_Bleu" class="link">Voir l'article Wikipedia</a>)</p>
 	]]></attribute>
-	<declinedproduct    byCodeReference="GAMEBOY-GAME-POKEMON" 
+	<declinedproduct 	byCodeReference="GAMEBOY-GAME-POKEMON" 
 						label="Pokemon" 
 						shelf-refids="CAT-GAMES" 
 						id="GAMEBOY-GAME-POKEMON" 
