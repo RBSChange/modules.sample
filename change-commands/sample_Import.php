@@ -155,6 +155,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'sample/fullos/statictext.xml';
 		$samples[] = 'sample/fullos/polls.xml';
 		$samples[] = 'sample/fullos/bookmarks.xml';
+		$samples[] = 'sample/fullos/inquiry.xml';
 		
 		// ECOM modules.
 		$samples[] = 'sample/fullos/brand.xml';

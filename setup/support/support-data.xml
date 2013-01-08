@@ -53,7 +53,9 @@
 		<systemtopic byLabel="Support client">
 			<permissions inherits="true">
 				<frontendpermission module="website"
-					role="AuthenticatedFrontUser" user-refid="grpsupport" />
+					role="AuthenticatedFrontUser" group-refid="grpsupportadmin" />
+				<frontendpermission module="website"
+					role="AuthenticatedFrontUser" group-refid="grpsupport" />
 			</permissions>
 		</systemtopic>
 	</website>

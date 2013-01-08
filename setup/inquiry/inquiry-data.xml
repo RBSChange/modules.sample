@@ -43,4 +43,12 @@
 			<fieldtext fieldName="message" label="Message" required="true" multiline="true" cols="50" rows="10" maxlength="1000" validators="blank:false;maxSize:1000" />
 		</inquiryform>
 	</rootfolder>
+	
+	<rootfolder module="inquiry">
+		<answertplfolder byLabel="m.inquiry.document.answertplfolder.default-name">
+			<answertemplate byLabel="Modèle candidature retenue" contents="Madame, Monsieur, Merci pour votre {targetLabel}. Nous vous recontacterons rapidement pour prendre rendez-vous pour un entretien."></answertemplate>
+			<answertemplate byLabel="Modèle candidature refusée" contents="Madame, Monsieur, J’ai le regret de vous informer que, malgré tout l’intérêt que présente votre {targetLabel}, nous ne pouvons pas lui donner une suite favorable."></answertemplate>
+			<answertemplate byLabel="Modèle formule de politesse" contents="Je vous prie d'agréer, Madame, Monsieur, l'expression de mes respectueuses salutations."></answertemplate>
+		</answertplfolder>
+	</rootfolder>
 </script>

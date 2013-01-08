@@ -5,6 +5,12 @@
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 	<binding fileName="modules/inquiry/persistentdocument/import/inquiry_binding.xml" />
+	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+
+	<backenduser byLogin="demo" id="demo" />
+	<backenduser byLogin="wwwadmin" id="wwwadmin" />
+
+	<candidacyinquiryform byLabel="Candidature à une offre d'emploi sur le site (avec workflow)" receiver-refids="demo,wwwadmin"></candidacyinquiryform>
 
 	<systemfolder module="form" relatedmodule="joboffer">
 		<documentRef type="modules_form/form" byFormid="modules_joboffer/simplecandidacy" id="sform" />
