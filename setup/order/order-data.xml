@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<!-- 
-		WARNING: before importing this file, import :
+	<!--
+		WARNING: before importing this file, import:
 			- catalog/catalog-data.xml
 	-->
 	
@@ -21,22 +21,39 @@
 	<customer id="customer2" byLogin="luigi" />
 	<customer id="customer3" byLogin="donkey" />
 	<customer id="customer4" byLogin="peach" />
-		
+	
 	<shippingfilter id="shippingfilter" byLabel="Colissimo" />
 	
 	<chequeconnector id="payment" byLabel="Paiement par chèque" />
 
-	<simpleproduct id="product1" byCodeReference="NES-1985" />
-	<simpleproduct id="product2" byCodeReference="COLECO-1982" />
-	<productdeclination id="product3" byCodeReference="SUPER-NINTENDO-EUR" />
-	<simpleproduct id="product4" byCodeReference="MEGADRIVE-1988" />
-	<simpleproduct id="product5" byCodeReference="NEOGEO-1990" />
-	<simpleproduct id="product6" byCodeReference="ATARI2600-1978" />
-	<productdeclination id="product7" byCodeReference="NES-ZAPPER-GREY" />
-		
+	<simpleproduct id="product1" byCodeReference="NES-1985">
+		<execute method="compile" />
+	</simpleproduct>
+	<simpleproduct id="product2" byCodeReference="COLECO-1982">
+		<execute method="compile" />
+	</simpleproduct>
+	<productdeclination id="product3" byCodeReference="SUPER-NINTENDO-EUR">
+		<execute method="compile" />
+	</productdeclination>
+	<simpleproduct id="product4" byCodeReference="MEGADRIVE-1988">
+		<execute method="compile" />
+	</simpleproduct>
+	<simpleproduct id="product5" byCodeReference="NEOGEO-1990">
+		<execute method="compile" />
+	</simpleproduct>
+	<simpleproduct id="product6" byCodeReference="ATARI2600-1978">
+		<execute method="compile" />
+	</simpleproduct>
+	<productdeclination id="product7" byCodeReference="NES-ZAPPER-GREY">
+		<execute method="compile" />
+	</productdeclination>
+	
 	<address id="address" byLabel="L'adresse de livraison de Mario" />
 	
 	<website id="website" byTag="default_modules_website_default-website" />
+
+	<attribute name="waitingChequeTransactionText"><![CDATA[Ordre du chèque : RBS
+Adresse d'envoi : 11 rue Icare Strasbourg Entzheim 67836 Tanneries Cedex]]></attribute>
 
 	<cart id="cart3" shop-refid="shop" customer-refid="customer1" 
 		address-refid="address" shippingFilter-refid="shippingfilter" billingMode-refid="payment"
@@ -66,7 +83,7 @@
 		creationdate="2010-04-15 11:03:40">
 		<cartline product-refid="product4" quantity="1" />
 		<cartline product-refid="product2" quantity="1" />
-	</cart>	
+	</cart>
 	<order cart-refid="cart5" orderNumber="201000000003">
 		<bill transactionId="CHQ-623155115" creationdate="2010-04-15 11:03:40"
 			transactionDate="2010-04-18 09:45:12" transactionText="Chèque receptionné le 2010-04-18"
@@ -116,7 +133,7 @@
 		<cartline product-refid="product4" quantity="1" />
 		<cartline product-refid="product5" quantity="3" />
 		<cartline product-refid="product2" quantity="1" />
-	</cart>	
+	</cart>
 	<order cart-refid="cart9" orderNumber="201000000007">
 		<bill transactionId="CHQ-6121144" creationdate="2010-05-10 16:18:40"
 			transactionDate="2010-05-17 11:00:00"  transactionText="Chèque receptionné le 2010-05-17"
@@ -130,7 +147,7 @@
 		<cartline product-refid="product5" quantity="3" />
 		<cartline product-refid="product1" quantity="1" />
 		<cartline product-refid="product3" quantity="1" />
-	</cart>	
+	</cart>
 	<order cart-refid="cart10" orderNumber="201000000008">
 		<bill transactionId="CHQ-41126544" creationdate="2010-05-10 17:00:40"
 			transactionDate="2010-05-16 10:00:00"  transactionText="Chèque receptionné le 2010-05-16"
@@ -144,7 +161,7 @@
 		<cartline product-refid="product5" quantity="3" />
 		<cartline product-refid="product1" quantity="1" />
 		<cartline product-refid="product3" quantity="1" />
-	</cart>	
+	</cart>
 	<order cart-refid="cart11" orderNumber="201000000009">
 		<bill transactionId="CHQ-56213115" creationdate="2010-05-10 17:05:40"
 			transactionDate="2010-05-12 10:00:00"  transactionText="Chèque receptionné le 2010-05-16"
@@ -160,7 +177,7 @@
 		<cartline product-refid="product2" quantity="4" />
 		<cartline product-refid="product1" quantity="1" />
 		<cartline product-refid="product3" quantity="1" />
-	</cart>	
+	</cart>
 	<order cart-refid="cart12" orderNumber="201200000001">
 		<bill transactionId="CHQ-5222144" creationdate="2012-05-10 17:09:40"
 			transactionText="Chèque refusé le 2012-05-14"
@@ -172,9 +189,10 @@
 		creationdate="2012-12-10 07:54:45">
 		<cartline product-refid="product4" quantity="1" />
 		<cartline product-refid="product6" quantity="1" />
-	</cart>	
+	</cart>
 	<order cart-refid="cart13" orderNumber="201200000002">
-		<bill status="waiting" creationdate="2012-12-10 07:54:45" />
+		<bill status="waiting" creationdate="2012-12-10 07:54:45"
+			transactionId="TEMPORARY" transactionText-attr="waitingChequeTransactionText" />
 	</order>
 	
 	<cart id="cart14" shop-refid="shop" customer-refid="customer1" 
@@ -182,9 +200,10 @@
 		creationdate="2012-12-10 09:08:40">
 		<cartline product-refid="product4" quantity="1" />
 		<cartline product-refid="product7" quantity="1" />
-	</cart>	
+	</cart>
 	<order cart-refid="cart14" orderNumber="201200000003">
-		<bill status="waiting" creationdate="2012-12-10 09:08:45" />
+		<bill status="waiting" creationdate="2012-12-10 09:08:45"
+			transactionId="TEMPORARY" transactionText-attr="waitingChequeTransactionText" />
 	</order>
 	
 	<cart id="cart15" shop-refid="shop" customer-refid="customer1" 
@@ -192,9 +211,10 @@
 		creationdate="2012-12-10 12:05:40">
 		<cartline product-refid="product4" quantity="1" />
 		<cartline product-refid="product7" quantity="1" />
-	</cart>	
+	</cart>
 	<order cart-refid="cart15" orderNumber="201200000004">
-		<bill status="waiting" creationdate="2012-12-10 12:05:40" />
+		<bill status="waiting" creationdate="2012-12-10 12:05:40"
+			transactionId="TEMPORARY" transactionText-attr="waitingChequeTransactionText" />
 	</order>
 	
 	<cart id="cart16" shop-refid="shop" customer-refid="customer1" 
@@ -204,6 +224,7 @@
 		<cartline product-refid="product7" quantity="1" />
 	</cart>	
 	<order cart-refid="cart16" orderNumber="201200000005">
-		<bill status="waiting" creationdate="2012-12-10 14:03:40" />
+		<bill status="waiting" creationdate="2012-12-10 14:03:40"
+			transactionId="TEMPORARY" transactionText-attr="waitingChequeTransactionText" />
 	</order>
 </script>

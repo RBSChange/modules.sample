@@ -19,12 +19,25 @@
 	<documentRef id="payment" byLabel="Paiement par chèque" type="modules_payment/chequeconnector" />
 	<shippingfilter id="shippingfilter" byLabel="Colissimo" />
 	
-	<product id="product1" byCodeReference="NES-1985" />
-	<product id="product2" byCodeReference="COLECO-1982" />
-	<product id="product3" byCodeReference="ATARI2600-1978" />
-	<product id="product4" byCodeReference="NEOGEO-1990" />
-	<productdeclination id="product5" byCodeReference="SUPER-NINTENDO-EUR" />
-	<product id="product6" byCodeReference="MICRO-AMIGA" />
+	<product id="product1" byCodeReference="NES-1985">
+		<execute method="compile" />
+	</product>
+	<product id="product2" byCodeReference="COLECO-1982">
+		<execute method="compile" />
+	</product>
+	<product id="product3" byCodeReference="ATARI2600-1978">
+		<execute method="compile" />
+	</product>
+	<product id="product4" byCodeReference="NEOGEO-1990">
+		<execute method="compile" />
+	</product>
+	<productdeclination id="product5" byCodeReference="SUPER-NINTENDO-EUR">
+		<execute method="compile" />
+	</productdeclination>
+	<product id="product6" byCodeReference="MICRO-AMIGA">
+		<execute method="compile" />
+	</product>
+	
 	<customer id="customer1" byLogin="mario" />
 	<customer id="customer2" byLogin="luigi" />
 	<address id="address" byLabel="L'adresse de livraison de Mario" />
