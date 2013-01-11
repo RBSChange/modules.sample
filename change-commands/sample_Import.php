@@ -186,9 +186,8 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	}
 	
 	/**
-	 * @param string[] $params        	
-	 * @param array<string, string> $options where the option array key is
-	 *        	the option name, the potential option value or true
+	 * @param string[] $params
+	 * @param array<string, string> $options where the option array key is the option name, the potential option value or true
 	 * @see c_ChangescriptCommand::parseArgs($args)
 	 */
 	public function _execute($params, $options)
