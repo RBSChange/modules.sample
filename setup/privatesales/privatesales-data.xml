@@ -10,6 +10,7 @@
 	<binding fileName="modules/brand/persistentdocument/import/brand_binding.xml" />
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 
 	<website byTag="default_modules_website_default-website" id="default-website" />
 	<billingarea byCodeReference="FR" id="billingarea" />
@@ -109,5 +110,14 @@
 	<sale byLabel="Accessoires Nintendo">
 		<execute method="compileSaleAcl" />
 	</sale>
+	
+	<editablelist byListid="modules_privatesales/categories" >
+		<item byLabel="Consoles (Sega, Atari)" id="console" />
+		<item byLabel="Jeux (Nintendo)" id="game" />
+	</editablelist>
+	
+	<editablelist byListid="modules_privatesales/targets" >
+		<item byLabel="Tous publics (Nintendo, Sega, Atari)" id="all" />
+	</editablelist>
 
 </script>
