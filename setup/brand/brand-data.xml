@@ -41,7 +41,7 @@
 			<brand byLabel="SNK" id="SNK" visual-refid="SNK-LOGO" description-attr="snkDescription" />
 			<brand byLabel="Sega" id="SEGA" visual-refid="SEGA-LOGO" description-attr="segaDescription" websiteUrl="http://www.sega.fr" />
 			<brand byLabel="Coleco" id="COLECO" visual-refid="COLECO-LOGO" description-attr="colecoDescription" websiteUrl="http://www.coleco.com/" />
-			<brand byLabel="Atari" id="ATARI" visual-refid="ATARI-LOGO" description-attr="colecoDescription" websiteUrl="http://www.coleco.com/" />
+			<brand byLabel="Atari" id="ATARI" visual-refid="ATARI-LOGO" description-attr="atariDescription" websiteUrl="http://www.coleco.com/" />
 		</folder>
 	</rootfolder>
 	

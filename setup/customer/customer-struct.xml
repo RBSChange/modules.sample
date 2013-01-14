@@ -17,6 +17,7 @@
 			<page label="Mon compte" isIndexPage="true" byTag="contextual_website_website_modules_customer_my-account">
 				<changecontent for="content-block">
 					<changeblock type="modules_customer_index" />
+					<changeblock type="modules_catalog_favoriteProductList" />
 				</changecontent>
 			</page>
 			<page label="Mes informations" byTag="contextual_website_website_modules_customer_my-account-info">

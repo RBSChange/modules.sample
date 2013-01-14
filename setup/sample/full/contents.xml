@@ -90,7 +90,7 @@
 		</topic>
 		
 		<topic byLabel="Outils">
-			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
+			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false" navigationVisibility="hidden">
 				<changecontent for="content-block">
 					<changeblock type="modules_form_form" __cmpref-refid="sharelinkform" />
 				</changecontent>
