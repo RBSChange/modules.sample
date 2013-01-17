@@ -1,0 +1,6 @@
+{
+	"name": "rbschange/sample",
+	"description": "RBS Change Sample module",
+	"type": "rbschange-compatibility-module",
+	"license":"AGPL-3.0"
+}
