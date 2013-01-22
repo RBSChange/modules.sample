@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<topic byLabel="Outils">
+		<execute method="setDocumentIdAttribute" attribute-name="rootId" />
+	</topic>
+
+	<binding fileName="modules/sample/setup/sharethis/sharethis-data.xml" />
+	<binding fileName="modules/sample/setup/sharethis/sharethis-struct.xml" />
+</script>

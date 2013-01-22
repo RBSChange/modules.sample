@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/users/persistentdocument/import/users_binding.xml" />
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/forums/persistentdocument/import/forums_binding.xml" />
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
+
+	<documentRef byDocumentId-attr="rootId" id="mountId"/>
 
 	<country byCode="FR" id="fr" />
 	<country byCode="CH" id="ch" />
@@ -13,21 +16,19 @@
 	<frontendgroup id="grpmoderator" byLabel="Modérateur de forum" />
 
 	<rootfolder module="media">
-		<folder byLabel="m.generic.bo.general.samples">
-			<folder byLabel="forum">
-				<media path="modules/forums/setup/media/sample/new.png"
-					byLabel="Nouveau" id="visual-new" />
-				<media path="modules/forums/setup/media/sample/award_star_bronze_2.png"
-					byLabel="Médaille de bronze" id="visual-bronze" />
-				<media path="modules/forums/setup/media/sample/award_star_silver_2.png"
-					byLabel="Médaille d'argent" id="visual-silver" />
-				<media path="modules/forums/setup/media/sample/award_star_gold_2.png"
-					byLabel="Médaille d'or" id="visual-gold" />
-				<media path="modules/forums/setup/media/sample/medal_silver_1.png"
-					byLabel="Modérateur" id="visual-mod" />
-				<media path="modules/forums/setup/media/sample/medal_gold_1.png"
-					byLabel="Super-modérateur" id="visual-smod" />
-			</folder>
+		<folder byLabel="m.forums.bo.general.module-name">
+			<media path="modules/forums/setup/media/sample/new.png"
+				byLabel="Nouveau" id="visual-new" />
+			<media path="modules/forums/setup/media/sample/award_star_bronze_2.png"
+				byLabel="Médaille de bronze" id="visual-bronze" />
+			<media path="modules/forums/setup/media/sample/award_star_silver_2.png"
+				byLabel="Médaille d'argent" id="visual-silver" />
+			<media path="modules/forums/setup/media/sample/award_star_gold_2.png"
+				byLabel="Médaille d'or" id="visual-gold" />
+			<media path="modules/forums/setup/media/sample/medal_silver_1.png"
+				byLabel="Modérateur" id="visual-mod" />
+			<media path="modules/forums/setup/media/sample/medal_gold_1.png"
+				byLabel="Super-modérateur" id="visual-smod" />
 		</folder>
 	</rootfolder>
 
@@ -131,7 +132,7 @@
 					group-refid="grpsupermoderator" />
 			</permissions>
 			<execute method="setDocumentIdAttributeWithWebsite" />
-			<forumgroup label="Forums" mountParent-refid="topiccommunity"
+			<forumgroup label="Nos forums" mountParent-refid="mountId"
 				publicationstatus="ACTIVE" flagList-refid="flags">
 				<documenturl lang="fr" url="/forums" />
 				<permissions inherits="true">

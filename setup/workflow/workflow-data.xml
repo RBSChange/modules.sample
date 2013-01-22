@@ -45,7 +45,7 @@ Commentaire : {__LAST_COMMENTARY}" />
 	</systemfolder>
 
 	<rootfolder module="workflow">
-		<folder label="Exemple de workflow">
+		<folder label="m.generic.bo.general.samples">
 			<workflow starttaskid="VALIDATION1" label="Exemple de validation à un niveau">
 				<places>
 					<startplace id="pStart" label="Production du contenu" description="Production du contenu via Change." />

@@ -29,7 +29,7 @@
 		<linkedtopic refid="joboffertopic">
 			<offer byLabel="Développeur web" offertype-refid="cdi" reference="OFFRE1" description="Vous participerez au développement du CMS open source RBS Change."
 				publicationstatus="ACTIVE" location="Strasbourg" background="Minimum deux ans dans le développement web." profile="Bonne maitrise de la programmation orientée objet."
-				candidacyForm-refid="sform" />
+				candidacyForm-refid="iform" />
 			<attribute name="offer-cdp"><![CDATA[En relation avec les équipes techniques et commerciales vous prendrez en charge les projets de nos clients. Vous réalisez les projets dans le respect des budgets et des délais.<br/>
 <br/>
 Vous aurez en charge comme missions principales :<br/>

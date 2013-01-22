@@ -5,35 +5,33 @@
 	<binding fileName="modules/photoalbum/persistentdocument/import/photoalbum_binding.xml" />
 
 	<rootfolder module="media">
-		<folder byLabel="m.generic.bo.general.samples">
-			<folder byLabel="photoalbum">
-				<media path="modules/sample/setup/photoalbum/media/Deux_jours_a_tuer.jpg" byLabel="Deux jours à tuer" id="photo1" />
-				<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel.jpg" byLabel="Albert Dupontel" id="photo2" />
-				<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_2.jpg" byLabel="Albert Dupontel 2" id="photo3" />
-				<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_3.jpg" byLabel="Albert Dupontel 3" id="photo4" />
-				<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Jean_Becker_realisateur.jpg" byLabel="Albert Dupontel et Jean Becker"
-					id="photo5" />
-				<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Jean_Becker_realisateur_2.jpg" byLabel="Albert Dupontel et Jean Becker 2"
-					id="photo6" />
-				<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Jean_Becker_realisateur_3.jpg" byLabel="Albert Dupontel et Jean Becker 3"
-					id="photo7" />
-				<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Marie-Josee_Croze.jpg" byLabel="Albert Dupontel et Marie-Josée Croze"
-					id="photo8" />
-				<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Marie-Josee_Croze_2.jpg" byLabel="Albert Dupontel et Marie-Josée Croze 2"
-					id="photo9" />
-				<media path="modules/sample/setup/photoalbum/media/Jean_Becker.jpg" byLabel="Jean Becker" id="photo10" />
-				<media path="modules/sample/setup/photoalbum/media/Jean_Becker_realisateur.jpg" byLabel="Jean Becker 2" id="photo11" />
-				<media path="modules/sample/setup/photoalbum/media/Marie-Josee_Croze_et_Albert_Dupontel.jpg" byLabel="Albert Dupontel et Marie-Josée Croze 3"
-					id="photo12" />
-				<media path="modules/sample/setup/photoalbum/media/Mathias_Mlekuz_Albert_Dupontel_Cristiana_Reali_et_Francois_Marthouret.jpg" byLabel="Mathias Mlekuz, Albert Dupontel ..."
-					id="photo13" />
-				<media path="modules/sample/setup/photoalbum/media/Pierre_Vaneck_et_Albert_Dupontel.jpg" byLabel="Pierre Vaneck et Albert Dupontel" id="photo14" />
-			</folder>
+		<folder byLabel="m.photoalbum.bo.general.module-name">
+			<media path="modules/sample/setup/photoalbum/media/Deux_jours_a_tuer.jpg" byLabel="Deux jours à tuer" id="photo1" />
+			<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel.jpg" byLabel="Albert Dupontel" id="photo2" />
+			<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_2.jpg" byLabel="Albert Dupontel 2" id="photo3" />
+			<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_3.jpg" byLabel="Albert Dupontel 3" id="photo4" />
+			<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Jean_Becker_realisateur.jpg" byLabel="Albert Dupontel et Jean Becker"
+				id="photo5" />
+			<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Jean_Becker_realisateur_2.jpg" byLabel="Albert Dupontel et Jean Becker 2"
+				id="photo6" />
+			<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Jean_Becker_realisateur_3.jpg" byLabel="Albert Dupontel et Jean Becker 3"
+				id="photo7" />
+			<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Marie-Josee_Croze.jpg" byLabel="Albert Dupontel et Marie-Josée Croze"
+				id="photo8" />
+			<media path="modules/sample/setup/photoalbum/media/Albert_Dupontel_et_Marie-Josee_Croze_2.jpg" byLabel="Albert Dupontel et Marie-Josée Croze 2"
+				id="photo9" />
+			<media path="modules/sample/setup/photoalbum/media/Jean_Becker.jpg" byLabel="Jean Becker" id="photo10" />
+			<media path="modules/sample/setup/photoalbum/media/Jean_Becker_realisateur.jpg" byLabel="Jean Becker 2" id="photo11" />
+			<media path="modules/sample/setup/photoalbum/media/Marie-Josee_Croze_et_Albert_Dupontel.jpg" byLabel="Albert Dupontel et Marie-Josée Croze 3"
+				id="photo12" />
+			<media path="modules/sample/setup/photoalbum/media/Mathias_Mlekuz_Albert_Dupontel_Cristiana_Reali_et_Francois_Marthouret.jpg" byLabel="Mathias Mlekuz, Albert Dupontel ..."
+				id="photo13" />
+			<media path="modules/sample/setup/photoalbum/media/Pierre_Vaneck_et_Albert_Dupontel.jpg" byLabel="Pierre Vaneck et Albert Dupontel" id="photo14" />
 		</folder>
 	</rootfolder>
 
 	<rootfolder module="photoalbum">
-		<folder byLabel="Galeries d'exemple">
+		<folder byLabel="Galeries cinématographique">
 			<album byLabel="Deux jours à tuer" topic-refids="gallery"
 				summary="Antoine Méliot, la quarantaine, a tout pour être heureux : une belle épouse, deux enfants adorables, des amis sur lesquels il peut compter à tout instant, une jolie demeure dans les Yvelines et de l'argent. Mais un jour, il décide de tout saboter en un week-end : son bonheur, sa famille, ses amis. Que s'est-il passé chez cet homme pour qu'il change si étrangement de comportement ?">
 				<photo byLabel="Deux jours à tuer" mediarefid="photo1" summary="Antoine Méliot, la quarantaine, a tout pour être heureux" copyright="Canal plus" />

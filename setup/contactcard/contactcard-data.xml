@@ -4,16 +4,14 @@
 	<binding fileName="modules/contactcard/persistentdocument/import/contactcard_binding.xml" />
 
 	<rootfolder module="media">
-		<folder byLabel="m.generic.bo.general.samples">
-			<folder label="contactcard">
-				<media path="modules/sample/setup/contactcard/media/photo.png" byLabel="Photo non disponible" id="photo" />
-				<media path="modules/sample/setup/contactcard/media/amigacd32.jpg" byLabel="Amiga CD32" id="photo2" />
-				<media path="modules/sample/setup/contactcard/media/atari-2600.jpg" byLabel="Atari 2600" id="photo3" />
-				<media path="modules/sample/setup/contactcard/media/nes.png" byLabel="NES" id="photo4" />
-				<media path="modules/sample/setup/contactcard/media/master-system-set.png" byLabel="Master System" id="photo5" />
-				<media path="modules/sample/setup/contactcard/media/amiga-1200.jpg" byLabel="Amiga 1200" id="photo6" />
-				<media path="modules/sample/setup/contactcard/media/zx80.jpg" byLabel="ZX80" id="photo7" />
-			</folder>
+		<folder label="m.contactcard.bo.general.module-name">
+			<media path="modules/sample/setup/contactcard/media/photo.png" byLabel="Photo non disponible" id="photo" />
+			<media path="modules/sample/setup/contactcard/media/amigacd32.jpg" byLabel="Amiga CD32" id="photo2" />
+			<media path="modules/sample/setup/contactcard/media/atari-2600.jpg" byLabel="Atari 2600" id="photo3" />
+			<media path="modules/sample/setup/contactcard/media/nes.png" byLabel="NES" id="photo4" />
+			<media path="modules/sample/setup/contactcard/media/master-system-set.png" byLabel="Master System" id="photo5" />
+			<media path="modules/sample/setup/contactcard/media/amiga-1200.jpg" byLabel="Amiga 1200" id="photo6" />
+			<media path="modules/sample/setup/contactcard/media/zx80.jpg" byLabel="ZX80" id="photo7" />
 		</folder>
 	</rootfolder>
 

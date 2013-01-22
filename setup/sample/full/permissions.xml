@@ -2,16 +2,6 @@
 <script>	
 	<binding fileName="modules/sample/setup/sample/fullos/permissions.xml" />
 	
-<!-- 	<rootfolder module="website"> -->
-<!-- 		<website byTag="default_modules_website_default-website"> -->
-<!-- 			<topic byLabel="Extranet magasin"> -->
-<!-- 				<permissions> -->
-<!-- 					<backendpermission module="website" role="Admin" group-refid="grp-back-admin" /> -->
-<!-- 				</permissions> -->
-<!-- 			</topic> -->
-<!-- 		</website> -->
-<!-- 	</rootfolder> -->
-	
 	<rootfolder module="ads">
 		<permissions>
 			<backendpermission module="ads" role="Admin" group-refid="grp-back-admin" />

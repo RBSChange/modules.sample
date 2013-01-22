@@ -5,7 +5,7 @@
 
 	<websitefrontendgroup for-default-website="true" id="websitefrontendgroup" />
 
-	<topic byLabel="Communauté">
+	<topic byLabel="Nos forums">
 		<execute method="setDocumentIdAttribute" attribute-name="rootId" />
 	</topic>
 

@@ -127,60 +127,61 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	protected function addFullSamples(&$samples)
 	{
 		$samples[] = 'sample/full/permissions.xml';
-		$samples[] = 'sample/ecom/theme.xml';
+		$samples[] = 'sample/fullos/theme.xml';
 		
 		// Core modules.
-		$samples[] = 'website/website-struct.xml';
-		$samples[] = 'media/media-data.xml';
+		$samples[] = 'sample/core/website.xml';
+		$samples[] = 'sample/core/media.xml';
 		$samples[] = 'sample/core/users.xml';
-		$samples[] = 'workflow/workflow-data.xml';
+		$samples[] = 'sample/core/workflow.xml';
 		$samples[] = 'sample/core/form.xml';
-		$samples[] = 'notification/notification-data.xml';
+		$samples[] = 'sample/core/notification.xml';
 		$samples[] = 'sample/core/contactcard.xml';
-		$samples[] = 'list/list-data.xml';
-		$samples[] = 'rss/rss-data.xml';
+		$samples[] = 'sample/core/list.xml';
+		$samples[] = 'sample/core/rss.xml';
 		
-		$samples[] = 'sample/ecom/structure.xml';
+		$samples[] = 'sample/full/structure.xml';
 		
+		// OS modules
 		// CMS modules.
-		$samples[] = 'media/media-data.xml';
-		$samples[] = 'videos/videos-data.xml';
-		$samples[] = 'sharethis/sharethis-data.xml';
-		$samples[] = 'sample/fullos/privatemessaging.xml';
-		$samples[] = 'sample/fullos/event.xml';
-		$samples[] = 'sample/fullos/joboffer.xml';
-		$samples[] = 'sample/fullos/photoalbum.xml';
-		$samples[] = 'sample/fullos/blog.xml';
-		$samples[] = 'sample/fullos/forums.xml';
-		$samples[] = 'sample/fullos/statictext.xml';
-		$samples[] = 'sample/fullos/polls.xml';
-		$samples[] = 'sample/fullos/bookmarks.xml';
+		$samples[] = 'sample/fullos/sharethis.xml';
 		$samples[] = 'sample/fullos/inquiry.xml';
+		
+		$samples[] = 'sample/fullos/blog.xml';
+		$samples[] = 'sample/fullos/event.xml';
+		$samples[] = 'sample/fullos/forums.xml';
+		$samples[] = 'sample/fullos/privatemessaging.xml';
+		$samples[] = 'sample/fullos/polls.xml';
+		$samples[] = 'sample/fullos/videos.xml';
+		$samples[] = 'sample/fullos/photoalbum.xml';
+		
+		$samples[] = 'sample/fullos/joboffer.xml';
+		$samples[] = 'sample/fullos/statictext.xml';
+		$samples[] = 'sample/fullos/bookmarks.xml';
 		
 		// ECOM modules.
 		$samples[] = 'sample/fullos/brand.xml';
-		$samples[] = 'shipping/shipping-data.xml';
-		$samples[] = 'payment/payment-data.xml';
-		$samples[] = 'paybox/paybox-data.xml';
-		$samples[] = 'catalog/catalog-struct.xml';
+		$samples[] = 'sample/fullos/shipping.xml';
+		$samples[] = 'sample/fullos/payment.xml';
+		$samples[] = 'sample/fullos/paybox.xml';
+		$samples[] = 'sample/fullos/catalog.xml';
 		$samples[] = 'sample/fullos/customer.xml';
-		$samples[] = 'order/order-struct.xml';
+		$samples[] = 'sample/fullos/order.xml';
 		$samples[] = 'sample/fullos/kiala.xml';
 		$samples[] = 'sample/fullos/mondialrelay.xml';
 		$samples[] = 'sample/fullos/icirelais.xml';
 		$samples[] = 'sample/fullos/relaiscolis.xml';
 		
 		// Non-OS modules.
-		$samples[] = 'marketing/marketing-data.xml';
-		$samples[] = 'ecomextended/ecomextended-data.xml';
-		$samples[] = 'ecomextended/ecomextended-struct.xml';
+		$samples[] = 'sample/full/marketing.xml';
+		$samples[] = 'sample/full/ecomextended.xml';
 		$samples[] = 'sample/full/emailing.xml';
 		$samples[] = 'sample/full/store.xml';
-		$samples[] = 'loyalty/loyalty-struct.xml';
-		//$samples[] = 'productreturns/productreturns-struct.xml';
+		$samples[] = 'sample/full/loyalty.xml';
+		$samples[] = 'sample/full/productreturns.xml';
 		$samples[] = 'sample/full/support.xml';
-		//$samples[] = 'sample/full/privatesales.xml';
-		$samples[] = 'atosserver/atosserver-data.xml';
+		$samples[] = 'sample/full/privatesales.xml';
+		$samples[] = 'sample/full/atosserver.xml';
 		
 		$samples[] = 'sample/full/contents.xml';
 	}

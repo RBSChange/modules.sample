@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
+	<binding fileName="modules/statictext/persistentdocument/import/statictext_binding.xml" />
+
+	<website byTag="default_modules_website_default-website" id="default-website">
+		<menus>
+			<menu id="footer-1" byLabel="Catalogue"></menu>
+			<menu id="footer-2" byLabel="Communauté"></menu>
+			<menu id="footer-3" byLabel="Mon compte"></menu>
+			<menu id="footer-4" byLabel="À propos"></menu>
+		</menus>
+	</website>
+
+	<htmlcode byLabel="Warning" id="htmltext" />
+	
+	<theme byCodename="default">
+		<pagetemplate byCodename="default/nosidebarpage">
+			<pagetemplatedeclination byCodename="default/nosidebarpageecomsample" label="Sans sidebar, e-commerce">
+				<templateblock editname="header-top-2" type="modules_customer_Customerinfo" />
+				<templateblock editname="header-top-3" type="modules_order_ShortCart" />
+				<templateblock editname="footer-middle-1" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-1" __showTitle="true" />
+				<templateblock editname="footer-middle-2" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-2" __showTitle="true" />
+				<templateblock editname="footer-middle-3" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-3" __showTitle="true" />
+				<templateblock editname="footer-middle-4" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-4" __showTitle="true" />
+				<templateblock editname="footer-top-1" type="modules_statictext_Htmlcode" __cmpref-refid="htmltext" />
+			</pagetemplatedeclination>
+		</pagetemplate>
+		<pagetemplate byCodename="default/sidebarpage">
+			<pagetemplatedeclination byCodename="default/sidebarpageecomsample" label="Avec sidebar, e-commerce">
+				<templateblock editname="header-top-2" type="modules_customer_Customerinfo" />
+				<templateblock editname="header-top-3" type="modules_order_ShortCart" />
+				<templateblock editname="footer-middle-1" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-1" __showTitle="true" />
+				<templateblock editname="footer-middle-2" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-2" __showTitle="true" />
+				<templateblock editname="footer-middle-3" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-3" __showTitle="true" />
+				<templateblock editname="footer-middle-4" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-4" __showTitle="true" />
+				<templateblock editname="footer-top-1" type="modules_statictext_Htmlcode" __cmpref-refid="htmltext" />
+			</pagetemplatedeclination>
+			<pagetemplatedeclination byCodename="default/sidebarpageemptyecom" label="Avec sidebar vide, e-commerce">
+				<templateblock editname="header-top-2" type="modules_customer_Customerinfo" />
+				<templateblock editname="header-top-3" type="modules_order_ShortCart" />
+				<templateblock editname="content-middle-1" type="empty" />
+				<templateblock editname="footer-middle-1" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-1" __showTitle="true" />
+				<templateblock editname="footer-middle-2" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-2" __showTitle="true" />
+				<templateblock editname="footer-middle-3" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-3" __showTitle="true" />
+				<templateblock editname="footer-middle-4" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-4" __showTitle="true" />
+				<templateblock editname="footer-top-1" type="modules_statictext_Htmlcode" __cmpref-refid="htmltext" />
+			</pagetemplatedeclination>
+		</pagetemplate>
+	</theme>
+</script>

@@ -3,25 +3,16 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/sample/setup/videos/videos-data.xml" />
 
-	<website byTag="default_modules_website_default-website">
-		<topic byLabel="Galerie de vidéos" id="video">
-			<page label="Exemple de vidéo youtube" isIndexPage="true" id="pagevideo">
+	<documentRef byDocumentId-attr="rootId">
+		<topic byLabel="Vidéos" id="video">
+			<page label="Vidéos" isIndexPage="true" id="pagevideo" navigationVisibility="hidden">
 				<changecontent for="content-block">
-					<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube1" />
-					<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube2" />
-				</changecontent>
-			</page>
-			<page label="Exemple de vidéo flash">
-				<changecontent for="content-block">
+					<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube" />
+					<changeblock type="modules_videos_dailymotionvideo" __cmpref-refid="videodailymotion" />
 					<changeblock type="modules_videos_video" __cmpref-refid="v1" />
 				</changecontent>
 			</page>
 		</topic>
-	</website>
-
-	<menus>
-		<menu byTag="contextual_website_website_menu-main">
-			<menuitempage pageid="pagevideo" />
-		</menu>
-	</menus>
+	</documentRef>
+	
 </script>

@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/brand/persistentdocument/import/brand_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
 	<rootfolder module="media">
-		<folder byLabel="m.generic.bo.general.samples">
-			<folder byLabel="brand">
-				<media path="modules/sample/setup/brand/media/NINTENDO-BRAND-LOGO.png" label="Logo Nintendo" id="NINTENDO-LOGO" />
-				<media path="modules/sample/setup/brand/media/SNK-BRAND-LOGO.gif" label="Logo SNK" id="SNK-LOGO" />
-				<media path="modules/sample/setup/brand/media/SEGA-BRAND-LOGO.png" label="Logo SEGA" id="SEGA-LOGO" />
-				<media path="modules/sample/setup/brand/media/COLECO-BRAND-LOGO.png" label="Logo Coleco" id="COLECO-LOGO" />
-				<media path="modules/sample/setup/brand/media/ATARI-BRAND-LOGO.png" label="Logo Atari" id="ATARI-LOGO" />
-			</folder>
+		<folder byLabel="m.brand.bo.general.module-name">
+			<media path="modules/sample/setup/brand/media/NINTENDO-BRAND-LOGO.png" label="Logo Nintendo" id="NINTENDO-LOGO" />
+			<media path="modules/sample/setup/brand/media/SNK-BRAND-LOGO.gif" label="Logo SNK" id="SNK-LOGO" />
+			<media path="modules/sample/setup/brand/media/SEGA-BRAND-LOGO.png" label="Logo SEGA" id="SEGA-LOGO" />
+			<media path="modules/sample/setup/brand/media/COLECO-BRAND-LOGO.png" label="Logo Coleco" id="COLECO-LOGO" />
+			<media path="modules/sample/setup/brand/media/ATARI-BRAND-LOGO.png" label="Logo Atari" id="ATARI-LOGO" />
+			<media path="modules/sample/setup/brand/media/COMMODORE-BRAND-LOGO.png" byLabel="Logo de Commodore" id="COMMODORE-LOGO" />
 		</folder>
 	</rootfolder>
 	
-	<attribute name="brandDescription" default="true">
-		<![CDATA[<p>Sed sapien risus, rhoncus ac, vehicula ac, vulputate ut, nibh. Praesent nisi nulla, bibendum dapibus, tincidunt sed, dapibus ac, orci. Duis vulputate. Morbi nunc. Donec libero nulla, suscipit eget, hendrerit sit amet, sollicitudin et, libero. Integer metus arcu, malesuada et, vestibulum vel, accumsan in, mi. Curabitur molestie. Vestibulum ut purus. Duis vestibulum orci condimentum diam. Cras congue pharetra mauris! Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mollis tortor. Donec velit mauris, facilisis vel, venenatis id, congue eget; nisi. Nullam dictum laoreet ligula. Pellentesque magna. In lobortis, eros a elementum dictum, est neque sodales quam, in tempor mi leo rhoncus nisi.</p>]]>
-	</attribute>
 	<attribute name="nintendoDescription" default="true">
 		<![CDATA[<p class="normal">Nintendo Company, Limited (任天堂株式会社, Nintendō Kabushiki Gaisha) est une entreprise multinationale japonaise fondée en 1889 par Fusajiro Yamauchi près de Kyōto au Japon.<br />À ses débuts, la société produisait des cartes à jouer japonaises : les hanafuda. C’est à partir des années 1970 que la société a diversifié ses activités en produisant des jeux vidéo. Elle a été l'un des principaux précurseurs du jeu vidéo, et est actuellement le leader du marché des consoles de jeux vidéo.<br />À partir des années 1980, Nintendo s’est lancé dans le marché des consoles et des jeux vidéo. Actuellement, elle est l’un des leaders de ce marché : en 2008, Nintendo est classé premier éditeur de jeux vidéo au Japon et deuxième aux États-Unis (NPD Group). Au 1er décembre 2006, Nintendo a vendu 387 millions de consoles et 2,2 milliards de jeux vidéo dans le monde.(<a href="http://fr.wikipedia.org/wiki/Nintendo" class="link">Voir l'article Wikipedia</a>)</p>]]>
 	</attribute>
@@ -34,15 +30,20 @@
 	<attribute name="snkDescription" default="true">
 		<![CDATA[<p class="normal">SNK Corporation est une entreprise japonaise fondée en 1973 et basée à Ōsaka, dont l'activité est la planification, le développement et l'édition de jeux vidéo et de systèmes de jeu vidéo, ainsi que la création et la gestion de centres de divertissement. Parmi les produits plus célèbres de la marque, figurent le Neo-Geo MVS, un système d'arcade également commercialisé en version console de jeux vidéo de luxe : la Neo-Geo AES, les séries des jeux Fatal Fury, The King of Fighters ou Metal Slug. Après des tentatives infructueuses pour s'imposer sur le marché des consoles de salon et des consoles portables, SNK connaît de grosses difficultés financières. Aruze rachète l'entreprise en 2000, mais de mauvaises orientations et stratégies font sombrer SNK. Juste avant la faillite de SNK en 2001, le fondateur de la société créé une entreprise nommée BrezzaSoft, puis créé la société Playmore qui sera renommée SNK Playmore et détenant tous les droits des propriétés intellectuelles de SNK(<a href="http://fr.wikipedia.org/wiki/Snk" class="link">Voir l'article Wikipedia</a>)</p>]]>
 	</attribute>
+	<attribute name="commodore-description" default="true">
+		<![CDATA[<p class="normal">Commodore Business Machines Inc. (CBM) est une société d'électronique américaine qui s'est rendue célèbre pour ses calculatrices électroniques (comme la P-50 ou la PR-100) et ses micro-ordinateurs jusqu'en 1994. Après une brève réapparition sur le marché des PC de jeu en 2007, la marque est acquise sous licence en 2010 par deux jeunes entrepreneurs pour devenir Commodore USA en Floride.(<a href="http://fr.wikipedia.org/wiki/Commodore_International" class="link">Voir l'article Wikipedia</a>)</p>]]>
+	</attribute>
 	
 	<rootfolder module="brand">
-		<folder byLabel="m.generic.bo.general.samples">
-			<brand byLabel="Nintendo" id="NINTENDO" visual-refid="NINTENDO-LOGO" description-attr="nintendoDescription" websiteUrl="http://www.nintendo.com"/>
-			<brand byLabel="SNK" id="SNK" visual-refid="SNK-LOGO" description-attr="snkDescription" />
-			<brand byLabel="Sega" id="SEGA" visual-refid="SEGA-LOGO" description-attr="segaDescription" websiteUrl="http://www.sega.fr" />
-			<brand byLabel="Coleco" id="COLECO" visual-refid="COLECO-LOGO" description-attr="colecoDescription" websiteUrl="http://www.coleco.com/" />
-			<brand byLabel="Atari" id="ATARI" visual-refid="ATARI-LOGO" description-attr="atariDescription" websiteUrl="http://www.coleco.com/" />
-		</folder>
+		<brand byLabel="Nintendo" id="NINTENDO" visual-refid="NINTENDO-LOGO" description-attr="nintendoDescription" websiteUrl="http://www.nintendo.com">
+			<documentRef byDocumentId-attr="brandMountPointId" id="brandMountPoint"/>
+			<space mountPoint-refid="brandMountPoint"></space>
+		</brand>
+		<brand byLabel="SNK" id="SNK" visual-refid="SNK-LOGO" description-attr="snkDescription" />
+		<brand byLabel="Sega" id="SEGA" visual-refid="SEGA-LOGO" description-attr="segaDescription" websiteUrl="http://www.sega.fr" />
+		<brand byLabel="Coleco" id="COLECO" visual-refid="COLECO-LOGO" description-attr="colecoDescription" websiteUrl="http://www.coleco.com/" />
+		<brand byLabel="Atari" id="ATARI" visual-refid="ATARI-LOGO" description-attr="atariDescription" websiteUrl="http://www.atari.com" />
+		<brand byLabel="Commodore" id="COMMODORE" visual-refid="COMMODORE-LOGO" description-attr="commodore-description" />
 	</rootfolder>
 	
 </script>

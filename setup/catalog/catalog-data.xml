@@ -15,83 +15,72 @@
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 
 	<!-- Remind all needs to catalog's samples --> 
+	<documentRef type="modules_brand/brand" byLabel="Nintendo" id="NINTENDO" />
+	<documentRef type="modules_brand/brand" byLabel="SNK" id="SNK" />
+	<documentRef type="modules_brand/brand" byLabel="Sega" id="SEGA" />
+	<documentRef type="modules_brand/brand" byLabel="Coleco" id="COLECO" />
+	<documentRef type="modules_brand/brand" byLabel="Atari" id="ATARI" />
+	<documentRef type="modules_brand/brand" byLabel="Commodore" id="COMMODORE" />
+
+	<documentRef type="modules_media/media" byLabel="NES (set)" id="NES-1985-1" />
+	<documentRef type="modules_media/media" byLabel="NES (controller)" id="NES-1985-2" />
+	<documentRef type="modules_media/media" byLabel="NES Zapper" id="NES-ZAPPER-1" />
+	<documentRef type="modules_media/media" byLabel="NES Zapper Orange" id="NES-ZAPPER-2" />						
+	<documentRef type="modules_media/media" byLabel="FAMICOM (set)" id="FAMICOM-1983-1" />
+	<documentRef type="modules_media/media" byLabel="FAMICOM (controller)" id="FAMICOM-1983-2" />
+	<documentRef type="modules_media/media" byLabel="NEO-GEO Main" id="NEOGEO-1990-1" />
+	<documentRef type="modules_media/media" byLabel="NEO-GEO Alternate View" id="NEOGEO-1990-2" />
+	<documentRef type="modules_media/media" byLabel="SMS I" id="MASTERSYSTEM-1985" />
+	<documentRef type="modules_media/media" byLabel="SMS II" id="MASTERSYSTEM-1990" />
+	<documentRef type="modules_media/media" byLabel="Colecovision" id="COLECO-1982-1" />
+	<documentRef type="modules_media/media" byLabel="Atari 2600" id="ATARI2600-1978-1" />
+	<documentRef type="modules_media/media" byLabel="Atari 7800" id="ATARI7800-1986-1" />
+	<documentRef type="modules_media/media" byLabel="Super NES" id="SNES-1992-1" />
+	<documentRef type="modules_media/media" byLabel="Super NES PAL" id="SNESPAL-1992-1" />
+	<documentRef type="modules_media/media" byLabel="Super NES PAL (alternate)" id="SNESPAL-1992-2" />
+	<documentRef type="modules_media/media" byLabel="Super FAMICOM" id="SFAMICOM-1992-1" />
+	<documentRef type="modules_media/media" byLabel="Megadrive" id="MEGADRIVE-1988-1" />
+	<documentRef type="modules_media/media" byLabel="Pong Arcade" id="RETROGAMING" />
+	<documentRef type="modules_media/media" byLabel="Gameboy Panorama" id="GAMEBOY-ALL" />
+	<documentRef type="modules_media/media" byLabel="Arcade" id="ARCADE-PONG-PIC1" />
 
 	<rootfolder module="media">
-		<folder byLabel="m.generic.bo.general.samples">
-			<folder byLabel="media">
-				<folder byLabel="Retrogaming">
-					<!-- external media (comming from media module sample) -->
-					<media path="modules/sample/setup/media/media/NES-1985-1.jpg" byLabel="NES (set)" id="NES-1985-1" />
-					<media path="modules/sample/setup/media/media/NES-1985-2.jpg" byLabel="NES (controller)" id="NES-1985-2" />
-					<media path="modules/sample/setup/media/media/NES-ZAPPER.jpg" byLabel="NES Zapper" id="NES-ZAPPER-1" />
-					<media path="modules/sample/setup/media/media/NES-ZAPPER-2.jpg" byLabel="NES Zapper Orange" id="NES-ZAPPER-2" />						
-					<media path="modules/sample/setup/media/media/FAMICOM-1983-1.png" byLabel="FAMICOM (set)" id="FAMICOM-1983-1" />
-					<media path="modules/sample/setup/media/media/FAMICOM-1983-2.jpg" byLabel="FAMICOM (controller)" id="FAMICOM-1983-2" />
-					<media path="modules/sample/setup/media/media/NEOGEO-1990-1.jpg" byLabel="NEO-GEO Main" id="NEOGEO-1990-1" />
-					<media path="modules/sample/setup/media/media/NEOGEO-1990-2.png" byLabel="NEO-GEO Alternate View" id="NEOGEO-1990-2" />
-					<media path="modules/sample/setup/media/media/MASTERSYSTEM-1985-1.png" byLabel="SMS I" id="MASTERSYSTEM-1985" />
-					<media path="modules/sample/setup/media/media/MASTERSYSTEM-1990-1.jpg" byLabel="SMS II" id="MASTERSYSTEM-1990" />
-					<media path="modules/sample/setup/media/media/COLECO-1982.jpg" byLabel="Colecovision" id="COLECO-1982-1" />
-					<media path="modules/sample/setup/media/media/ATARI2600-1978-1.jpg" byLabel="Atari 2600" id="ATARI2600-1978-1" />
-					<media path="modules/sample/setup/media/media/ATARI7800-1986-1.jpg" byLabel="Atari 7800" id="ATARI7800-1986-1" />
-					<media path="modules/sample/setup/media/media/SNES-1992-1.png" byLabel="Super NES" id="SNES-1992-1" />
-					<media path="modules/sample/setup/media/media/SNESPAL-1992-1.png" byLabel="Super NES PAL" id="SNESPAL-1992-1" />
-					<media path="modules/sample/setup/media/media/SNESPAL-1992-2.jpg" byLabel="Super NES PAL (alternate)" id="SNESPAL-1992-2" />
-					<media path="modules/sample/setup/media/media/SFAMICOM-1992-1.png" byLabel="Super FAMICOM" id="SFAMICOM-1992-1" />
-					<media path="modules/sample/setup/media/media/MEGADRIVE-1988-1.jpg" byLabel="Megadrive" id="MEGADRIVE-1988-1" />
-					<media path="modules/sample/setup/media/media/RETROGAMING.png" byLabel="Pong Arcade" id="RETROGAMING" />
-					<media path="modules/sample/setup/media/media/GAMEBOY-ALL.png" byLabel="Gameboy Panorama" id="GAMEBOY-ALL" />
-					<media path="modules/sample/setup/media/media/RETROGAMING.png" byLabel="Arcade" id="ARCADE-PONG-PIC1" />
-					<!-- Internal media (included in catalog sample media folder) -->
-					<media path="modules/sample/setup/catalog/media/DUCK-HUNT-BOX.jpg" byLabel="Duck Hunt box" id="DUCK-HUNT-BOX" />
-					<media path="modules/sample/setup/catalog/media/DUCK-HUNT-PIC1.png" byLabel="Duck Hunt game 1" id="DUCK-HUNT-PIC1" />
-					<media path="modules/sample/setup/catalog/media/DUCK-HUNT-PIC2.jpg" byLabel="Duck Hunt game 2" id="DUCK-HUNT-PIC2" />
-					<media path="modules/sample/setup/catalog/media/DUCK-HUNT-PIC3.png" byLabel="Duck Hunt game 3" id="DUCK-HUNT-PIC3" />
-					<media path="modules/sample/setup/catalog/media/NES-CONTROLLER.jpg" byLabel="Manette Nes 1" id="NES-CONTROLLER-PIC1" />
-					<media path="modules/sample/setup/catalog/media/FAMICOM-CONTROLLER.jpg" byLabel="Manette Famicom 1" id="FAMICOM-CONTROLLER-PIC1" />
-					<media path="modules/sample/setup/catalog/media/NES-ADVANTAGE.jpg" byLabel="Joystick Nes 1" id="NES-ADVANTAGE-PIC1" />
-					<media path="modules/sample/setup/catalog/media/GAMEBOY-CLASSIC-PIC1.jpg" byLabel="Gameboy classic 1" id="GAMEBOY-CLASSIC-PIC1" />
-					<media path="modules/sample/setup/catalog/media/GAMEBOY-CLASSIC-PIC2.png" byLabel="Gameboy classic 2" id="GAMEBOY-CLASSIC-PIC2" />
-					<media path="modules/sample/setup/catalog/media/GAMEBOY-CLEAR-PIC1.jpg" byLabel="Gameboy clear 1" id="GAMEBOY-CLEAR-PIC1" />
-					<media path="modules/sample/setup/catalog/media/GAMEBOY-LIGHT-PIC1.jpg" byLabel="Gameboy light 1" id="GAMEBOY-LIGHT-PIC1" />
-					<media path="modules/sample/setup/catalog/media/GAMEBOY-POCKET-PIC1.jpg" byLabel="Gameboy pocket 1" id="GAMEBOY-POCKET-PIC1" />
-					<media path="modules/sample/setup/catalog/media/GAMEBOY-GAME-POKEMON-RED-PIC1.jpg" byLabel="Pokemon version rouge 1" id="GAMEBOY-GAME-POKEMON-RED" />
-					<media path="modules/sample/setup/catalog/media/GAMEBOY-GAME-POKEMON-BLUE-PIC1.jpg" byLabel="Pokemon version bleu 1" id="GAMEBOY-GAME-POKEMON-BLUE" />
-					<media path="modules/sample/setup/catalog/media/PACK-NES.jpg" byLabel="Pack pour bundle NES 1" id="PACK-NES-PIC1" />
-					<media path="modules/sample/setup/catalog/media/GAMEBOY-LINKCABLE.jpg" byLabel="Câble link pour gameboy 1" id="GAMEBOY-LINKCABLE-PIC1" />
-					<media path="modules/sample/setup/catalog/media/SNES-GAME-ZELDA.png" byLabel="The Legend of Zelda: A Link to the Past 1" id="SNES-GAME-ZELDA-PIC1" />
-					<securemedia path="modules/sample/setup/catalog/media/SNES-DOWNLOAD-ZELDA.pdf" byLabel="The Legend of Zelda: A Link to the Past Soluce" id="SNES-DOWNLOAD-ZELDA-TIPS-FILE" />
-					<media path="modules/sample/setup/catalog/media/SNES-DOWNLOAD-ZELDA-PIC1.png" byLabel="The Legend of Zelda: A Link to the Past Soluce 1" id="SNES-DOWNLOAD-ZELDA-PIC1" />
-					<media path="modules/sample/setup/catalog/media/COMMODORE64-PIC1.jpg" byLabel="Commodore 64 1" id="MICRO-COMMODORE64-PIC1" />
-					<media path="modules/sample/setup/catalog/media/ATARI-1040ST.jpg" byLabel="Atari ST 1" id="ATARI-ST-PIC1" />
-					<media path="modules/sample/setup/catalog/media/COMMODORE-LOGO.png" byLabel="Logo de Commodore" id="COMMODORE-LOGO" />
-					<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC1.jpg" byLabel="Amiga 500 1" id="MICRO-AMIGA-500-PIC1" />
-					<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC2.jpg" byLabel="Amiga 500 2" id="MICRO-AMIGA-500-PIC2" />
-					<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC3.jpg" byLabel="Amiga 500 3" id="MICRO-AMIGA-500-PIC3" />
-					<media path="modules/sample/setup/catalog/media/PACK-GAMEBOY-POKEMON.jpg" byLabel="Kit gameboy pokemon" id="PACK-GAMEBOY-POKEMON" />
-					<media path="modules/sample/setup/catalog/media/SUPER-FAMICOM-1.png" byLabel="Super famicom" id="SUPER-FAMICOM-1" />
-					<media path="modules/sample/setup/catalog/media/SUPER-FAMICOM-CONTROLLER-1.jpg" byLabel="Super famicom controller" id="SUPER-FAMICOM-CONTROLLER-1" />
-					<media path="modules/sample/setup/catalog/media/SNES-CONTROLLER-1.jpg" byLabel="SNES controller" id="SNES-CONTROLLER-1" />
-					<media path="modules/sample/setup/catalog/media/SUPER-NINTENDO-CONTROLLER-1.jpg" byLabel="Super nintendo controller" id="SUPER-NINTENDO-CONTROLLER-1" />
-				</folder>
-			</folder>
+		<folder byLabel="m.catalog.bo.general.module-name">
+			<!-- Internal media (included in catalog sample media folder) -->
+			<media path="modules/sample/setup/catalog/media/DUCK-HUNT-BOX.jpg" byLabel="Duck Hunt box" id="DUCK-HUNT-BOX" />
+			<media path="modules/sample/setup/catalog/media/DUCK-HUNT-PIC1.png" byLabel="Duck Hunt game 1" id="DUCK-HUNT-PIC1" />
+			<media path="modules/sample/setup/catalog/media/DUCK-HUNT-PIC2.jpg" byLabel="Duck Hunt game 2" id="DUCK-HUNT-PIC2" />
+			<media path="modules/sample/setup/catalog/media/DUCK-HUNT-PIC3.png" byLabel="Duck Hunt game 3" id="DUCK-HUNT-PIC3" />
+			<media path="modules/sample/setup/catalog/media/NES-CONTROLLER.jpg" byLabel="Manette Nes 1" id="NES-CONTROLLER-PIC1" />
+			<media path="modules/sample/setup/catalog/media/FAMICOM-CONTROLLER.jpg" byLabel="Manette Famicom 1" id="FAMICOM-CONTROLLER-PIC1" />
+			<media path="modules/sample/setup/catalog/media/NES-ADVANTAGE.jpg" byLabel="Joystick Nes 1" id="NES-ADVANTAGE-PIC1" />
+			<media path="modules/sample/setup/catalog/media/GAMEBOY-CLASSIC-PIC1.jpg" byLabel="Gameboy classic 1" id="GAMEBOY-CLASSIC-PIC1" />
+			<media path="modules/sample/setup/catalog/media/GAMEBOY-CLASSIC-PIC2.png" byLabel="Gameboy classic 2" id="GAMEBOY-CLASSIC-PIC2" />
+			<media path="modules/sample/setup/catalog/media/GAMEBOY-CLEAR-PIC1.jpg" byLabel="Gameboy clear 1" id="GAMEBOY-CLEAR-PIC1" />
+			<media path="modules/sample/setup/catalog/media/GAMEBOY-LIGHT-PIC1.jpg" byLabel="Gameboy light 1" id="GAMEBOY-LIGHT-PIC1" />
+			<media path="modules/sample/setup/catalog/media/GAMEBOY-POCKET-PIC1.jpg" byLabel="Gameboy pocket 1" id="GAMEBOY-POCKET-PIC1" />
+			<media path="modules/sample/setup/catalog/media/GAMEBOY-GAME-POKEMON-RED-PIC1.jpg" byLabel="Pokemon version rouge 1" id="GAMEBOY-GAME-POKEMON-RED" />
+			<media path="modules/sample/setup/catalog/media/GAMEBOY-GAME-POKEMON-BLUE-PIC1.jpg" byLabel="Pokemon version bleu 1" id="GAMEBOY-GAME-POKEMON-BLUE" />
+			<media path="modules/sample/setup/catalog/media/PACK-NES.jpg" byLabel="Pack pour bundle NES 1" id="PACK-NES-PIC1" />
+			<media path="modules/sample/setup/catalog/media/GAMEBOY-LINKCABLE.jpg" byLabel="Câble link pour gameboy 1" id="GAMEBOY-LINKCABLE-PIC1" />
+			<media path="modules/sample/setup/catalog/media/SNES-GAME-ZELDA.png" byLabel="The Legend of Zelda: A Link to the Past 1" id="SNES-GAME-ZELDA-PIC1" />
+			<securemedia path="modules/sample/setup/catalog/media/SNES-DOWNLOAD-ZELDA.pdf" byLabel="The Legend of Zelda: A Link to the Past Soluce" id="SNES-DOWNLOAD-ZELDA-TIPS-FILE" />
+			<media path="modules/sample/setup/catalog/media/SNES-DOWNLOAD-ZELDA-PIC1.png" byLabel="The Legend of Zelda: A Link to the Past Soluce 1" id="SNES-DOWNLOAD-ZELDA-PIC1" />
+			<media path="modules/sample/setup/catalog/media/COMMODORE64-PIC1.jpg" byLabel="Commodore 64 1" id="MICRO-COMMODORE64-PIC1" />
+			<media path="modules/sample/setup/catalog/media/ATARI-1040ST.jpg" byLabel="Atari ST 1" id="ATARI-ST-PIC1" />
+			<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC1.jpg" byLabel="Amiga 500 1" id="MICRO-AMIGA-500-PIC1" />
+			<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC2.jpg" byLabel="Amiga 500 2" id="MICRO-AMIGA-500-PIC2" />
+			<media path="modules/sample/setup/catalog/media/AMIGA-500-PIC3.jpg" byLabel="Amiga 500 3" id="MICRO-AMIGA-500-PIC3" />
+			<media path="modules/sample/setup/catalog/media/PACK-GAMEBOY-POKEMON.jpg" byLabel="Kit gameboy pokemon" id="PACK-GAMEBOY-POKEMON" />
+			<media path="modules/sample/setup/catalog/media/SUPER-FAMICOM-1.png" byLabel="Super famicom" id="SUPER-FAMICOM-1" />
+			<media path="modules/sample/setup/catalog/media/SUPER-FAMICOM-CONTROLLER-1.jpg" byLabel="Super famicom controller" id="SUPER-FAMICOM-CONTROLLER-1" />
+			<media path="modules/sample/setup/catalog/media/SNES-CONTROLLER-1.jpg" byLabel="SNES controller" id="SNES-CONTROLLER-1" />
+			<media path="modules/sample/setup/catalog/media/SUPER-NINTENDO-CONTROLLER-1.jpg" byLabel="Super nintendo controller" id="SUPER-NINTENDO-CONTROLLER-1" />
 		</folder>
 	</rootfolder>
-	<attribute name="commodore-description"><![CDATA[<p class="normal">Commodore Business Machines Inc. (CBM) est une société d'électronique américaine qui s'est rendue célèbre pour ses calculatrices électroniques (comme la P-50 ou la PR-100) et ses micro-ordinateurs jusqu'en 1994. Après une brève réapparition sur le marché des PC de jeu en 2007, la marque est acquise sous licence en 2010 par deux jeunes entrepreneurs pour devenir Commodore USA en Floride.(<a href="http://fr.wikipedia.org/wiki/Commodore_International" class="link">Voir l'article Wikipedia</a>)</p>]]></attribute>
-	<rootfolder module="brand">
-		<folder byLabel="m.generic.bo.general.samples">
-			<!-- From brand module -->
-			<brand byLabel="Nintendo" id="NINTENDO" />
-			<brand byLabel="SNK" id="SNK" />
-			<brand byLabel="Sega" id="SEGA" />
-			<brand byLabel="Coleco" id="COLECO" />
-			<brand byLabel="Atari" id="ATARI" />
-			<!-- from catalog module -->
-			<brand byLabel="Commodore" visual-refid="COMMODORE-LOGO" description-attr="commodore-description" id="COMMODORE" />
-		</folder>
-	</rootfolder>
+	
 	<rootfolder module="list">
-		<folder byLabel="m.generic.bo.general.samples">
+		<folder byLabel="m.catalog.bo.general.module-name">
 			<editablelist listid="modules_catalog/videostd" id="VIDEOSTD-LIST"
 						label="Standard vidéo" description="Liste des différents standards vidéos couleur">
 						<item byLabel="NTSC" id="NTSC" />
@@ -129,6 +118,7 @@
 			</editablelist>
 		</folder>
 	</rootfolder>
+	
 	<rootfolder module="catalog">
 		<topshelf byLabel="Consoles de jeux" visual-refid="NES-1985-1" id="CAT-CONSOLES">
 			<shelf byLabel="Portables" visual-refid="GAMEBOY-ALL" id="SUBCAT-PORTABLE" />
@@ -673,4 +663,4 @@ Le terme a été popularisé par la Game Boy de Nintendo et le succès de jeux t
 	<crossitem targetDocument-refid="FAMICOM-1983" linkedDocument-refid="NEOGEO-1990" linkType="upsell" />
 	<crossitem targetDocument-refid="ATARI2600-1978" linkedDocument-refid="ATARI7800-1986" linkType="upsell" />
 	<crossitem targetDocument-refid="SMS-MULTI" linkedDocument-refid="MEGADRIVE-1988" linkType="upsell" />
-</script>
+</script>	

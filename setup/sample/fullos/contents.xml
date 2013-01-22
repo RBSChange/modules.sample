@@ -4,7 +4,7 @@
 	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
 
-	<binding fileName="modules/sample/setup/sample/ecom/theme-contents.xml" />
+	<binding fileName="modules/sample/setup/sample/fullos/theme-contents.xml" />
 
 	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform" />
 	<documentRef type="modules_form/form" byLabel="Partager un lien" id="sharelinkform" />

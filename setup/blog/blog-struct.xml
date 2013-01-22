@@ -3,7 +3,7 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
 	<documentRef byDocumentId-attr="rootId">
-		<topic byLabel="Liste des blogs" id="blogs">
+		<topic byLabel="Blogs" id="blogs">
 			<execute method="setDocumentIdAttribute" />
 			<binding fileName="modules/blog/setup/topicDefaultStructure.xml" />
 		</topic>

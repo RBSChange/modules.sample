@@ -15,7 +15,7 @@
 	</rootfolder>
 	
 	<rootfolder module="form">
-		<form label="Formulaire de contact" description="Exemple de formulaire" id="contactform"
+		<form label="Formulaire de contact" description="Vous êtes sur une plateforme de démonstration, ce formulaire de contact ne fonctionnera pas pour joindre l'équipe RBS Change, pour cela rendez-vous sur la page http://www.rbschange.fr/contact.html." id="contactform"
 			submitButton="Envoyer" confirmMessage="Votre message nous a bien été transmis. Il sera traité sous 48 heures. Merci"
 			markup="default" useBackLink="true" useCaptcha="false">	
 			

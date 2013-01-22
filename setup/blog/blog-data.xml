@@ -6,13 +6,11 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
 	<rootfolder module="media">
-		<folder byLabel="m.generic.bo.general.samples">
-			<folder byLabel="blog">
-				<media path="modules/sample/setup/blog/media/voiture-1950.jpg"
-					label="Voiture 1950" id="media1" />
-				<media path="modules/sample/setup/blog/media/voiture-cugnot.jpg"
-					label="Fardier de Cugnot" id="media2" />
-			</folder>
+		<folder byLabel="m.blog.bo.general.module-name">
+			<media path="modules/sample/setup/blog/media/voiture-1950.jpg"
+				label="Voiture 1950" id="media1" />
+			<media path="modules/sample/setup/blog/media/voiture-cugnot.jpg"
+				label="Fardier de Cugnot" id="media2" />
 		</folder>
 	</rootfolder>
 	<rootfolder module="blog">

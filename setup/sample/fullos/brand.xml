@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
-	<binding fileName="modules/sample/setup/brand/brand-struct.xml" />
+	<website byTag="default_modules_website_default-website">
+		<execute method="setDocumentIdAttribute" attribute-name="websiteId" />
+	</website>
+
+	<topic byLabel="Le magazine">
+		<topic byLabel="Toutes les marques">
+			<execute method="setDocumentIdAttribute" attribute-name="brandMountPointId"/>
+		</topic>
+	</topic>
+
+	<binding fileName="modules/sample/setup/brand/brand-struct.xml" />	
 	<binding fileName="modules/sample/setup/brand/brand-data.xml" />
-
 </script>

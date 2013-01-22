@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
-	<topic byLabel="À propos">
+	<topic byLabel="Le magazine">
 		<execute method="setDocumentIdAttribute" attribute-name="rootId" />
 	</topic>
 
 	<binding fileName="modules/sample/setup/event/event-struct.xml" />
 	<binding fileName="modules/sample/setup/event/event-data.xml" />
+	
+	<binding fileName="modules/event/setup/localDefaultStructure.xml" />
+	<binding fileName="modules/event/setup/globalDefaultStructure.xml" />
+	
 </script>

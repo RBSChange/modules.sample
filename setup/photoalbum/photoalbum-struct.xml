@@ -3,7 +3,7 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
 	<documentRef byDocumentId-attr="rootId">
-		<topic byLabel="Galerie de photos" id="gallery">
+		<topic byLabel="Albums photos" id="gallery">
 			<execute method="setDocumentIdAttribute" />
 			<binding fileName="modules/photoalbum/setup/localDefaultStructure.xml" />
 		</topic>

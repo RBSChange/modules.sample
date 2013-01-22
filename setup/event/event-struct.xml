@@ -7,8 +7,6 @@
 			<topic byLabel="Actualités abandonware" id="events2" />
 			<topic byLabel="Consoles Retro" id="events3" />
 			<execute method="setDocumentIdAttribute" />
-			<binding fileName="modules/event/setup/localDefaultStructure.xml" />
-			<binding fileName="modules/event/setup/globalDefaultStructure.xml" />
 		</topic>
 	</documentRef>
 </script>

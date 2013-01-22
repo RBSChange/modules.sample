@@ -3,31 +3,29 @@
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 
 	<rootfolder module="media">
-		<folder byLabel="m.generic.bo.general.samples">
-			<folder byLabel="media">
-				<folder byLabel="Retrogaming">
-					<media path="modules/sample/setup/media/media/NES-1985-1.jpg" byLabel="NES (set)" id="NES-1985-1" />
-					<media path="modules/sample/setup/media/media/NES-1985-2.jpg" byLabel="NES (controller)" id="NES-1985-2" />
-					<media path="modules/sample/setup/media/media/NES-ZAPPER.jpg" byLabel="NES Zapper" id="NES-ZAPPER-1" />
-					<media path="modules/sample/setup/media/media/NES-ZAPPER-2.jpg" byLabel="NES Zapper Orange" id="NES-ZAPPER-2" />						
-					<media path="modules/sample/setup/media/media/FAMICOM-1983-1.png" byLabel="FAMICOM (set)" id="FAMICOM-1983-1" />
-					<media path="modules/sample/setup/media/media/FAMICOM-1983-2.jpg" byLabel="FAMICOM (controller)" id="FAMICOM-1983-2" />
-					<media path="modules/sample/setup/media/media/NEOGEO-1990-1.jpg" byLabel="NEO-GEO Main" id="NEOGEO-1990-1" />
-					<media path="modules/sample/setup/media/media/NEOGEO-1990-2.png" byLabel="NEO-GEO Alternate View" id="NEOGEO-1990-2" />
-					<media path="modules/sample/setup/media/media/MASTERSYSTEM-1985-1.png" byLabel="SMS I" id="MASTERSYSTEM-1985" />
-					<media path="modules/sample/setup/media/media/MASTERSYSTEM-1990-1.jpg" byLabel="SMS II" id="MASTERSYSTEM-1990" />
-					<media path="modules/sample/setup/media/media/COLECO-1982.jpg" byLabel="Colecovision" id="COLECO-1982-1" />
-					<media path="modules/sample/setup/media/media/ATARI2600-1978-1.jpg" byLabel="Atari 2600" id="ATARI2600-1978-1" />
-					<media path="modules/sample/setup/media/media/ATARI7800-1986-1.jpg" byLabel="Atari 7800" id="ATARI7800-1986-1" />
-					<media path="modules/sample/setup/media/media/SNES-1992-1.png" byLabel="Super NES" id="SNES-1992-1" />
-					<media path="modules/sample/setup/media/media/SNESPAL-1992-1.png" byLabel="Super NES PAL" id="SNESPAL-1992-1" />
-					<media path="modules/sample/setup/media/media/SNESPAL-1992-2.jpg" byLabel="Super NES PAL (alternate)" id="SNESPAL-1992-2" />
-					<media path="modules/sample/setup/media/media/SFAMICOM-1992-1.png" byLabel="Super FAMICOM" id="SFAMICOM-1992-1" />
-					<media path="modules/sample/setup/media/media/MEGADRIVE-1988-1.jpg" byLabel="Megadrive" id="MEGADRIVE-1988-1" />
-					<media path="modules/sample/setup/media/media/RETROGAMING.png" byLabel="Pong Arcade" id="RETROGAMING" />
-					<media path="modules/sample/setup/media/media/GAMEBOY-ALL.png" byLabel="Gameboy Panorama" id="GAMEBOY-ALL" />
-					<media path="modules/sample/setup/media/media/RETROGAMING.png" byLabel="Arcade" id="ARCADE-PONG-PIC1" />
-				</folder>
+		<folder byLabel="m.media.bo.general.module-name">
+			<folder byLabel="Retrogaming">
+				<media path="modules/sample/setup/media/media/NES-1985-1.jpg" byLabel="NES (set)" id="NES-1985-1" />
+				<media path="modules/sample/setup/media/media/NES-1985-2.jpg" byLabel="NES (controller)" id="NES-1985-2" />
+				<media path="modules/sample/setup/media/media/NES-ZAPPER.jpg" byLabel="NES Zapper" id="NES-ZAPPER-1" />
+				<media path="modules/sample/setup/media/media/NES-ZAPPER-2.jpg" byLabel="NES Zapper Orange" id="NES-ZAPPER-2" />						
+				<media path="modules/sample/setup/media/media/FAMICOM-1983-1.png" byLabel="FAMICOM (set)" id="FAMICOM-1983-1" />
+				<media path="modules/sample/setup/media/media/FAMICOM-1983-2.jpg" byLabel="FAMICOM (controller)" id="FAMICOM-1983-2" />
+				<media path="modules/sample/setup/media/media/NEOGEO-1990-1.jpg" byLabel="NEO-GEO Main" id="NEOGEO-1990-1" />
+				<media path="modules/sample/setup/media/media/NEOGEO-1990-2.png" byLabel="NEO-GEO Alternate View" id="NEOGEO-1990-2" />
+				<media path="modules/sample/setup/media/media/MASTERSYSTEM-1985-1.png" byLabel="SMS I" id="MASTERSYSTEM-1985" />
+				<media path="modules/sample/setup/media/media/MASTERSYSTEM-1990-1.jpg" byLabel="SMS II" id="MASTERSYSTEM-1990" />
+				<media path="modules/sample/setup/media/media/COLECO-1982.jpg" byLabel="Colecovision" id="COLECO-1982-1" />
+				<media path="modules/sample/setup/media/media/ATARI2600-1978-1.jpg" byLabel="Atari 2600" id="ATARI2600-1978-1" />
+				<media path="modules/sample/setup/media/media/ATARI7800-1986-1.jpg" byLabel="Atari 7800" id="ATARI7800-1986-1" />
+				<media path="modules/sample/setup/media/media/SNES-1992-1.png" byLabel="Super NES" id="SNES-1992-1" />
+				<media path="modules/sample/setup/media/media/SNESPAL-1992-1.png" byLabel="Super NES PAL" id="SNESPAL-1992-1" />
+				<media path="modules/sample/setup/media/media/SNESPAL-1992-2.jpg" byLabel="Super NES PAL (alternate)" id="SNESPAL-1992-2" />
+				<media path="modules/sample/setup/media/media/SFAMICOM-1992-1.png" byLabel="Super FAMICOM" id="SFAMICOM-1992-1" />
+				<media path="modules/sample/setup/media/media/MEGADRIVE-1988-1.jpg" byLabel="Megadrive" id="MEGADRIVE-1988-1" />
+				<media path="modules/sample/setup/media/media/RETROGAMING.png" byLabel="Pong Arcade" id="RETROGAMING" />
+				<media path="modules/sample/setup/media/media/GAMEBOY-ALL.png" byLabel="Gameboy Panorama" id="GAMEBOY-ALL" />
+				<media path="modules/sample/setup/media/media/RETROGAMING.png" byLabel="Arcade" id="ARCADE-PONG-PIC1" />
 			</folder>
 		</folder>
 	</rootfolder>

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<topic byLabel="Le magazine">
+		<topic byLabel="Sélection de liens">
+			<execute method="setDocumentIdAttribute" attribute-name="rootId" />
+		</topic>
+	</topic>
 
 	<binding fileName="modules/sample/setup/bookmarks/bookmarks-struct.xml" />
 	<binding fileName="modules/sample/setup/bookmarks/bookmarks-data.xml" />

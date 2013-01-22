@@ -3,7 +3,7 @@
 	<binding fileName="modules/polls/persistentdocument/import/polls_binding.xml" />
 
 	<rootfolder module="polls">
-		<folder byLabel="m.generic.bo.general.samples">
+		<folder byLabel="Sondages jeux vidéo">
 			<attribute name="description"><![CDATA[<p class="normal">Sondage sur l'utilisation des consoles de jeux</p>]]></attribute>
 			<poll byLabel="Sondage sur l'utilisation des consoles de jeux"
 				description-attr="" allowAnonymousVote="true">
@@ -29,6 +29,7 @@
 				</question>
 
 			</poll>
+			
 			<poll byLabel="Marque préférée">
 				<question byLabel="Quel est votre marque de console préférée ?"
 					maxAnswers="1">

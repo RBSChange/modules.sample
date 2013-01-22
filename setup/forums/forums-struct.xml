@@ -3,7 +3,9 @@
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
 	<documentRef byDocumentId-attr="rootId">
-		<execute method="setDocumentIdAttribute" />
-		<binding fileName="modules/forums/setup/membersDefaultStructure.xml" />
+		<topic byLabel="Nos forums">
+			<execute method="setDocumentIdAttribute"/>
+			<binding fileName="modules/forums/setup/membersDefaultStructure.xml" />
+		</topic>
 	</documentRef>
 </script>

@@ -2,17 +2,21 @@
 <script>
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/event/persistentdocument/import/event_binding.xml" />
-	<binding fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	
+	<binding
+		fileName="modules/comment/persistentdocument/import/comment_binding.xml" />
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
 	<rootfolder module="media">
-		<folder byLabel="m.generic.bo.general.samples">
-			<folder byLabel="event">
-				<media path="modules/sample/setup/event/media/Logo_abandonware.png" byLabel="Logo abandon" id="photo1" />
-				<media path="modules/sample/setup/event/media/eComGeneve.jpg" byLabel="eCom Genève" id="photo2" />
-				<media path="modules/sample/setup/event/media/amigacd32.jpg" byLabel="AmigaCD32" id="photo3" />
-				<media path="modules/sample/setup/event/media/atari-2600.jpg" byLabel="Atari 2600" id="photo4" />
-			</folder>
+		<folder byLabel="m.event.bo.general.module-name">
+			<media path="modules/sample/setup/event/media/Logo_abandonware.png"
+				byLabel="Logo abandon" id="photo1" />
+			<media path="modules/sample/setup/event/media/eComGeneve.jpg"
+				byLabel="eCom Genève" id="photo2" />
+			<media path="modules/sample/setup/event/media/amigacd32.jpg"
+				byLabel="AmigaCD32" id="photo3" />
+			<media path="modules/sample/setup/event/media/atari-2600.jpg"
+				byLabel="Atari 2600" id="photo4" />
 		</folder>
 	</rootfolder>
 
@@ -33,9 +37,12 @@
 					<p class="normal">Le logiciel abandonné remet en question la durée des droits d'auteur en informatique qui est de 70 ans. On s'aperçoit qu'en moins de 10 ans la vente et le service après-vente ne sont plus assurés pour la très grande majorité des logiciels. Ce qui s'explique en partie par l'évolution très rapide des ressources en mémoire et de la puissance de calcul des machines. Il y a actuellement une disproportion entre la durée légale et la durée de vie constatée.</p>
 					<p class="normal"><strong>Référence :</strong><br /><a class="link" href="http://fr.wikipedia.org/wiki/Logiciel_abandonné">Wikipédia</a><br /></p>]]>
 				</attribute>
-				<news byLabel="AbandonWare " date="2012-06-20 09:00:00" text-attr="" summary-attr="" category-refids="cat-aw" topic-refids="events1,events2"
+				<news byLabel="AbandonWare " date="2012-06-20 09:00:00"
+					text-attr="" summary-attr="" category-refids="cat-aw" topic-refids="events1,events2"
 					listvisual-refid="photo1" detailvisual-refid="photo1">
-					<comment authorName="Marcus" email="marcus@rbs.fr" authorwebsiteurl="http://rbs.fr" contentsAsBBCode="J'adore le retro gaming !" rating="4" />
+					<comment authorName="Marcus" email="marcus@rbs.fr"
+						authorwebsiteurl="http://rbs.fr" contentsAsBBCode="J'adore le retro gaming !"
+						rating="4" />
 				</news>
 				<attribute name="summary">
 					<![CDATA[<p class="normal">Un grand nombre d'éditeurs l'ont compris, et ne font pas valoir leurs droits ni ne luttent activement contre l'utilisation et le partage des logiciels abandonnés.</p>]]>
@@ -45,17 +52,26 @@
 					<p class="normal">D'autres éditeurs les font même passer sous licence libre et/ou publient leur code source : c'est par exemple le cas d'id Software avec ses vieux moteurs de jeu, ou de Beneath a Steel Sky (1994) dont Revolution Software a donné le code source à ScummVM le 2 août 2003. De même, pour permettre le portage du jeu sur le projet One Laptop per Child, SimCity a été libéré sous GNU GPL 3 le 10 janvier 2008 et renommé en Micropolis.</p>
 					<p class="normal">Sans oublier Bethesda Softworks qui a mis à disposition sur son site internet les versions complètes de The Elder Scrolls II: Daggerfall et de The Elder Scrolls I: Arena.</p>]]>
 				</attribute>
-				<event byLabel="Abandon volontaire" date="2012-06-20 16:00:00" enddate="2015-06-28 18:00:00" text-attr="text" category-refids="cat-aw"
+				<event byLabel="Abandon volontaire" date="2012-06-20 16:00:00"
+					enddate="2015-06-28 18:00:00" text-attr="text" category-refids="cat-aw"
 					topic-refids="events1,events2" />
 			</treefolder>
 			<treefolder byLabel="Console Retro">
-				<news byLabel="Amiga CD32" date="2010-07-05 12:00:00" text="Première et dernière console de jeux fabriqué par la société Amiga"
-					category-refids="cat-con" topic-refids="events1,events3" listvisual-refid="photo3" detailvisual-refid="photo3">
-					<comment authorName="Unknown" email="Unknown@rbs.fr" authorwebsiteurl="http://rbs.fr" contentsAsBBCode="Dommage, ça aurait pu être une superbe console..."
+				<news byLabel="Amiga CD32" date="2010-07-05 12:00:00"
+					text="Première et dernière console de jeux fabriqué par la société Amiga"
+					category-refids="cat-con" topic-refids="events1,events3"
+					listvisual-refid="photo3" detailvisual-refid="photo3">
+					<comment authorName="Unknown" email="Unknown@rbs.fr"
+						authorwebsiteurl="http://rbs.fr"
+						contentsAsBBCode="Dommage, ça aurait pu être une superbe console..."
 						rating="1" />
 				</news>
-				<news byLabel="Atari 2600" date="2010-07-06 12:00:00" text="Console Atari vendu dans les années 80." category-refids="cat-con" topic-refids="events1,events3"
-					detailvisual-refid="photo4" />
+				<news byLabel="Atari 2600" date="2010-07-06 12:00:00"
+					text="Console Atari vendu dans les années 80." category-refids="cat-con"
+					topic-refids="events1,events3" detailvisual-refid="photo4" />
+			</treefolder>
+			<treefolder byLabel="Contributions des internautes">
+				<execute method="setDocumentIdAttribute" attribute-name="treeFolderId"/>
 			</treefolder>
 		</treefolder>
 		<highlightfolder byLabel="Mises en avant">

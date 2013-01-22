@@ -2,7 +2,7 @@
 <script>
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
-	<topic byLabel="Communauté">
+	<topic byLabel="Le magazine">
 		<execute method="setDocumentIdAttribute" attribute-name="rootId" />
 	</topic>
 
