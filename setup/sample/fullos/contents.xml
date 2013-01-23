@@ -1,39 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
 	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
-	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+	<binding fileName="modules/event/persistentdocument/import/event_binding.xml" />
 
 	<binding fileName="modules/sample/setup/sample/fullos/theme-contents.xml" />
 
-	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform" />
-	<documentRef type="modules_form/form" byLabel="Partager un lien" id="sharelinkform" />
-	<documentRef type="modules_videos/youtubevideo" byLabel="RBS CHANGE, du propriétaire à l'Open Source" id="videoyoutube1" />
-	<documentRef type="modules_videos/youtubevideo" byLabel="Webinar CMS RBS Change - chapitre 1" id="videoyoutube2" />
-	<documentRef type="modules_videos/video" byLabel="Video 1" id="video1" />
-	<documentRef type="modules_website/systemtopic" byLabel="Consoles de jeux" id="consoles" />
-	<documentRef type="modules_website/systemtopic" byLabel="Accessoires" id="accessoiries" />
-	<documentRef type="modules_website/systemtopic" byLabel="Jeux" id="games" />
-	<documentRef type="modules_website/systemtopic" byLabel="Bornes d'arcade" id="arcades" />
-	<documentRef type="modules_website/systemtopic" byLabel="Ordinateurs" id="micro" />
+	<documentRef type="modules_form/form" byLabel="Formulaire de contact"
+		id="contactform" />
+
+	<documentRef type="modules_website/systemtopic" byLabel="Consoles de jeux"
+		id="consoles" />
+	<documentRef type="modules_website/systemtopic" byLabel="Accessoires"
+		id="accessoiries" />
+	<documentRef type="modules_website/systemtopic" byLabel="Jeux"
+		id="games" />
+	<documentRef type="modules_website/systemtopic" byLabel="Bornes d'arcade"
+		id="arcades" />
+	<documentRef type="modules_website/systemtopic" byLabel="Ordinateurs"
+		id="micro" />
+
+	<documentRef type="modules_website/page" byLabel="Mes commandes"
+		id="myorders" />
+	<documentRef type="modules_website/page" byLabel="Mes informations"
+		id="myinfos" />
+
+	<documentRef type="modules_website/topic" byLabel="Vidéos"
+		id="videos" />
+	<documentRef type="modules_website/topic" byLabel="Blogs"
+		id="blogs" />
+	<documentRef type="modules_website/topic" byLabel="Nos forums"
+		id="forums" />
+	<documentRef type="modules_website/topic" byLabel="Offres d'emploi"
+		id="jobs" />
+		
+	<documentRef type="modules_polls/poll" byLabel="Marque préférée"
+		id="poll-brand" />
 	
-	<product id="product1" byCodeReference="NES-1985" />
-	<product id="product2" byCodeReference="COLECO-1982" />
-	<product id="product3" byCodeReference="ATARI2600-1978" />
-	<product id="product4" byCodeReference="NEOGEO-1990" />
-	<productdeclination id="product5" byCodeReference="SUPER-NINTENDO-EUR" />
-	<product id="product6" byCodeReference="MICRO-AMIGA" />
+	<documentRef type="modules_catalog/bundleproduct" byCodeReference="NES-BUNDLE" id="product1" />
+	<documentRef type="modules_catalog/simpleproduct" byCodeReference="ARCADE-PONG" id="product2" />
+	<documentRef type="modules_catalog/simpleproduct" byCodeReference="ATARI2600-1978" id="product3" />
+	<documentRef type="modules_catalog/simpleproduct" byCodeReference="MEGADRIVE-1988" id="product4" />
 	
-	<documentRef type="modules_website/page" byLabel="Mes commandes" id="myorders" />
-	<documentRef type="modules_website/page" byLabel="Mes informations" id="myinfos" />
-	<documentRef type="modules_website/topic" byLabel="Galerie de photos" id="photos" />
-	<documentRef type="modules_website/topic" byLabel="Forums" id="forums" />
-	<documentRef type="modules_website/topic" byLabel="Membres" id="members" />
+	<rootfolder module="media">
+		<folder byLabel="m.event.bo.general.module-name">
+			<media path="modules/sample/setup/sample/fullos/media/event-visual1.png"
+				byLabel="Visuel actu Wii U" id="event-visual1" />
+		</folder>
+	</rootfolder>
+
+	<topic byLabel="Actualités et événements" id="events">
+		<topic byLabel="Actualités Nintendo" id="topic-nintendo" />
+	</topic>
+
+	<rootfolder module="event">
+		<categoryfolder byLabel="Catégories">
+			<category byLabel="Nintendo" id="cat-event-nintendo" />
+		</categoryfolder>
+		<treefolder byLabel="Actualités et événements">
+			<treefolder byLabel="Nintendo">
+				<attribute name="summary">
+					<![CDATA[<p class="normal">La Wii U est maintenant disponible dans toute l'Europe, et si vous souhaitez mieux connaître votre nouvelle console de salon, asseyez-vous confortablement pour lire ce que les récentes entrevues Iwata demande ont révélé. Le président de Nintendo, Satoru Iwata, vous dévoile les coulisses de la création de la console dans ces entrevues exclusives.</p>]]>
+				</attribute>
+				<attribute name="text">
+					<![CDATA[<p class="normal">Cette série d'entrevues se penche sur chaque étape de la création de la console, depuis le concept original jusqu'au produit fini. Dans Iwata demande : la console Wii U principale, M. Takeda et M. Shiota de la division développement et recherche intégrée se concentrent sur l'essentiel du développement et de la phase de test de la console. Ils présentent également une console transparente au plus grand étonnement de M. Iwata.</p>
+					<p class="normal">Et comme une console ne sort jamais sans sa manette, la Wii U ne fait pas exception à la règle avec son Wii U GamePad. Découvrez tous les secrets de cette manette révolutionnaire et ergonomique qui ouvre la voie vers de nouvelles formes de gameplay dans l'interview Iwata demande : le Wii U GamePad avec l'équipe du développement et de la recherche intégrée.</p>
+					<p class="normal">Si les prototypes faits à la main vous intéressent, ne manquez pas l'entrevue Iwata demande : Miiverse : les développeurs et découvrez le Wii U GamePad en carton qui a inspiré Nintendo et Hatena dans la création de Miiverse : le nouvel outil de communication en réseau de la Wii U. Et pour en savoir davantage sur ce service qui vous permet de communiquer avec d'autres joueurs et de partager des expériences de jeu ensemble, ne manquez pas le deuxième volet consacré à Miiverse dans Iwata demande : Miiverse : les producteurs.</p>
+					<p class="normal">La Wii U vous permet également de jouer avec vos personnages favoris. Découvrez pourquoi New Super Mario Bros. U est un jeu incontournable dans l'entrevue Iwata demande : New Super Mario Bros. U, et restez à l'écoute pour l'entrevue concernant Nintendo Land, bientôt disponible.</p>]]>
+				</attribute>
+				<news byLabel="Découvrez tous les détails croustillants sur la Wii U avec ce résumé Iwata demande !" date="2012-12-14 09:00:00"
+					text-attr="" summary-attr="" category-refids="cat-event-nintendo" topic-refids="topic-nintendo"
+					listvisual-refid="event-visual1" detailvisual-refid="event-visual1">
+				</news>
+			</treefolder>
+		</treefolder>
+	</rootfolder>
 
 	<website byTag="default_modules_website_default-website" id="default-website">
 		<page byLabel="Accueil">
 			<changecontent for="content-block">
-				<changeblock type="modules_catalog_productpromotion" __displayMode="slide" __label="Nos bonnes affaires" __products-refids="product1,product2,product3,product4,product5,product6" />
+				<changeblock type="modules_catalog_productpromotion" __products-refids="product1,product2,product3,product4"></changeblock>
 			</changecontent>
 		</page>
 
@@ -41,69 +89,98 @@
 			<page byLabel="Comparaison de produits" navigationVisibility="hidden" />
 		</topic>
 
-		<topic byLabel="Communauté" id="topiccommunity">
-			<page id="pagecommunity" byLabel="Communauté" isIndexPage="true" navigationVisibility="Hidden">
-				<changecontent for="sidebar-block">
-					<changeblock type="modules_catalog_productpromotion" __displayMode="slide" __label="Nos bonnes affaires" __products-refids="product1,product2,product3,product4,product5,product6" />
-				</changecontent>
+		<topic byLabel="Le magazine" id="topicmag">
+			<page byLabel="Le magazine" isIndexPage="true"
+				navigationVisibility="hidden">
 				<changecontent for="content-block">
 					<changeblock type="richtext">
 						<![CDATA[
-						    <h1 class="heading-one">Besoin de fédérer une communauté ?</h1>
-							<p class="normal">RBS Change vous propose des modules qui peuvent vous aider dans cette tâche : mise en ligne de <strong>galeries de photos ou videos</strong>,
-							<strong>forums</strong>, <strong>blogging</strong>, ...
+						    <h1 class="heading-one">Le magazine</h1>
+							<p class="normal">Suivez les tendances dans nos blogs, les dernières actualités, et venez discuter avec les fans dans nos forums.
 							</p>
 						]]>
 					</changeblock>
+					<changelayout>
+						<changecolumn>
+							<changerow>
+								<changeblock type="modules_event_BaseeventDayList"></changeblock>
+							</changerow> 
+						</changecolumn>
+						<changecolumn>
+							<changerow>
+								<changeblock type="modules_polls_Poll" __cmpref-refid="poll-brand"></changeblock>
+							</changerow> 
+						</changecolumn>
+					</changelayout>
 				</changecontent>
 			</page>
-			<topic byLabel="Galerie de vidéos" id="videos">
-				<page label="Exemple de vidéo youtube" isIndexPage="true">
-					<changecontent for="content-block">
-						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube1" />
-						<changeblock type="modules_videos_youtubevideo" __cmpref-refid="videoyoutube2" />
+			
+			<topic byLabel="Sélection de liens">
+				<page byLabel="Détail d'un lien">
+					<changecontent for="content-block" append="true">
+						<changeblock type="modules_sharethis_sharepage" __cusecache="true" __groupCode="currentpage"/>
 					</changecontent>
 				</page>
-				<page label="Exemple de vidéo flash">
-					<changecontent for="content-block">
-						<changeblock type="modules_videos_video" __cmpref-refid="video1" />
+			</topic>
+			
+			<topic byLabel="Albums photos" id="photos">
+				<page byLabel="Album">
+					<changecontent for="content-block" append="true">
+						<changeblock type="modules_sharethis_sharepage" __cusecache="true" __groupCode="currentpage"/>
 					</changecontent>
 				</page>
 			</topic>
 		</topic>
 
 		<topic byLabel="À propos" id="topicabout">
-			<page byLabel="Annuaire" indexingstatus="false">
-				<changecontent for="sidebar-block" append="true">
-					<changeblock type="modules_catalog_productpromotion" __displayMode="slide" __label="Nos bonnes affaires" __products-refids="product1,product2,product3,product4,product5,product6" />
-				</changecontent>
+			<page byLabel="À propos" isIndexPage="true" navigationVisibility="hidden">
 				<changecontent for="content-block">
-					<changeblock type="modules_contactcard_contactlist" __showContactpageLink="false" />
+					<changeblock type="richtext">
+						<![CDATA[
+						<p class="normal text-align-justify">Le <strong>CMS open Source RBS Change </strong>est développé par la société <strong>Ready Business System</strong>, <strong>SSII indépendante </strong>fondée en 1997 et basée à Strasbourg (France) au cœur de l’Europe.</p><p class="normal text-align-justify">Entreprise de haute technicité rassemblant 160 collaborateurs dont 50% d’ingénieurs, nous faisons bénéficier nos clients des avancées technologiques les plus récentes, que celles-ci soient issus de notre service R&amp;D ou de démarches de veilles.</p><h2 class="title">Un CMS fruit de l'expérience<br/></h2><br/><p class="normal text-align-justify">Le <strong>CMS Open Source RBS Change</strong> a été conçu dans l'objectif de doter la Webfactory, agence web  intégrée à la société RBS, d'un outil puissant, rapide à mettre en œuvre et répondant aux besoins de ses clients. RBS Change a succédé à WebEdit, avec lequel la même équipe avait réalisé plus de 150 projets entre 2001 et 2005.<br/></p>
+						<p class="normal text-align-justify">Le développement de RBS Change a commencé en 2005 et, de versions en versions, l'outil s'est étoffé pour gagner en maturité : une interface d'administration dynamique et ergonomique, un outil  CMS multi-sites et multi-langues, une gestion avancée des droits, un moteur de workflow performant, un moteur de recherche basé sur <a class="link tooltip popup" href="http://lucene.apache.org/solr/" lang="fr" title="Apache Solr (s'ouvre dans une nouvelle fenêtre) (s'ouvre dans une nouvelle fenêtre) (s'ouvre dans une nouvelle fenêtre)">Apache Solr</a><strong>... </strong></p>
+						<p class="normal text-align-justify">Fin 2007, le lancement officiel de RBS Change 2.0 marqua une étape majeure du projet. C'est à cette occasion que fût prise la décision de relever un nouveau défi : la réalisation d'une <strong>solution e-commerce complètement intégrée </strong>à la solution de gestion de contenus RBS Change.<br/></p>
+						<br/>
+						<h2 class="title">Passage à l'open source</h2>
+						<p class="normal text-align-justify">La question de la diffusion de RBS Change et de son modèle économique s'est posée courant 2009, alors que se profilait la version 3.0 du CMS à l'horizon 2010. L'ambition de cette nouvelle version était d'améliorer l'ergonomie de l'interface d'administration de Change, mais également de développer l'offre e-commerce (<a class="link" href="http://www.rbschange.fr/addons/distributions/RBS-Change-complet-Open-Source,67203.html">RBS Change complet - Open Source</a>).</p>
+						<p class="normal text-align-justify">C'est ainsi qu'est née l'idée de faire de RBS Change 3.0 un <strong>projet open source</strong>. Notre objectif est de faciliter et d'accélérer la diffusion du CMS tout en <strong>fédérant une communauté</strong> d'utilisateurs et de passionnés du Web, qui inclut tous les métiers et  profils impliqués dans la vie d'un projet Internet. <br/></p>
+						<p class="normal text-align-justify">C'est donc le fruit de 10 années de recherche &amp; développement que nous avons décidé de libérer afin que tous puissent profiter des qualités notre CMS e-commerce open source RBS Change:<strong> flexibilité, performance, productivité et ouverture</strong>.<br/></p>
+ 						Alors n'hésitez pas et <strong>faites vous une opinion</strong> ! Découvrez RBS Change par un webinaire ou en essayant la <a class="link" href="http://www.rbschange.fr/site-demo.html" lang="fr">démo</a> puis <a class="link" href="http://www.rbschange.fr/download.html" lang="fr">téléchargez le logiciel</a> et construisez vos premiers sites ! Et bien entendu, venez échanger sur nos <a class="link" href="http://www.rbschange.fr/forums/" lang="fr">forums</a> ou commenter les articles de notre <a class="link" href="http://www.rbschange.fr/blog,355.html" lang="fr">blog</a>.
+						]]>
+					</changeblock>
 				</changecontent>
 			</page>
-			<page byLabel="Nous contacter" isIndexPage="true" navigationVisibility="visible" template-attr="templateHome" id="contactus">
-				<changecontent>
+			
+			<page byLabel="Nous contacter" 
+				navigationVisibility="visible" id="contactus">
+				<changecontent for="content-block">
 					<changeblock type="modules_form_form" __cmpref-refid="contactform" />
 				</changecontent>
 			</page>
-		</topic>
-		
-		<topic byLabel="Outils">
-			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
+			
+			<page byLabel="Notre équipe" indexingstatus="false" id="team">
+				<changecontent for="sidebar-block" append="true">
+					
+				</changecontent>
 				<changecontent for="content-block">
-					<changeblock type="modules_form_form" __cmpref-refid="sharelinkform" />
+					<changeblock type="modules_contactcard_contactlist"
+						__showContactpageLink="false" />
 				</changecontent>
 			</page>
+			
 		</topic>
-		
+
+		<topic byLabel="Nos magasins" id="topicstores" />
+
 		<menus>
 			<menu byTag="contextual_website_website_menu-main">
+				<menuitempage pageid="topicmag" />
 				<menuitempage pageid="consoles" />
 				<menuitempage pageid="games" />
 				<menuitempage pageid="arcades" />
 				<menuitempage pageid="micro" />
 				<menuitempage pageid="accessoiries" />
-				<menuitempage pageid="topiccommunity" />
+				<menuitempage pageid="topicstores" />
 				<menuitempage pageid="topicabout" />
 			</menu>
 			<menu id="footer-1" byLabel="Catalogue">
@@ -113,19 +190,35 @@
 				<menuitempage pageid="micro" />
 				<menuitempage pageid="accessoiries" />
 			</menu>
-			<menu id="footer-2" byLabel="Communauté">
-				<menuitempage pageid="photos" />
-				<menuitempage pageid="videos" />
+			<menu id="footer-2" byLabel="Le magazine">
+				<menuitempage pageid="blogs" />
+				<menuitempage pageid="events" />
 				<menuitempage pageid="forums" />
-				<menuitempage pageid="members" />
+				<menuitempage pageid="videos" />
+				<menuitempage pageid="photos" />
 			</menu>
 			<menu id="footer-3" byLabel="Mon compte">
 				<menuitempage pageid="myorders" />
 				<menuitempage pageid="myinfos" />
 			</menu>
 			<menu id="footer-4" byLabel="À propos">
+				<menuitempage pageid="jobs" />
 				<menuitempage pageid="contactus" />
+				<menuitempage pageid="team" />
 			</menu>
 		</menus>
 	</website>
+	
+	<documentRef type="modules_website/topic" byLabel="Nintendo" id="topicNintendo">
+		<page label="Détail d'une marque" isIndexPage="true" indexingstatus="false" navigationVisibility="hidden">
+			<changecontent for="content-block">
+				<changeblock type="modules_brand_brand" __cmpref-attr="NINTENDO" />
+				<changeblock type="modules_event_Category" __cmpref-refid="cat-event-nintendo" __displayMode="Success" __itemsPerPage="10"
+				__filterByModel="false" __showTime="false" __showVisuals="true" __showCategories="true" paginationPosition="bottom"
+				__linkToDetailPage="true" __showTitle="true" __enablemetas="true" __blockTitle="Actualités"/>
+				<changeblock type="modules_brand_brandProducts" __cmpref-attr="NINTENDO" />
+			</changecontent>
+		</page>
+	</documentRef>
+	
 </script>

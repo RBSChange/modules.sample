@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
-	
-	<documentRef type="modules_form/form" byLabel="Formulaire de contact" id="contactform" />
+	<binding
+		fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<binding fileName="modules/sample/setup/sample/core/theme-contents.xml" />
+
+	<documentRef type="modules_form/form" byLabel="Formulaire de contact"
+		id="contactform" />
 
 	<website byTag="default_modules_website_default-website">
-		<topic byLabel="À propos">
-			<page byLabel="Nous contacter" isIndexPage="true" navigationVisibility="Hidden" template-attr="templateHome">
-				<changecontent>
+		<topic byLabel="À propos" id="topicabout">
+			<page byLabel="À propos" isIndexPage="true" navigationVisibility="hidden">
+				<changecontent for="content-block">
+					<changeblock type="richtext">
+						<![CDATA[
+						<p class="normal text-align-justify">Le <strong>CMS open Source RBS Change </strong>est développé par la société <strong>Ready Business System</strong>, <strong>SSII indépendante </strong>fondée en 1997 et basée à Strasbourg (France) au cœur de l’Europe.</p><p class="normal text-align-justify">Entreprise de haute technicité rassemblant 160 collaborateurs dont 50% d’ingénieurs, nous faisons bénéficier nos clients des avancées technologiques les plus récentes, que celles-ci soient issus de notre service R&amp;D ou de démarches de veilles.</p><h2 class="title">Un CMS fruit de l'expérience<br/></h2><br/><p class="normal text-align-justify">Le <strong>CMS Open Source RBS Change</strong> a été conçu dans l'objectif de doter la Webfactory, agence web  intégrée à la société RBS, d'un outil puissant, rapide à mettre en œuvre et répondant aux besoins de ses clients. RBS Change a succédé à WebEdit, avec lequel la même équipe avait réalisé plus de 150 projets entre 2001 et 2005.<br/></p>
+						<p class="normal text-align-justify">Le développement de RBS Change a commencé en 2005 et, de versions en versions, l'outil s'est étoffé pour gagner en maturité : une interface d'administration dynamique et ergonomique, un outil  CMS multi-sites et multi-langues, une gestion avancée des droits, un moteur de workflow performant, un moteur de recherche basé sur <a class="link tooltip popup" href="http://lucene.apache.org/solr/" lang="fr" title="Apache Solr (s'ouvre dans une nouvelle fenêtre) (s'ouvre dans une nouvelle fenêtre) (s'ouvre dans une nouvelle fenêtre)">Apache Solr</a><strong>... </strong></p>
+						<p class="normal text-align-justify">Fin 2007, le lancement officiel de RBS Change 2.0 marqua une étape majeure du projet. C'est à cette occasion que fût prise la décision de relever un nouveau défi : la réalisation d'une <strong>solution e-commerce complètement intégrée </strong>à la solution de gestion de contenus RBS Change.<br/></p>
+						<br/>
+						<h2 class="title">Passage à l'open source</h2>
+						<p class="normal text-align-justify">La question de la diffusion de RBS Change et de son modèle économique s'est posée courant 2009, alors que se profilait la version 3.0 du CMS à l'horizon 2010. L'ambition de cette nouvelle version était d'améliorer l'ergonomie de l'interface d'administration de Change, mais également de développer l'offre e-commerce (<a class="link" href="http://www.rbschange.fr/addons/distributions/RBS-Change-complet-Open-Source,67203.html">RBS Change complet - Open Source</a>).</p>
+						<p class="normal text-align-justify">C'est ainsi qu'est née l'idée de faire de RBS Change 3.0 un <strong>projet open source</strong>. Notre objectif est de faciliter et d'accélérer la diffusion du CMS tout en <strong>fédérant une communauté</strong> d'utilisateurs et de passionnés du Web, qui inclut tous les métiers et  profils impliqués dans la vie d'un projet Internet. <br/></p>
+						<p class="normal text-align-justify">C'est donc le fruit de 10 années de recherche &amp; développement que nous avons décidé de libérer afin que tous puissent profiter des qualités notre CMS e-commerce open source RBS Change:<strong> flexibilité, performance, productivité et ouverture</strong>.<br/></p>
+ 						Alors n'hésitez pas et <strong>faites vous une opinion</strong> ! Découvrez RBS Change par un webinaire ou en essayant la <a class="link" href="http://www.rbschange.fr/site-demo.html" lang="fr">démo</a> puis <a class="link" href="http://www.rbschange.fr/download.html" lang="fr">téléchargez le logiciel</a> et construisez vos premiers sites ! Et bien entendu, venez échanger sur nos <a class="link" href="http://www.rbschange.fr/forums/" lang="fr">forums</a> ou commenter les articles de notre <a class="link" href="http://www.rbschange.fr/blog,355.html" lang="fr">blog</a>.
+						]]>
+					</changeblock>
+				</changecontent>
+			</page>
+		
+			<page byLabel="Nous contacter" navigationVisibility="visible" id="contactus">
+				<changecontent for="content-block">
 					<changeblock type="modules_form_form" __cmpref-refid="contactform" />
 				</changecontent>
 			</page>
 		</topic>
+		
+		<menus>
+			<menu byTag="contextual_website_website_menu-main">
+				<menuitempage pageid="topicabout" />
+			</menu>
+			<menu id="footer-4" byLabel="À propos">
+				<menuitempage pageid="contactus" />
+			</menu>
+		</menus>
 	</website>
 </script>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
+
+	<theme byCodename="default">
+		<pagetemplate byCodename="default/nosidebarpage">
+		</pagetemplate>
+		<pagetemplate byCodename="default/sidebarpage">
+		</pagetemplate>
+	</theme>
+</script>

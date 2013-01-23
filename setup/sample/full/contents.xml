@@ -49,7 +49,6 @@
 	<documentRef type="modules_polls/poll" byLabel="Marque préférée"
 		id="poll-brand" />
 		
-
 	<rootfolder module="media">
 		<folder byLabel="m.event.bo.general.module-name">
 			<media path="modules/sample/setup/sample/fullos/media/event-visual1.png"

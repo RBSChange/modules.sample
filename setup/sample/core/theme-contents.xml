@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+	<binding fileName="modules/theme/persistentdocument/import/theme_binding.xml" />
+<!-- 	<binding fileName="modules/statictext/persistentdocument/import/statictext_binding.xml" /> -->
+
+	<website byTag="default_modules_website_default-website" id="default-website">
+		<menus>
+			<menu id="footer-4" byLabel="À propos"></menu>
+		</menus>
+	</website>
+
+<!-- 	<htmlcode byLabel="Warning page d'accueil" id="htmltext" /> -->
+	
+	<theme byCodename="default">
+		<pagetemplate byCodename="default/nosidebarpage">
+			<templateblock editname="footer-middle-4" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-4" __showTitle="true" />
+<!-- 			<templateblock editname="footer-top-1" type="modules_statictext_Htmlcode" __cmpref-refid="htmltext" /> -->
+		</pagetemplate>
+		<pagetemplate byCodename="default/sidebarpage">
+			<templateblock editname="footer-middle-4" type="modules_website_ConfigurableMenu" __mode="document" __displayMode="Default"
+					__depth="1" __cmpref-refid="footer-4" __showTitle="true" />
+<!-- 			<templateblock editname="footer-top-1" type="modules_statictext_Htmlcode" __cmpref-refid="htmltext" /> -->
+		</pagetemplate>
+	</theme>
+</script>

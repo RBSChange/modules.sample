@@ -7,13 +7,13 @@
 	<website byTag="default_modules_website_default-website" id="default-website">
 		<menus>
 			<menu id="footer-1" byLabel="Catalogue"></menu>
-			<menu id="footer-2" byLabel="Communauté"></menu>
+			<menu id="footer-2" byLabel="Le magazine"></menu>
 			<menu id="footer-3" byLabel="Mon compte"></menu>
 			<menu id="footer-4" byLabel="À propos"></menu>
 		</menus>
 	</website>
 
-	<htmlcode byLabel="Warning" id="htmltext" />
+	<htmlcode byLabel="Warning page d'accueil" id="htmltext" />
 	
 	<theme byCodename="default">
 		<pagetemplate byCodename="default/nosidebarpage">

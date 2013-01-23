@@ -57,17 +57,20 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	protected function addCoreSamples(&$samples)
 	{
 		$samples[] = 'sample/core/permissions.xml';
+		$samples[] = 'sample/core/theme.xml';
 		
 		// Core modules.
-		$samples[] = 'website/website-struct.xml';
-		$samples[] = 'media/media-data.xml';
+		$samples[] = 'sample/core/website.xml';
+		$samples[] = 'sample/core/structure.xml';
+		
+		$samples[] = 'sample/core/media.xml';
 		$samples[] = 'sample/core/users.xml';
-		$samples[] = 'workflow/workflow-data.xml';
+		$samples[] = 'sample/core/workflow.xml';
 		$samples[] = 'sample/core/form.xml';
-		$samples[] = 'notification/notification-data.xml';
+		$samples[] = 'sample/core/notification.xml';
 		$samples[] = 'sample/core/contactcard.xml';
-		$samples[] = 'list/list-data.xml';
-		$samples[] = 'rss/rss-data.xml';
+		$samples[] = 'sample/core/list.xml';
+		$samples[] = 'sample/core/rss.xml';
 		
 		$samples[] = 'sample/core/contents.xml';
 	}
@@ -78,41 +81,46 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 	protected function addFullOsSamples(&$samples)
 	{
 		$samples[] = 'sample/fullos/permissions.xml';
-		$samples[] = 'sample/ecom/theme.xml';
+		$samples[] = 'sample/fullos/theme.xml';
 		
 		// Core modules.
-		$samples[] = 'website/website-struct.xml';
-		$samples[] = 'media/media-data.xml';
+		$samples[] = 'sample/core/website.xml';
+		$samples[] = 'sample/fullos/structure.xml';
+		
+		$samples[] = 'sample/core/media.xml';
 		$samples[] = 'sample/core/users.xml';
-		$samples[] = 'workflow/workflow-data.xml';
+		$samples[] = 'sample/core/workflow.xml';
 		$samples[] = 'sample/core/form.xml';
-		$samples[] = 'notification/notification-data.xml';
+		$samples[] = 'sample/core/notification.xml';
 		$samples[] = 'sample/core/contactcard.xml';
-		$samples[] = 'list/list-data.xml';
-		$samples[] = 'rss/rss-data.xml';
+		$samples[] = 'sample/core/list.xml';
+		$samples[] = 'sample/core/rss.xml';
 		
-		$samples[] = 'sample/ecom/structure.xml';
-		
+		// OS modules
 		// CMS modules.
-		$samples[] = 'media/media-data.xml';
-		$samples[] = 'videos/videos-data.xml';
-		$samples[] = 'sharethis/sharethis-data.xml';
-		$samples[] = 'sample/fullos/privatemessaging.xml';
-		$samples[] = 'sample/fullos/event.xml';
-		$samples[] = 'sample/fullos/joboffer.xml';
-		$samples[] = 'sample/fullos/photoalbum.xml';
+		$samples[] = 'sample/fullos/sharethis.xml';
+		$samples[] = 'sample/fullos/inquiry.xml';
+		
 		$samples[] = 'sample/fullos/blog.xml';
+		$samples[] = 'sample/fullos/event.xml';
 		$samples[] = 'sample/fullos/forums.xml';
-		$samples[] = 'brand/brand-data.xml';
+		$samples[] = 'sample/fullos/privatemessaging.xml';
+		$samples[] = 'sample/fullos/polls.xml';
+		$samples[] = 'sample/fullos/videos.xml';
+		$samples[] = 'sample/fullos/photoalbum.xml';
+		
+		$samples[] = 'sample/fullos/joboffer.xml';
 		$samples[] = 'sample/fullos/statictext.xml';
+		$samples[] = 'sample/fullos/bookmarks.xml';
 		
 		// ECOM modules.
-		$samples[] = 'shipping/shipping-data.xml';
-		$samples[] = 'payment/payment-data.xml';
-		$samples[] = 'paybox/paybox-data.xml';
-		$samples[] = 'catalog/catalog-struct.xml';
+		$samples[] = 'sample/fullos/brand.xml';
+		$samples[] = 'sample/fullos/shipping.xml';
+		$samples[] = 'sample/fullos/payment.xml';
+		$samples[] = 'sample/fullos/paybox.xml';
+		$samples[] = 'sample/fullos/catalog.xml';
 		$samples[] = 'sample/fullos/customer.xml';
-		$samples[] = 'order/order-struct.xml';
+		$samples[] = 'sample/fullos/order.xml';
 		$samples[] = 'sample/fullos/kiala.xml';
 		$samples[] = 'sample/fullos/mondialrelay.xml';
 		$samples[] = 'sample/fullos/icirelais.xml';
@@ -131,6 +139,8 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		
 		// Core modules.
 		$samples[] = 'sample/core/website.xml';
+		$samples[] = 'sample/full/structure.xml';
+		
 		$samples[] = 'sample/core/media.xml';
 		$samples[] = 'sample/core/users.xml';
 		$samples[] = 'sample/core/workflow.xml';
@@ -139,8 +149,6 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 		$samples[] = 'sample/core/contactcard.xml';
 		$samples[] = 'sample/core/list.xml';
 		$samples[] = 'sample/core/rss.xml';
-		
-		$samples[] = 'sample/full/structure.xml';
 		
 		// OS modules
 		// CMS modules.
