@@ -3,7 +3,9 @@
 	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
 	<binding fileName="modules/kiala/persistentdocument/import/kiala_binding.xml" />
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
+    <binding fileName="modules/zone/persistentdocument/import/zone_binding.xml" />
 
+    <country byTag="default_zone"  id="default-country"/>
 	<rootfolder module="media">
 		<folder byLabel="m.generic.bo.general.samples">
 			<folder byLabel="shipping">
@@ -15,11 +17,16 @@
 	<rootfolder module="shipping">
 		<folder byLabel="m.generic.bo.general.samples">
 			<kialamode byLabel="Kiala" visual-refid="visual" description="Livraison Kiala" code="Kiala" codeReference="Kiala" dspid="DEMO_DSP"
-				id="shipping" groupName="RBSChange" />
+				id="shipping" groupName="RBSChange" fromCountry-refid="default-country" packnshiptype="desktop" >
+				<execute method="setDocumentIdAttribute" attribute-name="shippingModeId" />
+			</kialamode>
 		</folder>
 	</rootfolder>
-
+<!--
+	<kialadspid kialamodeId-attr="shippingModeId" toCountry-refid="default-country" dspidCode="DEMO_DSP" />
+-->
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
+    <shop byCodeReference="DEMO" id="shop" />
 	<shippingfilter byLabel="Kiala" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="8" />
 	
 	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
@@ -28,4 +35,5 @@
 		<execute method="setStrategyParam" name="valuewithouttax" value="8" />
 		<execute method="setStrategyParam" name="ranges" value="200=0,100=4" />
 	</fees>
+
 </script>

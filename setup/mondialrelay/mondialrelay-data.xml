@@ -23,6 +23,7 @@
 	<shippingfilter byLabel="Mondial Relay" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="8" />
 	
 	<binding fileName="modules/order/persistentdocument/import/order_binding.xml" />
+    <shop byCodeReference="DEMO" id="shop" />
 	<fees byLabel="Frais d'envoi : Mondial Relay" applicationstrategy="order_CartPriceShippingStrategy">
 		<execute method="setStrategyParam" name="taxcategory" value="1" />
 		<execute method="setStrategyParam" name="valuewithouttax" value="8" />

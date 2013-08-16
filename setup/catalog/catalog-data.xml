@@ -166,7 +166,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<simpleproduct byCodeReference="DUCK-HUNT" id="DUCK-HUNT" label="Duck Hunt" shelf-refids="CAT-GAMES" brand-refid="NINTENDO"
 		visual-refid="DUCK-HUNT-BOX" additionnalVisual-refids="DUCK-HUNT-PIC1,DUCK-HUNT-PIC2,DUCK-HUNT-PIC3" 
-		stockQuantity="8" shippedIn="1" description-attr="description-duckhunt">
+		stockQuantity="8" shippedIn="1" description-attr="description-duckhunt" shippingWeight="150">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="20" />
 		<comment authorName="Gamer51" email="gamer51@rbs.fr" contentsAsBBCode="Super" rating="5" />
 	</simpleproduct>
@@ -175,7 +175,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	<attribute name="description-zapper"><![CDATA[Le NES Zapper (ou Famicom Light Gun au Japon) est un pistolet électronique, vendu comme accessoire de la Nintendo Entertainment System (NES) en 1985 et de la Nintendo Family Computer (Famicom) en 1984. La version japonaise est une représentation réaliste d'un revolver, alors que la version occidentale ressemble plus à un jouet, gardant le schéma de couleur de la NES. Le NES Zapper original est gris, mais une autre version sortit plus tard en couleur orange, la première ressemblant trop à une arme réelle pour le marché occidental. Il permet aux joueurs de tirer sur la télévision, sur des cibles telles que des canards, des pigeons d'argile ou encore des bandits.(<a href="http://fr.wikipedia.org/wiki/NES_Zapper">Voir l'article Wikipedia</a>).
 	]]></attribute>
 	<declinedproduct byCodeReference="NES-ZAPPER" label="NES Zapper" shelf-refids="CAT-ACCESSORIES" synchronizePrices="false" 
-		brand-refid="NINTENDO" description-attr="description-zapper" axe1="attribute::COLOR" showAxeInList="0" id="NES-ZAPPER">
+		brand-refid="NINTENDO" description-attr="description-zapper" axe1="attribute::COLOR" showAxeInList="0" id="NES-ZAPPER" synchronizeWeight="true" shippingWeight="200">
 		<productdeclination shippedIn="1"  visual-refid="NES-ZAPPER-1" byCodeReference="NES-ZAPPER-GREY" id="NES-ZAPPER-GREY"
 			label="NES Zapper (gris)" stockQuantity="5" attributes='COLOR:{ref-id:LIST-ITEM-GREY},GAMEZONE:{ref-id:EUR}'>
 			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="20" />
@@ -189,11 +189,11 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	<!-- NES CONTROLLER -->
 	<attribute name="description-nescontroller"><![CDATA[La manette de jeu utilisée par la NES et la Famicom]]></attribute>
 	<declinedproduct byCodeReference="NINTENDO-CONTROLLER" id="NINTENDO-CONTROLLER" label="Manette Nintendo"
-		synchronizePrices="false" shelf-refids="CAT-ACCESSORIES" brand-refid="NINTENDO" description-attr="description-nescontroller">
-		<productdeclination shippedIn="1"  visual-refid="NES-CONTROLLER-PIC1"  byCodeReference="NES-CONTROLLER" id="NES-CONTROLLER" label="NES" stockQuantity="8" attributes='COLOR:{ref-id:LIST-ITEM-GREY},GAMEZONE:{ref-id:EUR}'>
-			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="20" />
+		synchronizePrices="false" shelf-refids="CAT-ACCESSORIES" brand-refid="NINTENDO" description-attr="description-nescontroller"  synchronizeWeight="false">
+		<productdeclination shippedIn="1"  visual-refid="NES-CONTROLLER-PIC1"  byCodeReference="NES-CONTROLLER" id="NES-CONTROLLER" label="NES" stockQuantity="8" attributes='COLOR:{ref-id:LIST-ITEM-GREY},GAMEZONE:{ref-id:EUR}' shippingWeight="210">
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="20"/>
 		</productdeclination>
-		<productdeclination shippedIn="1"  visual-refid="FAMICOM-CONTROLLER-PIC1"  byCodeReference="FAMICOM-CONTROLLER" id="FAMICOM-CONTROLLER" label="Famicom" stockQuantity="8" attributes='COLOR:{ref-id:LIST-ITEM-GREY},GAMEZONE:{ref-id:JAP}'>
+		<productdeclination shippedIn="1"  visual-refid="FAMICOM-CONTROLLER-PIC1"  byCodeReference="FAMICOM-CONTROLLER" id="FAMICOM-CONTROLLER" label="Famicom" stockQuantity="8" attributes='COLOR:{ref-id:LIST-ITEM-GREY},GAMEZONE:{ref-id:JAP}' shippingWeight="250">
 			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="23" />
 		</productdeclination>
 	</declinedproduct>
@@ -202,7 +202,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	<attribute name="description-nesadvantage"><![CDATA[Le NES Advantage est un grand joystick de type arcade développé pour la console Nintendo Entertainment System et vendu à partir de 1987. Ce joystick est censé reposer sur une surface plane afin d'offrir un meilleur confort de jeu (sur une table ou sur le sol). Ainsi positionné celui-ci peut être utilisé comme le joystick d'un jeu d'arcade, avec une main utilisant le stick et l'autre appuyant sur les boutons.(<a href="http://fr.wikipedia.org/wiki/NES_Advantage">Voir l'article Wikipedia</a>)]]></attribute>
 	<simpleproduct byCodeReference="NES-ADVANTAGE" id="NES-ADVANTAGE" label="Joystick pour la NES" 
 		shelf-refids="CAT-ACCESSORIES" visual-refid="NES-ADVANTAGE-PIC1" additionnalVisual-refids="" brand-refid="NINTENDO"
-		stockQuantity="8" shippedIn="1" description-attr="description-nesadvantage">
+		stockQuantity="8" shippedIn="1" description-attr="description-nesadvantage" shippingWeight="400">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="40" />
 	</simpleproduct>
 
@@ -212,7 +212,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<simpleproduct byCodeReference="NES-1985" label="Nintendo Entertainment System (NES)" shelf-refids="SUBCAT-SALON" 
 		id="NES-1985" visual-refid="NES-1985-1" additionnalVisual-refids="NES-1985-2" brand-refid="NINTENDO" 
-		stockQuantity="8" shippedIn="1" description-attr="description-nes" attributes='GAMEZONE:{ref-id:EUR}'>
+		stockQuantity="8" shippedIn="1" description-attr="description-nes" attributes='GAMEZONE:{ref-id:EUR}' shippingWeight="1500">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="179.00" />
 		<comment authorName="NostaGamer" email="ngamer@rbs.fr" contentsAsBBCode="J'avais 10 ans quand elle est sortie ! Ma console préféré !" rating="5" />
 		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Nul ! Vive la master system !!!" rating="1" />
@@ -225,7 +225,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<simpleproduct byCodeReference="FAMICOM-1983" label="Famicom" shelf-refids="SUBCAT-SALON" id="FAMICOM-1983" 
 		visual-refid="FAMICOM-1983-1" additionnalVisual-refids="FAMICOM-1983-2" brand-refid="NINTENDO" stockQuantity="4" 
-		shippedIn="3" description-attr="description-famicom" attributes='GAMEZONE:{ref-id:JAP}'>
+		shippedIn="3" description-attr="description-famicom" attributes='GAMEZONE:{ref-id:JAP}'  shippingWeight="1000">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="249.00" />
 	</simpleproduct>
 	
@@ -235,7 +235,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<simpleproduct byCodeReference="COLECO-1982" label="Colecovision" shelf-refids="SUBCAT-SALON" id="COLECO-1982" 
 		visual-refid="COLECO-1982-1" additionnalVisual-refids="" brand-refid="COLECO" stockQuantity="1" 
-		description-attr="description-coleco" attributes='GAMEZONE:{ref-id:EUR}'>
+		description-attr="description-coleco" attributes='GAMEZONE:{ref-id:EUR}'  shippingWeight="1700">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="149.00" />
 	</simpleproduct>
 	
@@ -244,12 +244,12 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 		<p class="normal">La console qui a précédé la Master System au Japon est la SG-1000 Mark III, qui succède à la SG-1000 et la SG-1000 II. Elle sort en 1985 au Japon, avec pour mascotte Alex Kidd.</p><p class="normal">La console est redessinée avant d'être vendue aux États-Unis sous le nom Sega Master System en juin 1986, soit un an après la sortie de la NES. Son prix de vente est alors de 200 dollars</p><p class="normal">La console sort alors un peu partout dans le monde, y compris au Japon, en 1987 sous son nouveau nom. Mais la version japonaise n'était pas qu'un simple recarrossage de la SG-1000 Mark III puisqu'elle incorporait pour le son un module FM qu'exploitaient certains jeux.</p><p class="normal">Bien que la Master System soit sur certains points plus avancée que la NES, elle n'atteint pas le même niveau de popularité aux États-Unis. Ce manque de succès a de multiples causes. On peut citer la quantité de jeux qui a joué en l'avantage de la NES, ainsi que l'année qui sépare la sortie des deux consoles. L'accord qui existait entre Nintendo et ses éditeurs a certainement eu un impact. En effet, le contrat des éditeurs stipulait que ceux-ci ne devaient produire que pour la console de Nintendo. Durant les quatre premiers mois suivant sa sortie, la Master System s'est vendue à 125 000 exemplaires contre 2 000 000 pour la NES dans la même période.</p>
 	]]></attribute>
 	<declinedproduct byCodeReference="SMS-MULTI" id="SMS-MULTI" label="Master System" shelf-refids="SUBCAT-SALON"
-		synchronizePrices="false" brand-refid="SEGA" description-attr="description-sms">
-		<productdeclination shippedIn="1" visual-refid="MASTERSYSTEM-1985"  byCodeReference="SMS-1" id="SMS-1" label="I (1985)" stockQuantity="5" attributes='GAMEZONE:{ref-id:EUR}'>
-			<price  shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="249" oldValueWithTax="299" />
+		synchronizePrices="false" brand-refid="SEGA" description-attr="description-sms"  synchronizeWeight="false" >
+		<productdeclination shippedIn="1" visual-refid="MASTERSYSTEM-1985"  byCodeReference="SMS-1" id="SMS-1" label="I (1985)" stockQuantity="5" attributes='GAMEZONE:{ref-id:EUR}' shippingWeight="1200">
+			<price  shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="249" oldValueWithTax="299"/>
 		</productdeclination>
-		<productdeclination shippedIn="3" visual-refid="MASTERSYSTEM-1990" byCodeReference="SMS-2" label="II (1990)" stockQuantity="10" attributes='GAMEZONE:{ref-id:EUR}'>
-			<price shopId-refid="shop" billingAreaId-refid="billingarea"  taxCategory="1" valueWithTax="199" />
+		<productdeclination shippedIn="3" visual-refid="MASTERSYSTEM-1990" byCodeReference="SMS-2" label="II (1990)" stockQuantity="10" attributes='GAMEZONE:{ref-id:EUR}' shippingWeight="1100">
+			<price shopId-refid="shop" billingAreaId-refid="billingarea"  taxCategory="1" valueWithTax="199"/>
 		</productdeclination>
 	</declinedproduct>
 	
@@ -259,7 +259,7 @@ Le jeu se vendait aussi avec Super Mario Bros sur la même cartouche. (<a href="
 	]]></attribute>
 	<simpleproduct byCodeReference="ATARI2600-1978" label="Atari 2660 (Atari VCS)" shelf-refids="SUBCAT-SALON" 
 		id="ATARI2600-1978" visual-refid="ATARI2600-1978-1" additionnalVisual-refids="" brand-refid="ATARI" 
-		stockQuantity="5" shippedIn="2" description-attr="description-atari2600" attributes='GAMEZONE:{ref-id:EUR}'>
+		stockQuantity="5" shippedIn="2" description-attr="description-atari2600" attributes='GAMEZONE:{ref-id:EUR}' shippingWeight="1800">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="199.00" />
 	</simpleproduct>
 
@@ -295,7 +295,7 @@ buts, comme le traitement de texte.</p>
 	]]></attribute>
 	<simpleproduct byCodeReference="ATARI7800-1986" label="Atari 7800" shelf-refids="SUBCAT-SALON" id="ATARI7800-1986"
 		visual-refid="ATARI7800-1986-1" additionnalVisual-refids="" brand-refid="ATARI" stockQuantity="10"
-		shippedIn="1" description-attr="description-atari7800" attributes='GAMEZONE:{ref-id:EUR}'>
+		shippedIn="1" description-attr="description-atari7800" attributes='GAMEZONE:{ref-id:EUR}' shippingWeight="1300">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="149.00" oldValueWithTax="179.00"/>
 	</simpleproduct>
 	
@@ -305,7 +305,7 @@ buts, comme le traitement de texte.</p>
 	]]></attribute>
 	<simpleproduct byCodeReference="NEOGEO-1990" label="Neo-Geo AES" shelf-refids="SUBCAT-SALON" id="NEOGEO-1990"
 		visual-refid="NEOGEO-1990-1" additionnalVisual-refids="NEOGEO-1990-2" brand-refid="SNK" stockQuantity="0"
-		description-attr="description-neogeo" attributes='GAMEZONE:{ref-id:EUR}'>
+		description-attr="description-neogeo" attributes='GAMEZONE:{ref-id:EUR}' shippingWeight="1100">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="599.00" />
 		<comment authorName="NostaGamer" email="ngamer@rbs.fr" contentsAsBBCode="Dommage quelle soit si chère !" rating="5" />
 		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Elle est juste géniale !" rating="4" />
@@ -317,18 +317,18 @@ buts, comme le traitement de texte.</p>
 		<p class="normal">La Super Nintendo est une console de jeux vidéo de salon 16 bits du constructeur japonais Nintendo sortie en 1992 en Europe. Son équivalent japonais est la Super Famicom (スーパーファミコン) sortie en 1990 et arborant quasiment le même design. À noter qu'en Corée du Sud, la Super Famicom est distribuée par Hyundai Electronics sous le nom de Super Comboy (슈퍼 컴보이). L'équivalent nord-américain, le Super Nintendo Entertainment System (Super NES) présente, en revanche, un look résolument différent. Les consoles sont zonées (Asie, Europe, Amérique) mais les différences concrètes sont inexistantes ou aisément contournables. La Super Nintendo, sort pour contrer la Megadrive de Sega (16 bits) et dans une moindre mesure la PC-Engine de NEC (16 bits processeur graphique/8 bits processeur principal) et la Neo-Geo AES de SNK (16 bits). La Super Nintendo sera la mieux vendue des consoles de son époque et malgré ses faibles capacités sur le papier, elle tiendra encore tête à des consoles de génération suivantes : 3DO, Saturn de Sega.</p>
 	]]></attribute>
 	<declinedproduct byCodeReference="SUPER-NINTENDO" id="SUPER-NINTENDO" label="Super Nintendo"
-		synchronizePrices="false" shelf-refids="SUBCAT-SALON" brand-refid="NINTENDO" description-attr="description-snes">
+		synchronizePrices="false" shelf-refids="SUBCAT-SALON" brand-refid="NINTENDO" description-attr="description-snes" synchronizeWeight="false">
 		<productdeclination shippedIn="1"  visual-refid="SNESPAL-1992-1" additionnalVisual-refids="SNESPAL-1992-2" byCodeReference="SUPER-NINTENDO-EUR" 
-			id="SUPER-NINTENDO-EUR" label="PAL" stockQuantity="15" attributes='GAMEZONE:{ref-id:EUR}'>
+			id="SUPER-NINTENDO-EUR" label="PAL" stockQuantity="15" attributes='GAMEZONE:{ref-id:EUR}' shippingWeight="800">
 			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="199.00" />
 		</productdeclination>
 		<productdeclination shippedIn="1"  visual-refid="SNES-1992-1"  byCodeReference="SUPER-NINTENDO-N-USA" id="SUPER-NINTENDO-N-USA" 
-			label="Super NES" stockQuantity="1" attributes='GAMEZONE:{ref-id:N-USA}'>
-			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="189.00" />
+			label="Super NES" stockQuantity="1" attributes='GAMEZONE:{ref-id:N-USA}' shippingWeight="900">
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="189.00"/>
 		</productdeclination>
 		<productdeclination shippedIn="1"  visual-refid="SUPER-FAMICOM-1"  byCodeReference="SUPER-FAMICOM" id="SUPER-FAMICOM" 
-			label="Super Famicom" stockQuantity="1" attributes='GAMEZONE:{ref-id:JAP}'>
-			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="210.00" />
+			label="Super Famicom" stockQuantity="1" attributes='GAMEZONE:{ref-id:JAP}' shippingWeight="1200">
+			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="210.00"/>
 		</productdeclination>
 		<comment authorName="NostaGamer" email="ngamer@rbs.fr" contentsAsBBCode="J'avais 10 ans quand elle est sortie ! Ma console préféré !" rating="5" />
 		<comment authorName="SegaFan" email="segafan@rbs.fr" contentsAsBBCode="Bof ! Vive la megadrive !!!" rating="2" />
@@ -340,8 +340,8 @@ buts, comme le traitement de texte.</p>
 		<p class="normal">La manette de la Super Nintendo eu un design style plus "os de chien (dog-bone)" que celui de la NES plus "carré" et deux boutons en plus "X" et "Y" sur la façade qui sont répartis façon carreaux d'un jeux de carte. Deux autres boutons au dessus de la manette "L" et "R" viennent s'ajouter en épousant la forme arrondie de la manette, concept qui a été repris par beaucoup de manette sorties par la suite. Cette manette dispose donc d'un total de 8 boutons (4 pour la NES). Le fait d'avoir six boutons actifs (A, B, X, Y, L, R) a permit la popularité des jeux de la séries Street Fighter, sortit précédemment sur Arcade.</p>
 	]]></attribute>
 	<declinedproduct byCodeReference="SUPER-NINTENDO-CONTROLLER" id="SUPER-NINTENDO-CONTROLLER" label="Manette de Super Nintendo"
-		synchronizePrices="false" shelf-refids="CAT-ACCESSORIES" brand-refid="NINTENDO" description-attr="description-snes-controller">
-		<productdeclination shippedIn="1"  visual-refid="SUPER-NINTENDO-CONTROLLER-1" byCodeReference="SUPER-NINTENDO-CONTROLLER-EUR" 
+		synchronizePrices="false" shelf-refids="CAT-ACCESSORIES" brand-refid="NINTENDO" description-attr="description-snes-controller" synchronizeWeight="true" shippingWeight="1150">
+		<productdeclination shippedIn="1"  visual-refid="SUPER-NINTENDO-CONTROLLER-1" byCodeReference="SUPER-NINTENDO-CONTROLLER-EUR"
 			id="SUPER-NINTENDO-CONTROLLER-EUR" label="PAL" stockQuantity="15" attributes='GAMEZONE:{ref-id:EUR}'>
 			<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="19.00" />
 		</productdeclination>
@@ -361,8 +361,8 @@ buts, comme le traitement de texte.</p>
 	]]></attribute>
 	<simpleproduct byCodeReference="SNES-GAME-ZELDA" label="The Legend of Zelda: A Link to the Past" shelf-refids="CAT-GAMES"
 		id="SNES-GAME-ZELDA" visual-refid="SNES-GAME-ZELDA-PIC1" additionnalVisual-refids="" brand-refid="NINTENDO" 
-		stockQuantity="5" description-attr="description-zelda3" attributes="GAMEZONE:{ref-id:EUR}">
-		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="32.00" />
+		stockQuantity="5" description-attr="description-zelda3" attributes="GAMEZONE:{ref-id:EUR}" shippingWeight="150">
+		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="32.00"/>
 	</simpleproduct>
 	
 	<attribute name="description-zeldatips"><![CDATA[
@@ -377,7 +377,7 @@ buts, comme le traitement de texte.</p>
 	
 	<!-- MEGADRIVE -->	
 	<simpleproduct byCodeReference="MEGADRIVE-1988" label="Megadrive" shelf-refids="SUBCAT-SALON" id="MEGADRIVE-1988"
-		visual-refid="MEGADRIVE-1988-1" brand-refid="SEGA" stockQuantity="100" attributes="GAMEZONE:{ref-id:EUR}">
+		visual-refid="MEGADRIVE-1988-1" brand-refid="SEGA" stockQuantity="100" attributes="GAMEZONE:{ref-id:EUR}" shippingWeight="1150">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="149.00" />
 	</simpleproduct>
 	
@@ -386,7 +386,7 @@ buts, comme le traitement de texte.</p>
 		<p class="normal">Le (ou la) Game Boy (ゲームボーイ, Gēmu Bōi) est une console de jeux vidéo portable créée par Nintendo en 1989. (<a href="http://fr.wikipedia.org/wiki/Gameboy" class="link">Voir l'article Wikipedia</a>)</p>
 	]]></attribute>
 	<declinedproduct id="GAMEBOY" byCodeReference="GAMEBOY" label="Game boy" shelf-refids="SUBCAT-PORTABLE" 
-		synchronizePrices="false" brand-refid="NINTENDO" description-attr="description-gameboy" showAxeInList="1">
+		synchronizePrices="false" brand-refid="NINTENDO" description-attr="description-gameboy" showAxeInList="1" synchronizeWeight="true" shippingWeight="750">
 		<productdeclination shippedIn="1" visual-refid="GAMEBOY-CLASSIC-PIC1" additionnalVisual-refids="GAMEBOY-CLASSIC-PIC2"
 			byCodeReference="GAMEBOY-CLASSIC" id="GAMEBOY-CLASSIC" label="classic (1989)" stockQuantity="3">
 			<execute method="setDocumentIdAttribute" attribute-name="GAMEBOY-CLASSIC" />
@@ -407,7 +407,7 @@ buts, comme le traitement de texte.</p>
 		<p class="normal">Pokémon version rouge et Pokémon version bleue sont les deux éditions du premier jeu vidéo de rôle japonais de la licence Pokémon développé par Game Freak sous la direction de Satoshi Tajiri. Elles sont éditées par Nintendo sur la console portable Game Boy au Japon en 1996 (originellement dans des versions version rouge et version verte), en Amérique du Nord en 1998, puis en Europe et en Australie en 1999.(<a href="http://fr.wikipedia.org/wiki/Pok%C3%A9mon_Rouge_et_Bleu" class="link">Voir l'article Wikipedia</a>)</p>
 	]]></attribute>
 	<declinedproduct byCodeReference="GAMEBOY-GAME-POKEMON" label="Pokemon" shelf-refids="CAT-GAMES" id="GAMEBOY-GAME-POKEMON"
-		synchronizePrices="true" brand-refid="NINTENDO" description-attr="description-pokemon">
+		synchronizePrices="true" brand-refid="NINTENDO" description-attr="description-pokemon" synchronizeWeight="true" shippingWeight="150">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="15.00" />
 		<productdeclination shippedIn="1" visual-refid="GAMEBOY-GAME-POKEMON-RED" byCodeReference="POKEMON-GAME-RED"
 			label="version rouge" stockQuantity="100" id="POKEMON-GAME-RED">
@@ -423,7 +423,7 @@ buts, comme le traitement de texte.</p>
 	]]></attribute>
 	<simpleproduct byCodeReference="GAMEBOY-LINKCABLE" label="Câble link pour Game boy" shelf-refids="CAT-ACCESSORIES"
 		id="GAMEBOY-LINKCABLE" visual-refid="GAMEBOY-LINKCABLE-PIC1" brand-refid="NINTENDO"
-		stockQuantity="100" description-attr="description-pokemon">
+		stockQuantity="100" description-attr="description-pokemon" shippingWeight="50">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="19.00" />
 	</simpleproduct>
 
@@ -437,37 +437,37 @@ buts, comme le traitement de texte.</p>
 	<!-- Micro -->
 	<attribute name="description-commodore64"><![CDATA[<p class="normal">Le Commodore 64 est un ordinateur personnel conçu par Commodore Business Machines Inc. en 1982, sous l'égide de Jack Tramiel. Il fut la première machine vendue à plusieurs millions d'exemplaires (de 17 à 25 millions selon les estimations), et il reste le modèle d'ordinateur le plus vendu à ce jour.(<a href="http://fr.wikipedia.org/wiki/Commodore_64" class="link">Voir l'article Wikipedia</a>)</p>]]></attribute>
 	<simpleproduct byCodeReference="MICRO-COMMODORE64" label="Commodore 64" shelf-refids="CAT-MICRO" id="MICRO-COMMODORE64"
-		visual-refid="MICRO-COMMODORE64-PIC1" brand-refid="COMMODORE" stockQuantity="1" description-attr="description-commodore64">
+		visual-refid="MICRO-COMMODORE64-PIC1" brand-refid="COMMODORE" stockQuantity="1" description-attr="description-commodore64" shippingWeight="4000">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="609.90" />
 	</simpleproduct>
 
 	<attribute name="description-atarist"><![CDATA[<p class="normal">Les Atari ST forment une famille d'ordinateurs personnels conçus par Atari dont le succès commercial a marqué la deuxième moitié des années 1980. Le succès fut autant grand public (Jeux vidéo) que professionnel (Traitement de texte, PAO et surtout MAO).(<a href="http://fr.wikipedia.org/wiki/Atari_ST" class="link">Voir l'article Wikipedia</a>)</p>]]></attribute>
 	<simpleproduct byCodeReference="MICRO-ATARI-ST" label="Atari ST" shelf-refids="CAT-MICRO" id="MICRO-ATARI-ST" 
-		visual-refid="ATARI-ST-PIC1" brand-refid="ATARI" stockQuantity="1" description-attr="description-atarist">
+		visual-refid="ATARI-ST-PIC1" brand-refid="ATARI" stockQuantity="1" description-attr="description-atarist" shippingWeight="4000">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="409.90" />
 	</simpleproduct>
 
 	<attribute name="description-amiga"><![CDATA[<p class="normal">L’Amiga est une famille d’ordinateurs personnels commercialisée par Commodore International entre 1985 et 1994. Dans les années 1990 il était très populaire sur la scène démo, parmi les amateurs de jeux vidéo et dans l'industrie du cinéma et de la télévision. L'Amiga offrait alors un affichage plus coloré et plus fluide et un multitâches supérieur à celles des produits concurrents, une interface graphique similaire à celle du Macintosh et des logiciels de traitement de texte, de musique assistée par ordinateur et de dessin.(<a href="http://fr.wikipedia.org/wiki/Amiga" class="link">Voir l'article Wikipedia</a>)</p>]]></attribute>
 	<simpleproduct byCodeReference="MICRO-AMIGA" label="Amiga" shelf-refids="CAT-MICRO" id="MICRO-AMIGA"
 		visual-refid="MICRO-AMIGA-500-PIC1" additionnalVisual-refids="MICRO-AMIGA-500-PIC2,MICRO-AMIGA-500-PIC3"
-		brand-refid="COMMODORE"  stockQuantity="10" description-attr="description-amiga">
+		brand-refid="COMMODORE"  stockQuantity="10" description-attr="description-amiga" shippingWeight="4000">
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="609.90" />
 	</simpleproduct>
 
 	<!-- Bundle -->
 	<bundleproduct id="NES-BUNDLE" byCodeReference="NES-BUNDLE" label="Starter pack Nes"  shelf-refids="CAT-CONSOLES,CAT-ACCESSORIES,CAT-GAMES"
-		visual-refid="PACK-NES-PIC1">
+		visual-refid="PACK-NES-PIC1" shippingWeight="2100">
 		<bundleditem product-refid="NES-1985" quantity="1" />
 		<bundleditem product-refid="DUCK-HUNT" quantity="1" />
 		<bundleditem product-refid="NES-ZAPPER-ORANGE" quantity="1" />
-		<bundleditem product-refid="NES-CONTROLLER" quantity="2"/>
+		<bundleditem product-refid="NES-CONTROLLER" quantity="2" />
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="490" oldValueWithTax="500" />
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="470" oldValueWithTax="490" thresholdMin="5" />
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="450" oldValueWithTax="480" thresholdMin="10" />
 	</bundleproduct>
 	
 	<bundleproduct id="SNES-ZELDA-BUNDLE" byCodeReference="SNES-ZELDA-BUNDLE" label="Soluce pack Zelda LttP"  shelf-refids="CAT-GAMES"
-		visual-refid="">
+		visual-refid="" shippingWeight="150">
 		<bundleditem product-refid="SNES-GAME-ZELDA" quantity="1" />
 		<bundleditem product-refid="SNES-DOWNLOAD-ZELDA-TIPS" quantity="1" />
 		<price shopId-refid="shop" billingAreaId-refid="billingarea" taxCategory="1" valueWithTax="34.90" oldValueWithTax="40.00"/>
