@@ -14,17 +14,27 @@
 		</folder>
 	</rootfolder>
 
+	<country id="country-BE" byCode="BE" />
+	<country id="country-FR" byCode="FR" />
+	<country id="country-LU" byCode="LU" />
+	<country id="country-NL" byCode="NL" />
+	<country id="country-ES" byCode="ES" />
+	<country id="country-GB" byCode="GB" />
 	<rootfolder module="shipping">
 		<folder byLabel="m.generic.bo.general.samples">
-			<kialamode byLabel="Kiala" visual-refid="visual" description="Livraison Kiala" code="Kiala" codeReference="Kiala" dspid="DEMO_DSP"
+			<kialamode byLabel="Kiala" visual-refid="visual" description="Livraison en Relais Kiala" code="Kiala" codeReference="Kiala" dspid="DEMO_DSP"
 				id="shipping" groupName="RBSChange" fromCountry-refid="default-country" packnshiptype="desktop" >
-				<execute method="setDocumentIdAttribute" attribute-name="shippingModeId" />
+				<execute method="setDocumentIdAttribute" attribute-name="kialamodeId" />
+				<kialadspid kialamodeId-attr="kialamodeId" toCountry-refid="country-BE" dspidCode="DEMO_DSP" />
+				<kialadspid kialamodeId-attr="kialamodeId" toCountry-refid="country-FR" dspidCode="DEMO_DSP" />
+				<kialadspid kialamodeId-attr="kialamodeId" toCountry-refid="country-LU" dspidCode="DEMO_DSP" />
+				<kialadspid kialamodeId-attr="kialamodeId" toCountry-refid="country-NL" dspidCode="DEMO_DSP" />
+				<kialadspid kialamodeId-attr="kialamodeId" toCountry-refid="country-ES" dspidCode="DEMO_DSP" />
+				<kialadspid kialamodeId-attr="kialamodeId" toCountry-refid="country-GB" dspidCode="DEMO_DSP" />
 			</kialamode>
 		</folder>
 	</rootfolder>
-<!--
-	<kialadspid kialamodeId-attr="shippingModeId" toCountry-refid="default-country" dspidCode="DEMO_DSP" />
--->
+
 	<binding fileName="modules/catalog/persistentdocument/import/catalog_binding.xml" />
     <shop byCodeReference="DEMO" id="shop" />
 	<shippingfilter byLabel="Kiala" shop-refid="shop" mode-refid="shipping" taxCategory="1" valueWithoutTax="8" />
