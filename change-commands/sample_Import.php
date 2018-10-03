@@ -245,7 +245,7 @@ class commands_sample_Import extends commands_AbstractChangeCommand
 			$moduleName = preg_replace('/\/.*/', '', $sampleName);
 			if ($ms->isInstalled($moduleName))
 			{
-				$result = f_util_System::execScript($batchPath, array($sampleName));
+				$result = f_util_System::execScriptConsole($batchPath, array($sampleName));
 				// Log fatal errors...
 				if ($result != 'OK')
 				{
